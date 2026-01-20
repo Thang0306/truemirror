@@ -12,20 +12,27 @@ def create_app():
     app.config.from_object(Config)
     
     # CORS configuration for production
-    allowed_origins = [
-        "http://localhost:5173",  # Local dev
-        "http://localhost:3000",
+    # Allow both localhost and production URLs
+    cors_origins = [
+        "http://localhost:5173",  # Local Vite dev
+        "http://localhost:3000",  # Local alternative
     ]
-    
-    # Add production frontend URL (will be set later)
+
+    # Add Vercel frontend URL from environment
     frontend_url = os.getenv('FRONTEND_URL')
     if frontend_url:
-        allowed_origins.append(frontend_url)
-        # Also allow all Vercel preview URLs
-        allowed_origins.append("https://*.vercel.app")
-    
-    CORS(app, 
-         resources={r"/api/*": {"origins": allowed_origins}},
+        cors_origins.append(frontend_url)
+
+    # For development/testing: allow all Vercel preview deployments
+    # In production, you should set FRONTEND_URL to your specific domain
+    is_development = os.getenv('RAILWAY_ENVIRONMENT') != 'production'
+
+    CORS(app,
+         resources={r"/api/*": {
+             "origins": cors_origins if not is_development else "*",
+             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+             "allow_headers": ["Content-Type", "Authorization"]
+         }},
          supports_credentials=True)
     
     # Initialize extensions
