@@ -8,7 +8,7 @@ auth_bp = Blueprint('auth', __name__, url_prefix='/api/auth')
 # Email validation regex
 EMAIL_REGEX = re.compile(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
 
-@auth_bp.route('/register', methods=['POST', 'OPTIONS'])
+@auth_bp.route('/register', methods=['POST'])
 def register():
     """
     Register new user endpoint (mock - no email sending)
@@ -71,7 +71,7 @@ def register():
         return jsonify({'error': 'Đã xảy ra lỗi khi đăng ký'}), 500
 
 
-@auth_bp.route('/login', methods=['POST', 'OPTIONS'])
+@auth_bp.route('/login', methods=['POST'])
 def login():
     """
     Login endpoint with JWT token
