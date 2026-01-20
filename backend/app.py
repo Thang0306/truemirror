@@ -21,24 +21,15 @@ def create_app():
     # Add Vercel frontend URL from environment
     frontend_url = os.getenv('FRONTEND_URL')
     if frontend_url:
+        # Remove trailing slash if exists
+        frontend_url = frontend_url.rstrip('/')
         cors_origins.append(frontend_url)
 
-    # For development: allow all origins if FRONTEND_URL not set
-    # In production: set FRONTEND_URL environment variable
-    if not frontend_url:
-        # Development mode - allow all origins
-        CORS(app, resources={r"/api/*": {"origins": "*"}})
-        print("[INFO] CORS: Allowing all origins (development mode)")
-    else:
-        # Production mode - strict CORS
-        CORS(app,
-             resources={r"/api/*": {
-                 "origins": cors_origins,
-                 "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-                 "allow_headers": ["Content-Type", "Authorization"]
-             }},
-             supports_credentials=True)
-        print(f"[INFO] CORS: Allowing origins: {cors_origins}")
+    # TEMPORARY: Allow all origins for testing
+    # TODO: Restrict to specific origins in production
+    CORS(app, resources={r"/api/*": {"origins": "*"}})
+    print(f"[INFO] CORS: Allowing ALL origins (development/testing mode)")
+    print(f"[INFO] Configured origins list: {cors_origins}")
     
     # Initialize extensions
     db.init_app(app)
