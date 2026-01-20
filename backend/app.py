@@ -23,17 +23,22 @@ def create_app():
     if frontend_url:
         cors_origins.append(frontend_url)
 
-    # For development/testing: allow all Vercel preview deployments
-    # In production, you should set FRONTEND_URL to your specific domain
-    is_development = os.getenv('RAILWAY_ENVIRONMENT') != 'production'
-
-    CORS(app,
-         resources={r"/api/*": {
-             "origins": cors_origins if not is_development else "*",
-             "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-             "allow_headers": ["Content-Type", "Authorization"]
-         }},
-         supports_credentials=True)
+    # For development: allow all origins if FRONTEND_URL not set
+    # In production: set FRONTEND_URL environment variable
+    if not frontend_url:
+        # Development mode - allow all origins
+        CORS(app, resources={r"/api/*": {"origins": "*"}})
+        print("[INFO] CORS: Allowing all origins (development mode)")
+    else:
+        # Production mode - strict CORS
+        CORS(app,
+             resources={r"/api/*": {
+                 "origins": cors_origins,
+                 "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+                 "allow_headers": ["Content-Type", "Authorization"]
+             }},
+             supports_credentials=True)
+        print(f"[INFO] CORS: Allowing origins: {cors_origins}")
     
     # Initialize extensions
     db.init_app(app)
