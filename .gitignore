@@ -24,3 +24,7 @@ Thumbs.db
 *.swo
 *.env
 .env
+
+# Claude files
+.claude/
+CLAUDE.md
