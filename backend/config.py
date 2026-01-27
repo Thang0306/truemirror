@@ -14,6 +14,14 @@ class Config:
     
     SQLALCHEMY_DATABASE_URI = DATABASE_URL
     SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    # PostgreSQL connection pool settings for Railway
+    SQLALCHEMY_ENGINE_OPTIONS = {
+        'pool_size': 10,
+        'pool_recycle': 280,  # Recycle connections before Railway timeout (300s)
+        'pool_pre_ping': True,  # Verify connection health before using
+        'max_overflow': 5
+    }
     
     # JWT config
     JWT_SECRET_KEY = os.getenv('JWT_SECRET_KEY', 'truemirror-jwt-secret-dev-2026')

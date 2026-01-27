@@ -31,10 +31,13 @@ def create_app():
         frontend_url = frontend_url.rstrip('/')
         cors_origins.append(frontend_url)
 
-    # TEMPORARY: Allow all origins for testing
-    # TODO: Restrict to specific origins in production
-    CORS(app, resources={r"/api/*": {"origins": "*"}})
-    print(f"[INFO] CORS: Allowing ALL origins (development/testing mode)")
+    # CORS configuration - Allow all origins with full headers
+    CORS(app,
+         resources={r"/*": {"origins": "*"}},
+         supports_credentials=True,
+         allow_headers=["Content-Type", "Authorization"],
+         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
+    print(f"[INFO] CORS: Allowing ALL origins with full headers")
     print(f"[INFO] Configured origins list: {cors_origins}")
     
     # Initialize extensions
