@@ -4,11 +4,18 @@ from openai import OpenAI
 class AzureGPTService:
     def __init__(self):
         # Azure OpenAI Configuration - using standard OpenAI client with base_url
+        api_key = os.getenv('AZURE_OPENAI_KEY')
+        base_url = os.getenv('AZURE_OPENAI_BASE_URL')
+
+        if not api_key or not base_url:
+            raise ValueError("AZURE_OPENAI_KEY and AZURE_OPENAI_BASE_URL must be set")
+
         self.client = OpenAI(
-            api_key=os.getenv('AZURE_OPENAI_KEY'),
-            base_url=os.getenv('AZURE_OPENAI_BASE_URL')
+            api_key=api_key,
+            base_url=base_url
         )
-        self.model = "gpt-4.1"
+        self.model = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-4')
+        print(f"[INFO] Azure OpenAI initialized: model={self.model}, base_url={base_url}")
 
     def get_chat_response_stream(self, conversation_history):
         """

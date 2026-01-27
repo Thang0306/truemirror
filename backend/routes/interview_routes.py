@@ -1,11 +1,13 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
+from flask_cors import cross_origin
 from models import db, InterviewSession, User
 from datetime import datetime, timezone
 
 interview_bp = Blueprint('interview', __name__, url_prefix='/api/interview')
 
-@interview_bp.route('/setup', methods=['POST'])
+@interview_bp.route('/setup', methods=['POST', 'OPTIONS'])
+@cross_origin()
 @jwt_required()
 def create_session():
     """
@@ -78,7 +80,8 @@ def create_session():
         return jsonify({'error': 'Đã xảy ra lỗi khi tạo phiên phỏng vấn'}), 500
 
 
-@interview_bp.route('/sessions', methods=['GET'])
+@interview_bp.route('/sessions', methods=['GET', 'OPTIONS'])
+@cross_origin()
 @jwt_required()
 def get_user_sessions():
     """
@@ -105,7 +108,8 @@ def get_user_sessions():
         return jsonify({'error': 'Đã xảy ra lỗi'}), 500
 
 
-@interview_bp.route('/session/<int:session_id>', methods=['GET'])
+@interview_bp.route('/session/<int:session_id>', methods=['GET', 'OPTIONS'])
+@cross_origin()
 @jwt_required()
 def get_session(session_id):
     """
