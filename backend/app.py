@@ -16,9 +16,8 @@ from routes.admin_routes import admin_bp
 # Import WebSocket init
 from routes.websocket_routes import init_socketio_events
 
-# Initialize SocketIO without wildcard cors
+# Initialize SocketIO — allow specific origins later
 socketio = SocketIO(
-    cors_allowed_origins=[],  # we set origins later
     async_mode="threading",
     logger=True,
     engineio_logger=True
@@ -38,7 +37,7 @@ def create_app():
     if FRONTEND_URL:
         cors_origins.append(FRONTEND_URL.rstrip("/"))
 
-    # Setup CORS
+    # Setup CORS for Flask HTTP routes
     CORS(
         app,
         resources={r"/*": {"origins": cors_origins}},
@@ -56,20 +55,23 @@ def create_app():
     bcrypt.init_app(app)
     JWTManager(app)
 
-    # Init SocketIO with allowed origins
+    # Init SocketIO with allowed origins (needed for WebSocket handshakes)
     socketio.init_app(
         app,
         cors_allowed_origins=cors_origins
     )
 
-    # Register blueprints
+    # **Important**: register WebSocket event handlers
+    init_socketio_events(socketio)
+
+    # Register HTTP blueprints
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(interview_bp)
     app.register_blueprint(chat_bp)
     app.register_blueprint(admin_bp)
 
-    # Create DB tables
+    # Create DB tables if not exist
     with app.app_context():
         db.create_all()
         print("[INFO] Database tables created")
