@@ -21,8 +21,8 @@ const InterviewSetup = () => {
   // Dropdown options
   const positions = [
     { value: 'Intern', label: 'Intern' },
-    { value: 'Fresher', label: 'Fresher' },
     { value: 'Junior', label: 'Junior' },
+    { value: 'Senior', label: 'Senior' },
     { value: 'Manager', label: 'Manager' }
   ]
 
@@ -74,10 +74,9 @@ const InterviewSetup = () => {
       const response = await api.post('/api/interview/setup', formData)
       
       console.log('[INFO] Interview session created:', response.data.session)
-      
-      // Navigate to interview page (will be created in next days)
-      // For now, navigate to dashboard with success message
-      navigate('/dashboard')
+
+      // Navigate to interview room with session ID
+      navigate(`/interview/${response.data.session.id}`)
       
     } catch (error) {
       if (error.response?.data?.error) {

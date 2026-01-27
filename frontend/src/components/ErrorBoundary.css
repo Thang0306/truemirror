@@ -1,0 +1,161 @@
+/* TrueMirror Error Boundary - Color Scheme:
+   Navy: #0F2854
+   Blue: #1C4D8D
+   Light Blue: #4988C4
+*/
+
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0F2854 0%, #1C4D8D 100%);
+  padding: 20px;
+}
+
+.error-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 48px 40px;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border: 2px solid #4988C4;
+  text-align: center;
+}
+
+.error-icon {
+  font-size: 4rem;
+  margin-bottom: 24px;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-10px); }
+  75% { transform: translateX(10px); }
+}
+
+.error-card h2 {
+  color: #0F2854;
+  font-size: 2rem;
+  margin: 0 0 16px 0;
+  font-weight: 700;
+}
+
+.error-message {
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+
+.error-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.retry-btn,
+.reload-btn {
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.retry-btn {
+  background: #1C4D8D;
+  color: white;
+}
+
+.retry-btn:hover {
+  background: #0F2854;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(15, 40, 84, 0.3);
+}
+
+.reload-btn {
+  background: transparent;
+  color: #1C4D8D;
+  border: 2px solid #1C4D8D;
+}
+
+.reload-btn:hover {
+  background: #4988C4;
+  color: white;
+  border-color: #4988C4;
+}
+
+.error-details {
+  margin-top: 24px;
+  text-align: left;
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 16px;
+  border: 1px solid #d1d5db;
+}
+
+.error-details summary {
+  color: #6b7280;
+  cursor: pointer;
+  font-size: 0.875rem;
+  user-select: none;
+  padding: 4px 0;
+}
+
+.error-details summary:hover {
+  color: #1C4D8D;
+}
+
+.error-stack {
+  margin: 12px 0 0 0;
+  padding: 16px;
+  background: #0F2854;
+  border-radius: 6px;
+  color: #fbbf24;
+  font-family: 'Courier New', monospace;
+  font-size: 0.75rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+.error-stack::-webkit-scrollbar {
+  height: 6px;
+}
+
+.error-stack::-webkit-scrollbar-track {
+  background: #1C4D8D;
+}
+
+.error-stack::-webkit-scrollbar-thumb {
+  background: #4988C4;
+  border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  .error-card {
+    padding: 32px 24px;
+  }
+
+  .error-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .error-message {
+    font-size: 1rem;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .retry-btn,
+  .reload-btn {
+    width: 100%;
+  }
+}

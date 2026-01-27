@@ -1,0 +1,196 @@
+{
+  "position": "Junior",
+  "industry": "IT",
+  "language": "vi",
+  "total_duration_minutes": 35,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Kỹ thuật Framework & Ngôn ngữ",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "IT_JUNIOR_01",
+          "question_text": "Hãy giải thích cơ chế Rendering của React (Virtual DOM) hoặc cơ chế Dependency Injection trong Spring Boot tùy theo chuyên môn của em. Tại sao nó lại giúp cải thiện hiệu suất hoặc quản lý code tốt hơn?",
+          "question_type": "Technical / Detail",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra độ hiểu sâu về công cụ đang dùng",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "So sánh Virtual DOM và Real DOM?",
+            "Lợi ích của việc tách rời (Decoupling) trong DI là gì?"
+          ],
+          "guidelines_must_have": [
+            "Cơ chế so sánh (Diffing algorithm) đối với React",
+            "Cơ chế quản lý Bean và Inversion of Control đối với Spring",
+            "Lợi ích về bảo trì và tốc độ"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ nêu định nghĩa mà không giải thích cơ chế",
+            "Không biết cách nó tác động đến code thực tế"
+          ],
+          "sample_answer": "(Với React) Virtual DOM là một bản sao nhẹ của Real DOM. Khi state thay đổi, React tạo ra một Virtual DOM mới, so sánh với bản cũ bằng thuật toán Diffing để tìm ra những điểm thực sự thay đổi. Sau đó nó mới cập nhật những điểm đó lên Real DOM, giúp tránh việc load lại toàn bộ trang, tăng tốc độ hiển thị."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Database & Tối ưu hóa",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "IT_JUNIOR_02",
+          "question_text": "Khi một câu truy vấn SQL (Query) chạy quá chậm (vài giây), các bước cụ thể em sẽ làm để tối ưu hóa nó là gì?",
+          "question_type": "Analytical",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng xử lý hiệu suất database",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em dùng lệnh gì để xem cách database thực thi query (Explain)?",
+            "Khi nào thì việc đánh Index lại có hại cho hiệu suất?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng EXPLAIN/ANALYZE để xem kế hoạch thực thi",
+            "Kiểm tra và đánh Index hợp lý",
+            "Tránh SELECT * hoặc các sub-query không cần thiết",
+            "Kiểm tra kết nối và cấu hình server"
+          ],
+          "guidelines_should_avoid": [
+            "Đánh index cho tất cả các cột",
+            "Chỉ biết khởi động lại server"
+          ],
+          "sample_answer": "Đầu tiên em dùng lệnh EXPLAIN để xem nó có đang bị 'Full table scan' hay không. Sau đó em kiểm tra các cột trong điều kiện WHERE có được đánh Index chưa. Em cũng rà soát lại xem có đang JOIN quá nhiều bảng không cần thiết không và hạn chế dùng SELECT * để giảm tải băng thông dữ liệu."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Thiết kế hệ thống & Quy trình",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "IT_JUNIOR_03",
+          "question_text": "Em hãy giải thích mô hình MVC hoặc Microservices. Tại sao dự án của em lại chọn kiến trúc đó?",
+          "question_type": "Architectural",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy tổ chức code",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Khó khăn lớn nhất khi làm việc với Microservices là gì?",
+            "Làm sao để các service giao tiếp với nhau?"
+          ],
+          "guidelines_must_have": [
+            "Phân tách trách nhiệm (Separation of Concerns)",
+            "Khả năng mở rộng (Scalability)",
+            "Dễ dàng bảo trì và test độc lập"
+          ],
+          "guidelines_should_avoid": [
+            "Dùng Microservices cho một dự án quá nhỏ",
+            "Không hiểu các thành phần Model-View-Controller làm gì"
+          ],
+          "sample_answer": "Dự án của em dùng Microservices vì team đông và các tính năng cần deploy độc lập. Tuy nó phức tạp trong việc quản lý giao tiếp giữa các service qua REST hay Message Broker, nhưng nó giúp hệ thống không bị sập toàn bộ nếu một module gặp lỗi."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Làm việc nhóm & Giao tiếp",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "IT_JUNIOR_04",
+          "question_text": "Khi nhận được một bản Code Review từ Senior với rất nhiều yêu cầu sửa đổi mà em cảm thấy không hợp lý, em sẽ phản ứng và trao đổi như thế nào?",
+          "question_type": "Behavioral",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng nhận feedback và phản biện",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có giữ thái độ bảo thủ không?",
+            "Em làm gì để thuyết phục Senior theo ý mình?"
+          ],
+          "guidelines_must_have": [
+            "Giữ thái độ cầu thị, không cá nhân hóa vấn đề",
+            "Đặt câu hỏi để hiểu 'Tại sao' Senior lại yêu cầu như vậy",
+            "Dùng dẫn chứng kỹ thuật để phản biện thay vì cảm tính"
+          ],
+          "guidelines_should_avoid": [
+            "Âm thầm sửa mà không hiểu, hoặc phớt lờ comment",
+            "Tranh cãi gay gắt"
+          ],
+          "sample_answer": "Em sẽ không vội phản đối. Em sẽ comment hỏi rõ lý do tại sao anh ấy chọn giải pháp đó. Nếu em vẫn tin cách của mình tối ưu hơn (ví dụ về performance), em sẽ đưa ra số liệu hoặc link tài liệu để trao đổi thêm. Mục tiêu cuối cùng là chọn ra phương án tốt nhất cho dự án chứ không phải thắng thua."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Xử lý áp lực & Deadline",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "IT_JUNIOR_05",
+          "question_text": "Kể về một lần em ước lượng thời gian (Estimation) sai dẫn đến trễ deadline. Em đã xử lý tình huống đó như thế nào với Team Lead?",
+          "question_type": "Behavioral / Stress",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tính trách nhiệm và khả năng quản lý thời gian",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Tại sao lúc đó em lại ước lượng sai?",
+            "Bây giờ em dùng phương pháp gì để estimate chính xác hơn?"
+          ],
+          "guidelines_must_have": [
+            "Thừa nhận sai sót sớm",
+            "Đề xuất làm thêm giờ (OT) hoặc giảm scope tính năng",
+            "Rút ra bài học về buffer time (thời gian dự phòng)"
+          ],
+          "guidelines_should_avoid": [
+            "Đến sát giờ mới báo trễ",
+            "Đổ lỗi cho yêu cầu của khách hàng thay đổi"
+          ],
+          "sample_answer": "Em từng quên tính thời gian viết Unit Test nên bị trễ 2 ngày. Ngay khi nhận ra, em đã báo với Lead để điều chỉnh kế hoạch test của team QA. Sau đó em đã làm thêm giờ để bù tiến độ. Bài học của em là luôn dành ra khoảng 20% thời gian dự phòng cho các lỗi phát sinh bất ngờ."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Định hướng phát triển",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "IT_JUNIOR_06",
+          "question_text": "Em muốn trở thành một chuyên gia chuyên sâu về kỹ thuật (Expert) hay muốn hướng tới quản lý team (Lead) trong 3 năm tới? Tại sao?",
+          "question_type": "Ambition",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra sự phù hợp với lộ trình công ty",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em đang làm gì để hiện thực hóa mục tiêu đó?",
+            "Nếu công ty yêu cầu em làm trái sở thích để đạt mục tiêu chung, em nghĩ sao?"
+          ],
+          "guidelines_must_have": [
+            "Có lựa chọn rõ ràng",
+            "Lý do dựa trên sở thích và năng lực hiện tại",
+            "Kế hoạch học tập cụ thể"
+          ],
+          "guidelines_should_avoid": [
+            "Trả lời 'em chưa biết'",
+            "Nghĩ rằng lên Lead chỉ để có lương cao hơn"
+          ],
+          "sample_answer": "Em muốn hướng tới vị trí Senior Developer chuyên sâu về System Architect. Em thích giải quyết những bài toán hóc búa về hiệu năng và bảo mật. Hiện tại em đang tự học thêm về AWS và Kubernetes để hiểu sâu hơn về hạ tầng."
+        },
+        {
+          "question_id": "IT_JUNIOR_07",
+          "question_text": "Em có sẵn sàng hỗ trợ (On-call) vào cuối tuần nếu hệ thống gặp sự cố khẩn cấp không?",
+          "question_type": "Commitment",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra thái độ với công việc",
+          "expected_duration_minutes": 2,
+          "guidelines_must_have": [
+            "Thể hiện sự sẵn sàng vì trách nhiệm chung",
+            "Mong muốn quy trình ổn định để hạn chế on-call"
+          ],
+          "sample_answer": "Tất nhiên là có nếu đó là lỗi nghiêm trọng ảnh hưởng khách hàng. Tuy nhiên, em cũng sẽ đề xuất team cải thiện quy trình CI/CD và test để giảm thiểu tối đa rủi ro phải on-call vào ngày nghỉ."
+        }
+      ]
+    }
+  ]
+}

@@ -1,10 +1,16 @@
 from flask import Flask
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager
+from flask_socketio import SocketIO
 from config import Config
 from models import db, bcrypt
-from routes import main_bp, auth_bp, interview_bp
+from routes import main_bp, auth_bp, interview_bp, chat_bp
+from routes.websocket_routes import init_socketio_events
 import os
+
+# Initialize SocketIO
+# Using 'threading' mode for Python 3.14 compatibility (gevent/eventlet không hỗ trợ Python 3.14)
+socketio = SocketIO(cors_allowed_origins="*", async_mode='threading', logger=True, engineio_logger=True)
 
 def create_app():
     # Initialize Flask app
@@ -35,24 +41,31 @@ def create_app():
     db.init_app(app)
     bcrypt.init_app(app)
     JWTManager(app)
-    
+    socketio.init_app(app)
+
+    # Initialize WebSocket events
+    init_socketio_events(socketio)
+
     # Register blueprints
     app.register_blueprint(main_bp)
     app.register_blueprint(auth_bp)
     app.register_blueprint(interview_bp)
-    
+    app.register_blueprint(chat_bp)
+
     # Create database tables
     with app.app_context():
         db.create_all()
         print("[INFO] Database tables created")
-    
+
     print("[INFO] TrueMirror backend started successfully")
+    print(f"[INFO] WebSocket support enabled")
     print(f"[INFO] Environment: {os.getenv('RAILWAY_ENVIRONMENT', 'development')}")
-    
+
     return app
 
 app = create_app()
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 5000))
-    app.run(debug=False, host='0.0.0.0', port=port)
+    # Use socketio.run instead of app.run for WebSocket support
+    socketio.run(app, debug=False, host='0.0.0.0', port=port)

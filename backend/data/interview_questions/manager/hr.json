@@ -1,0 +1,159 @@
+{
+  "position": "Manager",
+  "industry": "HR",
+  "language": "vi",
+  "total_duration_minutes": 60,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Quản trị Chiến lược & Business Partnership",
+      "duration_minutes": 15,
+      "questions": [
+        {
+          "question_id": "HR_MANAGER_01",
+          "question_text": "Làm thế nào để bạn xây dựng một chiến lược nhân sự (HR Strategy) hoàn toàn đồng bộ với mục tiêu tăng trưởng doanh thu của công ty trong 3 năm tới? Bạn đo lường sự thành công của chiến lược đó qua những chỉ số tài chính nào?",
+          "question_type": "CEO Mindset",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra tư duy kinh doanh của lãnh đạo nhân sự",
+          "expected_duration_minutes": 8,
+          "popup_questions": [
+            "Bạn có hiểu về EBITDA và tác động của chi phí nhân sự lên đó không?",
+            "Làm thế nào để HR không trở thành 'trung tâm tiêu tiền' mà là 'trung tâm tạo ra giá trị'?",
+            "Bạn ưu tiên tuyển mới hay đào tạo lại nguồn lực hiện có?"
+          ],
+          "guidelines_must_have": [
+            "Liên kết KPI của HR với kết quả kinh doanh (Revenue per Employee)",
+            "Tối ưu hóa chi phí nhân sự trên tổng doanh thu",
+            "Chiến lược phát triển nhân tài dài hạn để giảm chi phí tuyển dụng",
+            "Quản trị hiệu suất dựa trên ROI của từng phòng ban"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ nói về các chỉ số cảm xúc (hài lòng, vui vẻ) mà không có số liệu kinh doanh",
+            "Đưa ra các chính sách tốn kém mà không tính toán điểm hòa vốn",
+            "Tách rời bộ phận HR khỏi các cuộc họp chiến lược của công ty"
+          ],
+          "sample_answer": "Chiến lược nhân sự của tôi bắt đầu từ mục tiêu kinh doanh. Nếu công ty muốn tăng 200% doanh thu, tôi tập trung vào 2 thứ: (1) Tuyển dụng đúng những 'Rainmakers' (người tạo ra doanh số) và (2) Xây dựng cơ chế thưởng thúc đẩy hiệu suất cao. Tôi đo lường thành công bằng chỉ số 'Doanh thu trên mỗi nhân viên' và 'Tỷ lệ chi phí nhân sự trên lợi nhuận gộp'. HR phải đóng góp trực tiếp vào dòng tiền của công ty."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Lãnh đạo Đội ngũ & Quản trị P&L HR",
+      "duration_minutes": 12,
+      "questions": [
+        {
+          "question_id": "HR_MANAGER_02",
+          "question_text": "Bạn quản lý ngân sách nhân sự (HR Budget) như thế nào để vừa đảm bảo các hoạt động gắn kết (Engagement), vừa không vượt định mức chi phí vận hành (OpEx) trong bối cảnh thắt chặt chi tiêu?",
+          "question_type": "Financial Management",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng quản lý tài chính",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Bạn xử lý thế nào nếu sếp yêu cầu cắt giảm 20% ngân sách đào tạo?",
+            "Làm sao để tối ưu hóa ngân sách phúc lợi mà nhân viên không cảm thấy bị thiệt thòi?"
+          ],
+          "guidelines_must_have": [
+            "Lập kế hoạch ngân sách dựa trên dữ liệu dự báo (Forecasting)",
+            "Ưu tiên các khoản đầu tư có tác động lớn (High-impact items)",
+            "Đàm phán với các nhà cung cấp (Vendors) để có giá tốt nhất",
+            "Minh bạch hóa chi phí và hiệu quả đầu tư nhân sự với CFO"
+          ],
+          "sample_answer": "Tôi quản lý ngân sách như một nhà đầu tư. Thay vì dàn trải, tôi tập trung tiền vào các hoạt động có tỷ lệ giữ chân nhân tài cao nhất. Nếu phải cắt giảm, tôi sẽ cắt bỏ các hoạt động hình thức và giữ lại các chương trình đào tạo cốt lõi. Tôi sẽ cho nhân viên thấy rằng chúng ta đang tối ưu để bảo vệ quỹ lương và công việc của họ."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Quản trị Rủi ro & Khủng hoảng Nhân sự",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "HR_MANAGER_03",
+          "question_text": "Giả sử công ty gặp một cuộc khủng hoảng truyền thông lớn do một cựu nhân viên tố cáo môi trường làm việc độc hại trên mạng xã hội. Bạn sẽ dẫn dắt team HR xử lý khủng hoảng này như thế nào?",
+          "question_type": "Crisis Leadership",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra kỹ năng xử lý khủng hoảng và bảo vệ thương hiệu",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn có chọn cách đối đầu hay im lặng?",
+            "Làm sao để ổn định tâm lý của những nhân viên đang ở lại?",
+            "Bạn sẽ thay đổi gì trong nội bộ sau khủng hoảng?"
+          ],
+          "guidelines_must_have": [
+            "Phối hợp chặt chẽ với bộ phận PR và Pháp lý",
+            "Phản hồi dựa trên sự thật và thái độ cầu thị",
+            "Thực hiện khảo sát nội bộ ngay lập tức để nắm bắt tâm tư",
+            "Cam kết các hành động cải thiện cụ thể thay vì lời nói suông"
+          ],
+          "sample_answer": "Đầu tiên là giữ bình tĩnh. Chúng ta không tranh cãi trên mạng xã hội. Tôi sẽ yêu cầu team HR rà soát lại sự việc từ gốc. Nếu chúng ta sai, chúng ta nhận lỗi và sửa đổi công khai. Quan trọng nhất là ổn định nội bộ: Tôi sẽ tổ chức các buổi đối thoại để nhân viên thấy công ty đang lắng nghe và có những bước đi tích cực. Khủng hoảng là cơ hội để thanh lọc và xây dựng lại văn hóa tốt hơn."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Đạo đức & Quản trị Tập đoàn (Governance)",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "HR_MANAGER_04",
+          "question_text": "Làm thế nào để xây dựng và duy trì một hệ thống đạo đức kinh doanh (Code of Conduct) xuyên suốt từ cấp lãnh đạo cao nhất đến nhân viên cấp thấp nhất?",
+          "question_type": "Compliance / Ethics",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng thiết lập chuẩn mực đạo đức",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Đạo đức phải đi từ đỉnh tháp xuống. Tôi sẽ xây dựng bộ quy tắc rõ ràng kèm theo các kênh tố giác ẩn danh (Whistleblowing). Manager phải là người làm gương. Bất kỳ vi phạm nào, dù là của 'ngôi sao' hay lãnh đạo, đều phải được xử lý công bằng để tạo dựng niềm tin tuyệt đối vào sự chính trực của công ty."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Tương lai của Công việc & Chuyển đổi số",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "HR_MANAGER_05",
+          "question_text": "Bạn có kế hoạch gì cho việc ứng dụng AI và Tự động hóa vào quy trình quản trị nhân sự trong 2 năm tới để cắt giảm 30% khối lượng công việc hành chính?",
+          "question_type": "Digital Transformation",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự nhạy bén với công nghệ",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Tôi sẽ triển khai AI Chatbot cho các câu hỏi thường gặp của nhân viên và tự động hóa quy trình sàng lọc CV bằng AI. Việc này giải phóng team HR khỏi các task lặp lại để họ có thể tập trung vào những việc đòi hỏi sự thấu cảm như tư vấn nghề nghiệp và phát triển văn hóa."
+        },
+        {
+          "question_id": "HR_MANAGER_06",
+          "question_text": "Làm thế nào để quản lý hiệu suất của đội ngũ làm việc từ xa (Remote/Hybrid) mà vẫn giữ được sự kết nối và văn hóa chung của công ty?",
+          "question_type": "Modern Management",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng quản lý linh hoạt",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Chúng ta phải chuyển từ quản lý 'thời gian' sang quản lý 'kết quả' (Output-based). Tôi sử dụng các công cụ cộng tác trực tuyến và duy trì các buổi họp 'Check-in' hàng tuần không bàn về công việc mà chỉ bàn về cảm xúc và sự hỗ trợ, giúp mọi người dù ở xa vẫn thấy mình thuộc về tổ chức."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Lãnh đạo & Di sản",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "HR_MANAGER_07",
+          "question_text": "Bạn muốn được nhớ đến như một người Manager 'Cứu vãn con người' hay 'Bảo vệ lợi ích doanh nghiệp'? Làm thế nào để cân bằng hai vai trò thường xuyên mâu thuẫn này?",
+          "question_type": "Leadership Philosophy",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra phong cách lãnh đạo và sự trưởng thành",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Tôi không chọn một trong hai. Tôi bảo vệ doanh nghiệp bằng cách phát triển con người. Một doanh nghiệp chỉ bền vững khi con người hạnh phúc, và con người chỉ hạnh phúc khi doanh nghiệp làm ăn có lãi. Tôi là người cân bằng chiếc bập bênh đó. Tôi muốn được nhớ đến như một người đã xây dựng được một môi trường nơi sự tử tế tạo ra lợi nhuận."
+        },
+        {
+          "question_id": "HR_MANAGER_08",
+          "question_text": "Thử thách lớn nhất mà bạn từng vượt qua với tư cách là một Trưởng phòng nhân sự là gì? Bạn đã thay đổi như thế nào sau trải nghiệm đó?",
+          "question_type": "Self-Reflection",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự thấu hiểu bản thân",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Đó là lần phải sa thải 50 nhân sự do khủng hoảng tài chính. Tôi học được rằng cách chúng ta cho một người ra đi nói lên rất nhiều về giá trị của công ty. Tôi đã nỗ lực hỗ trợ họ tìm việc mới và đảm bảo mọi quyền lợi cao nhất có thể. Bài học là: HR phải cứng rắn trong quyết định nhưng phải cực kỳ nhân văn trong cách thực hiện."
+        }
+      ]
+    }
+  ]
+}

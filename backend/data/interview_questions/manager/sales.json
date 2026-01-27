@@ -1,0 +1,178 @@
+{
+  "position": "Manager",
+  "industry": "Sales",
+  "language": "vi",
+  "total_duration_minutes": 60,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Xây dựng Đội ngũ & Văn hóa Chiến thắng",
+      "duration_minutes": 15,
+      "questions": [
+        {
+          "question_id": "SALES_MANAGER_01",
+          "question_text": "Làm thế nào để bạn duy trì động lực cho đội ngũ Sales khi thị trường đang rơi vào giai đoạn khủng hoảng và 80% thành viên không đạt được KPI trong 2 quý liên tiếp?",
+          "question_type": "Leadership / Resilience",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra kỹ năng quản lý tinh thần và xoay chuyển tình thế",
+          "expected_duration_minutes": 7,
+          "popup_questions": [
+            "Bạn có điều chỉnh lại KPI (Quota) để giảm áp lực không?",
+            "Làm sao để ngăn chặn tình trạng chảy máu chất xám (nhân sự giỏi nghỉ việc)?",
+            "Bạn sẽ ưu tiên đào tạo kỹ năng hay chấn chỉnh thái độ trong thời điểm này?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích lại thị trường để tìm ra các 'ngách' mới (Pivot)",
+            "Tập trung vào các 'Small Wins' để lấy lại sự tự tin cho team",
+            "Minh bạch hóa tình hình công ty và đưa ra lộ trình hỗ trợ cụ thể",
+            "Cải thiện chính sách hoa hồng ngắn hạn hoặc các phần thưởng phi tài chính"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ trích và tạo thêm áp lực con số mà không có giải pháp",
+            "Hứa hẹn những điều xa vời không thực tế",
+            "Để mặc các thành viên tự bơi trong sự chán nản"
+          ],
+          "sample_answer": "Tôi sẽ không chỉ nhìn vào con số cuối cùng. Tôi chia nhỏ mục tiêu thành các hành động hàng ngày (Activity-based KPI). Thay vì bắt họ chốt 1 tỷ, tôi yêu cầu họ thực hiện 20 cuộc gọi chất lượng. Khi các hành động nhỏ có kết quả, tinh thần team sẽ đi lên. Đồng thời, tôi sẽ cùng các bạn đi gặp những khách hàng khó nhất để họ thấy rằng Manager luôn đồng hành và thị trường vẫn còn cơ hội."
+        },
+        {
+          "question_id": "SALES_MANAGER_02",
+          "question_text": "Hãy mô tả quy trình bạn tuyển dụng và đào tạo một Salesman mới từ số 0 thành một 'chiến binh' thực thụ trong vòng 90 ngày (Onboarding).",
+          "question_type": "Recruitment / Training",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra hệ thống hóa quy trình nhân sự",
+          "expected_duration_minutes": 8,
+          "popup_questions": [
+            "Chỉ số nào cho thấy một nhân viên mới không phù hợp và cần sa thải sớm?",
+            "Làm sao để chuyển giao kiến thức (Knowledge Transfer) hiệu quả nhất?"
+          ],
+          "guidelines_must_have": [
+            "Quy trình 30-60-90 ngày rõ ràng",
+            "Sử dụng phương pháp Shadowing (quan sát) và Role-play (đóng vai)",
+            "Kiểm tra định kỳ về kiến thức sản phẩm và kỹ năng xử lý từ chối",
+            "Giao cho các tài khoản nhỏ để thực hành trước khi giao khách lớn"
+          ],
+          "sample_answer": "Tháng đầu tiên là học sản phẩm và nghe điện thoại của Senior. Tháng thứ hai là tự gọi và xử lý từ chối dưới sự giám sát. Tháng thứ ba là tự chủ động tìm kiếm và chốt đơn nhỏ. Tôi đánh giá họ dựa trên 'khát khao học hỏi' hơn là kết quả doanh số trong thời gian này. Nếu sau 30 ngày họ không thuộc được USP của sản phẩm, đó là tín hiệu cần dừng lại."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Quản trị Vận hành & Hệ thống (Sales Ops)",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "SALES_MANAGER_03",
+          "question_text": "Làm thế nào bạn thiết lập một hệ thống báo cáo và CRM giúp phát hiện sớm các 'điểm nghẽn' (Bottlenecks) trong phễu bán hàng của toàn team?",
+          "question_type": "Operations / Tech Stack",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra năng lực quản trị dựa trên dữ liệu",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn xử lý thế nào nếu nhân viên lười nhập liệu vào CRM?",
+            "Chỉ số Leading Indicator nào quan trọng hơn Lagging Indicator?"
+          ],
+          "guidelines_must_have": [
+            "Theo dõi tỷ lệ chuyển đổi giữa các giai đoạn (Stage Conversion Rate)",
+            "Đo lường thời gian trung bình để đóng một deal (Sales Cycle Length)",
+            "Thiết lập Dashboard báo cáo tự động cho ban giám đốc",
+            "Sử dụng dữ liệu để dự báo xu hướng thị trường"
+          ],
+          "sample_answer": "Tôi coi CRM là 'nguồn sự thật duy nhất'. Nếu không có trên CRM, nghĩa là deal đó không tồn tại. Tôi tập trung vào các Leading Indicators như: Số lượng cuộc gọi mới, Số buổi demo. Nếu các chỉ số này giảm hôm nay, tôi biết doanh thu tháng sau sẽ bị ảnh hưởng. Từ đó tôi có thể can thiệp ngay lập tức bằng các chiến dịch thúc đẩy bán hàng sớm."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Quản lý Tài chính & P&L",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "SALES_MANAGER_04",
+          "question_text": "Bạn cân bằng giữa chi phí thu hút khách hàng (CAC) và giá trị vòng đời khách hàng (LTV) như thế nào để đảm bảo phòng Sales không chỉ đạt doanh thu mà còn đạt lợi nhuận?",
+          "question_type": "Financial Management",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tư duy kinh doanh của nhà quản lý",
+          "expected_duration_minutes": 5,
+          "guidelines_must_have": [
+            "Hiểu về cấu trúc chi phí (lương, marketing, công cụ, hoa hồng)",
+            "Chiến lược Up-sell và Cross-sell để tăng LTV",
+            "Tối ưu hóa các kênh có CAC thấp nhất"
+          ],
+          "sample_answer": "Tôi không cho phép Sales chốt đơn bằng mọi giá, đặc biệt là giảm giá quá sâu. Tôi theo dõi tỷ lệ LTV/CAC phải ít nhất là 3:1. Nếu một kênh quảng cáo mang về nhiều khách nhưng CAC quá cao, tôi sẽ cắt giảm và chuyển ngân sách sang chương trình Referral (giới thiệu khách hàng) vốn có chi phí thấp và tỷ lệ trung thành cao hơn."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Giải quyết Xung đột & Phối hợp Liên phòng ban",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "SALES_MANAGER_05",
+          "question_text": "Mâu thuẫn giữa Sales và Marketing là rất phổ biến (Sales chê Lead kém, Marketing chê Sales không biết chốt). Bạn sẽ làm gì để xóa bỏ rào cản này và tạo ra một quy trình làm việc thống nhất?",
+          "question_type": "Conflict Resolution / Collaboration",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng điều phối tổ chức",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn có xây dựng định nghĩa chung về 'Sales Qualified Lead' (SQL) không?",
+            "Làm sao để feedback từ Sales quay ngược lại giúp Marketing tối ưu nội dung?"
+          ],
+          "guidelines_must_have": [
+            "Thiết lập bản cam kết chất lượng (SLA) giữa hai bên",
+            "Tổ chức các buổi họp chung định kỳ để đối soát dữ liệu",
+            "Xây dựng hệ thống feedback loop tự động trên CRM"
+          ],
+          "sample_answer": "Tôi sẽ cùng Manager Marketing ngồi lại để thống nhất định nghĩa thế nào là một Lead chất lượng. Chúng tôi xây dựng một 'SLA' rõ ràng: Marketing cam kết số lượng Lead, Sales cam kết thời gian phản hồi Lead đó trong vòng 5 phút. Khi có chung một mục tiêu và tiếng nói, mâu thuẫn sẽ biến thành sự hợp tác."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Chiến lược Mở rộng & Tầm nhìn",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "SALES_MANAGER_06",
+          "question_text": "Nếu được giao nhiệm vụ mở rộng thị trường vào một khu vực hoàn toàn mới trong 6 tháng, kế hoạch hành động từng bước của bạn là gì?",
+          "question_type": "Market Expansion",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng lập kế hoạch chiến lược",
+          "expected_duration_minutes": 5,
+          "guidelines_must_have": [
+            "Nghiên cứu đối thủ và hành vi khách hàng địa phương",
+            "Xây dựng đội ngũ nòng cốt (Seed team)",
+            "Thử nghiệm mô hình bán hàng (Test & Learn)",
+            "Đẩy mạnh quan hệ với các đối tác địa phương"
+          ],
+          "sample_answer": "Tháng 1 nghiên cứu và tuyển dụng. Tháng 2-3 chạy thử nghiệm với các nhóm khách hàng nhỏ. Tháng 4-6 tập trung mở rộng quy mô. Tôi tin vào việc 'Thử sai nhanh' (Fail fast). Tôi sẽ cử 2 Senior giỏi nhất từ team cũ sang để truyền bá văn hóa công ty cho đội ngũ mới tại địa phương."
+        },
+        {
+          "question_id": "SALES_MANAGER_07",
+          "question_text": "Làm thế nào để bạn đảm bảo tính trung thực (Ethics) của đội ngũ, ngăn chặn tình trạng 'hứa hão' với khách hàng để lấy đơn hàng bằng mọi giá?",
+          "question_type": "Ethics / Compliance",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra quản trị rủi ro đạo đức",
+          "expected_duration_minutes": 5,
+          "sample_answer": "Tôi áp dụng chính sách 'Clawback' – thu hồi hoa hồng nếu khách hàng hủy hợp đồng trong 3 tháng đầu do lỗi tư vấn sai. Đồng thời, tôi thực hiện các cuộc gọi kiểm tra ngẫu nhiên (Quality Check). Tôi xây dựng văn hóa: Một đơn hàng gian dối sẽ hủy hoại 10 năm uy tín thương hiệu."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Câu hỏi kết thúc & Cam kết",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "SALES_MANAGER_08",
+          "question_text": "Bạn muốn được nhớ đến như một Manager 'thân thiện, luôn hỗ trợ' hay một Manager 'kết quả trên hết, kỷ luật thép'?",
+          "question_type": "Personal Brand",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra phong cách lãnh đạo",
+          "expected_duration_minutes": 5,
+          "sample_answer": "Tôi chọn là một 'Lãnh đạo phục vụ' (Servant Leader). Tôi kỷ luật thép với quy trình và mục tiêu, nhưng tôi thân thiện và hỗ trợ hết mình với con người. Tôi tin rằng khi nhân viên được hỗ trợ đầy đủ về công cụ và tâm lý, kết quả tự khắc sẽ đạt được ở mức cao nhất."
+        }
+      ]
+    }
+  ]
+}

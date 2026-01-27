@@ -1,0 +1,243 @@
+{
+  "position": "Manager",
+  "industry": "IT",
+  "language": "vi",
+  "total_duration_minutes": 60,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Quản trị Con người & Phát triển Đội ngũ",
+      "duration_minutes": 15,
+      "questions": [
+        {
+          "question_id": "IT_MANAGER_01",
+          "question_text": "Làm thế nào để bạn xử lý một 'Brilliant Jerk' trong team – một nhân sự có kỹ năng chuyên môn cực giỏi, đóng góp 40% khối lượng code nhưng lại có thái độ trịch thượng và gây mất đoàn kết nội bộ?",
+          "question_type": "People Management / Ethics",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra bản lĩnh quản trị và khả năng bảo vệ văn hóa đội ngũ",
+          "expected_duration_minutes": 8,
+          "popup_questions": [
+            "Nếu sau 2 lần nhắc nhở họ vẫn không đổi, bạn có sẵn sàng sa thải họ ngay giữa dự án không?",
+            "Làm sao để bạn giảm thiểu sự phụ thuộc của team vào 'ngôi sao' này?",
+            "Bạn sẽ nói gì với các thành viên khác đang chịu ảnh hưởng tiêu cực từ nhân sự này?"
+          ],
+          "guidelines_must_have": [
+            "Ưu tiên sự ổn định của tập thể hơn cá nhân xuất sắc đơn lẻ",
+            "Cơ chế Feedback 1-1 thẳng thắn và đưa ra lộ trình cải thiện (PIP)",
+            "Kế hoạch dự phòng (Knowledge Transfer) để giảm rủi ro khi nhân sự này rời đi",
+            "Phân tích tác động của văn hóa độc hại lên hiệu suất dài hạn (Burnout của các thành viên khác)"
+          ],
+          "guidelines_should_avoid": [
+            "Nhượng bộ vì sợ dự án trễ tiến độ",
+            "Công khai chỉ trích trước mặt team",
+            "Hy vọng họ tự thay đổi mà không có sự can thiệp của quản lý"
+          ],
+          "sample_answer": "Tôi sẽ đối thoại 1-1 để ghi nhận đóng góp nhưng khẳng định văn hóa team là ưu tiên số 1. Tôi sẽ đưa ra các tiêu chí hành vi cụ thể cần thay đổi trong 1 tháng. Song song đó, tôi yêu cầu bạn này thực hiện tài liệu hóa hệ thống và hướng dẫn cho người khác để team không bị kẹt nếu bạn ấy ra đi. Nếu thái độ không đổi, tôi thà chịu chậm tiến độ ngắn hạn bằng cách sa thải bạn ấy để cứu lấy tinh thần làm việc của cả team về lâu dài."
+        },
+        {
+          "question_id": "IT_MANAGER_02",
+          "question_text": "Bạn xây dựng lộ trình phát triển (Career Path) cho nhân viên như thế nào để cân bằng giữa mục tiêu cá nhân của họ và mục tiêu kinh doanh của công ty?",
+          "question_type": "Mentorship / Retention",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng nuôi dưỡng nhân tài và tầm nhìn nhân sự",
+          "expected_duration_minutes": 7,
+          "popup_questions": [
+            "Nếu một bạn Senior muốn lên Manager nhưng bạn thấy họ chỉ giỏi kỹ thuật, bạn sẽ xử lý thế nào?",
+            "Làm sao để giữ chân nhân sự giỏi khi ngân sách tăng lương của công ty bị hạn chế?"
+          ],
+          "guidelines_must_have": [
+            "Xây dựng Individual Development Plan (IDP) định kỳ 6 tháng",
+            "Phân biệt rõ hai nhánh: Individual Contributor (IC) và Management",
+            "Tạo điều kiện cho nhân viên tham gia các khóa học hoặc dự án mới (Internal mobility)",
+            "Gắn kết quyền lợi cá nhân với sự thành công của sản phẩm"
+          ],
+          "guidelines_should_avoid": [
+            "Hứa hẹn những điều không thể thực hiện",
+            "Áp đặt mọi người đều phải đi theo hướng quản lý",
+            "Không lắng nghe nguyện vọng thực sự của nhân viên"
+          ],
+          "sample_answer": "Tôi thường dành thời gian hàng quý để thảo luận về IDP với từng nhân viên. Nếu công ty cần chuyển dịch sang Cloud, tôi sẽ hỗ trợ chi phí thi chứng chỉ cho các bạn có mong muốn phát triển mảng này. Với những người giỏi kỹ thuật nhưng yếu quản lý, tôi hướng họ sang con đường Tech Lead hoặc Principal Engineer để họ vẫn cảm thấy được thăng tiến mà không bị 'vấp' vào những việc họ không thích như quản trị con người."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Chiến lược Công nghệ & Tầm nhìn",
+      "duration_minutes": 12,
+      "questions": [
+        {
+          "question_id": "IT_MANAGER_03",
+          "question_text": "Khi đối mặt với việc lựa chọn giữa việc tiếp tục bảo trì hệ thống cũ (Legacy System) hay đập đi xây lại toàn bộ (Refactoring), bạn dựa trên những tiêu chí định lượng nào để đưa ra quyết định?",
+          "question_type": "Technical Strategy / Business Value",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng ra quyết định dựa trên dữ liệu và chi phí cơ hội",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Bạn giải thích thế nào với các sếp (non-tech) về việc bỏ ra 6 tháng chỉ để 'viết lại cái cũ'?",
+            "Làm sao để đảm bảo hệ thống mới không lặp lại sai lầm của hệ thống cũ?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích chi phí bảo trì (Maintenance cost) vs Chi phí đầu tư mới (CapEx)",
+            "Đánh giá rủi ro về bảo mật và khả năng mở rộng (Scalability) của hệ thống cũ",
+            "Tính toán Time-to-market cho các tính năng mới trên cả hai nền tảng",
+            "Chiến lược chuyển đổi cuốn chiếu (Strangler Fig Pattern) thay vì đập đi xây lại 1 lần"
+          ],
+          "guidelines_should_avoid": [
+            "Quyết định dựa trên cảm tính hoặc sở thích dùng công nghệ mới của team",
+            "Không tính đến rủi ro gián đoạn kinh doanh trong quá trình chuyển đổi",
+            "Thiếu kế hoạch dự phòng nếu dự án xây lại bị kéo dài"
+          ],
+          "sample_answer": "Tôi sẽ lập bảng so sánh. Nếu chi phí sửa lỗi hàng tháng vượt quá 30% ngân sách team và tốc độ ra tính năng mới chậm hơn đối thủ gấp 2 lần, đó là lúc phải thay đổi. Tôi sẽ không đập đi xây lại trong một đêm. Tôi áp dụng chiến lược bóc tách từng module (Microservices) để thay thế dần dần, giúp doanh nghiệp vẫn vận hành bình thường trong khi hệ thống đang được trẻ hóa."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Quản trị Dự án & Agile Delivery",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "IT_MANAGER_04",
+          "question_text": "Dự án đang trong giai đoạn nước rút nhưng yêu cầu từ phía kinh doanh thay đổi liên tục (Scope Creep). Bạn sẽ bảo vệ team mình như thế nào mà vẫn đảm bảo được lòng tin của khách hàng/stakeholders?",
+          "question_type": "Project Management / Negotiation",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng quản lý kỳ vọng và đàm phán",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Nếu sếp tổng ép phải làm cả tính năng cũ và mới đúng hạn, bạn sẽ nói gì?",
+            "Bạn dùng công cụ gì để chứng minh cho stakeholders thấy team đang quá tải?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng dữ liệu về Velocity (tốc độ team) để nói chuyện",
+            "Nguyên tắc 'Trade-off': Thêm tính năng mới thì phải bỏ bớt tính năng cũ hoặc dời deadline",
+            "Phân loại ưu tiên theo ma trận MoSCoW (Must-have, Should-have...)",
+            "Minh bạch hóa Backlog để stakeholders tự lựa chọn ưu tiên"
+          ],
+          "guidelines_should_avoid": [
+            "Đồng ý tất cả rồi ép team làm OT (Overtime) vô hạn",
+            "Phản ứng gay gắt với stakeholders mà không đưa ra giải pháp thay thế",
+            "Giấu diếm về tình trạng trễ tiến độ cho đến phút chót"
+          ],
+          "sample_answer": "Tôi sẽ mời stakeholders vào buổi họp review Backlog. Tôi đưa ra số liệu: Team chỉ có 100 point mỗi sprint, các yêu cầu mới tốn 40 point. Tôi sẽ hỏi họ muốn đẩy 40 point tính năng cũ nào sang sprint sau để làm cái mới này? Tôi không nói 'Không', tôi nói 'Có, nhưng chúng ta cần đánh đổi'. Điều này giúp họ hiểu được giới hạn nguồn lực và cùng tôi chịu trách nhiệm về tiến độ."
+        },
+        {
+          "question_id": "IT_MANAGER_05",
+          "question_text": "Hãy kể về một lần dự án do bạn quản lý thất bại hoặc gặp sự cố nghiêm trọng trên môi trường Production. Bạn đã xử lý hậu quả và đối diện với Ban giám đốc như thế nào?",
+          "question_type": "Crisis Management / Responsibility",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra sự trung thực và bản lĩnh chịu trách nhiệm",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Lỗi đó là do bạn hay do nhân viên?",
+            "Bạn đã thay đổi quy trình gì sau sự cố đó?"
+          ],
+          "guidelines_must_have": [
+            "Nhận trách nhiệm cao nhất (Accountability) thay vì đổ lỗi cho cấp dưới",
+            "Quy trình xử lý sự cố: Cô lập -> Khắc phục -> Thông báo",
+            "Thực hiện Post-mortem (Blameless) để tìm nguyên nhân gốc (Root Cause)",
+            "Đưa ra giải pháp ngăn chặn (Action items) cụ thể cho tương lai"
+          ],
+          "guidelines_should_avoid": [
+            "Tìm cách bao biện hoặc che giấu mức độ nghiêm trọng",
+            "Đổ lỗi cho hoàn cảnh hoặc khách hàng",
+            "Không có kế hoạch cải thiện sau thất bại"
+          ],
+          "sample_answer": "Tôi từng để xảy ra lỗi rò rỉ dữ liệu do cấu hình Server sai. Ngay lập tức tôi báo cáo CEO, thừa nhận lỗi quản lý quy trình review của mình. Sau khi vá lỗi trong 2 giờ, tôi tổ chức buổi họp rút kinh nghiệm và triển khai ngay hệ thống tự động kiểm tra bảo mật (CI/CD security scan). Tôi không hứa sẽ không có lỗi, tôi hứa rằng lỗi đó sẽ không bao giờ lặp lại lần thứ hai."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Quản trị Rủi ro & Bảo mật",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "IT_MANAGER_06",
+          "question_text": "Bạn làm thế nào để cân bằng giữa tốc độ phát triển (Speed) và tính bảo mật/ổn định (Security/Stability) trong quy trình phát triển phần mềm?",
+          "question_type": "Governance / Process",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy về DevSecOps và quy trình bền vững",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn có cho phép team bỏ qua Unit Test khi cần release gấp không?",
+            "Làm sao để nhân viên không cảm thấy quy trình bảo mật là gánh nặng?"
+          ],
+          "guidelines_must_have": [
+            "Áp dụng tư duy 'Shift Left Security' (kiểm tra bảo mật sớm)",
+            "Tự động hóa các khâu kiểm thử (Automation Testing)",
+            "Thiết lập các 'Quality Gates' không thể vượt qua trong pipeline",
+            "Văn hóa chia sẻ trách nhiệm về chất lượng (Shared Responsibility)"
+          ],
+          "guidelines_should_avoid": [
+            "Coi bảo mật là việc riêng của team Security",
+            "Hy sinh hoàn toàn chất lượng để lấy tốc độ",
+            "Thực hiện các khâu kiểm tra bằng tay rườm rà"
+          ],
+          "sample_answer": "Tôi áp dụng DevSecOps. Thay vì đợi đến cuối mới kiểm tra, chúng tôi cài đặt các công cụ quét mã lỗi ngay khi developer commit code. Nếu không đạt chuẩn, code sẽ không thể merge. Bằng cách tự động hóa, chúng tôi vẫn giữ được tốc độ mà không cần phải lo lắng về những lỗi bảo mật cơ bản."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Tài chính & Tối ưu hóa Nguồn lực",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "IT_MANAGER_07",
+          "question_text": "Làm thế nào bạn tối ưu hóa chi phí vận hành hệ thống (ví dụ Cloud cost) khi quy mô người dùng tăng gấp 10 lần nhưng ngân sách của công ty chỉ tăng 20%?",
+          "question_type": "Financial Management / Optimization",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng quản lý ngân sách và hiệu quả hạ tầng",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Bạn ưu tiên cắt giảm nhân sự hay cắt giảm hạ tầng công nghệ?",
+            "Bạn có kinh nghiệm gì trong việc đàm phán với các nhà cung cấp như AWS/Azure?"
+          ],
+          "guidelines_must_have": [
+            "Chiến lược Auto-scaling và Serverless để tối ưu tài nguyên",
+            "Sử dụng Reserved Instances hoặc Spot Instances để tiết kiệm chi phí",
+            "Đánh giá lại kiến trúc hệ thống để giảm thiểu lãng phí (FinOps)",
+            "Phân tích dữ liệu sử dụng để tắt các dịch vụ không cần thiết"
+          ],
+          "guidelines_should_avoid": [
+            "Cắt giảm bừa bãi làm ảnh hưởng đến trải nghiệm người dùng",
+            "Không có hệ thống giám sát chi phí thời gian thực",
+            "Chỉ dựa vào cài đặt mặc định của nhà cung cấp Cloud"
+          ],
+          "sample_answer": "Tôi sẽ triển khai mô hình FinOps. Đầu tiên là rà soát các tài nguyên 'mồ côi' không sử dụng. Sau đó, tôi yêu cầu team chuyển đổi các task không yêu cầu thời gian thực sang dùng Spot Instances giúp tiết kiệm 70% chi phí. Cuối cùng, tôi tối ưu lại code và database query để giảm tải CPU, giúp hệ thống chịu tải lớn hơn mà không cần nâng cấp server."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Định hướng & Cam kết",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "IT_MANAGER_08",
+          "question_text": "Trong kỷ nguyên AI, bạn định hướng như thế nào về việc thay đổi bộ máy nhân sự IT? Bạn sẽ làm gì nếu AI có khả năng thay thế 50% công việc của Junior Developer trong team bạn?",
+          "question_type": "Visionary / Industry Sensitivity",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng thích nghi với xu hướng công nghệ lớn",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn sẽ đào tạo lại họ (Reskill) hay sẽ cắt giảm nhân sự?",
+            "AI có thể thay thế được vai trò Manager của bạn không?"
+          ],
+          "guidelines_must_have": [
+            "Khuyến khích team sử dụng AI tools để tăng năng suất",
+            "Tập trung đào tạo tư duy giải quyết vấn đề (Problem solving) thay vì chỉ viết code",
+            "Nâng cao vai trò của kiến trúc hệ thống và kiểm soát chất lượng (Quality Assurance)",
+            "Chuyển dịch trọng tâm sang thấu hiểu nghiệp vụ (Business Domain)"
+          ],
+          "guidelines_should_avoid": [
+            "Cấm đoán hoặc sợ hãi AI",
+            "Giữ nguyên quy trình làm việc truyền thống lỗi thời",
+            "Không có kế hoạch chuẩn bị cho sự thay đổi nhân lực"
+          ],
+          "sample_answer": "Tôi coi AI là một 'cộng sự' chứ không phải kẻ thay thế. Tôi sẽ yêu cầu các bạn Junior học cách sử dụng AI để viết code thô, nhưng họ phải nâng tầm mình lên thành những người Review và Designer. Thay vì dành 8 tiếng để code, họ sẽ dành 2 tiếng dùng AI và 6 tiếng còn lại để học về kiến trúc và bảo mật. AI có thể viết code, nhưng nó không thể hiểu được nỗi đau của khách hàng như chúng ta."
+        }
+      ]
+    }
+  ]
+}

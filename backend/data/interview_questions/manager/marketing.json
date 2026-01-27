@@ -1,0 +1,204 @@
+{
+  "position": "Manager",
+  "industry": "Marketing",
+  "language": "vi",
+  "total_duration_minutes": 60,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Quản trị Chiến lược & P&L",
+      "duration_minutes": 15,
+      "questions": [
+        {
+          "question_id": "MKT_MANAGER_01",
+          "question_text": "Khi đối mặt với việc cắt giảm 30% ngân sách Marketing toàn năm nhưng sếp vẫn yêu cầu giữ nguyên mục tiêu doanh thu, bạn sẽ tái cấu trúc đội ngũ và kế hoạch như thế nào?",
+          "question_type": "Strategic Leadership / Finance",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra khả năng xoay sở nguồn lực và tư duy hướng kết quả",
+          "expected_duration_minutes": 8,
+          "popup_questions": [
+            "Bạn sẽ cắt giảm nhân sự hay cắt giảm chi phí quảng cáo?",
+            "Bạn ưu tiên giữ lại kênh Marketing nào?"
+          ],
+          "guidelines_must_have": [
+            "Tập trung vào Retention (giữ chân khách cũ) thay vì Acquisition (tìm khách mới)",
+            "Tối ưu hóa quy trình bằng Automation",
+            "Thương lượng lại với các Vendor/Agency"
+          ],
+          "guidelines_should_avoid": [
+            "Than phiền về ngân sách",
+            "Cắt giảm bừa bãi không tính toán"
+          ],
+          "sample_answer": "Tôi sẽ chuyển trọng tâm từ 'Burning' sang 'Earning'. Thay vì chạy Ads dồn dập, tôi đầu tư vào CRM và Referral để khai thác tệp khách cũ với chi phí bằng 1/5. Đồng thời rà soát lại hiệu quả từng nhân sự để tối ưu hóa bộ máy, tập trung vào các kênh có ROI cao nhất."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Xây dựng & Phát triển Đội ngũ",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_MANAGER_02",
+          "question_text": "Làm thế nào để bạn xây dựng một văn hóa làm việc 'Data-driven' trong một team Creative vốn dĩ chỉ thích làm việc theo cảm hứng?",
+          "question_type": "Management / Culture",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng thay đổi tư duy nhân sự",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Nếu một bạn Creative giỏi nhất team phản đối thì bạn làm gì?",
+            "Làm sao để số liệu không bóp nghẹt sự sáng tạo?"
+          ],
+          "guidelines_must_have": [
+            "Thiết lập các buổi Review định kỳ dựa trên con số",
+            "Chứng minh cho team thấy Data giúp Creative hiệu quả hơn",
+            "Khen thưởng dựa trên hiệu quả đo lường được"
+          ],
+          "guidelines_should_avoid": [
+            "Ép buộc bằng mệnh lệnh hành chính",
+            "Dùng số liệu để chỉ trích nhân viên"
+          ],
+          "sample_answer": "Tôi không ép họ đọc bảng tính. Tôi cho họ thấy kết quả A/B Testing: 'Màu đỏ của bạn giúp chúng ta có thêm 100 khách'. Khi họ thấy sự sáng tạo của mình có tác động thực tế, họ sẽ tự chủ động tìm đến dữ liệu."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Quản trị Thương hiệu & Thị trường",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_MANAGER_03",
+          "question_text": "Hãy mô tả một lần bạn thực hiện tái định vị thương hiệu (Rebranding). Chỉ số nào cho bạn biết đó là một quyết định đúng đắn?",
+          "question_type": "Strategic Branding",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tầm nhìn dài hạn",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Khách hàng cũ phản ứng thế nào?",
+            "Chi phí cơ hội của việc này là gì?"
+          ],
+          "guidelines_must_have": [
+            "Lý do tái định vị (Thị trường thay đổi, Insight mới)",
+            "Chỉ số Brand Health, Top of Mind, Market Share",
+            "Sự nhất quán trong truyền thông"
+          ],
+          "guidelines_should_avoid": [
+            "Rebranding chỉ vì 'thích đổi mới'",
+            "Không có nghiên cứu thị trường trước đó"
+          ],
+          "sample_answer": "Chúng tôi thực hiện Rebranding khi nhận thấy tệp khách hàng đang già hóa. Chúng tôi đổi sang phong cách trẻ trung, tích hợp công nghệ. Chỉ số thành công là lượng khách hàng Gen Z tăng 60% và giá trị vốn hóa thương hiệu tăng 20% sau 1 năm."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Xử lý Khủng hoảng Cấp cao",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_MANAGER_04",
+          "question_text": "Nếu doanh nghiệp gặp sự cố nghiêm trọng về chất lượng sản phẩm ảnh hưởng đến hàng ngàn người, bạn sẽ tư vấn cho Ban giám đốc phát ngôn như thế nào trong 24 giờ đầu?",
+          "question_type": "Crisis Management / PR",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra khả năng bảo vệ uy tín doanh nghiệp",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Trung thực hay che giấu để bảo vệ giá cổ phiếu?",
+            "Ai sẽ là người đại diện phát ngôn tốt nhất?"
+          ],
+          "guidelines_must_have": [
+            "Nguyên tắc: Nhận lỗi - Khắc phục - Cam kết",
+            "Minh bạch thông tin",
+            "Đặt sự an toàn khách hàng lên trên lợi nhuận"
+          ],
+          "guidelines_should_avoid": [
+            "Đổ lỗi cho khách hàng hoặc bên thứ ba",
+            "Phát ngôn vòng vo, thiếu trách nhiệm"
+          ],
+          "sample_answer": "Tôi sẽ tư vấn CEO ra mặt xin lỗi công khai ngay lập tức. Thông điệp là: 'Chúng tôi biết sai, chúng tôi đang dừng toàn bộ dây chuyền để kiểm tra và sẽ đền bù thỏa đáng'. Sự chân thành là cách duy nhất cứu vãn thương hiệu trong lúc này."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Chuyển đổi số & Tương lai Marketing",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_MANAGER_05",
+          "question_text": "Bạn định hình bộ máy Marketing của công ty mình như thế nào trong 3-5 năm tới với sự can thiệp sâu của AI và Big Data?",
+          "question_type": "Visionary",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng dẫn dắt sự thay đổi",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Vai trò của con người lúc đó là gì?",
+            "Bạn sẽ đầu tư bao nhiêu vào hạ tầng công nghệ?"
+          ],
+          "guidelines_must_have": [
+            "Tư duy Personalized Marketing (Cá nhân hóa quy mô lớn)",
+            "Đội ngũ tinh gọn, chuyên môn hóa cao",
+            "Dùng AI để dự báo xu hướng (Predictive Analytics)"
+          ],
+          "guidelines_should_avoid": [
+            "Nghĩ AI là trào lưu nhất thời",
+            "Không có kế hoạch đào tạo lại nhân sự (Reskilling)"
+          ],
+          "sample_answer": "Bộ máy sẽ tinh gọn hơn nhưng 'thông minh' hơn. Tôi sẽ đầu tư vào CDP (Customer Data Platform) để hiểu khách hàng 360 độ. Marketer lúc đó sẽ đóng vai trò là những người 'kiểm soát AI' và tập trung vào trải nghiệm cảm xúc thực tế của khách hàng."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Tư duy Doanh nghiệp & Cam kết",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_MANAGER_06",
+          "question_text": "Marketing thường bị coi là 'bộ phận tiêu tiền'. Bạn làm thế nào để chứng minh với CFO rằng mỗi đồng Marketing bỏ ra là một đồng đầu tư sinh lời?",
+          "question_type": "Business Logic",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra sự kết nối giữa Marketing và Tài chính",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn có hiểu về bảng cân đối kế toán không?",
+            "Làm sao để đo lường giá trị vòng đời khách hàng (LTV)?"
+          ],
+          "guidelines_must_have": [
+            "Báo cáo dựa trên ROI, ROMI",
+            "Liên kết chỉ số Marketing với doanh thu thực tế",
+            "Chứng minh giá trị vô hình của thương hiệu"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ nói về Like, Share, Reach",
+            "Không hiểu về chi phí vận hành doanh nghiệp"
+          ],
+          "sample_answer": "Tôi nói ngôn ngữ của CFO. Thay vì nói 'Chiến dịch này đạt 1 triệu view', tôi nói 'Chiến dịch này mang về 5000 leads với CAC thấp hơn 20% so với quý trước, dự kiến đóng góp 10% vào doanh thu ròng'."
+        },
+        {
+          "question_id": "MKT_MANAGER_07",
+          "question_text": "Nếu phải chọn giữa việc đạt KPI ngắn hạn và giữ gìn giá trị cốt lõi của thương hiệu về lâu dài, bạn chọn gì?",
+          "question_type": "Ethics / Strategy",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra sự chính trực của người lãnh đạo",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Nếu bạn bị sa thải vì không đạt KPI ngắn hạn thì sao?",
+            "Bạn có giải pháp trung hòa nào không?"
+          ],
+          "guidelines_must_have": [
+            "Ưu tiên giá trị cốt lõi (Brand Equity)",
+            "Có giải pháp cân bằng (Optimize thay vì Burn)",
+            "Bảo vệ uy tín lâu dài"
+          ],
+          "guidelines_should_avoid": [
+            "Bất chấp tất cả để lấy số",
+            "Trả lời nước đôi không dứt khoát"
+          ],
+          "sample_answer": "Tôi chọn giá trị thương hiệu. KPI ngắn hạn có thể bù đắp vào tháng sau, nhưng một thương hiệu bị tổn thương thì mất cả thập kỷ để sửa chữa. Tôi sẽ thuyết phục sếp bằng một lộ trình tăng trưởng bền vững hơn là một cú nhảy vọt đầy rủi ro."
+        }
+      ]
+    }
+  ]
+}

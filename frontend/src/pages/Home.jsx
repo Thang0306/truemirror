@@ -1,4 +1,5 @@
 import React from 'react'
+import LazyYouTube from "../components/LazyYouTube";
 
 const Home = () => {
   return (
@@ -30,8 +31,13 @@ const Home = () => {
                   </button>
                 </div>
               </div>
-
-              <div className="relative mt-8 md:mt-0 flex justify-center md:justify-end">
+              
+              <div className="relative mt-8 md:mt-0 flex justify-center md:justify-end w-full">
+                <div className="w-full max-w-lg">
+                  <LazyYouTube videoId="8z-admUM-d8" />
+                </div>
+              </div>
+              {/* <div className="relative mt-8 md:mt-0 flex justify-center md:justify-end">
                 <div className="bg-gradient-to-br from-brand-blue to-brand-light-blue rounded-2xl p-4 md:p-6 shadow-2xl w-full max-w-md">
                   <div className="bg-white rounded-lg p-6 md:p-8 aspect-video flex flex-col items-center justify-center gap-3">
                     <div className="relative w-16 h-16 md:w-20 md:h-20">
@@ -48,7 +54,7 @@ const Home = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             <div className="h-0"></div>
           </div>
         </div>

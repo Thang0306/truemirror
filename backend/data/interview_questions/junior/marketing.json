@@ -1,0 +1,174 @@
+{
+  "position": "Junior",
+  "industry": "Marketing",
+  "language": "vi",
+  "total_duration_minutes": 35,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Tư duy Chiến lược & Nghiên cứu",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_JUNIOR_01",
+          "question_text": "Trước khi bắt đầu một chiến dịch, em làm thế nào để tìm ra những 'nỗi đau' (pain-point) thực sự của khách hàng mà đối thủ chưa khai thác? Em đã từng thay đổi một nội dung nào đó dựa trên dữ liệu nghiên cứu chưa?",
+          "question_type": "Behavioral / Structure",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng research và analytical thinking",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Em sử dụng tools nào để research?",
+            "Em phân biệt giữa pain-point thực sự và pain-point giả như thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Nghiên cứu đa chiều (Social Listening, competitor analysis, customer reviews)",
+            "Có ví dụ thực tế về việc thay đổi strategy dựa trên insight",
+            "Kết quả đo lường được (metrics)"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ dựa vào cảm tính",
+            "Không có data để support",
+            "Copy đối thủ mà không hiểu why"
+          ],
+          "sample_answer": "Quy trình của em gồm 3 bước: (1) Social Listening - nghe ngóng thảo luận tự nhiên; (2) Đối soát với bộ phận CS để tìm ra câu hỏi khách hay hỏi nhất; (3) Thử nghiệm 2 Angle khác nhau. Ví dụ: Khi làm cho ngành dược, em nhận ra khách hàng không sợ bệnh mà sợ 'tác dụng phụ'. Em đã đổi content từ 'Công dụng thần kỳ' sang 'An toàn tuyệt đối' và giúp tỷ lệ click tăng 40%."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ thuật Tối ưu & Quản trị Hiệu suất",
+      "duration_minutes": 12,
+      "questions": [
+        {
+          "question_id": "MKT_JUNIOR_02",
+          "question_text": "Nếu một bài Blog/Social post của em có Reach rất cao nhờ tiêu đề hay, nhưng Bounce rate lại lớn hoặc Time-on-page cực thấp, em sẽ thực hiện các bước tối ưu hóa (A/B Testing) cụ thể nào?",
+          "question_type": "Analytical",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra outcome thinking và problem solving",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Em đã từng làm A/B testing chưa?",
+            "Em sẽ test những yếu tố nào trước?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích điểm nghẽn: nhận diện sự đứt gãy giữa 'Hứa hẹn ở tiêu đề' và 'Nội dung thực tế'",
+            "Giải pháp kỹ thuật: đề xuất thay đổi cấu trúc bài, thêm Visual/Infographic",
+            "Có approach có hệ thống"
+          ],
+          "guidelines_should_avoid": [
+            "Vội sửa nội dung ngay mà không phân tích",
+            "Không biết metrics nào cần theo dõi",
+            "Không có plan B"
+          ],
+          "sample_answer": "Em sẽ không vội sửa nội dung ngay. Trước hết, em kiểm tra xem hình ảnh minh họa có liên quan không. Sau đó, em sẽ A/B testing bằng cách đổi đoạn mở đầu (Sapo) hoặc thêm các Box thông tin quan trọng lên trên đầu. Nếu vẫn không cải thiện, em sẽ kiểm tra lại tệp đối tượng quảng cáo vì có thể nội dung đang tiếp cận sai người."
+        },
+        {
+          "question_id": "MKT_JUNIOR_03",
+          "question_text": "Em phân biệt chiến thuật phân phối nội dung như thế nào giữa TikTok (Short-video), Facebook (Community) và Website (SEO)? Làm sao để cùng một thông điệp nhưng chạm tới khách hàng ở cả 3 điểm chạm này?",
+          "question_type": "Structure / Technical",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra hiểu biết về platforms",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em đã làm việc với platform nào nhiều nhất?",
+            "Em adapt content như thế nào cho từng platform?"
+          ],
+          "guidelines_must_have": [
+            "Hiểu đặc thù từng platform",
+            "Có chiến thuật repurpose content",
+            "Tư duy omni-channel"
+          ],
+          "guidelines_should_avoid": [
+            "Copy-paste content qua các platform",
+            "Không hiểu hành vi user trên từng platform"
+          ],
+          "sample_answer": "Em áp dụng chiến thuật 'Gốc rễ và Cành lá'. Website là gốc rễ (nơi chứa thông tin sâu, chuẩn SEO). Facebook là cành (nơi tạo thảo luận, trích dẫn các đoạn hay nhất). TikTok là lá (nơi bắt trend, biến nội dung thành kịch bản nhanh 15-30s). Thay vì copy-paste, em biến một bài Blog 2000 chữ thành 1 video highlight và 1 bộ ảnh Carousel để tối ưu hành vi người dùng mỗi kênh."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Xử lý Tình huống & Đạo đức",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "MKT_JUNIOR_04",
+          "question_text": "Kể về một lần em quyết liệt bảo vệ một ý tưởng sáng tạo mà cấp trên không đồng ý. Kết quả cuối cùng thế nào và em rút ra bài học gì về cách giao tiếp trong team Marketing?",
+          "question_type": "Behavioral / Stress",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra confidence và persuasion skill",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em đã thuyết phục sếp như thế nào?",
+            "Nếu sếp vẫn không đồng ý thì sao?"
+          ],
+          "guidelines_must_have": [
+            "Có ví dụ cụ thể",
+            "Thể hiện cách thuyết phục bằng data",
+            "Có kết quả/bài học"
+          ],
+          "guidelines_should_avoid": [
+            "Tranh cãi cảm tính",
+            "Không chấp nhận ý kiến khác",
+            "Đổ lỗi cho sếp"
+          ],
+          "sample_answer": "Em từng đề xuất một concept 'ngược dòng' cho chiến dịch Tết. Sếp cho rằng nó rủi ro. Thay vì tranh cãi cảm tính, em đã làm một bản Demo nhỏ và chạy thử nghiệm (test) trên một nhóm nhỏ khách hàng để lấy số liệu thực tế chứng minh. Sếp đã bị thuyết phục bởi con số. Bài học của em là: Đừng nói bằng cái tôi, hãy nói bằng dữ liệu (Data speaks)."
+        },
+        {
+          "question_id": "MKT_JUNIOR_05",
+          "question_text": "Nếu một bài content của em vô tình gây ra tranh cãi tiêu cực (backlash) từ cộng đồng mạng, em sẽ làm gì trong 1 giờ đầu tiên để giảm thiểu thiệt hại cho thương hiệu?",
+          "question_type": "Ethical / Stress",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra crisis management",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em có từng gặp tình huống này chưa?",
+            "Em sẽ xóa bài viết không?"
+          ],
+          "guidelines_must_have": [
+            "Báo cáo Leader ngay",
+            "Chụp bằng chứng",
+            "Không xóa comment ngay",
+            "Soạn nội dung phản hồi cầu thị"
+          ],
+          "guidelines_should_avoid": [
+            "Panic và xóa post",
+            "Tranh cãi với user",
+            "Đổ lỗi cho người khác"
+          ],
+          "sample_answer": "Em sẽ: (1) Báo Leader ngay và chụp screenshot bằng chứng; (2) Không xóa comment để tránh gây nghi ngờ; (3) Soạn một thông điệp xin lỗi chân thành và giải thích; (4) Monitor sát sao diễn biến. Quan trọng nhất là đặt uy tín Brand lên trên cái tôi cá nhân."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Định hướng & Cam kết",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_JUNIOR_06",
+          "question_text": "AI đang thay đổi ngành Content rất nhanh. Em đang ứng dụng AI vào công việc hàng ngày như thế nào để không bị đào thải, và theo em, đâu là thứ AI không bao giờ thay thế được ở một Junior như em?",
+          "question_type": "Ambiguous",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra growth mindset và industry sensitivity",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em đã dùng AI tools nào?",
+            "Em lo lắng về việc AI thay thế công việc không?"
+          ],
+          "guidelines_must_have": [
+            "Biết và đang dùng AI tools",
+            "Hiểu được giá trị con người",
+            "Có mindset học hỏi liên tục"
+          ],
+          "guidelines_should_avoid": [
+            "Sợ AI",
+            "Không biết AI tools",
+            "Nghĩ AI sẽ làm thay mọi thứ"
+          ],
+          "sample_answer": "Em dùng AI để lên Outline bài viết và nghiên cứu từ khóa giúp tiết kiệm 50% thời gian thô. Tuy nhiên, AI không thể có được 'Trải nghiệm cá nhân' và 'Sự thấu cảm tâm lý'. Em tập trung vào việc trau dồi khả năng thấu hiểu người dùng (Empathy) và tư duy chiến lược nội dung -- những thứ mà máy móc chỉ có thể mô phỏng chứ không thể thực sự sở hữu."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "position": "Intern",
+  "industry": "Finance",
+  "language": "vi",
+  "total_duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Kiến thức Nền tảng & Tư duy Kế toán",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "FIN_INTERN_01",
+          "question_text": "Em hãy giải thích mối quan hệ giữa Bảng cân đối kế toán (Balance Sheet) và Báo cáo kết quả kinh doanh (Income Statement). Nếu một nghiệp vụ làm tăng doanh thu, nó sẽ ảnh hưởng như thế nào đến Bảng cân đối kế toán?",
+          "question_type": "Knowledge / Logic",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự hiểu biết về luồng dữ liệu tài chính",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Lợi nhuận giữ lại (Retained Earnings) nằm ở đâu trên Bảng cân đối?",
+            "Nguyên tắc 'Cơ sở dồn tích' (Accrual Basis) khác gì với 'Cơ sở tiền mặt'?"
+          ],
+          "guidelines_must_have": [
+            "Nêu được lợi nhuận thuần từ IS sẽ được chuyển vào Retained Earnings trên BS",
+            "Giải thích được phương trình kế toán: Assets = Liabilities + Equity",
+            "Hiểu về sự tác động của doanh thu đến vốn chủ sở hữu"
+          ],
+          "guidelines_should_avoid": [
+            "Nhầm lẫn giữa doanh thu và dòng tiền thực tế",
+            "Không giải thích được mối liên kết giữa hai báo cáo"
+          ],
+          "sample_answer": "Dạ, lợi nhuận sau thuế từ Income Statement sẽ được chuyển vào mục Lợi nhuận chưa phân phối trong phần Vốn chủ sở hữu của Balance Sheet. Khi doanh thu tăng, nếu chi phí giữ nguyên, lợi nhuận sẽ tăng, dẫn đến Vốn chủ sở hữu tăng. Điều này đảm bảo phương trình kế toán luôn cân bằng thông qua việc tăng Tài sản tương ứng (như Tiền mặt hoặc Phải thu khách hàng)."
+        },
+        {
+          "question_id": "FIN_INTERN_02",
+          "question_text": "Trong kế toán, tại sao chúng ta lại phải thực hiện bút toán khấu hao (Depreciation)? Việc không trích khấu hao sẽ làm sai lệch báo cáo tài chính như thế nào?",
+          "question_type": "Knowledge",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra hiểu biết về nguyên tắc phù hợp (Matching Principle)",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Khấu hao giúp phân bổ chi phí của tài sản cố định phù hợp với doanh thu mà nó tạo ra trong suốt thời gian sử dụng. Nếu không trích khấu hao, lợi nhuận trong năm đầu tiên sẽ bị thổi phồng quá mức (do chưa tính chi phí sử dụng tài sản), trong khi giá trị tài sản trên Bảng cân đối kế toán sẽ không phản ánh đúng giá trị thực tế bị hao mòn."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ năng Excel & Xử lý Dữ liệu",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_INTERN_03",
+          "question_text": "Em hãy kể tên 3 hàm Excel mà em hay dùng nhất để xử lý dữ liệu tài chính. Nếu có hai bảng dữ liệu khách hàng khác nhau, em dùng cách nào để đối chiếu nhanh nhất?",
+          "question_type": "Technical / Excel",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra kỹ năng công cụ thực tế",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có biết dùng Pivot Table không? Nó giúp ích gì trong báo cáo?",
+            "Làm sao để cố định một vùng tham chiếu trong công thức ($A$1)?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng thành thạo VLOOKUP/XLOOKUP hoặc INDEX/MATCH",
+            "Biết sử dụng các hàm điều kiện (IF, SUMIF) và hàm thời gian",
+            "Biết cách sử dụng Conditional Formatting để tìm dữ liệu trùng"
+          ],
+          "sample_answer": "Em thường dùng XLOOKUP để đối chiếu dữ liệu giữa các bảng, Pivot Table để tóm tắt doanh thu theo vùng, và hàm IF để phân loại nợ. Để đối chiếu hai bảng khách hàng, em sẽ dùng Conditional Formatting để tô màu các giá trị trùng hoặc dùng hàm IFERROR kết hợp VLOOKUP để lọc ra những mã khách hàng chỉ có ở một bên."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Sự tỉ mỉ & Quản trị rủi ro sai sót",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_INTERN_04",
+          "question_text": "Làm thế nào để em kiểm tra lại một bảng tính Excel có hàng ngàn dòng trước khi gửi cho Mentor để đảm bảo không có bất kỳ lỗi công thức hay sai số nào?",
+          "question_type": "Detail Orientation",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tính cẩn thận và quy trình tự kiểm tra",
+          "expected_duration_minutes": 2,
+          "popup_questions": [
+            "Em có dùng phím tắt để di chuyển nhanh không?",
+            "Làm sao em phát hiện ra một ô đang bị lỗi #N/A hay #VALUE! giữa hàng ngàn dòng?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng tính năng Filter để kiểm tra các giá trị bất thường",
+            "Đặt các dòng 'Total' để đối soát chéo (Cross-check)",
+            "Sử dụng Trace Precedents để kiểm tra luồng công thức"
+          ],
+          "sample_answer": "Em sẽ tạo một dòng 'Check' ở cuối bảng để đối chiếu tổng cột và tổng hàng. Em cũng dùng Filter để xem có ô nào bị lỗi định dạng không. Cuối cùng, em dùng tính năng 'Go To Special -> Formulas -> Errors' để quét nhanh toàn bộ file. Em luôn dành ít nhất 10 phút để soi lại dữ liệu trước khi nhấn nút gửi."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Đạo đức & Bảo mật Thông tin",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_INTERN_05",
+          "question_text": "Dữ liệu tài chính là thông tin tối mật. Nếu em thấy một tệp tin chứa lương của các anh chị trong phòng bị bỏ quên trên máy in công cộng, em sẽ xử lý như thế nào?",
+          "question_type": "Ethics / Integrity",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tính chính trực - cốt lõi ngành Tài chính",
+          "expected_duration_minutes": 2,
+          "popup_questions": [
+            "Em có tò mò xem thử không?",
+            "Em sẽ báo cáo với ai về việc rò rỉ thông tin này?"
+          ],
+          "guidelines_must_have": [
+            "Không được phép xem nội dung tệp tin",
+            "Thu hồi tài liệu ngay lập tức và bảo quản ở nơi an toàn",
+            "Báo cáo kín đáo cho Mentor hoặc người phụ trách hành chính"
+          ],
+          "sample_answer": "Em sẽ lập tức thu hồi tệp tin đó mà không đọc nội dung bên trong, sau đó đem về bàn giao trực tiếp cho Mentor của em. Em cũng sẽ nhắc nhở Mentor rằng tệp tin bị bỏ quên ở máy in để bộ phận có biện pháp bảo mật tốt hơn lần sau. Với em, sự bảo mật là ưu tiên hàng đầu trong ngành này."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Giải quyết vấn đề & Logic",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_INTERN_06",
+          "question_text": "Giả sử cuối tháng bảng cân đối thử (Trial Balance) của em không cân lệch 10.000.000 VNĐ. Em sẽ bắt đầu tìm lỗi từ đâu?",
+          "question_type": "Problem Solving",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng rà soát và tư duy logic",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Số lệch đó có thể là do nhầm lẫn giữa Nợ (Debit) và Có (Credit) không?",
+            "Em có kiểm tra các bút toán định kỳ không?"
+          ],
+          "guidelines_must_have": [
+            "Kiểm tra xem có bút toán nào bị bỏ sót không",
+            "Chia số lệch cho 2 để xem có nhầm lẫn Nợ/Có không",
+            "Chia số lệch cho 9 để xem có bị đảo số (ví dụ 12 thành 21) không"
+          ],
+          "sample_answer": "Đầu tiên em lấy số lệch chia cho 2, nếu ra 5 triệu thì có thể em đã hạch toán nhầm một bút toán 5 triệu từ Nợ sang Có. Nếu không được, em chia cho 9 để xem có bị gõ nhầm số không. Sau đó, em rà soát lại sổ phụ ngân hàng và các phiếu thu/chi lớn nhất trong tháng. Em sẽ kiểm tra từng phần hành một cho đến khi tìm ra nguyên nhân."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Định hướng & Sự phù hợp",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "FIN_INTERN_07",
+          "question_text": "Ngành Tài chính có những giai đoạn 'mùa cao điểm' cực kỳ áp lực và phải làm thêm giờ (như quyết toán năm). Em đã chuẩn bị tâm lý cho việc này chưa?",
+          "question_type": "Resilience",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự cam kết",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Dạ, em hiểu đó là đặc thù của ngành. Em là người chịu được áp lực tốt và luôn biết cách sắp xếp công việc để hoàn thành đúng hạn. Em coi đó là cơ hội để học hỏi được nhiều nhất trong thời gian ngắn."
+        },
+        {
+          "question_id": "FIN_INTERN_08",
+          "question_text": "Tại sao em lại chọn công ty chúng tôi để bắt đầu sự nghiệp tài chính của mình mà không phải là một ngân hàng hay công ty kiểm toán Big4?",
+          "question_type": "Ambition",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra mức độ quan tâm đến doanh nghiệp",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Em ấn tượng với quy trình quản trị tài chính tinh gọn của công ty. Thay vì chỉ làm một mảng hẹp như ở Big4, em muốn được quan sát bức tranh tài chính toàn diện của một doanh nghiệp sản xuất/dịch vụ thực tế tại đây."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,179 @@
+{
+  "position": "Senior",
+  "industry": "HR",
+  "language": "vi",
+  "total_duration_minutes": 50,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Chiến lược Tuyển dụng & Thương hiệu Nhà tuyển dụng",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "HR_SENIOR_01",
+          "question_text": "Làm thế nào để xây dựng một chiến lược Employer Branding (Thương hiệu nhà tuyển dụng) hiệu quả nhằm thu hút nhân tài cấp cao (C-level) trong một thị trường cạnh tranh mà không cần tiêu tốn quá nhiều ngân sách Marketing?",
+          "question_type": "Strategic Thinking",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng xây dựng vị thế công ty",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn đánh giá chỉ số ROI của Employer Branding như thế nào?",
+            "Làm sao để biến mỗi nhân viên thành một đại sứ thương hiệu?",
+            "Kênh truyền thông nào là hiệu quả nhất cho đối tượng Senior?"
+          ],
+          "guidelines_must_have": [
+            "Định vị giá trị nhân viên (EVP - Employee Value Proposition) độc đáo",
+            "Tận dụng Social Selling thông qua LinkedIn của ban lãnh đạo",
+            "Xây dựng văn hóa minh bạch và trải nghiệm ứng viên (Candidate Experience) xuất sắc",
+            "Sử dụng các giải thưởng và chứng nhận uy tín (Great Place to Work)"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ tập trung vào quảng cáo hào nhoáng mà nội bộ rỗng tuếch",
+            "Copy-paste văn hóa của công ty khác",
+            "Thiếu sự đo lường tỷ lệ chuyển đổi từ ứng viên thụ động"
+          ],
+          "sample_answer": "Tôi sẽ bắt đầu bằng việc xác định EVP cốt lõi: Tại sao một nhân tài phải chọn chúng ta thay vì đối thủ? Sau đó, tôi tập trung vào 'Content từ nhân viên thực'. Thay vì thuê KOL, tôi khuyến khích các Leader chia sẻ kiến thức trên LinkedIn. Một chiến lược Employer Branding bền vững phải đi từ bên trong ra bên ngoài, biến sự hài lòng của nhân viên thành thỏi nam châm thu hút ứng viên."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Phát triển Tổ chức (OD) & Văn hóa",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "HR_SENIOR_02",
+          "question_text": "Khi công ty thực hiện tái cấu trúc hoặc thay đổi mô hình kinh doanh, bạn làm thế nào để quản trị sự thay đổi (Change Management) nhằm giảm thiểu sự phản kháng của nhân viên và ngăn chặn tình trạng 'chảy máu chất xám'?",
+          "question_type": "Change Management",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra năng lực điều phối tâm lý tổ chức",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn áp dụng mô hình ADKAR hay Kotter trong trường hợp này?",
+            "Làm thế nào để thuyết phục nhóm nhân sự 'bảo thủ' chấp nhận cái mới?",
+            "Chỉ số nào cho thấy việc tái cấu trúc đang đi đúng hướng?"
+          ],
+          "guidelines_must_have": [
+            "Truyền thông minh bạch về lý do thay đổi (The 'Why')",
+            "Xác định và làm việc với nhóm 'Người gây ảnh hưởng' (Change Agents) trong công ty",
+            "Thiết kế lộ trình đào tạo lại (Reskilling) cho nhân viên",
+            "Lắng nghe và giải tỏa nỗi sợ hãi của nhân sự thông qua các buổi Town Hall"
+          ],
+          "sample_answer": "Tôi áp dụng mô hình ADKAR. Đầu tiên là tạo ra nhận thức (Awareness) về sự cần thiết của thay đổi. Tôi sẽ làm việc sát sao với các Manager để họ hiểu và đồng hành. Quan trọng nhất là sự 'Thấu cảm'. Tôi sẽ thiết lập các kênh phản hồi hai chiều để nhân viên cảm thấy tiếng nói của họ được tôn trọng, từ đó giảm bớt sự bất an và gia tăng sự cam kết với lộ trình mới."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Quản trị Hiệu suất & Nhân tài (Talent Management)",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "HR_SENIOR_03",
+          "question_text": "Bạn thiết kế khung năng lực (Competency Framework) cho một phòng ban hoàn toàn mới như thế nào? Làm sao để khung này thực sự áp dụng được vào đánh giá lương thưởng mà không gây tranh cãi?",
+          "question_type": "Technical / Architecture",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy hệ thống và sự công bằng",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn phân biệt thế nào giữa năng lực hành vi và năng lực chuyên môn?",
+            "Làm sao để đảm bảo tính khách quan khi các Manager đánh giá nhân viên?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích công việc (Job Analysis) thực tế thay vì lý thuyết",
+            "Sử dụng các cấp độ hành vi quan sát được (Behavioral Indicators)",
+            "Liên kết trực tiếp với KPIs và OKRs",
+            "Tổ chức các buổi Calibration (Cân đối đánh giá) giữa các phòng ban"
+          ],
+          "sample_answer": "Tôi sẽ phỏng vấn những người làm tốt nhất hiện tại để đúc kết bộ kỹ năng thành công. Khung năng lực phải được định nghĩa bằng các hành động cụ thể, có thể đo lường được (ví dụ: Thay vì nói 'Giao tiếp tốt', hãy nói 'Có khả năng thuyết phục khách hàng trong 10 phút'). Khi mọi thứ đều định lượng được, việc áp dụng vào lương thưởng sẽ trở nên minh bạch và thuyết phục."
+        },
+        {
+          "question_id": "HR_SENIOR_04",
+          "question_text": "Hãy kể về quy trình lập kế hoạch kế nhiệm (Succession Planning) cho các vị trí chủ chốt mà bạn đã từng triển khai. Làm sao để giữ chân những 'High-Potential' (HiPo) không bị đối thủ lôi kéo?",
+          "question_type": "Talent Strategy",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tầm nhìn dài hạn về nguồn lực",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Tôi sử dụng ma trận 9-Box để phân loại nhân tài. Với nhóm HiPo, tôi không chỉ tăng lương mà còn trao quyền thông qua các dự án chiến lược và lộ trình phát triển cá nhân hóa (IDP). Tôi cho họ thấy một tương lai rõ ràng tại công ty, nơi họ được đóng góp và ghi nhận xứng đáng."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Quan hệ Lao động & Pháp lý Cao cấp",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "HR_SENIOR_05",
+          "question_text": "Khi phát hiện một vụ việc tham nhũng hoặc vi phạm đạo đức nghiêm trọng liên quan đến một quản lý cấp cao có nhiều đóng góp, bạn sẽ xử lý như thế nào để vừa thượng tôn pháp luật, vừa bảo vệ uy tín công ty?",
+          "question_type": "Ethics / Legal",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra sự chính trực và kỹ năng xử lý khủng hoảng nội bộ",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn có bị áp lực từ ban giám đốc để 'ém nhẹm' chuyện này không?",
+            "Quy trình điều tra nội bộ của bạn diễn ra như thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Thu thập bằng chứng khách quan và bảo mật tuyệt đối",
+            "Tuân thủ nghiêm ngặt nội quy lao động và Luật lao động",
+            "Kế hoạch truyền thông nội bộ để ổn định tâm lý nhân viên",
+            "Đảm bảo nguyên tắc 'Không có vùng cấm' trong đạo đức nghề nghiệp"
+          ],
+          "sample_answer": "Sự chính trực là giá trị cao nhất của HR. Tôi sẽ thực hiện điều tra độc lập, thu thập bằng chứng xác thực. Dù họ là ai, vi phạm đạo đức là không thể chấp nhận. Tôi sẽ tư vấn ban giám đốc xử lý quyết liệt nhưng khéo léo về mặt truyền thông để tránh khủng hoảng bên ngoài. Việc xử lý nghiêm người giỏi nhưng sai phạm sẽ tạo ra một tiền lệ tốt về tính công bằng trong tổ chức."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "HR Analytics & Công nghệ",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "HR_SENIOR_06",
+          "question_text": "Bạn sử dụng HR Analytics như thế nào để dự báo tỷ lệ nghỉ việc (Turnover Rate) và đưa ra các giải pháp ngăn chặn chủ động thay vì chỉ báo cáo số liệu quá khứ?",
+          "question_type": "Analytical",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy dữ liệu (Data-driven)",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn quan tâm đến chỉ số 'Regrettable Attrition' (nghỉ việc gây tiếc nuối) như thế nào?",
+            "Làm sao để biết nhân viên nghỉ việc vì lương hay vì quản lý trực tiếp?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng dữ liệu từ phỏng vấn thôi việc (Exit Interview) và khảo sát gắn kết",
+            "Phân tích tương quan giữa hiệu suất, thâm niên và tỷ lệ nghỉ việc",
+            "Xây dựng mô hình dự báo rủi ro dựa trên dữ liệu hành vi",
+            "Đề xuất các chính sách giữ chân dựa trên Insight thực tế"
+          ],
+          "sample_answer": "Tôi không chỉ nhìn vào con số phần trăm. Tôi phân tích dữ liệu để tìm ra 'điểm gãy'. Nếu nhân viên thường nghỉ ở tháng thứ 18, tôi sẽ xem lại lộ trình thăng tiến tại thời điểm đó. Dữ liệu cho thấy 70% nhân viên nghỉ việc vì quản lý, nên tôi sẽ tập trung vào việc đào tạo kỹ năng lãnh đạo cho các Manager. Số liệu phải được biến thành hành động ngăn ngừa."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Tầm nhìn & Sự nghiệp",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "HR_SENIOR_07",
+          "question_text": "Bạn định nghĩa thế nào là một 'Strategic HR Business Partner' thực thụ? Bạn đã bao giờ thay đổi được một quyết định kinh doanh của CEO dựa trên góc nhìn nhân sự chưa?",
+          "question_type": "Business Acumen",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tầm ảnh hưởng chiến lược",
+          "expected_duration_minutes": 4,
+          "sample_answer": "HRBP thực thụ phải hiểu bảng cân đối kế toán như một CFO. Tôi từng thuyết phục CEO dừng việc mở rộng chi nhánh mới vì dữ liệu cho thấy năng lực quản lý của đội ngũ hiện tại chưa đủ đáp ứng. Việc dừng lại để đào tạo đã giúp công ty tránh được khoản lỗ hàng tỷ đồng do vận hành kém hiệu quả."
+        },
+        {
+          "question_id": "HR_SENIOR_08",
+          "question_text": "Tại sao một người có năng lực như bạn lại chọn làm việc ở một môi trường đang có nhiều vấn đề về nhân sự như công ty chúng tôi?",
+          "question_type": "Motivation",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự sẵn sàng và thái độ thử thách",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Vì ở đâu có vấn đề, ở đó có cơ hội cho HR thể hiện giá trị. Tôi không tìm kiếm một cỗ máy hoàn hảo, tôi tìm kiếm một nơi sẵn sàng thay đổi để tốt hơn. Với kinh nghiệm của mình, tôi tin rằng tôi có thể giúp công ty xây dựng lại hệ thống nhân sự vững mạnh."
+        }
+      ]
+    }
+  ]
+}

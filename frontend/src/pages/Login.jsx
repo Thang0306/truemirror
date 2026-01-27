@@ -113,9 +113,10 @@ return (
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full h-12 px-6 text-base md:text-lg border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`w-full h-12 pl-8 pr-4 text-base md:text-lg border-2 rounded-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  }`}
                 placeholder="email@example.com"
               />
               {errors.email && (

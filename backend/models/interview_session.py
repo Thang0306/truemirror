@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from .user import db
 
 class InterviewSession(db.Model):
@@ -9,14 +9,18 @@ class InterviewSession(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
     
     # Interview configuration
-    position = db.Column(db.String(50), nullable=False)  # Intern, Fresher, Junior, Manager
+    position = db.Column(db.String(50), nullable=False)  # Intern, Senior, Junior, Manager
     industry = db.Column(db.String(50), nullable=False)  # IT, Marketing, Sales, Finance, HR
     style = db.Column(db.String(50), nullable=False)     # Nghiêm túc, Thân thiện, Khó tính
     language = db.Column(db.String(20), nullable=False)  # vi, en
     
     # Session metadata
     status = db.Column(db.String(20), default='pending')  # pending, in_progress, completed
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(
+    db.DateTime(timezone=True),
+    nullable=False,
+    default=lambda: datetime.now(timezone.utc)
+)
     started_at = db.Column(db.DateTime, nullable=True)
     completed_at = db.Column(db.DateTime, nullable=True)
     

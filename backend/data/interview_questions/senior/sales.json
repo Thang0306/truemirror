@@ -1,0 +1,172 @@
+{
+  "position": "Senior",
+  "industry": "Sales",
+  "language": "vi",
+  "total_duration_minutes": 45,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Chiến lược Khách hàng Trọng điểm (KAM)",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "SALES_SENIOR_01",
+          "question_text": "Trong một thương vụ Enterprise lớn, bạn làm thế nào để xây dựng 'Bản đồ các bên liên quan' (Stakeholder Mapping) và xác định ai là người ủng hộ (Champion), ai là người cản trở (Blocker)?",
+          "question_type": "Strategic Selling",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng điều hướng trong các tổ chức phức tạp",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Bạn sẽ tiếp cận người có quyền quyết định cuối cùng (EB - Economic Buyer) như thế nào?",
+            "Nếu Blocker là người có chức vụ cao hơn Champion của bạn, bạn xử lý ra sao?",
+            "Làm sao để biến một người trung lập thành Champion của mình?"
+          ],
+          "guidelines_must_have": [
+            "Hiểu về mô hình Decision Making Unit (DMU)",
+            "Kỹ thuật đặt câu hỏi để tìm ra mối quan hệ nội bộ của khách hàng",
+            "Xây dựng chiến lược tiếp cận đa điểm (Multi-threading)",
+            "Chứng minh được giá trị riêng biệt cho từng đối tượng (User vs Manager vs Buyer)"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ làm việc với một đầu mối liên hệ duy nhất",
+            "Nhầm lẫn giữa người sử dụng sản phẩm và người ký hợp đồng",
+            "Thiếu sự chuẩn bị về hồ sơ tâm lý của các bên liên quan"
+          ],
+          "sample_answer": "Tôi không bao giờ đặt cược vào một người duy nhất. Tôi thực hiện Stakeholder Map bằng cách phân loại 4 nhóm: Người quyết định, Người hưởng lợi, Người thẩm định kỹ thuật và Người gây ảnh hưởng. Tôi sẽ tìm một 'Champion' – người hưởng lợi nhiều nhất từ giải pháp của tôi – để họ cung cấp thông tin 'tay trong' về quy trình ra quyết định, từ đó có chiến lược hóa giải các 'Blocker' trước khi bước vào bàn đàm phán chính thức."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Đàm phán Giá trị & Tâm lý học",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "SALES_SENIOR_02",
+          "question_text": "Khi đối phương sử dụng kỹ thuật 'Good Cop/Bad Cop' hoặc liên tục đòi giảm giá vào phút chót trước khi ký, bạn sẽ áp dụng chiến thuật tâm lý nào để bảo vệ biên lợi nhuận của công ty?",
+          "question_type": "Advanced Negotiation",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra bản lĩnh trên bàn đàm phán",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn có sẵn sàng bước ra khỏi bàn đàm phán (Walk-away) không?",
+            "Làm sao để đưa thêm các giá trị phi tiền tệ vào để đánh đổi việc giảm giá?",
+            "Bạn nhận diện 'Tín hiệu chốt đơn giả' của khách hàng như thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng kỹ thuật 'Trade-off' (Trao đổi): Nếu giảm giá thì phải bớt dịch vụ hoặc tăng thời hạn hợp đồng",
+            "Giữ vững tâm lý, không bị cuốn vào áp lực thời gian của đối phương",
+            "Nhấn mạnh vào Tổng chi phí sở hữu (TCO) và rủi ro nếu chọn đối thủ rẻ hơn",
+            "Biết cách im lặng có chiến thuật để đối phương tự hạ bớt yêu cầu"
+          ],
+          "sample_answer": "Tôi sẽ tách rời giá cả khỏi giá trị. Nếu họ đòi giảm 10%, tôi sẽ nói: 'Tôi có thể làm việc với ban giám đốc về mức giá này, nhưng chúng ta sẽ phải điều chỉnh lại điều khoản bảo hành từ 24 tháng xuống 12 tháng'. Thường thì khách hàng sẽ chọn giữ lại dịch vụ và chấp nhận giá ban đầu. Mục tiêu của tôi là tạo ra tình huống Win-Win nhưng không được phép làm rẻ rúng giải pháp của mình."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Phân tích Thị trường & Dự báo (Forecasting)",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "SALES_SENIOR_03",
+          "question_text": "Làm thế nào bạn đảm bảo tính chính xác của 'Sales Pipeline' và dự báo doanh thu hàng quý của mình? Bạn xử lý thế nào khi một thương vụ 'chắc ăn' 90% đột ngột bị trì hoãn vô thời hạn?",
+          "question_type": "Analytical / Operations",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng quản trị con số và rủi ro",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Các giai đoạn (Stages) trong phễu của bạn có tiêu chí đo lường rõ ràng không?",
+            "Bạn quản lý 'nợ kỹ thuật' trong sales (các lead cũ không chuyển đổi) như thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng các tiêu chí khách quan để phân loại giai đoạn (vốn thực tế thay vì cảm tính)",
+            "Luôn có phương án dự phòng (Back-up deals) để bù đắp hụt thu",
+            "Phân tích nguyên nhân gốc rễ (Root Cause Analysis) khi deal bị đóng băng"
+          ],
+          "sample_answer": "Tôi đánh giá Pipeline dựa trên hành động cụ thể của khách hàng, không phải dựa trên lời hứa. Nếu khách hàng chưa đồng ý buổi Demo kỹ thuật, deal đó chỉ ở mức 20% dù họ có khen sản phẩm hay thế nào. Để giảm rủi ro, tôi luôn duy trì tỷ lệ Pipeline gấp 3 lần KPI thực tế. Khi một deal lớn bị hoãn, tôi ngay lập tức kích hoạt nhóm 'Quick Win' (các đơn hàng nhỏ, chốt nhanh) để lấp đầy khoảng trống doanh thu."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Kỹ năng Cố vấn & Thấu hiểu Ngành",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "SALES_SENIOR_04",
+          "question_text": "Bạn làm thế nào để trở thành một 'Cố vấn tin cậy' (Trusted Advisor) thay vì chỉ là một người bán hàng trong mắt các quản lý cấp cao (C-level)?",
+          "question_type": "Consultative Selling",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy giải quyết vấn đề kinh doanh cho khách hàng",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn dành bao nhiêu thời gian để nghiên cứu báo cáo tài chính của khách hàng?",
+            "Làm thế nào để nói về khó khăn của khách hàng mà không khiến họ cảm thấy bị xúc phạm?"
+          ],
+          "guidelines_must_have": [
+            "Chia sẻ các thông tin về xu hướng thị trường mà khách hàng chưa biết",
+            "Đưa ra giải pháp giải quyết trực tiếp các chỉ số kinh doanh (Top-line/Bottom-line)",
+            "Sẵn sàng khuyên khách hàng không nên mua nếu sản phẩm không phù hợp (tạo niềm tin dài hạn)"
+          ],
+          "sample_answer": "Tôi không nói về tính năng, tôi nói về bài toán kinh doanh. Trước khi gặp CEO, tôi nghiên cứu báo cáo ngành của họ. Thay vì giới thiệu máy móc, tôi nói: 'Tôi thấy tỷ lệ hao hụt của anh đang cao hơn mức trung bình ngành 5%, giải pháp của tôi có thể giúp anh tiết kiệm 2 tỷ mỗi năm'. Khi đó, họ coi tôi là đối tác giúp họ kiếm tiền, không phải người đang lấy tiền của họ."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Mentorship & Tầm ảnh hưởng Đội ngũ",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "SALES_SENIOR_05",
+          "question_text": "Là một Senior, bạn làm thế nào để hỗ trợ các bạn Junior mà không làm ảnh hưởng đến thời gian chạy số của cá nhân mình?",
+          "question_type": "Leadership / Mentoring",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra khả năng dẫn dắt và làm việc nhóm",
+          "expected_duration_minutes": 3,
+          "guidelines_must_have": [
+            "Tạo ra các tài liệu mẫu (Playbook) để chia sẻ kinh nghiệm",
+            "Thực hiện các buổi đóng vai (Role-play) chớp nhoáng",
+            "Hướng dẫn tư duy hơn là cầm tay chỉ việc"
+          ],
+          "sample_answer": "Tôi xây dựng một bộ 'Kịch bản xử lý từ chối' chuẩn từ các case thực tế tôi đã trải qua. Thay vì trả lời từng câu hỏi nhỏ, tôi khuyến khích các bạn Junior tham gia dự thính các cuộc gọi của tôi. Tôi tin rằng việc nâng tầm đội ngũ cũng là cách để tôi mở rộng tầm ảnh hưởng của mình trong công ty."
+        },
+        {
+          "question_id": "SALES_SENIOR_06",
+          "question_text": "Nếu bạn và một đồng nghiệp cùng theo đuổi một khách hàng lớn và xảy ra tranh chấp về quyền lợi, bạn sẽ xử lý như thế nào?",
+          "question_type": "Conflict Resolution",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự chuyên nghiệp trong nội bộ",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Tôi sẽ đề xuất một phương án hợp tác (Split deal). Thay vì tranh giành làm hỏng hình ảnh công ty trước khách hàng, chúng tôi sẽ chia sẻ nguồn lực để chốt deal nhanh nhất và chia hoa hồng theo tỷ lệ đóng góp. Sự minh bạch trên CRM là căn cứ duy nhất tôi sử dụng để đối thoại."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Tư duy Đổi mới & Công nghệ",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "SALES_SENIOR_07",
+          "question_text": "Bạn đang ứng dụng Social Selling (LinkedIn, nội dung chuyên gia) như thế nào để xây dựng thương hiệu cá nhân và thu hút khách hàng Inbound?",
+          "question_type": "Social Selling",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra sự nhạy bén với các kênh bán hàng hiện đại",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Tôi dành 30 phút mỗi ngày để chia sẻ kiến thức chuyên ngành trên LinkedIn. Điều này giúp tôi xây dựng vị thế chuyên gia. Thay vì Cold Call, khách hàng thường chủ động nhắn tin hỏi ý kiến tôi, giúp tỷ lệ chuyển đổi cao hơn nhiều so với phương thức truyền thống."
+        },
+        {
+          "question_id": "SALES_SENIOR_08",
+          "question_text": "Tại sao chúng tôi nên giao tệp khách hàng VIP nhất cho bạn mà không phải một người khác có cùng số năm kinh nghiệm?",
+          "question_type": "Confidence",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra giá trị cốt lõi và sự tự tin",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Vì tôi có sự kết hợp giữa kỹ năng đàm phán sắc bén và tư duy đạo đức nghề nghiệp. Với khách VIP, sự ổn định và uy tín là quan trọng nhất. Tôi không chỉ mang về doanh số tháng này, mà tôi đảm bảo khách hàng đó sẽ ở lại với công ty trong 5 năm tới."
+        }
+      ]
+    }
+  ]
+}

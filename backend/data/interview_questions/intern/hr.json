@@ -1,0 +1,183 @@
+{
+  "position": "Intern",
+  "industry": "HR",
+  "language": "vi",
+  "total_duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Nhận thức về Nghề & Động lực",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "HR_INTERN_01",
+          "question_text": "Nhiều người nghĩ HR chỉ là làm tuyển dụng hoặc chấm công, tính lương. Theo góc nhìn của một sinh viên sắp ra trường, em định nghĩa vai trò của HR trong việc kết nối giữa mục tiêu của công ty và quyền lợi nhân viên như thế nào?",
+          "question_type": "Mindset / Perception",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra sự hiểu biết về bản chất ngành HR",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Tại sao em lại chọn HR mà không phải Marketing hay Sales?",
+            "Em nghĩ bộ phận HR có phải là 'người gác cổng' của công ty không?"
+          ],
+          "guidelines_must_have": [
+            "Nêu được vai trò hỗ trợ và quản trị nguồn lực con người",
+            "Sự cân bằng giữa mục tiêu kinh doanh và sự hài lòng của nhân viên",
+            "Tư duy phục vụ (Service mindset) trong nội bộ"
+          ],
+          "guidelines_should_avoid": [
+            "Nghĩ HR là quyền lực, có quyền 'đuổi việc' người khác",
+            "Trả lời quá lý thuyết mà không có quan điểm cá nhân"
+          ],
+          "sample_answer": "Dạ, em nghĩ HR không chỉ là giấy tờ. HR giống như một cái cầu nối. Nếu công ty là một cỗ máy, thì HR là dầu bôi trơn giúp các bộ phận vận hành êm ái hơn. Vai trò của HR là đảm bảo nhân viên có môi trường tốt nhất để cống hiến, từ đó giúp công ty đạt được mục tiêu kinh doanh. Em chọn HR vì em yêu thích việc làm việc với con người và sự kỷ luật trong quy trình."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Hỗ trợ Tuyển dụng & Sàng lọc (Sourcing)",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "HR_INTERN_02",
+          "question_text": "Khi được giao lọc 50 hồ sơ (CV) cho vị trí thực tập sinh Marketing chỉ trong 1 buổi sáng, em sẽ ưu tiên những tiêu chí nào để đảm bảo chọn đúng người mà vẫn kịp tiến độ?",
+          "question_type": "Technical / Sourcing",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng sàng lọc và tư duy ưu tiên",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có đánh giá ứng viên qua hoạt động ngoại khóa không?",
+            "Nếu CV trình bày quá xấu nhưng kinh nghiệm tốt, em có loại không?",
+            "Em dùng từ khóa (keywords) nào để lọc nhanh?"
+          ],
+          "guidelines_must_have": [
+            "Kiểm tra sự phù hợp về kỹ năng tối thiểu (Must-have skills)",
+            "Đánh giá mức độ chỉn chu của CV (tên file, định dạng, lỗi chính tả)",
+            "Ưu tiên sự phù hợp về văn hóa thông qua các hoạt động đã tham gia"
+          ],
+          "guidelines_should_avoid": [
+            "Đọc quá chi tiết từng chữ gây mất thời gian",
+            "Loại ứng viên chỉ dựa trên cảm tính cá nhân"
+          ],
+          "sample_answer": "Em sẽ dùng phương pháp '30 giây cho mỗi CV'. Đầu tiên em nhìn vào Tech-stack hoặc kỹ năng bắt buộc. Tiếp theo là thái độ thông qua cách họ trình bày CV. Cuối cùng em mới xem đến trường lớp và hoạt động. Em sẽ chia thành 3 nhóm: Tiềm năng, Cân nhắc và Không phù hợp để Mentor của em dễ dàng duyệt lại."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Sự tỉ mỉ & Quản trị hồ sơ",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "HR_INTERN_03",
+          "question_text": "Trong HR, một sai sót nhỏ về số CMND hoặc ngày bắt đầu hợp đồng cũng có thể dẫn đến rủi ro pháp lý. Em có phương pháp gì để kiểm soát lỗi sai trong việc nhập liệu và quản lý hồ sơ nhân viên?",
+          "question_type": "Detail Orientation",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tính cẩn thận và trách nhiệm",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em đã từng làm sai số liệu nào quan trọng chưa?",
+            "Em có sử dụng các hàm kiểm tra trong Excel không?",
+            "Làm thế nào để em không bị hoa mắt khi làm việc với hàng ngàn dòng dữ liệu?"
+          ],
+          "guidelines_must_have": [
+            "Quy trình tự kiểm tra 2 lần (Double-check)",
+            "Sử dụng các công cụ hỗ trợ (VLOOKUP, Data Validation trong Excel)",
+            "Tư duy sắp xếp hồ sơ khoa học (Online & Offline)"
+          ],
+          "sample_answer": "Em luôn áp dụng quy tắc 'nhập một dòng, soát một dòng'. Sau khi hoàn thành, em sẽ dùng hàm đối chiếu để kiểm tra sự trùng lặp. Với em, dữ liệu nhân sự là tài sản của công ty, nên mỗi con số em nhập vào đều phải chính xác tuyệt đối trước khi chuyển sang bước tiếp theo."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Đạo đức nghề nghiệp & Bảo mật",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "HR_INTERN_04",
+          "question_text": "Nếu một người bạn thân trong công ty hỏi em về mức lương của một đồng nghiệp khác (mà em vô tình biết được), em sẽ xử lý tình huống này như thế nào để vừa giữ tình bạn, vừa đúng nguyên tắc bảo mật?",
+          "question_type": "Ethics / Stress",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tính bảo mật - yếu tố sống còn của HR",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Nếu họ giận em vì em không nói, em thấy sao?",
+            "Em có nghĩ lương nên công khai không?",
+            "Em sẽ báo cáo với sếp nếu bạn đó cứ gặng hỏi không?"
+          ],
+          "guidelines_must_have": [
+            "Từ chối khéo léo nhưng kiên quyết",
+            "Khẳng định nguyên tắc bảo mật của bộ phận HR",
+            "Không tiết lộ bất kỳ thông tin nhạy cảm nào dưới mọi hình thức"
+          ],
+          "guidelines_should_avoid": [
+            "Tiết lộ theo kiểu 'nói nhỏ cho biết'",
+            "Dùng thông tin để đi buôn chuyện"
+          ],
+          "sample_answer": "Em sẽ trả lời thẳng thắn nhưng nhẹ nhàng: 'Tớ rất quý cậu, nhưng đây là nguyên tắc nghề nghiệp của HR và tớ đã ký cam kết bảo mật. Nếu tớ tiết lộ, tớ sẽ không còn tư cách làm HR nữa. Mong cậu thông cảm cho tớ nhé'. Em tin bạn thân sẽ hiểu cho công việc của em."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Giao tiếp & Kết nối nội bộ",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "HR_INTERN_05",
+          "question_text": "Em được giao nhiệm vụ hỗ trợ tổ chức một buổi Team Building cho 50 người với ngân sách hạn hẹp. Em sẽ ưu tiên phân bổ ngân sách vào việc gì để nhân viên vẫn cảm thấy vui vẻ và gắn kết?",
+          "question_type": "Engagement / Creativity",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng tổ chức và thấu hiểu nhân viên",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em chọn ăn uống hay trò chơi?",
+            "Em có tự mình làm MC được không?",
+            "Làm sao để lôi kéo những người hướng nội tham gia?"
+          ],
+          "guidelines_must_have": [
+            "Ưu tiên trải nghiệm chung và cảm xúc",
+            "Tiết kiệm chi phí vật lý (quà cáp đắt tiền) để tập trung vào không khí buổi tiệc",
+            "Tận dụng nguồn lực nội bộ để giảm chi phí thuê ngoài"
+          ],
+          "sample_answer": "Em sẽ ưu tiên vào phần 'Hoạt động trải nghiệm' và 'Ăn uống nhẹ'. Thay vì thuê đơn vị tổ chức đắt tiền, em sẽ thiết kế các trò chơi mang tính đồng đội cao và có những phần quà nhỏ nhưng ý nghĩa cá nhân hóa. Quan trọng nhất là tạo ra được kỉ niệm đẹp cho mọi người."
+        },
+        {
+          "question_id": "HR_INTERN_06",
+          "question_text": "Khi đi gọi điện mời ứng viên đến phỏng vấn, nếu ứng viên tỏ thái độ khó chịu vì em gọi vào giờ nghỉ trưa, em sẽ xử lý thế nào?",
+          "question_type": "Communication / Situation",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng xử lý tình huống giao tiếp",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Em sẽ ngay lập tức xin lỗi chân thành vì sự bất tiện này và đề nghị gọi lại vào một khung giờ khác phù hợp với họ (ví dụ sau 2h chiều). Em sẽ ghi chú lại để lần sau không lặp lại sai lầm về thời gian gọi."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Cam kết & Học hỏi",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "HR_INTERN_07",
+          "question_text": "Em mong muốn được học mảng nào nhất trong HR tại công ty chúng tôi (Tuyển dụng, C&B, hay L&D)? Tại sao?",
+          "question_type": "Growth Mindset",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra định hướng nghề nghiệp",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Em muốn bắt đầu với Tuyển dụng để học cách nhìn nhận con người, nhưng về lâu dài em muốn tìm hiểu thêm về C&B vì em thích làm việc với các con số và chính sách đãi ngộ."
+        },
+        {
+          "question_id": "HR_INTERN_08",
+          "question_text": "Nếu kết thúc kỳ thực tập, chúng tôi không có vị trí chính thức cho em, em sẽ cảm thấy thế nào và kế hoạch của em là gì?",
+          "question_type": "Resilience",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra sự bền bỉ và thái độ tích cực",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Em sẽ coi đây là một trải nghiệm quý giá. Em sẽ xin Mentor lời khuyên về những điểm em cần cải thiện để chuẩn bị cho hành trình tiếp theo. Em tin rằng kiến thức học được ở đây sẽ là nền tảng tốt cho em dù ở bất cứ đâu."
+        }
+      ]
+    }
+  ]
+}

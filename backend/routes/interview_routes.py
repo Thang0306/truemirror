@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from models import db, InterviewSession, User
-from datetime import datetime
+from datetime import datetime, timezone
 
 interview_bp = Blueprint('interview', __name__, url_prefix='/api/interview')
 
@@ -35,7 +35,7 @@ def create_session():
             return jsonify({'error': 'Vui lòng điền đầy đủ thông tin'}), 400
         
         # Validate values
-        valid_positions = ['Intern', 'Fresher', 'Junior', 'Manager']
+        valid_positions = ['Intern', 'Senior', 'Junior', 'Manager']
         valid_industries = ['IT', 'Marketing', 'Sales', 'Finance', 'HR']
         valid_styles = ['Nghiêm túc', 'Thân thiện', 'Khó tính']
         valid_languages = ['vi', 'en']

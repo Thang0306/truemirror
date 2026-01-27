@@ -1,0 +1,204 @@
+{
+  "position": "Senior",
+  "industry": "Marketing",
+  "language": "vi",
+  "total_duration_minutes": 45,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Chiến lược & Lập kế hoạch",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_SENIOR_01",
+          "question_text": "Khi lập kế hoạch cho một sản phẩm mới vào thị trường đã bão hòa, bạn ưu tiên chọn chiến lược 'Price War' hay 'Differentiation'? Hãy minh chứng bằng một chiến dịch bạn từng thực hiện.",
+          "question_type": "Strategic Thinking",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tư duy thị trường và kinh nghiệm thực chiến",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Làm sao bạn định nghĩa được sự khác biệt bền vững?",
+            "Nếu đối thủ copy sự khác biệt đó ngay lập tức thì sao?"
+          ],
+          "guidelines_must_have": [
+            "Ưu tiên sự khác biệt (Differentiation)",
+            "Có số liệu chứng minh (Market share, Growth)",
+            "Phân tích được đối thủ cạnh tranh"
+          ],
+          "guidelines_should_avoid": [
+            "Chọn đánh giá về giá mà không có kế hoạch tài chính",
+            "Lý thuyết suông, không có ví dụ"
+          ],
+          "sample_answer": "Tôi luôn chọn Differentiation. Ví dụ ở dự án X, khi thị trường mỹ phẩm đã bão hòa, thay vì giảm giá, tôi tập trung vào 'Sustainability' trong bao bì. Kết quả là chúng tôi chiếm được 5% thị phần trong 6 tháng đầu mà không cần đốt tiền vào khuyến mãi."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Quản trị Hiệu suất (Performance & Data)",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "MKT_SENIOR_02",
+          "question_text": "Bạn tối ưu hóa phễu chuyển đổi như thế nào khi tỷ lệ rớt khách (Drop-off rate) ở bước thanh toán lên đến 70%? Bạn sẽ xem xét những chỉ số nào trước tiên?",
+          "question_type": "Analytical",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng phân tích dữ liệu và tìm điểm nghẽn",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn dùng công cụ gì để track user behavior?",
+            "Bạn có phối hợp với bộ phận Product/UX không?"
+          ],
+          "guidelines_must_have": [
+            "Kiểm tra kỹ thuật (loading speed, payment gateway)",
+            "Phân tích tâm lý khách hàng (trust, hidden cost)",
+            "Đề xuất A/B testing cho UX/UI"
+          ],
+          "guidelines_should_avoid": [
+            "Đổ lỗi cho bộ phận khác",
+            "Chỉ đề xuất đổ thêm tiền vào quảng cáo"
+          ],
+          "sample_answer": "Đầu tiên tôi kiểm tra Heatmap để xem khách hàng khựng lại ở đâu. Nếu là do phí ship cao, tôi đề xuất chương trình freeship. Nếu là do lỗi kỹ thuật, tôi làm việc với Dev. Tôi sẽ theo dõi tỷ lệ CR và CVR sau mỗi thay đổi nhỏ."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Lãnh đạo & Quản lý Dự án",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "MKT_SENIOR_03",
+          "question_text": "Hãy kể về một lần bạn quản lý một team đa chức năng (Creative, Ads, Content) gặp mâu thuẫn về định hướng sáng tạo. Bạn đã giải quyết thế nào để đảm bảo deadline?",
+          "question_type": "Management / Leadership",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng điều phối và giải quyết xung đột",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn ưu tiên cái tôi sáng tạo hay yêu cầu của khách hàng?",
+            "Làm sao để giữ lửa cho team khi bị reject ý tưởng?"
+          ],
+          "guidelines_must_have": [
+            "Dùng mục tiêu chung (KPI) làm trọng tâm giải quyết",
+            "Lắng nghe đa chiều",
+            "Quyết đoán khi cần thiết"
+          ],
+          "guidelines_should_avoid": [
+            "Áp đặt quyền lực mà không giải thích",
+            "Để mâu thuẫn kéo dài gây trễ tiến độ"
+          ],
+          "sample_answer": "Tôi tổ chức một buổi workshop nhanh để mọi người đối chiếu ý tưởng với Brief ban đầu. Tôi nhắc nhở rằng: 'Khách hàng là người trả tiền cho kết quả, không phải cho cái tôi của chúng ta'. Cuối cùng, chúng tôi kết hợp thế mạnh của cả hai bên để ra bản final."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "MarTech & Automation",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_SENIOR_04",
+          "question_text": "Bạn đã từng triển khai hệ thống Marketing Automation (CRM, Email Flow) nào chưa? Hiệu quả mang lại đối với Customer Lifecycle là gì?",
+          "question_type": "Technical",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy hệ thống và tối ưu nguồn lực",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn đánh giá thế nào về Lead Scoring?",
+            "Làm sao để tránh spam khách hàng?"
+          ],
+          "guidelines_must_have": [
+            "Hiểu về phân mảnh khách hàng (Segmentation)",
+            "Tối ưu tỷ lệ chuyển đổi từ Lead sang Customer",
+            "Sử dụng công cụ cụ thể (Hubspot, Salesforce, v.v.)"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ gửi email rác hàng loạt",
+            "Không quan tâm đến dữ liệu phản hồi"
+          ],
+          "sample_answer": "Tôi đã thiết lập luồng Email nuôi dưỡng tự động trên Hubspot dựa trên hành vi người dùng. Kết quả là tỷ lệ mở mail tăng 25% và giảm 15% khối lượng công việc cho team Sales nhờ bộ lọc Lead chất lượng."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Quản trị Rủi ro & Khủng hoảng",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "MKT_SENIOR_05",
+          "question_text": "Khi một chiến dịch lớn đang chạy và bị tấn công bởi 'nick ảo' (seeding bẩn) từ đối thủ, bạn sẽ xử lý như thế nào để bảo vệ thương hiệu?",
+          "question_type": "Stress / Crisis",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra bản lĩnh và phản ứng nhanh",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn có dùng pháp lý can thiệp không?",
+            "Làm sao để cộng đồng đứng về phía mình?"
+          ],
+          "guidelines_must_have": [
+            "Phân loại mức độ nghiêm trọng",
+            "Kế hoạch truyền thông phản hồi (Statement)",
+            "Đẩy mạnh các nội dung tích cực để 'đè' tin xấu"
+          ],
+          "guidelines_should_avoid": [
+            "Tranh cãi tay đôi với nick ảo",
+            "Phớt lờ hoàn toàn khi sự việc đã lan rộng"
+          ],
+          "sample_answer": "Tôi sẽ kích hoạt quy trình xử lý khủng hoảng: (1) Cô lập nguồn phát tin; (2) Liên hệ phía nền tảng để báo cáo vi phạm; (3) Tung các bằng chứng minh bạch thông qua các bên thứ 3 uy tín (KOLs/Báo chí) để lấy lại niềm tin."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Tầm nhìn & Sự nghiệp",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_SENIOR_06",
+          "question_text": "Bạn định nghĩa thế nào là một 'Full-stack Marketer' trong thời đại AI? Bạn đang bổ sung kỹ năng nào để không bị tụt hậu?",
+          "question_type": "Vision",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự cầu tiến và định hướng",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn nghĩ gì về Data Science trong Marketing?",
+            "Bạn dành bao nhiêu thời gian để học mỗi tuần?"
+          ],
+          "guidelines_must_have": [
+            "Sự kết hợp giữa Creative và Data",
+            "Kỹ năng sử dụng AI để nhân bản hiệu suất",
+            "Tư duy doanh nghiệp (Business mindset)"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ tập trung vào 1 kỹ năng duy nhất",
+            "Phụ thuộc quá nhiều vào kinh nghiệm cũ"
+          ],
+          "sample_answer": "Full-stack Marketer hiện nay phải biết dùng Data để định hướng Creative. Tôi đang học thêm về Python cơ bản để có thể tự xử lý những tệp dữ liệu lớn mà không cần đợi bộ phận Data, giúp chiến dịch linh hoạt hơn."
+        },
+        {
+          "question_id": "MKT_SENIOR_07",
+          "question_text": "Nếu được cấp 1 tỷ đồng để làm branding cho một startup công nghệ trong 1 tháng, bạn sẽ phân bổ ngân sách như thế nào?",
+          "question_type": "Planning / Finance",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng quản lý ngân sách",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn kỳ vọng ROI là bao nhiêu?",
+            "Tại sao bạn lại chọn kênh đó?"
+          ],
+          "guidelines_must_have": [
+            "Phân bổ dựa trên mục tiêu (Awareness vs Conversion)",
+            "Có khoản dự phòng",
+            "Lý do chọn kênh thuyết phục"
+          ],
+          "guidelines_should_avoid": [
+            "Đổ hết tiền vào 1 kênh duy nhất",
+            "Không có con số đo lường cụ thể"
+          ],
+          "sample_answer": "Tôi sẽ chia 40% cho Awareness (Social Ads/KOLs), 40% cho Performance (Google Search/Retargeting) để ra số ngay, và 20% cho Content/Community để tạo độ dày thương hiệu. Mọi chi phí phải dựa trên CAC dự kiến."
+        }
+      ]
+    }
+  ]
+}

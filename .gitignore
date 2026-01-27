@@ -28,3 +28,7 @@ Thumbs.db
 # Claude files
 .claude/
 CLAUDE.md
+
+# Reference folders
+AIChatAssistant/
+AITrueMirrorDocuments/

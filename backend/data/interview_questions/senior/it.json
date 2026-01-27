@@ -1,0 +1,182 @@
+{
+  "position": "Senior",
+  "industry": "IT",
+  "language": "vi",
+  "total_duration_minutes": 45,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "System Design & Scalability",
+      "duration_minutes": 12,
+      "questions": [
+        {
+          "question_id": "IT_SENIOR_01",
+          "question_text": "Làm thế nào để thiết kế một hệ thống có thể chịu tải hàng triệu lượt truy cập đồng thời (ví dụ hệ thống Flash Sale)? Bạn sẽ xử lý vấn đề 'Race Condition' khi hàng ngàn người cùng đặt một món hàng cuối cùng như thế nào?",
+          "question_type": "Architectural / Complex",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tư duy hệ thống lớn và concurrency",
+          "expected_duration_minutes": 7,
+          "popup_questions": [
+            "Sử dụng Caching (Redis) ở đâu trong sơ đồ này?",
+            "Tại sao dùng Message Queue (Kafka/RabbitMQ) lại quan trọng ở đây?",
+            "Database Lock hay Optimistic Locking sẽ phù hợp hơn?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng Load Balancer, Caching layer",
+            "Cơ chế hàng đợi (Queue) để tránh quá tải DB",
+            "Giải pháp Race Condition: Distributed Lock (Redis) hoặc cơ chế Versioning ở DB",
+            "Tách biệt service đọc và ghi (CQRS)"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ đề xuất nâng cấp cấu hình server (Vertical Scaling)",
+            "Quên mất vấn đề đồng bộ dữ liệu giữa các node"
+          ],
+          "sample_answer": "Tôi sẽ dùng Redis Distributed Lock để đảm bảo chỉ một request được trừ tồn kho tại một thời điểm. Hệ thống sẽ không ghi trực tiếp vào DB chính mà qua một Message Queue để 'giảm đỉnh' tải. Ngoài ra, dùng CDN và Cache ở tầng Frontend để giảm tải cho các API lấy thông tin sản phẩm."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ thuật chuyên sâu & Security",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "IT_SENIOR_02",
+          "question_text": "Hãy phân tích các lỗ hổng bảo mật phổ biến như SQL Injection, XSS, hay Broken Authentication. Bạn đã áp dụng những tiêu chuẩn nào (như OWASP) để bảo vệ sản phẩm của mình?",
+          "question_type": "Security",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kiến thức bảo mật - bắt buộc với Senior",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Làm sao để bảo vệ JWT token khỏi bị đánh cắp?",
+            "Bạn có quy trình rà soát bảo mật tự động trong CI/CD không?"
+          ],
+          "guidelines_must_have": [
+            "Input validation & Sanitization",
+            "Sử dụng ORM để tránh SQL Injection",
+            "HTTPS, CSP headers cho XSS",
+            "Mã hóa mật khẩu (BCrypt, Argon2)"
+          ],
+          "guidelines_should_avoid": [
+            "Coi nhẹ vấn đề bảo mật ở môi trường Dev",
+            "Lưu mật khẩu dạng text thô"
+          ],
+          "sample_answer": "Chúng tôi tuân thủ danh mục OWASP Top 10. Mọi input từ khách hàng đều phải qua bộ lọc chuẩn hóa. Với Authentication, chúng tôi dùng OAuth2/OpenID Connect và luôn lưu trữ mật khẩu bằng thuật toán băm có muối (Salted Hashing). Ngoài ra, chúng tôi dùng các công cụ quét mã lỗi tĩnh (SAST) để phát hiện sớm lỗ hổng."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Lãnh đạo kỹ thuật & Mentorship",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "IT_SENIOR_03",
+          "question_text": "Bạn làm thế nào để nâng cao năng lực của các bạn Junior/Middle trong team? Hãy kể về một trường hợp cụ thể bạn đã giúp một nhân sự yếu trở nên tiến bộ.",
+          "question_type": "Leadership",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng mentoring",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn có dành thời gian cho Pair Programming không?",
+            "Làm sao để feedback mà không làm họ nản lòng?"
+          ],
+          "guidelines_must_have": [
+            "Thiết lập quy trình Code Review kỹ lưỡng nhưng mang tính xây dựng",
+            "Tổ chức các buổi Tech Sharing",
+            "Phân chia task phù hợp với lộ trình phát triển của từng người"
+          ],
+          "guidelines_should_avoid": [
+            "Làm hộ hết phần việc của Junior cho nhanh",
+            "Chỉ trích lỗi sai mà không chỉ ra cách sửa"
+          ],
+          "sample_answer": "Tôi thường áp dụng Pair Programming cho các task khó. Tôi từng hướng dẫn một bạn Junior bằng cách giao cho bạn ấy thiết kế module nhỏ, sau đó tôi review và đặt các câu hỏi gợi mở để bạn ấy tự tìm ra lỗi logic. Sau 3 tháng, bạn ấy đã có thể tự đảm nhận các task phức tạp hơn mà không cần tôi hỗ trợ sát sao."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Quản trị rủi ro & Troubleshooting",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "IT_SENIOR_04",
+          "question_text": "Khi hệ thống Production gặp sự cố sập hoàn toàn (Downtime) và chưa rõ nguyên nhân, quy trình xử lý ưu tiên của bạn là gì?",
+          "question_type": "Stress / Technical",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra bản lĩnh và quy trình xử lý sự cố",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn ưu tiên tìm nguyên nhân hay ưu tiên khôi phục dịch vụ trước (Rollback)?",
+            "Sau sự cố, bạn làm gì để nó không lặp lại?"
+          ],
+          "guidelines_must_have": [
+            "Thông báo cho các bên liên quan (Stakeholders)",
+            "Cách ly lỗi (Isolate)",
+            "Rollback về phiên bản ổn định gần nhất nếu cần",
+            "Viết Post-mortem (báo cáo sau sự cố)"
+          ],
+          "guidelines_should_avoid": [
+            "Panic và thử sửa trực tiếp trên Production mà không backup",
+            "Giấu thông tin lỗi với ban giám đốc"
+          ],
+          "sample_answer": "Ưu tiên số một là khôi phục dịch vụ. Nếu nghi ngờ do phiên bản mới, tôi sẽ Rollback ngay lập tức. Sau khi hệ thống chạy lại, tôi mới bắt đầu soi Log và Monitoring để tìm Root Cause. Cuối cùng là viết Post-mortem để phân tích lỗi và đề xuất giải pháp ngăn chặn vĩnh viễn."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Tư duy sản phẩm & Business",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "IT_SENIOR_05",
+          "question_text": "Đôi khi yêu cầu từ phía kinh doanh (Business) mâu thuẫn với các tiêu chuẩn kỹ thuật (Best practices). Bạn sẽ cân bằng giữa việc 'chạy cho nhanh' và 'code cho chuẩn' như thế nào?",
+          "question_type": "Behavioral",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng cân bằng giữa kỹ thuật và kinh doanh",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn có chấp nhận nợ kỹ thuật (Technical Debt) không?",
+            "Làm sao để giải thích nợ kỹ thuật cho PM/PO hiểu?"
+          ],
+          "guidelines_must_have": [
+            "Hiểu rằng kỹ thuật phục vụ kinh doanh",
+            "Chấp nhận Technical Debt có kiểm soát",
+            "Có kế hoạch trả nợ kỹ thuật sau khi xong tính năng gấp"
+          ],
+          "guidelines_should_avoid": [
+            "Quá cứng nhắc về kỹ thuật làm hỏng cơ hội kinh doanh",
+            "Code quá 'ẩu' dẫn đến hệ thống không thể mở rộng sau này"
+          ],
+          "sample_answer": "Tôi sẽ thảo luận với PO về rủi ro. Nếu cần tính năng gấp để bắt kịp thị trường, tôi đồng ý dùng giải pháp ngắn hạn nhưng phải đăng ký nó vào 'Technical Debt backlog' để xử lý ngay ở sprint tiếp theo. Senior không chỉ là viết code tốt mà là biết khi nào cần hy sinh sự hoàn hảo vì mục tiêu chung."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Tầm nhìn & Công nghệ mới",
+      "duration_minutes": 3,
+      "questions": [
+        {
+          "question_id": "IT_SENIOR_06",
+          "question_text": "Bạn đánh giá thế nào về tác động của GenAI đối với năng suất lập trình hiện nay? Bạn đang ứng dụng nó như thế nào để dẫn dắt team hiệu quả hơn?",
+          "question_type": "Vision",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra sự thích nghi với xu hướng lớn",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Tôi dùng AI để generate Unit Test và viết Documentation nhanh hơn. Tôi cũng khuyến khích team dùng Copilot để giảm bớt các task lặp lại, từ đó tập trung vào việc thiết kế logic và giải quyết các bài toán nghiệp vụ phức tạp của công ty."
+        },
+        {
+          "question_id": "IT_SENIOR_07",
+          "question_text": "Tại sao chúng tôi nên tin tưởng giao phó vị trí Senior này cho bạn thay vì tuyển một người có nhiều năm kinh nghiệm hơn?",
+          "question_type": "Confidence",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra điểm mạnh cốt lõi",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Vì tôi không chỉ mang lại kỹ năng lập trình mà còn mang lại tư duy làm sản phẩm. Tôi có khả năng kết nối giữa các phòng ban, giải quyết xung đột và luôn đảm bảo rằng mọi dòng code của team đều tạo ra giá trị thực cho người dùng cuối."
+        }
+      ]
+    }
+  ]
+}

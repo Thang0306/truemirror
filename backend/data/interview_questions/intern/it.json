@@ -1,0 +1,228 @@
+{
+  "position": "Intern",
+  "industry": "IT",
+  "language": "vi",
+  "total_duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Tư duy Thuật toán & Cơ sở ngành",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "IT_INTERN_01",
+          "question_text": "Em hãy phân biệt sự khác biệt giữa Array và Linked List. Trong trường hợp nào thì em sẽ ưu tiên sử dụng Linked List thay vì Array?",
+          "question_type": "Knowledge / Logic",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kiến thức cấu trúc dữ liệu cơ bản",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Độ phức tạp thời gian (Time Complexity) khi truy cập một phần tử bất kỳ của hai loại này là bao nhiêu?",
+            "Em đã từng tự cài đặt Linked List bằng ngôn ngữ nào chưa?"
+          ],
+          "guidelines_must_have": [
+            "Nêu được cơ chế lưu trữ (vùng nhớ liên tục vs không liên tục)",
+            "Nói được ưu điểm của Linked List khi chèn/xóa phần tử",
+            "Nhắc đến Big O notation (O(1) vs O(n))"
+          ],
+          "guidelines_should_avoid": [
+            "Nhầm lẫn giữa cơ chế truy cập ngẫu nhiên",
+            "Không đưa ra được ví dụ cụ thể"
+          ],
+          "sample_answer": "Array lưu trữ ở các ô nhớ liên tiếp nên truy cập rất nhanh qua index O(1), nhưng chèn/xóa thì chậm O(n). Linked List thì ngược lại, các node liên kết qua con trỏ nên chèn/xóa nhanh O(1) nếu đã biết vị trí, nhưng truy cập chậm O(n). Em dùng Linked List khi cần thay đổi kích thước danh sách thường xuyên và không biết trước số lượng phần tử."
+        },
+        {
+          "question_id": "IT_INTERN_02",
+          "question_text": "Lập trình hướng đối tượng (OOP) có 4 tính chất cơ bản. Em hãy giải thích tính 'Đa hình' (Polymorphism) theo cách hiểu đơn giản nhất của em?",
+          "question_text_en": "Explain Polymorphism in OOP.",
+          "question_type": "Technical",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra kiến thức OOP nền tảng",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Phân biệt Overloading và Overriding?",
+            "Tại sao chúng ta cần dùng interface trong đa hình?"
+          ],
+          "guidelines_must_have": [
+            "Nêu được khái niệm 'một tên gọi nhiều hình thái'",
+            "Ví dụ về hàm cùng tên nhưng thực hiện khác nhau ở các class con",
+            "Tính ứng dụng trong việc mở rộng code"
+          ],
+          "guidelines_should_avoid": [
+            "Trả lời quá máy móc lý thuyết",
+            "Không lấy được ví dụ thực tế như con vật kêu hay hình vẽ"
+          ],
+          "sample_answer": "Đa hình là khả năng một đối tượng có thể thực hiện một hành động theo nhiều cách khác nhau. Ví dụ: class 'ConVat' có hàm 'keu()'. Class 'Cho' kế thừa 'ConVat' và override lại hàm đó thành 'Gâu Gâu', còn class 'Meo' thì override thành 'Meo Meo'. Khi gọi hàm 'keu()' trên một danh sách các con vật, mỗi con sẽ tự biết phát ra tiếng kêu riêng của nó."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ năng lập trình & Clean Code",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "IT_INTERN_03",
+          "question_text": "Theo em, thế nào là một đoạn code 'đẹp' và dễ bảo trì? Em thường đặt tên biến và hàm theo quy tắc nào?",
+          "question_type": "Technical / Mindset",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra thói quen code sạch",
+          "expected_duration_minutes": 2,
+          "popup_questions": [
+            "Em có biết quy tắc đặt tên camelCase hay snake_case không?",
+            "Em có hay viết comment cho code của mình không?"
+          ],
+          "guidelines_must_have": [
+            "Tên biến/hàm tường minh (meaningful names)",
+            "Hàm ngắn gọn, chỉ làm một việc",
+            "Định dạng code (indentation) đồng nhất"
+          ],
+          "guidelines_should_avoid": [
+            "Đặt tên biến là a, b, c x, y",
+            "Viết hàm quá dài hàng trăm dòng"
+          ],
+          "sample_answer": "Code đẹp trước hết phải dễ đọc như một bài văn. Em tuân thủ quy tắc đặt tên có ý nghĩa, ví dụ 'getUserBalance' thay vì 'getB'. Em cũng cố gắng giữ hàm nhỏ gọn và tuân theo chuẩn format của ngôn ngữ (như Prettier cho JS). Em quan niệm code là viết cho người khác đọc chứ không chỉ cho máy chạy."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Sử dụng Công cụ & Quy trình",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "IT_INTERN_04",
+          "question_text": "Em đã từng sử dụng Git chưa? Nếu em và một bạn khác cùng sửa một dòng code và đẩy lên dẫn đến 'Conflict', em sẽ xử lý như thế nào?",
+          "question_type": "Technical / Tools",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng làm việc với source control",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Lệnh git pull và git fetch khác nhau gì?",
+            "Em thường dùng tool UI hay dùng command line?"
+          ],
+          "guidelines_must_have": [
+            "Hiểu bản chất conflict là do trùng lặp thay đổi",
+            "Quy trình: Pull về -> Resolve tay -> Commit -> Push",
+            "Biết trao đổi với đồng nghiệp để quyết định giữ code nào"
+          ],
+          "guidelines_should_avoid": [
+            "Xóa hết code của mình hoặc của bạn để đẩy lên cho nhanh",
+            "Không biết lệnh git merge hay git rebase"
+          ],
+          "sample_answer": "Khi gặp conflict, em sẽ pull code mới nhất về máy local. Git sẽ đánh dấu đoạn code bị xung đột. Em sẽ mở code lên, so sánh thay đổi của em và của bạn. Nếu không chắc chắn, em sẽ chat với bạn đó để xem logic nào là đúng nhất, sau đó chọn giữ lại bản đúng, lưu lại và commit lại lần nữa."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Giải quyết vấn đề (Problem Solving)",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "IT_INTERN_05",
+          "question_text": "Khi gặp một lỗi (Bug) mà em search Google hay hỏi ChatGPT mãi vẫn không ra kết quả, em sẽ làm gì tiếp theo?",
+          "question_type": "Behavioral / Stress",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tính kiên trì và phương pháp debug",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có biết cách sử dụng Debugger hay log ra không?",
+            "Sau bao lâu thì em sẽ quyết định đi nhờ Mentor giúp đỡ?"
+          ],
+          "guidelines_must_have": [
+            "Chia nhỏ vấn đề để tìm nguyên nhân gốc (Isolate problem)",
+            "Đọc kỹ log lỗi và Stack Trace",
+            "Thử tạo một project nhỏ chỉ có tính năng đó để test",
+            "Biết xin trợ giúp đúng lúc"
+          ],
+          "guidelines_should_avoid": [
+            "Panic và bỏ cuộc",
+            "Thay đổi code lung tung cầu may mà không hiểu logic"
+          ],
+          "sample_answer": "Em sẽ dùng phương pháp cô lập vùng lỗi. Em sẽ đặt debugger hoặc in log để xem dữ liệu bị sai từ bước nào. Nếu vẫn bế tắc, em sẽ thử viết lại logic đó ra một file riêng biệt. Sau khoảng 1-2 tiếng tự mày mò không được, em sẽ tổng hợp lại các cách mình đã thử và đem đi hỏi Mentor để tiết kiệm thời gian cho dự án."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Thái độ & Khả năng học hỏi",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "IT_INTERN_06",
+          "question_text": "Ngành IT thay đổi rất nhanh. Em làm thế nào để cập nhật kiến thức mới hàng ngày? Gần đây em có học được công nghệ nào mới không?",
+          "question_type": "Ambiguous",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra đam mê và khả năng tự học",
+          "expected_duration_minutes": 2,
+          "popup_questions": [
+            "Em có hay đọc các blog công nghệ như Medium, Dev.to hay xem Youtube không?",
+            "Em có kế hoạch học gì trong 6 tháng tới?"
+          ],
+          "guidelines_must_have": [
+            "Có nguồn tin tức uy tín (X, Reddit, Blog công nghệ)",
+            "Có ví dụ về công nghệ mới (Ví dụ: React 19, Bun, AI tools)",
+            "Thể hiện được sự hào hứng với công nghệ"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ học những gì trường dạy",
+            "Không biết tên một framework hay thư viện mới nào"
+          ],
+          "sample_answer": "Em thường theo dõi các kênh Youtube như Fireship để cập nhật nhanh tin tức. Gần đây em đang học về Docker vì em thấy nó rất hữu ích trong việc đồng bộ môi trường phát triển. Em đã tự tạo được một container chạy Node.js đơn giản."
+        },
+        {
+          "question_id": "IT_INTERN_07",
+          "question_text": "Tại sao em lại chọn thực tập tại công ty chúng tôi mà không phải các công ty lớn (Big Tech) khác?",
+          "question_type": "Behavioral",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra mức độ quan tâm đến công ty",
+          "expected_duration_minutes": 2,
+          "popup_questions": [
+            "Em biết sản phẩm chính của chúng tôi là gì không?",
+            "Em mong đợi gì từ Mentor của mình?"
+          ],
+          "guidelines_must_have": [
+            "Nghiên cứu trước về sản phẩm/lĩnh vực công ty",
+            "Nêu lý do phù hợp (Ví dụ: Thích làm startup, thích tech stack của công ty)",
+            "Sự chân thành"
+          ],
+          "guidelines_should_avoid": [
+            "Trả lời 'em nộp đại'",
+            "Không biết công ty làm về lĩnh vực gì"
+          ],
+          "sample_answer": "Em đã tìm hiểu và thấy công ty đang dùng Golang - ngôn ngữ mà em rất muốn phát triển chuyên sâu. Hơn nữa, em thích môi trường làm việc năng động, nơi thực tập sinh được tham gia trực tiếp vào dự án thực tế thay vì chỉ ngồi học lý thuyết."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Câu hỏi kết thúc & Tổng kết",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "IT_INTERN_08",
+          "question_text": "Em có câu hỏi nào dành cho anh/chị về vị trí này hoặc về đội ngũ kỹ thuật của công ty không?",
+          "question_type": "Behavioral",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra sự chủ động và tò mò",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em có quan tâm đến lộ trình lên Junior không?",
+            "Em muốn biết thêm về văn hóa team không?"
+          ],
+          "guidelines_must_have": [
+            "Câu hỏi về tech stack, quy trình làm việc",
+            "Câu hỏi về kỳ vọng đối với intern",
+            "Câu hỏi về văn hóa học tập tại công ty"
+          ],
+          "guidelines_should_avoid": [
+            "Trả lời 'Em không có câu hỏi nào'",
+            "Chỉ hỏi về lương/phụ cấp ngay lập tức"
+          ],
+          "sample_answer": "Dạ, em muốn hỏi là trong team mình quy trình Code Review cho intern sẽ diễn ra như thế nào ạ? Và anh/chị kỳ vọng sau 3 tháng thực tập thì em có thể đảm nhận được những phần việc cụ thể nào trong dự án?"
+        }
+      ]
+    }
+  ]
+}

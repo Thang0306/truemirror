@@ -1,0 +1,160 @@
+{
+  "position": "Manager",
+  "industry": "Finance",
+  "language": "vi",
+  "total_duration_minutes": 60,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Quản trị Tài chính Chiến lược & Lập kế hoạch (FP&A)",
+      "duration_minutes": 15,
+      "questions": [
+        {
+          "question_id": "FIN_MANAGER_01",
+          "question_text": "Trong bối cảnh nền kinh tế đối mặt với lạm phát cao và đứt gãy chuỗi cung ứng, bạn sẽ xây dựng kịch bản dự báo dòng tiền (Cash Flow Forecasting) như thế nào để đảm bảo tính thanh khoản mà vẫn tối ưu hóa được lợi nhuận trên vốn (ROE)?",
+          "question_type": "Strategic Leadership",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra năng lực điều hành dòng tiền cấp tập đoàn",
+          "expected_duration_minutes": 8,
+          "popup_questions": [
+            "Bạn ưu tiên phương pháp dự báo trực tiếp hay gián tiếp trong tình huống này?",
+            "Làm thế nào để quản trị Working Capital (Vốn lưu động) hiệu quả hơn khi chi phí đầu vào tăng?",
+            "Bạn có sử dụng các công cụ phái sinh (Hedging) để phòng ngừa rủi ro tỷ giá/giá hàng hóa không?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích chu kỳ chuyển đổi tiền mặt (Cash Conversion Cycle)",
+            "Xây dựng kịch bản Stress Test (tốt nhất, cơ bản, xấu nhất)",
+            "Chính sách quản trị nợ phải thu và nợ phải trả linh hoạt",
+            "Tối ưu hóa cơ cấu nguồn vốn ngắn và dài hạn"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ dựa vào dữ liệu lịch sử mà bỏ qua các biến số vĩ mô",
+            "Cắt giảm chi tiêu cực đoan làm tê liệt hoạt động kinh doanh",
+            "Thiếu dự phòng cho các tình huống khẩn cấp (Contingency fund)"
+          ],
+          "sample_answer": "Tôi sẽ chuyển sang mô hình dự báo cuốn chiếu (Rolling Forecast) hàng tuần thay vì hàng tháng. Tôi tập trung tối ưu vòng quay hàng tồn kho và thắt chặt chính sách tín dụng khách hàng. Đồng thời, tôi sẽ đàm phán kéo dài thời gian thanh toán với nhà cung cấp chiến lược. Mục tiêu là duy trì một 'Cash Buffer' đủ lớn để vượt qua khủng hỏa nhưng vẫn sẵn sàng nguồn lực để thâu tóm các cơ hội khi thị trường hồi phục."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Cấu trúc Vốn & Huy động Vốn",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "FIN_MANAGER_02",
+          "question_text": "Giả sử công ty cần 500 tỷ VNĐ cho một dự án mở rộng nhà máy. Bạn hãy phân tích ưu và nhược điểm của việc phát hành trái phiếu doanh nghiệp so với việc vay vốn ngân hàng hoặc phát hành thêm cổ phiếu trong thời điểm hiện tại.",
+          "question_type": "Corporate Finance",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tư duy về đòn bẩy tài chính và chi phí sử dụng vốn",
+          "expected_duration_minutes": 6,
+          "popup_questions": [
+            "Tác động của từng phương án lên EPS (lợi nhuận trên cổ phiếu) là gì?",
+            "Làm sao để đảm bảo các chỉ số nợ (Debt-to-Equity) vẫn nằm trong ngưỡng an toàn cho phép?",
+            "Bạn đánh giá thế nào về rủi ro pha loãng cổ phiếu?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích chi phí vốn của từng phương án",
+            "Xem xét điều khoản vay (Covenants) và tính linh hoạt",
+            "Đánh giá khẩu vị rủi ro của cổ đông hiện hữu",
+            "Tác động đến xếp hạng tín nhiệm của doanh nghiệp"
+          ],
+          "sample_answer": "Tôi sẽ thực hiện phân tích so sánh chi phí vốn (WACC) và tác động lên cấu trúc tài chính lâu dài. Vay ngân hàng có lợi thế về lá chắn thuế nhưng kèm nhiều điều kiện khắt khe. Phát hành cổ phiếu giúp giảm áp lực trả nợ nhưng lại pha loãng quyền sở hữu. Tùy vào mặt bằng lãi suất và kế hoạch dòng tiền 5 năm tới, tôi sẽ đề xuất một phương án hỗn hợp để vừa tận dụng đòn bẩy tài chính, vừa đảm bảo tính tự chủ về vốn."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Quản trị Rủi ro & Quản trị Tập đoàn (Governance)",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "FIN_MANAGER_03",
+          "question_text": "Nếu bạn phát hiện ra Ban giám đốc đang có dấu hiệu 'xào nấu' số liệu doanh thu để đạt được mục tiêu niêm yết hoặc vay vốn, là một Finance Manager, bạn sẽ hành động như thế nào?",
+          "question_type": "Ethics / Governance",
+          "pressure_level": "Extreme",
+          "purpose": "Kiểm tra đạo đức nghề nghiệp và bản lĩnh lãnh đạo",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Bạn có sẵn sàng từ chức nếu không thể thay đổi tình hình?",
+            "Làm thế nào để báo cáo vấn đề này lên Hội đồng quản trị một cách chuyên nghiệp?",
+            "Bạn xử lý thế nào với các áp lực từ phía các phòng ban khác?"
+          ],
+          "guidelines_must_have": [
+            "Tuân thủ đạo đức nghề nghiệp kế toán/tài chính quốc tế",
+            "Sử dụng các kênh báo cáo nội bộ (Whistleblowing) nếu có",
+            "Phân tích hậu quả pháp lý dài hạn cho doanh nghiệp (vụ Enron là ví dụ điển hình)",
+            "Đề xuất các phương án ghi nhận doanh thu đúng chuẩn mực"
+          ],
+          "sample_answer": "Sự chính trực là nền tảng của một Manager Tài chính. Tôi sẽ trình bày các bằng chứng và rủi ro pháp lý khủng khiếp nếu bị phát hiện (bao gồm cả án phạt hình sự và sụp đổ uy tín). Tôi sẽ đề xuất các cách thức tối ưu hóa chi phí hoặc tăng trưởng thực chất để cải thiện số liệu thay vì gian lận. Nếu Ban giám đốc vẫn quyết tâm làm sai, tôi buộc phải báo cáo lên Ban kiểm soát và cân nhắc việc rời bỏ vị trí để bảo vệ uy tín nghề nghiệp của mình."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "M&A & Đầu tư Chiến lược",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "FIN_MANAGER_04",
+          "question_text": "Khi thực hiện Due Diligence (Thẩm định chuyên sâu) cho một thương vụ M&A, những 'Red Flags' tài chính nào khiến bạn sẽ ngay lập tức khuyên Hội đồng quản trị dừng thương vụ?",
+          "question_type": "M&A Strategy",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng thẩm định và nhìn nhận rủi ro tiềm ẩn",
+          "expected_duration_minutes": 5,
+          "sample_answer": "Tôi đặc biệt chú ý đến: (1) Các khoản nợ tiềm tàng ngoài bảng cân đối, (2) Sự sụt giảm chất lượng của các khoản phải thu, (3) Các giao dịch với bên liên kết bất thường, và (4) Sự rời bỏ của các nhân sự chủ chốt ngay trước thương vụ. Nếu các rủi ro về pháp lý hoặc tài chính không thể định lượng được hoặc vượt quá khả năng chịu đựng của tập đoàn, tôi sẽ kiến nghị dừng lại ngay lập tức để bảo vệ dòng vốn của cổ đông."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Lãnh đạo Đội ngũ & Phát triển Nhân tài",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "FIN_MANAGER_05",
+          "question_text": "Làm thế nào để bạn xây dựng một đội ngũ tài chính vừa giỏi chuyên môn (Hard skills) vừa có tư duy hỗ trợ kinh doanh (Service mindset)?",
+          "question_type": "Leadership",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra năng lực quản trị con người",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Tôi luân chuyển các bạn nhân sự tài chính sang làm việc sát sao với các phòng ban kinh doanh để họ hiểu 'tiền được tạo ra như thế nào'. Tôi khuyến khích họ không chỉ đưa ra thông tin 'Đúng/Sai' mà phải là 'Giải pháp'. Tôi cũng thiết lập lộ trình đào tạo các chứng chỉ quốc tế để nâng tầm tư duy quản trị cho toàn đội ngũ."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Quản trị Hiệu suất & Chỉ số Tài chính",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "FIN_MANAGER_06",
+          "question_text": "Hệ thống thẻ điểm cân bằng (Balanced Scorecard) đóng vai trò gì trong việc chuyển đổi chiến lược tài chính thành các hành động cụ thể cho từng bộ phận?",
+          "question_type": "Management Control",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng quản trị hiệu suất tổng thể",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Nó giúp chúng ta không chỉ nhìn vào tài chính (quá khứ) mà còn nhìn vào khách hàng, quy trình nội bộ và sự học hỏi phát triển (tương lai). Là Manager, tôi dùng BSC để đảm bảo rằng việc tối ưu hóa chi phí hôm nay không làm hỏng trải nghiệm khách hàng hay kìm hãm sự đổi mới của công ty trong dài hạn."
+        },
+        {
+          "question_id": "FIN_MANAGER_07",
+          "question_text": "Nếu lợi nhuận ròng tăng nhưng giá cổ phiếu công ty liên tục giảm trên thị trường, bạn sẽ giải trình với các cổ đông lớn như thế nào trong buổi họp Investor Relations?",
+          "question_type": "Investor Relations",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng đối ngoại và thấu hiểu thị trường chứng khoán",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Tôi sẽ phân tích các yếu tố vĩ mô và so sánh với trung bình ngành. Có thể thị trường đang lo ngại về triển vọng tăng trưởng dài hạn hoặc cơ cấu nợ của chúng ta. Tôi sẽ trình bày rõ chiến lược tái đầu tư lợi nhuận và các chỉ số về dòng tiền tự do (FCFF) để chứng minh sức khỏe nội tại của công ty vẫn rất tốt, từ đó củng cố niềm tin cho nhà đầu tư."
+        },
+        {
+          "question_id": "FIN_MANAGER_08",
+          "question_text": "Triết lý quản trị tài chính cốt lõi của bạn là gì? Bạn muốn xây dựng một bộ phận Tài chính là 'Cảnh sát' hay là 'Kiến trúc sư' cho sự phát triển?",
+          "question_type": "Leadership Philosophy",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy lãnh đạo tối cao",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Tôi chọn là một 'Kiến trúc sư có kỷ luật'. Chúng ta xây dựng các cấu trúc tài chính vững chắc để nâng đỡ ngôi nhà doanh nghiệp phát triển cao hơn. Nhưng kiến trúc sư cũng là người nắm rõ các giới hạn vật lý (nguồn lực) để đảm bảo ngôi nhà không bị sụp đổ. Tài chính phải là động lực thúc đẩy kinh doanh một cách an toàn và bền vững."
+        }
+      ]
+    }
+  ]
+}

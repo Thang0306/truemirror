@@ -1,0 +1,140 @@
+/* Interview Room Styles - TrueMirror Brand Colors */
+
+.input-bar-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+  box-sizing: border-box;
+  min-height: 120px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-bar-form {
+  background: #ffffff;
+  border-radius: 36px;
+  box-shadow: 0 3px 18px rgba(15, 40, 84, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 28px 16px 24px;
+  width: 95%;
+  max-width: 1000px;
+  min-width: 300px;
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  border: 2px solid #e5e7eb;
+}
+
+.input-bar-form input[type="text"] {
+  flex: 1;
+  background: #f9fafb;
+  border: none;
+  color: #0F2854;
+  border-radius: 14px;
+  font-size: 1.1rem;
+  padding: 18px 28px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.input-bar-form input[type="text"]::placeholder {
+  color: #6b7280;
+  opacity: 0.8;
+}
+
+.input-bar-form input[type="text"]:focus {
+  outline: none;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(73, 136, 196, 0.1);
+}
+
+.send-btn {
+  background: #1C4D8D;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 16px;
+  padding: 0 40px;
+  height: 54px;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.send-btn:hover:not(:disabled) {
+  background: #0F2854;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(28, 77, 141, 0.3);
+}
+
+.send-btn:disabled {
+  background: #9ca3af;
+  color: #d1d5db;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Evaluate Interview Button */
+.evaluate-btn {
+  background: #1C4D8D;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.evaluate-btn:hover:not(:disabled) {
+  background: #0F2854;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(28, 77, 141, 0.3);
+}
+
+/* End Interview Button */
+.end-interview-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.end-interview-btn:hover:not(:disabled) {
+  background: #b91c1c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .input-bar-form {
+    max-width: 100%;
+    padding: 12px 16px 12px 20px;
+  }
+
+  .input-bar-form input[type="text"] {
+    font-size: 1rem;
+    padding: 14px 22px;
+  }
+
+  .send-btn {
+    padding: 0 24px;
+    height: 48px;
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "position": "Senior",
+  "industry": "Finance",
+  "language": "vi",
+  "total_duration_minutes": 50,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Thẩm định Đầu tư & Mô hình Tài chính",
+      "duration_minutes": 12,
+      "questions": [
+        {
+          "question_id": "FIN_SENIOR_01",
+          "question_text": "Khi xây dựng mô hình DCF (Discounted Cash Flow) để thẩm định một dự án đầu tư dài hạn, bạn xác định chi phí vốn bình quân gia quyền (WACC) như thế nào? Trong bối cảnh lãi suất thị trường biến động mạnh, bạn điều chỉnh các tham số này ra sao để đảm bảo tính an toàn cho dự án?",
+          "question_type": "Technical / Modeling",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng định giá và hiểu biết về thị trường vốn",
+          "expected_duration_minutes": 7,
+          "popup_questions": [
+            "Bạn tính Cost of Equity theo mô hình CAPM hay phương pháp nào khác?",
+            "Làm thế nào để xác định Terminal Value (Giá trị cuối kỳ) một cách hợp lý nhất?",
+            "Nếu chỉ số IRR cao hơn WACC nhưng dự án có dòng tiền âm trong 3 năm đầu, bạn có kiến nghị đầu tư không?"
+          ],
+          "guidelines_must_have": [
+            "Công thức tính WACC: $WACC = \frac{E}{V} \times Re + \frac{D}{V} \times Rd \times (1 - Tc)$",
+            "Phân tích các thành phần: Beta, Risk-free rate, Equity Risk Premium",
+            "Sử dụng phân tích độ nhạy (Sensitivity Analysis) đối với các biến số chính",
+            "Đánh giá cấu trúc vốn tối ưu của doanh nghiệp"
+          ],
+          "guidelines_should_avoid": [
+            "Sử dụng một con số WACC cố định cho mọi kịch bản",
+            "Quên tính đến ảnh hưởng của lá chắn thuế (Tax Shield) từ lãi vay",
+            "Bỏ qua các yếu tố rủi ro đặc thù của ngành (Specific Risk)"
+          ],
+          "sample_answer": "Tôi xác định WACC bằng cách kết hợp chi phí vốn chủ sở hữu thông qua mô hình CAPM và chi phí nợ vay sau thuế. Trong bối cảnh lãi suất biến động, tôi không chỉ dùng một con số tĩnh mà thực hiện phân tích kịch bản với các mức Beta và Risk-free rate khác nhau. Tôi đặc biệt chú trọng vào việc tính toán Terminal Value bằng phương pháp tăng trưởng vĩnh viễn và kiểm tra chéo với phương pháp Exit Multiple để đảm bảo kết quả không bị thổi phồng."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Quản trị Thuế & Tuân thủ Quốc tế",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "FIN_SENIOR_02",
+          "question_text": "Hãy trình bày hiểu biết của bạn về Chuyển giá (Transfer Pricing). Làm thế nào để thiết lập giá giao dịch giữa các bên liên kết trong tập đoàn nhằm tối ưu hóa nghĩa vụ thuế mà vẫn đảm bảo tuân thủ quy định của cơ quan thuế (BEPS)?",
+          "question_type": "Tax Strategy",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kiến thức về thuế nâng cao và rủi ro tuân thủ",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Phương pháp nào là phổ biến nhất để xác định giá thị trường (Arm's length principle)?",
+            "Bạn xử lý thế nào khi hồ sơ chuyển giá bị cơ quan thuế bác bỏ?",
+            "Làm sao để cân bằng giữa lợi nhuận của chi nhánh địa phương và lợi ích toàn tập đoàn?"
+          ],
+          "guidelines_must_have": [
+            "Nguyên tắc giá thị trường (Arm's Length Principle)",
+            "Các phương pháp xác định giá: TNMM, CUP, Resale Price...",
+            "Tầm quan trọng của tài liệu hóa (Documentation) và hồ sơ 3 cấp",
+            "Hiểu biết về quy định Nghị định 132 (tại Việt Nam) hoặc các chuẩn mực OECD"
+          ],
+          "sample_answer": "Tôi tuân thủ nguyên tắc 'Arm's Length', đảm bảo giá giao dịch tương đương với giao dịch giữa các bên độc lập. Tôi thường ưu tiên phương pháp so sánh lợi nhuận ròng (TNMM) vì tính thực tiễn cao. Để giảm thiểu rủi ro, tôi luôn chuẩn bị hồ sơ quốc gia và hồ sơ toàn cầu cực kỳ chi tiết, làm rõ các phân tích chức năng, tài sản và rủi ro của từng thực thể trong chuỗi giá trị."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Kiểm soát Nội bộ & Quản trị Rủi ro",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "FIN_SENIOR_03",
+          "question_text": "Bạn đã bao giờ phát hiện ra một lỗ hổng trọng yếu trong hệ thống kiểm soát nội bộ dẫn đến thất thoát tài sản chưa? Quy trình điều tra và khắc phục của bạn diễn ra như thế nào?",
+          "question_type": "Risk & Control",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng rà soát và tư duy phòng chống gian lận",
+          "expected_duration_minutes": 4,
+          "guidelines_must_have": [
+            "Sử dụng khung kiểm soát COSO",
+            "Phân tách nhiệm vụ (Segregation of Duties)",
+            "Quy trình báo cáo và xử lý độc lập",
+            "Áp dụng công nghệ để tự động hóa kiểm soát (Data Analytics)"
+          ],
+          "sample_answer": "Tôi từng phát hiện sự thiếu đồng bộ giữa hệ thống kho và kế toán dẫn đến rủi ro chiếm dụng hàng tồn kho. Tôi đã lập tức thực hiện kiểm kê đột xuất, đối soát dữ liệu ngược từ 6 tháng trước. Sau đó, tôi đề xuất thiết lập quy trình phê duyệt đa tầng trên ERP và bắt buộc thực hiện luân chuyển nhân sự ở các vị trí nhạy cảm để triệt tiêu cơ hội gian lận."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Business Partnering & Hỗ trợ Ra quyết định",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "FIN_SENIOR_04",
+          "question_text": "Làm thế nào để bạn giải thích một khái niệm tài chính phức tạp (ví dụ: tác động của tỷ giá lên EBITDA) cho một Giám đốc Sản xuất hoặc Giám đốc Kinh doanh vốn không am hiểu về con số?",
+          "question_type": "Communication",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng làm việc liên phòng ban (HRBP/FinBP)",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn dùng biểu đồ (Visualizing) như thế nào để thuyết phục họ?",
+            "Nếu họ vẫn muốn chi vượt ngân sách vì lý do 'thị trường', bạn phản ứng ra sao?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng ngôn ngữ kinh doanh thay vì thuật ngữ kế toán",
+            "Trình bày theo dạng Bridge Chart (biểu đồ cầu) để thấy sự biến động",
+            "Tập trung vào giải pháp thay vì chỉ đưa ra con số cảnh báo"
+          ],
+          "sample_answer": "Tôi sẽ dùng một ví dụ đơn giản: 'Nếu đồng USD tăng giá, mỗi chiếc linh kiện anh nhập về sẽ đắt thêm 5%, điều đó trực tiếp ăn mòn lợi nhuận của anh dù doanh số có tăng'. Tôi thường dùng biểu đồ thác nước (Waterfall chart) để họ thấy rõ: đâu là lỗi do vận hành, đâu là do yếu tố thị trường khách quan, từ đó cùng họ tìm cách tối ưu chi phí khác để bù đắp."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Báo cáo Tài chính & Chuẩn mực Quốc tế",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "FIN_SENIOR_05",
+          "question_text": "Sự khác biệt lớn nhất giữa chuẩn mực kế toán Việt Nam (VAS) và chuẩn mực quốc tế (IFRS) mà bạn thường gặp là gì? Tại sao việc chuyển đổi sang IFRS lại quan trọng đối với các doanh nghiệp muốn niêm yết quốc tế?",
+          "question_type": "Technical / IFRS",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra trình độ chuyên môn chuẩn quốc tế",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Khác biệt lớn nhất là tư duy 'Giá trị hợp lý' (Fair Value) của IFRS so với 'Giá gốc' (Historical Cost) của VAS. IFRS phản ánh sát thực tế thị trường hơn, đặc biệt là các công cụ tài chính và tài sản cố định. Đối với niêm yết quốc tế, IFRS là ngôn ngữ chung giúp các nhà đầu tư nước ngoài tin tưởng vào tính minh bạch và khả năng so sánh của báo cáo tài chính doanh nghiệp."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Tầm nhìn & Sự phát triển",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "FIN_SENIOR_06",
+          "question_text": "Theo bạn, vai trò của AI và tự động hóa (RPA) trong bộ phận tài chính sẽ thay đổi công việc của một Senior Finance như thế nào trong 5 năm tới?",
+          "question_type": "Vision",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra khả năng thích nghi công nghệ",
+          "expected_duration_minutes": 3,
+          "sample_answer": "AI sẽ làm thay các việc thu thập và xử lý dữ liệu thô. Vai trò của tôi sẽ chuyển dịch hoàn toàn sang phân tích chiến lược (Insights) và cố vấn. Thay vì dành 80% thời gian làm báo cáo, tôi sẽ dành 80% thời gian để giải thích 'Tại sao con số lại như vậy' và 'Chúng ta nên làm gì tiếp theo'."
+        },
+        {
+          "question_id": "FIN_SENIOR_07",
+          "question_text": "Bạn làm thế nào để quản lý áp lực trong mùa quyết toán hoặc khi phải thực hiện các thương vụ M&A với cường độ làm việc 14-16 tiếng mỗi ngày?",
+          "question_type": "Soft Skill / Stress",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra sự bền bỉ",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi ưu tiên quản trị năng lượng thay vì thời gian. Tôi luôn lập danh sách ưu tiên (Critical path) và ủy quyền các task cơ bản cho Junior. Sự kỷ luật trong việc kiểm soát tiến độ giúp tôi giữ được sự tỉnh táo để đưa ra các quyết định tài chính chính xác nhất ngay cả trong lúc căng thẳng."
+        },
+        {
+          "question_id": "FIN_SENIOR_08",
+          "question_text": "Tại sao chúng tôi nên chọn bạn thay vì một ứng viên từ các công ty Kiểm toán Big4 vốn rất giỏi về quy trình và chuẩn mực?",
+          "question_type": "Confidence",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra điểm mạnh cốt lõi",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Kiểm toán viên giỏi trong việc kiểm tra những gì đã xảy ra, còn tôi giỏi trong việc điều hành những gì đang và sẽ xảy ra. Tôi có tư duy thực chiến của người trực tiếp vận hành dòng tiền doanh nghiệp, hiểu rõ sự đánh đổi giữa rủi ro và lợi nhuận trong thực tế kinh doanh, điều mà các con số trên giấy tờ của kiểm toán đôi khi không lột tả hết được."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "position": "Junior",
+  "industry": "Finance",
+  "language": "vi",
+  "total_duration_minutes": 40,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Phân tích Tài chính & Chỉ số Hiệu quả",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "FIN_JUNIOR_01",
+          "question_text": "Khi nhìn vào Báo cáo lưu chuyển tiền tệ (Cash Flow Statement), tại sao một doanh nghiệp có lợi nhuận (Net Income) rất cao nhưng vẫn có thể rơi vào tình trạng phá sản?",
+          "question_type": "Analytical Thinking",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng phân tích sự khác biệt giữa lợi nhuận và dòng tiền",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Sự khác biệt giữa dòng tiền hoạt động (CFO) và dòng tiền đầu tư (CFI) là gì?",
+            "Làm sao để cải thiện vòng quay tiền mặt (Cash Conversion Cycle)?"
+          ],
+          "guidelines_must_have": [
+            "Nêu được vấn đề nợ đọng (Accounts Receivable) quá cao",
+            "Chi phí đầu tư tài sản quá lớn hoặc trả nợ gốc",
+            "Giải thích được nguyên tắc dồn tích làm lợi nhuận tăng nhưng tiền chưa về túi"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ trả lời chung chung là do 'quản lý kém'",
+            "Không phân biệt được các hoạt động trong báo cáo lưu chuyển tiền tệ"
+          ],
+          "sample_answer": "Vì lợi nhuận chỉ là con số trên giấy tờ theo nguyên tắc dồn tích. Nếu doanh nghiệp bán được nhiều hàng nhưng không thu được tiền (nợ đọng), hoặc dùng hết tiền mặt để mua sắm tài sản cố định và trả nợ, họ sẽ không còn tiền để thanh toán cho nhà cung cấp hay trả lương. 'Profit is opinion, Cash is fact' – dòng tiền mới là thứ nuôi sống doanh nghiệp hàng ngày."
+        },
+        {
+          "question_id": "FIN_JUNIOR_02",
+          "question_text": "Bạn thường sử dụng những chỉ số (Ratios) nào để đánh giá khả năng thanh toán ngắn hạn của một doanh nghiệp? Chỉ số bao nhiêu là an toàn?",
+          "question_type": "Technical Knowledge",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kiến thức về quản trị rủi ro tài chính",
+          "expected_duration_minutes": 4,
+          "sample_answer": "Tôi thường dùng Current Ratio (Tài sản ngắn hạn / Nợ ngắn hạn) và Quick Ratio (loại bỏ hàng tồn kho). Thông thường Current Ratio > 1.5 là ổn, nhưng còn tùy vào ngành nghề. Nếu chỉ số quá cao, có thể doanh nghiệp đang lãng phí nguồn lực vì giữ quá nhiều tiền mặt hoặc hàng tồn kho không cần thiết."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Quản trị Ngân sách & Kiểm soát chi phí",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "FIN_JUNIOR_03",
+          "question_text": "Làm thế nào để bạn thực hiện phân tích biến động (Variance Analysis) giữa ngân sách dự toán và thực tế? Khi một khoản chi vượt ngân sách 20%, hành động tiếp theo của bạn là gì?",
+          "question_type": "Management Accounting",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng quản trị chi phí",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Biến động do khối lượng (Volume variance) và biến động do giá (Price variance) khác nhau thế nào?",
+            "Bạn làm gì để thuyết phục các phòng ban khác tuân thủ ngân sách?"
+          ],
+          "guidelines_must_have": [
+            "Tìm hiểu nguyên nhân gốc rễ (do giá thị trường tăng hay do lãng phí)",
+            "Làm việc với bộ phận liên quan để có giải pháp điều chỉnh",
+            "Báo cáo kịp thời cho cấp quản lý để xin điều chỉnh dự báo (Re-forecast)"
+          ],
+          "sample_answer": "Tôi sẽ bóc tách lỗi xem đó là do giá nguyên vật liệu tăng (Price Variance) hay do team sử dụng quá định mức (Efficiency Variance). Sau đó tôi sẽ yêu cầu bộ phận đó giải trình. Nếu đó là biến động khách quan không thể tránh khỏi, tôi sẽ cập nhật vào bản dự báo tháng tới để Ban giám đốc kịp thời cân đối dòng tiền."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Thuế & Tuân thủ (Compliance)",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "FIN_JUNIOR_04",
+          "question_text": "Bạn hãy phân biệt chi phí hợp lý và chi phí không hợp lý khi quyết toán Thuế thu nhập doanh nghiệp (CIT). Bạn đã từng xử lý các hóa đơn nhạy cảm như thế nào?",
+          "question_type": "Tax Knowledge",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kiến thức pháp luật thuế",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Các khoản chi không có hóa đơn nhưng có chứng từ thực tế có được trừ không?",
+            "Chi phí quà tặng cho khách hàng có bị khống chế mức trần không?"
+          ],
+          "guidelines_must_have": [
+            "Chi phí phải liên quan đến hoạt động sản xuất kinh doanh",
+            "Phải có đủ hóa đơn, chứng từ hợp lệ theo quy định",
+            "Thanh toán qua ngân hàng đối với hóa đơn trên 20 triệu VNĐ"
+          ],
+          "sample_answer": "Chi phí hợp lý phải phục vụ sản xuất kinh doanh và có đủ chứng từ. Các khoản như tiền phạt vi phạm hành chính hay chi phí không có hóa đơn VAT sẽ bị loại khi tính thuế CIT. Tôi luôn kiểm tra tính hợp lệ của hóa đơn trên trang web của Tổng cục Thuế để đảm bảo không dính phải hóa đơn của doanh nghiệp 'ma' hay đã ngừng hoạt động."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Kiểm soát Nội bộ & ERP",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_JUNIOR_05",
+          "question_text": "Bạn đã từng làm việc trên các hệ thống ERP nào (SAP, Oracle, Odoo...)? Theo bạn, lợi ích lớn nhất của ERP đối với một nhân viên tài chính là gì?",
+          "question_type": "Technical / ERP",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra khả năng ứng dụng công nghệ",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi có kinh nghiệm dùng SAP. Lợi ích lớn nhất là tính 'Real-time' và sự thống nhất dữ liệu. Khi kho xuất hàng, kế toán thấy ngay doanh thu mà không cần nhập liệu thủ công lại, giúp giảm thiểu sai sót và tăng tính minh bạch cho hệ thống kiểm soát nội bộ."
+        },
+        {
+          "question_id": "FIN_JUNIOR_06",
+          "question_text": "Làm thế nào để ngăn chặn gian lận trong quy trình tạm ứng và thanh toán chi phí của nhân viên?",
+          "question_type": "Internal Control",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra tư duy phòng chống gian lận",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Phải áp dụng nguyên tắc 'Bất kiêm nhiệm'. Người duyệt chi không được là người giữ tiền. Đồng thời phải có định mức chi phí rõ ràng cho từng cấp bậc và yêu cầu đính kèm bằng chứng (hình ảnh, vị trí, hóa đơn) ngay trên hệ thống."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Kỹ năng Mềm & Giao tiếp",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_JUNIOR_07",
+          "question_text": "Bộ phận Finance thường bị coi là 'kẻ khó tính' vì hay từ chối các khoản chi. Bạn làm thế nào để giải thích một quy định tài chính cho các phòng ban khác mà vẫn giữ được mối quan hệ tốt?",
+          "question_type": "Communication",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng ngoại giao trong công việc",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Tôi sẽ không chỉ nói 'Không'. Tôi sẽ giải thích rủi ro về thuế hoặc ngân sách nếu khoản chi đó được thực hiện. Sau đó, tôi sẽ hướng dẫn họ cách làm đúng quy trình hoặc tìm một giải pháp thay thế hợp lý hơn. Tôi muốn họ hiểu tôi đang bảo vệ họ và công ty khỏi rủi ro pháp lý."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Định hướng & Cam kết",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "FIN_JUNIOR_08",
+          "question_text": "Mục tiêu trong 2 năm tới của bạn là gì? Bạn có kế hoạch thi các chứng chỉ nghề nghiệp như ACCA, CPA hay CFA không?",
+          "question_type": "Ambition",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra lộ trình phát triển",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi đang theo đuổi chứng chỉ ACCA để chuẩn hóa kiến thức theo chuẩn quốc tế (IFRS). Mục tiêu của tôi là trở thành một Senior Financial Analyst có thể tư vấn chiến lược cho Ban giám đốc dựa trên dữ liệu tài chính."
+        },
+        {
+          "question_id": "FIN_JUNIOR_09",
+          "question_text": "Tại sao chúng tôi nên chọn bạn thay vì một ứng viên có kinh nghiệm kiểm toán (Auditor) dày dạn hơn?",
+          "question_type": "Confidence",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra điểm mạnh tự thân",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Kiểm toán viên giỏi soi lỗi quá khứ, còn tôi có tư duy đồng hành cùng doanh nghiệp trong tương lai. Tôi không chỉ biết làm báo cáo đúng, mà còn biết cách dùng số liệu đó để tối ưu hóa chi phí và hỗ trợ các phòng ban khác vận hành hiệu quả hơn."
+        }
+      ]
+    }
+  ]
+}

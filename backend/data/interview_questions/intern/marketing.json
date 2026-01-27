@@ -1,0 +1,201 @@
+{
+  "position": "Intern",
+  "industry": "Marketing",
+  "language": "vi",
+  "total_duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Tư duy Sáng tạo & Thích nghi",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_INTERN_01",
+          "question_text": "Em thường tìm kiếm cảm hứng sáng tạo ở đâu khi phải bắt đầu một chủ đề hoàn toàn mới mà em chưa có kiến thức?",
+          "question_type": "Behavioral",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra cách tìm kiếm thông tin và sự chủ động",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em có hay dùng Pinterest hay TikTok để tìm ý tưởng không?",
+            "Làm sao em biết ý tưởng đó có phù hợp với thương hiệu không?"
+          ],
+          "guidelines_must_have": [
+            "Biết sử dụng các công cụ tìm kiếm/mạng xã hội",
+            "Có quy trình tìm hiểu kiến thức mới",
+            "Tinh thần học hỏi cao"
+          ],
+          "guidelines_should_avoid": [
+            "Đợi sếp giao tài liệu mới làm",
+            "Chỉ copy ý tưởng từ đối thủ"
+          ],
+          "sample_answer": "Khi gặp chủ đề mới, em thường bắt đầu bằng cách 'ngâm' mình trong các cộng đồng liên quan trên Facebook và Reddit để xem khách hàng đang nói gì. Sau đó, em dùng Pinterest để tìm moodboard và xem các case study thành công trên các trang như Brands Vietnam. Em tin rằng sáng tạo phải bắt đầu từ việc thấu hiểu dữ liệu thô."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ năng Thực thi Cơ bản",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "MKT_INTERN_02",
+          "question_text": "Em đã từng sử dụng các công cụ hỗ trợ thiết kế hoặc quản lý nội dung nào chưa (như Canva, CapCut, Notion)? Hãy kể về một sản phẩm em tự hào nhất.",
+          "question_type": "Technical / Portfolio",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng cứng cơ bản",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Em mất bao lâu để hoàn thành sản phẩm đó?",
+            "Nếu sếp yêu cầu sửa lại 5 lần, em sẽ phản ứng thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng thành thạo ít nhất 1 công cụ hỗ trợ",
+            "Có tư duy thẩm mỹ cơ bản",
+            "Quản lý được thời gian thực hiện"
+          ],
+          "guidelines_should_avoid": [
+            "Không biết dùng bất kỳ công cụ nào",
+            "Thái độ tiêu cực khi bị yêu cầu sửa lỗi"
+          ],
+          "sample_answer": "Em sử dụng Canva để thiết kế các bài đăng cho CLB ở trường và CapCut để dựng clip ngắn. Sản phẩm em tự hào nhất là video giới thiệu sự kiện tuyển thành viên đạt 10.000 view. Em học được cách sắp xếp layout và nhịp điệu video để giữ chân người xem."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Kiến thức Nền tảng",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_INTERN_03",
+          "question_text": "Theo em, sự khác biệt lớn nhất giữa Content Marketing và Quảng cáo (Advertising) là gì?",
+          "question_type": "Knowledge",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy nền tảng về ngành",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Cái nào sẽ mang lại hiệu quả bền vững hơn?",
+            "Em thích làm mảng nào hơn?"
+          ],
+          "guidelines_must_have": [
+            "Phân biệt được giá trị nội dung (value) và mục đích bán hàng (sales)",
+            "Hiểu về hành trình khách hàng cơ bản"
+          ],
+          "guidelines_should_avoid": [
+            "Nhầm lẫn hai khái niệm là một",
+            "Trả lời quá máy móc theo sách vở"
+          ],
+          "sample_answer": "Theo em, quảng cáo là 'nói về mình' để bán hàng nhanh, còn Content Marketing là 'trao giá trị' để xây dựng niềm tin lâu dài. Quảng cáo giúp người ta biết đến, nhưng Content mới là thứ giữ chân họ ở lại với thương hiệu."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Xử lý Tình huống Thực tế",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_INTERN_04",
+          "question_text": "Nếu em được giao một deadline vào sáng mai nhưng đến tối nay em vẫn chưa hoàn thành xong vì bài quá khó, em sẽ làm gì?",
+          "question_type": "Situation / Ethics",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra trách nhiệm và kỹ năng giao tiếp",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có dám báo sớm cho mentor không?",
+            "Em có chấp nhận thức đêm để hoàn thành không?"
+          ],
+          "guidelines_must_have": [
+            "Giao tiếp trung thực và sớm nhất có thể",
+            "Đề xuất giải pháp (làm trước phần quan trọng)",
+            "Tinh thần trách nhiệm"
+          ],
+          "guidelines_should_avoid": [
+            "Im lặng và biến mất",
+            "Nộp sản phẩm kém chất lượng để đối phó"
+          ],
+          "sample_answer": "Em sẽ ngay lập tức báo với mentor về tiến độ và lý do gặp khó khăn. Em sẽ đề xuất nộp trước những phần quan trọng nhất và xin thêm vài giờ để hoàn thiện phần còn lại thay vì nộp một bản không chỉn chu."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Ứng dụng Công nghệ mới",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "MKT_INTERN_05",
+          "question_text": "Em có đang dùng ChatGPT để viết bài không? Nếu sếp nói 'Bài này AI viết quá, em sửa lại đi', em sẽ làm thế nào?",
+          "question_type": "Tech Sensitivity",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra cách tận dụng AI và tư duy phản biện",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em prompt như thế nào để AI viết hay hơn?",
+            "AI có thay thế được người viết content không?"
+          ],
+          "guidelines_must_have": [
+            "Thừa nhận việc dùng AI như một công cụ hỗ trợ",
+            "Biết cách 'nhân hóa' nội dung (thêm cảm xúc, ví dụ thực tế)",
+            "Sẵn sàng chỉnh sửa"
+          ],
+          "guidelines_should_avoid": [
+            "Phụ thuộc hoàn toàn vào AI",
+            "Phủ nhận việc dùng AI khi bị phát hiện"
+          ],
+          "sample_answer": "Em dùng AI để lên ý tưởng và dàn ý. Nếu bị nhận xét là 'quá AI', em sẽ rà soát lại để thêm những trải nghiệm cá nhân, thay đổi từ ngữ cho tự nhiên hơn và lồng ghép cá tính của thương hiệu vào bài viết."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Định hướng Phát triển",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "MKT_INTERN_06",
+          "question_text": "Trong 3 tháng tới, em muốn học được kỹ năng gì nhất tại công ty chúng tôi?",
+          "question_type": "Ambition",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra mức độ phù hợp với team",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Tại sao em lại chọn kỹ năng đó?",
+            "Em có kế hoạch tự học như thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Mục tiêu cụ thể (ví dụ: chạy ads, viết kịch bản video)",
+            "Gắn liền với mong muốn đóng góp cho công ty"
+          ],
+          "guidelines_should_avoid": [
+            "Trả lời chung chung như 'học hỏi kinh nghiệm'",
+            "Không có định hướng rõ ràng"
+          ],
+          "sample_answer": "Em muốn nắm vững cách đọc chỉ số báo cáo chiến dịch hàng tuần. Em hiểu rằng làm Marketing không chỉ là sáng tạo mà còn phải dựa trên con số để biết mình đang làm đúng hay sai."
+        },
+        {
+          "question_id": "MKT_INTERN_07",
+          "question_text": "Tại sao chúng tôi nên chọn em thay vì một bạn khác cũng có cùng xuất phát điểm như em?",
+          "question_type": "Confidence",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra điểm mạnh tự thân",
+          "expected_duration_minutes": 2,
+          "popup_questions": [
+            "Điểm yếu lớn nhất của em là gì?",
+            "Em chịu được áp lực tốt không?"
+          ],
+          "guidelines_must_have": [
+            "Nêu bật được thái độ tích cực, sự nhanh nhạy",
+            "Cam kết về sự nỗ lực"
+          ],
+          "guidelines_should_avoid": [
+            "Tự phụ quá mức",
+            "Khiêm tốn đến mức không có gì nổi bật"
+          ],
+          "sample_answer": "Điểm khác biệt của em là tốc độ thích nghi. Em không ngại làm những việc nhỏ nhất và luôn cố gắng tối ưu hóa nó bằng công nghệ để đạt kết quả tốt nhất trong thời gian ngắn nhất."
+        }
+      ]
+    }
+  ]
+}

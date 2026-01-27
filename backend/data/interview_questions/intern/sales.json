@@ -1,0 +1,200 @@
+{
+  "position": "Intern",
+  "industry": "Sales",
+  "language": "vi",
+  "total_duration_minutes": 30,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Tư duy & Thái độ ngành Sales",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "SALES_INTERN_01",
+          "question_text": "Tại sao em lại chọn ngành Sales mà không phải một công việc văn phòng ổn định khác? Theo em, tố chất quan trọng nhất của một người làm Sales thành công là gì?",
+          "question_type": "Mindset / Motivation",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra động lực và sự hiểu biết về nghề nghiệp",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có sợ bị từ chối không?",
+            "Gia đình em có ủng hộ em làm nghề này không?",
+            "Em định nghĩa thế nào là 'thành công' trong bán hàng?"
+          ],
+          "guidelines_must_have": [
+            "Thể hiện sự yêu thích thử thách và khao khát thu nhập dựa trên năng lực",
+            "Nêu được các tố chất: Kiên trì (Resilience), Thấu cảm (Empathy), và Kỷ luật (Discipline)",
+            "Có mục tiêu nghề nghiệp rõ ràng trong ngắn hạn"
+          ],
+          "guidelines_should_avoid": [
+            "Trả lời 'em làm thử cho biết'",
+            "Chỉ quan tâm đến tiền mà không quan tâm đến giá trị mang lại cho khách hàng",
+            "Nghĩ rằng Sales chỉ cần nói giỏi là đủ"
+          ],
+          "sample_answer": "Em chọn Sales vì em thích cảm giác chinh phục các mục tiêu khó và sự linh hoạt trong thu nhập. Theo em, tố chất quan trọng nhất không phải là nói hay, mà là sự kiên trì. Trong Sales, việc bị từ chối là cơm bữa, người ở lại cuối cùng mới là người chiến thắng. Em muốn rèn luyện bản lĩnh đó ngay từ khi còn là sinh viên."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ năng Giao tiếp & Thấu cảm",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "SALES_INTERN_02",
+          "question_text": "Trong một cuộc hội thoại với người lạ, làm thế nào để em có thể phá vỡ tảng băng (break the ice) và tạo thiện cảm chỉ trong 30 giây đầu tiên?",
+          "question_type": "Communication Skill",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng kết nối nhanh",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em sẽ chọn chủ đề gì để bắt đầu?",
+            "Nếu khách hàng đang tỏ ra khó chịu, em sẽ làm gì?",
+            "Ngôn ngữ cơ thể (Body language) quan trọng như thế nào ở bước này?"
+          ],
+          "guidelines_must_have": [
+            "Kỹ thuật khen ngợi chân thành hoặc đặt câu hỏi mở",
+            "Tông giọng tự tin, thân thiện và chuyên nghiệp",
+            "Sử dụng kỹ thuật 'Mirroring' (soi gương) để tạo sự đồng điệu"
+          ],
+          "guidelines_should_avoid": [
+            "Vồ vập bán hàng ngay lập tức",
+            "Hỏi những câu hỏi quá riêng tư hoặc nhạy cảm",
+            "Nói quá nhanh hoặc quá nhỏ"
+          ],
+          "sample_answer": "Em thường bắt đầu bằng một lời khen về một điểm đặc biệt của họ hoặc đặt một câu hỏi liên quan đến bối cảnh hiện tại. Ví dụ: 'Em thấy anh/chị có chiếc đồng hồ rất tinh tế, chắc hẳn anh/chị là người rất coi trọng thời gian?'. Mục tiêu của em là khiến họ nói về bản thân họ trước khi em nói về sản phẩm."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Xử lý Từ chối (Rejection Handling)",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "SALES_INTERN_03",
+          "question_text": "Nếu em gọi điện (Cold Call) và khách hàng nói 'Anh bận lắm, đừng gọi nữa' rồi cúp máy, em sẽ cảm thấy thế nào và em sẽ làm gì với số điện thoại đó?",
+          "question_type": "Resilience / Process",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra chỉ số vượt khó (AQ)",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có gọi lại ngay lập tức không?",
+            "Em sẽ ghi chú gì vào hệ thống về khách hàng này?",
+            "Làm sao để em lấy lại năng lượng cho cuộc gọi tiếp theo?"
+          ],
+          "guidelines_must_have": [
+            "Giữ thái độ tích cực, không cá nhân hóa sự từ chối",
+            "Phân tích thời điểm gọi đã phù hợp chưa",
+            "Lên lịch chăm sóc lại vào một dịp khác (Follow-up) thay vì bỏ cuộc"
+          ],
+          "guidelines_should_avoid": [
+            "Buồn bã, nản lòng và dừng làm việc",
+            "Cố chấp gọi lại quấy rầy ngay lúc đó",
+            "Xóa số khách hàng khỏi danh sách một cách cảm tính"
+          ],
+          "sample_answer": "Em coi đó là chuyện bình thường. Khách hàng từ chối cuộc gọi chứ không phải từ chối con người em. Em sẽ ghi chú lại là 'Khách bận' và thời gian gọi. Em sẽ dành 10 giây hít thở sâu, tự nhủ cuộc gọi tiếp theo sẽ tốt hơn và nhấc máy lên ngay. Em sẽ thử gọi lại cho khách hàng đó vào 1 tuần sau ở một khung giờ khác."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Nghiên cứu & Chuẩn bị",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "SALES_INTERN_04",
+          "question_text": "Trước khi gặp một khách hàng tiềm năng, em thường tìm kiếm những thông tin gì về họ? Em sử dụng công cụ nào để tìm kiếm?",
+          "question_type": "Preparation",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự chu đáo và kỹ năng research",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có xem Facebook/LinkedIn của họ không?",
+            "Em tìm hiểu về đối thủ của khách hàng để làm gì?",
+            "Thông tin nào là quan trọng nhất đối với em?"
+          ],
+          "guidelines_must_have": [
+            "Nghiên cứu về lĩnh vực kinh doanh và chức vụ của họ",
+            "Tìm hiểu về những vấn đề (Pain points) họ có thể đang gặp phải",
+            "Sử dụng mạng xã hội, website công ty, và tin tức ngành"
+          ],
+          "guidelines_should_avoid": [
+            "Đi gặp khách hàng mà không biết họ là ai",
+            "Chỉ tìm hiểu thông tin bề nổi",
+            "Sa đà vào việc soi mói đời tư không liên quan đến công việc"
+          ],
+          "sample_answer": "Em sẽ tìm hiểu ít nhất 3 thứ: (1) Lĩnh vực họ đang làm, (2) Chức vụ và quyền quyết định của họ, (3) Các hoạt động gần đây của công ty họ trên LinkedIn. Việc này giúp em chuẩn bị các câu chuyện phù hợp để mở đầu và chứng tỏ em rất tôn trọng thời gian của họ."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Khả năng Thích nghi & Công cụ",
+      "duration_minutes": 4,
+      "questions": [
+        {
+          "question_id": "SALES_INTERN_05",
+          "question_text": "Hiện nay AI (như ChatGPT) có thể soạn kịch bản bán hàng rất hay. Theo em, một Sales Intern có thể tận dụng AI như thế nào để vượt qua chỉ tiêu (KPI)?",
+          "question_type": "Tech Savvy",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra khả năng ứng dụng công nghệ tăng năng suất",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "AI có thể thay thế việc gọi điện trực tiếp không?",
+            "Em dùng AI để xử lý các phản đối (objections) như thế nào?"
+          ],
+          "guidelines_must_have": [
+            "Sử dụng AI để lên danh sách câu hỏi khai thác nhu cầu",
+            "Dùng AI để tóm tắt thông tin khách hàng hoặc soạn email cá nhân hóa",
+            "Hiểu rằng AI là công cụ hỗ trợ, con người mới là bên tạo niềm tin"
+          ],
+          "sample_answer": "Em dùng AI để đóng vai khách hàng khó tính và tập trả lời các câu hỏi phản đối. Nó giúp em chuẩn bị tâm lý cực tốt. Ngoài ra, AI giúp em viết các mẫu email Follow-up chuyên nghiệp cho nhiều nhóm khách hàng khác nhau trong tích tắc, giúp em có thêm thời gian để gọi điện nhiều hơn."
+        },
+        {
+          "question_id": "SALES_INTERN_06",
+          "question_text": "Em có biết CRM là gì không? Tại sao một Salesman giỏi lại cần phải sử dụng phần mềm quản lý khách hàng thay vì dùng sổ tay hay Excel?",
+          "question_type": "Tools Knowledge",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy quản trị dữ liệu",
+          "expected_duration_minutes": 2,
+          "sample_answer": "CRM giúp em không bao giờ quên lịch hẹn và theo dõi được toàn bộ lịch sử tương tác với khách hàng. Dùng sổ tay rất dễ thất lạc dữ liệu. Với CRM, em có thể phân loại được khách hàng nào thực sự tiềm năng để ưu tiên chăm sóc, từ đó tối ưu hóa tỷ lệ chốt đơn."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Cam kết & Tiềm năng",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "SALES_INTERN_07",
+          "question_text": "Nếu trong 1 tháng đầu em không chốt được đơn hàng nào dù đã rất cố gắng, em sẽ làm gì để thay đổi tình hình?",
+          "question_type": "Problem Solving",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng tự nhìn nhận và sửa đổi",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Em có dám nhìn thẳng vào lỗi sai của mình không?",
+            "Em sẽ nhờ sự trợ giúp từ ai?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích phễu bán hàng để tìm điểm nghẽn (tại sao rớt khách?)",
+            "Xin feedback từ Leader và nghe lại các cuộc gọi của mình",
+            "Thay đổi cách tiếp cận hoặc kịch bản nói chuyện"
+          ],
+          "sample_answer": "Em sẽ xem lại các chỉ số: em gọi đủ số lượng chưa? Nếu gọi đủ mà không chốt được thì kỹ năng tư vấn có vấn đề. Em sẽ nhờ Leader nghe chung cuộc gọi để chỉ ra lỗi sai. Em không sợ thất bại, em chỉ sợ thất bại mà không biết tại sao. Em sẽ sửa lỗi đó ngay lập tức trong tháng thứ hai."
+        },
+        {
+          "question_id": "SALES_INTERN_08",
+          "question_text": "Em mong đợi mức thu nhập như thế nào (bao gồm lương cứng và hoa hồng) và em sẵn sàng làm gì để đạt được con số đó?",
+          "question_type": "Ambition",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khát vọng và sự thực tế",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Em mong muốn mức hoa hồng chiếm ít nhất 50% tổng thu nhập vì đó mới là động lực của Sales. Em sẵn sàng gọi thêm 20 cuộc mỗi ngày và đi gặp khách hàng bất kể giờ giấc để đạt được mục tiêu tài chính mà mình đã đề ra."
+        }
+      ]
+    }
+  ]
+}

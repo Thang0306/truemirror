@@ -1,3 +1,5 @@
+# Development requirements (SQLite, không cần PostgreSQL)
+# Python 3.14 compatible - using threading mode for Flask-SocketIO
 flask==3.0.0
 flask-cors==4.0.0
 flask-socketio==5.3.6
@@ -9,6 +11,5 @@ sqlalchemy==2.0.36
 flask-sqlalchemy==3.1.1
 flask-jwt-extended==4.6.0
 flask-bcrypt==1.0.1
-psycopg2-binary==2.9.9
 gunicorn==21.2.0
 python-docx==1.1.0

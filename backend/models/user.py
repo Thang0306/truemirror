@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from flask_sqlalchemy import SQLAlchemy
 from flask_bcrypt import Bcrypt
 
@@ -15,8 +15,17 @@ class User(db.Model):
     full_name = db.Column(db.String(100), nullable=False)
     
     # Metadata fields
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = db.Column(
+    db.DateTime(timezone=True),
+    nullable=False,
+    default=lambda: datetime.now(timezone.utc)
+)
+    updated_at = db.Column(
+    db.DateTime(timezone=True),
+    nullable=False,
+    default=lambda: datetime.now(timezone.utc),
+    onupdate=lambda: datetime.now(timezone.utc)
+)
     is_active = db.Column(db.Boolean, default=True)
     
     def __repr__(self):

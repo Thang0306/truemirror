@@ -1,0 +1,176 @@
+{
+  "position": "Junior",
+  "industry": "Sales",
+  "language": "vi",
+  "total_duration_minutes": 40,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Tìm kiếm & Phân loại Khách hàng (Prospecting)",
+      "duration_minutes": 7,
+      "questions": [
+        {
+          "question_id": "SALES_JUNIOR_01",
+          "question_text": "Làm thế nào để bạn phân biệt giữa một khách hàng thực sự có nhu cầu và một khách hàng 'chỉ xem cho biết' để tránh lãng phí thời gian?",
+          "question_type": "Qualification",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng đánh giá khách hàng (Lead Scoring)",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn áp dụng mô hình BANT (Budget, Authority, Need, Timeline) như thế nào?",
+            "Nếu khách hàng có nhu cầu nhưng chưa có tiền ngay, bạn sẽ làm gì?"
+          ],
+          "guidelines_must_have": [
+            "Đặt các câu hỏi khai thác sâu (Pain points)",
+            "Xác định được ngân sách và người có quyền quyết định",
+            "Kiểm tra tính cấp thiết của vấn đề mà khách hàng đang gặp"
+          ],
+          "guidelines_should_avoid": [
+            "Chăm sóc tất cả khách hàng như nhau",
+            "Bị khách hàng dẫn dắt đi lòng vòng mà không chốt được thông tin"
+          ],
+          "sample_answer": "Tôi áp dụng khung BANT. Tôi sẽ đặt những câu hỏi như: 'Nếu không giải quyết vấn đề này ngay, doanh nghiệp của anh chị sẽ thiệt hại ra sao?'. Nếu khách hàng trả lời mơ hồ, tôi sẽ liệt vào nhóm theo dõi thêm. Nếu họ nêu rõ con số thiệt hại và thời hạn cần giải quyết, đó là khách hàng ưu tiên số 1 của tôi."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Kỹ năng Khơi gợi Nhu cầu (Discovery)",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "SALES_JUNIOR_02",
+          "question_text": "Kỹ thuật 'Bán giải pháp' (Solution Selling) khác gì so với 'Bán sản phẩm' thông thường? Hãy cho tôi một ví dụ bạn đã biến một tính năng khô khan thành một giá trị cảm xúc cho khách hàng.",
+          "question_type": "Consultative Selling",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy tư vấn giải pháp",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Khách hàng mua 'máy khoan' hay mua 'cái lỗ trên tường'?",
+            "Làm sao để chạm được vào 'nỗi đau' sâu nhất của họ?"
+          ],
+          "guidelines_must_have": [
+            "Tập trung vào lợi ích (Benefit) thay vì tính năng (Feature)",
+            "Biết cách kể chuyện (Storytelling) để khơi gợi cảm xúc",
+            "Dùng mô hình FAB (Feature - Advantage - Benefit)"
+          ],
+          "sample_answer": "Bán sản phẩm là nói 'Phần mềm này có tính năng báo cáo tự động'. Bán giải pháp là nói: 'Với tính năng này, anh sẽ tiết kiệm được 2 tiếng mỗi ngày để về ăn cơm với gia đình thay vì phải ngồi làm Excel'. Tôi luôn bán 'thời gian' và 'sự thảnh thơi' cho khách hàng, chứ không bán phần mềm."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Xử lý Phản đối & Thuyết phục",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "SALES_JUNIOR_03",
+          "question_text": "Khi khách hàng nói 'Giá bên em cao quá, bên đối thủ đang chào anh rẻ hơn 20%', bạn sẽ xử lý tình huống này như thế nào để không phải giảm giá?",
+          "question_type": "Objection Handling",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng bảo vệ giá trị sản phẩm",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn có tự tin vào sự khác biệt của mình không?",
+            "Làm sao để khách hàng thấy giá rẻ thực chất lại là đắt?",
+            "Bạn có nên nói xấu đối thủ không?"
+          ],
+          "guidelines_must_have": [
+            "Không vội vàng giảm giá ngay (tránh làm mất giá trị)",
+            "Đặt câu hỏi ngược lại để tìm hiểu đối thủ đang thiếu gì",
+            "Nhấn mạnh vào Tổng chi phí sở hữu (TCO) và dịch vụ hậu mãi"
+          ],
+          "guidelines_should_avoid": [
+            "Chỉ trích đối thủ rẻ tiền",
+            "Đồng ý giảm giá ngay lập tức",
+            "Im lặng và chấp nhận thua cuộc"
+          ],
+          "sample_answer": "Tôi sẽ nói: 'Em hiểu giá cả rất quan trọng. Tuy nhiên, anh có bao giờ tự hỏi tại sao họ lại có thể rẻ hơn 20% không? Thường thì sự khác biệt nằm ở khâu hỗ trợ kỹ thuật 24/7 và độ bền của linh kiện. Nếu máy hỏng một ngày, chi phí ngừng sản xuất của anh sẽ lớn hơn nhiều so với 20% đó. Anh chọn tiết kiệm ngay bây giờ hay chọn sự an tâm lâu dài?'."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Kỹ thuật Chốt đơn (Closing Techniques)",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "SALES_JUNIOR_04",
+          "question_text": "Hãy mô tả 3 kỹ thuật chốt đơn mà bạn hay dùng nhất. Bạn nhận diện thời điểm 'vàng' để đưa ra lời đề nghị chốt sales như thế nào?",
+          "question_type": "Closing Skill",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ năng dứt điểm đơn hàng",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn có biết chốt đơn kiểu 'Giả định' (Assumptive Close) không?",
+            "Dấu hiệu ngôn ngữ nào cho thấy khách hàng đã sẵn sàng mua?"
+          ],
+          "guidelines_must_have": [
+            "Kỹ thuật: Chốt bằng sự khan hiếm, Chốt bằng lựa chọn thay thế, Chốt bằng dùng thử",
+            "Nhận diện tín hiệu: Khách hàng hỏi về chính sách bảo hành, phương thức thanh toán, hoặc gật đầu đồng thuận nhiều lần"
+          ],
+          "sample_answer": "Tôi thường dùng kỹ thuật 'Lựa chọn thay thế': 'Anh muốn thanh toán chuyển khoản hay tiền mặt để em làm hợp đồng luôn?'. Thời điểm vàng là khi khách hàng bắt đầu đặt các câu hỏi chi tiết về cách sử dụng sau khi mua. Lúc đó, tôi ngừng tư vấn và chuyển sang bước ký kết ngay."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Quản trị Hiệu suất & CRM",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "SALES_JUNIOR_05",
+          "question_text": "Chỉ số nào trong phễu bán hàng (Sales Funnel) mà bạn quan tâm nhất? Bạn làm gì để cải thiện tỷ lệ chuyển đổi (Conversion Rate) từ Lead sang Deal?",
+          "question_type": "Analytical / CRM",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy tối ưu hóa bằng dữ liệu",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn dành bao nhiêu thời gian mỗi ngày cho việc nhập liệu CRM?",
+            "Làm sao để không bỏ sót các khách hàng đang ở giai đoạn 'đang cân nhắc'?"
+          ],
+          "guidelines_must_have": [
+            "Phân tích tỷ lệ rớt khách ở từng giai đoạn",
+            "Sử dụng Automation Marketing để nuôi dưỡng lead",
+            "Cá nhân hóa nội dung Follow-up dựa trên lịch sử tương tác"
+          ],
+          "sample_answer": "Tôi quan tâm nhất là tỷ lệ từ 'Demo' sang 'Báo giá'. Nếu tỷ lệ này thấp, nghĩa là phần trình bày giải pháp của tôi chưa thuyết phục. Tôi sẽ cải thiện bằng cách cá nhân hóa bản demo cho đúng nhu cầu riêng của từng khách thay vì dùng một bản mẫu chung."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Làm việc nhóm & Xử lý Stress",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "SALES_JUNIOR_06",
+          "question_text": "Trong Sales thường có sự cạnh tranh khách hàng giữa các đồng nghiệp. Nếu bạn phát hiện một đồng nghiệp đang 'cướp' khách của mình, bạn xử lý thế nào?",
+          "question_type": "Conflict Resolution",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng xử lý mâu thuẫn nội bộ",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi sẽ nói chuyện trực tiếp với đồng nghiệp đó dựa trên các bằng chứng trên CRM. Nếu không giải quyết được, tôi sẽ nhờ Manager can thiệp dựa trên quy định chung của công ty. Tôi đề cao sự công bằng để duy trì môi trường làm việc lành mạnh."
+        },
+        {
+          "question_id": "SALES_JUNIOR_07",
+          "question_text": "Sales là ngành áp lực về con số hàng tháng. Bạn làm gì để duy trì năng lượng tích cực ngay cả khi đang ở giai đoạn 'đói' đơn hàng?",
+          "question_type": "Mental Health / Stress",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự bền bỉ",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi tập trung vào quy trình thay vì kết quả. Tôi biết rằng nếu tôi gọi đủ 50 cuộc, chắc chắn sẽ có 1 đơn. Thay vì lo lắng, tôi tập trung hoàn thành các chỉ số hành động mỗi ngày. Kỷ luật sẽ giúp tôi vượt qua cảm xúc nhất thời."
+        },
+        {
+          "question_id": "SALES_JUNIOR_08",
+          "question_text": "Mục tiêu doanh số cao nhất bạn từng đạt được là bao nhiêu và bạn đã làm gì để vượt định mức đó 120%?",
+          "question_type": "Performance",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra năng lực thực tế",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi từng đạt 1.2 tỷ/tháng khi mục tiêu là 1 tỷ. Tôi đã làm bằng cách tập trung vào việc bán thêm (Upsell) cho những khách hàng cũ đã hài lòng. Việc này tốn ít sức hơn tìm khách mới nhưng mang lại giá trị đơn hàng cực lớn."
+        }
+      ]
+    }
+  ]
+}

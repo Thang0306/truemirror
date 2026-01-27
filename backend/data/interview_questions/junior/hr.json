@@ -1,0 +1,173 @@
+{
+  "position": "Junior",
+  "industry": "HR",
+  "language": "vi",
+  "total_duration_minutes": 40,
+  "sections": [
+    {
+      "section_number": 1,
+      "section_name": "Kỹ năng Tuyển dụng & Đánh giá",
+      "duration_minutes": 10,
+      "questions": [
+        {
+          "question_id": "HR_JUNIOR_01",
+          "question_text": "Bạn sử dụng phương pháp STAR (Situation, Task, Action, Result) như thế nào để đánh giá một ứng viên nói rằng họ 'có kỹ năng giải quyết vấn đề tốt'?",
+          "question_type": "Interviewing Skill",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra kỹ thuật phỏng vấn hành vi",
+          "expected_duration_minutes": 5,
+          "popup_questions": [
+            "Làm sao bạn phát hiện ứng viên đang nói dối hoặc phóng đại?",
+            "Bạn có ghi chép (note) lại các từ khóa quan trọng không?",
+            "Bạn làm gì nếu ứng viên trả lời quá chung chung?"
+          ],
+          "guidelines_must_have": [
+            "Biết cách đặt câu hỏi đào sâu (Probing questions)",
+            "Tập trung vào hành động thực tế (Action) và kết quả đo lường được (Result)",
+            "Đối soát thông tin giữa các phần trả lời của ứng viên"
+          ],
+          "guidelines_should_avoid": [
+            "Chấp nhận các câu trả lời mang tính lý thuyết",
+            "Bị ấn tượng hào nhoáng ban đầu (Halo effect) làm mờ mắt"
+          ],
+          "sample_answer": "Tôi sẽ yêu cầu họ kể về một sự cố cụ thể nhất. Ví dụ: 'Hãy kể về một lần dự án bị trễ deadline và bạn là người xử lý'. Tôi sẽ xoáy sâu vào bước Action: Bạn đã làm gì đầu tiên? Bạn đã thuyết phục team ra sao? Kết quả dự án đó cuối cùng thế nào? Nếu họ không nêu được con số hoặc hành động cụ thể, tôi sẽ đánh giá thấp phần này."
+        }
+      ]
+    },
+    {
+      "section_number": 2,
+      "section_name": "Quan hệ Lao động & Giải quyết Mâu thuẫn",
+      "duration_minutes": 8,
+      "questions": [
+        {
+          "question_id": "HR_JUNIOR_02",
+          "question_text": "Nếu có mâu thuẫn gay gắt giữa một nhân viên và quản lý trực tiếp của họ về việc đánh giá KPI không công bằng, bạn sẽ đứng ra hòa giải như thế nào?",
+          "question_type": "Conflict Resolution",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kỹ năng ngoại giao và công bằng",
+          "expected_duration_minutes": 4,
+          "popup_questions": [
+            "Bạn sẽ gặp ai trước?",
+            "Nếu quản lý thực sự sai, bạn có dám góp ý thẳng thắn không?",
+            "Làm sao để nhân viên cảm thấy HR không bao che cho quản lý?"
+          ],
+          "guidelines_must_have": [
+            "Lắng nghe đa chiều từ cả hai phía",
+            "Dùng dữ liệu (số liệu KPI, email, tin nhắn) làm căn cứ đối soát",
+            "Giữ thái độ trung lập và bảo mật thông tin buổi hòa giải"
+          ],
+          "guidelines_should_avoid": [
+            "Đứng về phía quản lý chỉ vì họ có chức vụ cao hơn",
+            "Hứa hẹn những điều không nằm trong thẩm quyền"
+          ],
+          "sample_answer": "Tôi sẽ gặp riêng từng người để lắng nghe góc nhìn của họ. Sau đó, tôi yêu cầu cả hai cung cấp bằng chứng công việc. Tôi sẽ đóng vai trò người điều phối để họ đối thoại trực tiếp trên tinh thần xây dựng. Mục tiêu của tôi là tìm ra điểm chưa thống nhất trong cách hiểu về KPI để điều chỉnh lại cho rõ ràng."
+        }
+      ]
+    },
+    {
+      "section_number": 3,
+      "section_name": "Kiến thức Luật & Tuân thủ",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "HR_JUNIOR_03",
+          "question_text": "Theo Luật lao động hiện hành, trong trường hợp công ty muốn đơn phương chấm dứt hợp đồng với một nhân viên thường xuyên không hoàn thành nhiệm vụ, quy trình cần thực hiện là gì để tránh rủi ro pháp lý?",
+          "question_type": "Legal Knowledge",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra kiến thức pháp lý nền tảng",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Thời hạn báo trước đối với hợp đồng không xác định thời hạn là bao lâu?",
+            "Cần bao nhiêu biên bản làm việc trước khi quyết định cho thôi việc?"
+          ],
+          "guidelines_must_have": [
+            "Nêu được quy trình ban hành quy chế đánh giá mức độ hoàn thành công việc",
+            "Có bằng chứng về việc nhắc nhở/biên bản (ít nhất 2 lần)",
+            "Tuân thủ thời gian báo trước (30-45 ngày tùy loại hợp đồng)"
+          ],
+          "sample_answer": "Trước hết công ty phải có quy chế đánh giá rõ ràng. Nhân viên phải có ít nhất 2 lần không hoàn thành nhiệm vụ bằng văn bản. Chúng ta phải thông báo bằng văn bản cho họ trước 30 ngày (với HĐ xác định thời hạn) hoặc 45 ngày (với HĐ không xác định thời hạn). Nếu làm sai quy trình, công ty sẽ phải bồi thường rất nặng."
+        }
+      ]
+    },
+    {
+      "section_number": 4,
+      "section_name": "Đào tạo & Phát triển (L&D)",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "HR_JUNIOR_04",
+          "question_text": "Làm thế nào bạn đánh giá được hiệu quả của một buổi đào tạo kỹ năng mềm cho nhân viên (ví dụ kỹ năng giao tiếp)? Bạn dựa trên những chỉ số nào?",
+          "question_type": "L&D / Evaluation",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra tư duy đào tạo hướng kết quả",
+          "expected_duration_minutes": 3,
+          "popup_questions": [
+            "Bạn có sử dụng khảo sát sau buổi học không?",
+            "Làm sao để biết họ có áp dụng vào công việc hay không?"
+          ],
+          "guidelines_must_have": [
+            "Mô hình đánh giá 4 cấp độ của Kirkpatrick (Phản ứng, Học tập, Hành vi, Kết quả)",
+            "Khảo sát sự hài lòng ngay sau buổi học",
+            "Phối hợp với quản lý trực tiếp để quan sát sự thay đổi hành vi sau 1-3 tháng"
+          ],
+          "sample_answer": "Tôi không chỉ nhìn vào phiếu khảo sát cuối buổi. Tôi sẽ theo dõi sau 1 tháng thông qua feedback của quản lý và đồng nghiệp xem nhân viên đó có cải thiện giao tiếp không. Chỉ số thực tế nhất là tỷ lệ khiếu nại khách hàng giảm hoặc điểm đánh giá 360 độ tăng lên."
+        }
+      ]
+    },
+    {
+      "section_number": 5,
+      "section_name": "Quản trị Hiệu suất & C&B",
+      "duration_minutes": 6,
+      "questions": [
+        {
+          "question_id": "HR_JUNIOR_05",
+          "question_text": "Bạn làm thế nào để xây dựng một chính sách đãi ngộ (Total Rewards) hấp dẫn nhưng vẫn đảm bảo tối ưu chi phí cho doanh nghiệp?",
+          "question_type": "C&B Strategy",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra khả năng cân bằng tài chính và nhân sự",
+          "expected_duration_minutes": 3,
+          "guidelines_must_have": [
+            "Kết hợp giữa lương cứng, thưởng hiệu quả và phúc lợi phi tài chính (Flexible working, bảo hiểm sức khỏe)",
+            "Nghiên cứu thị trường (Salary survey) để đảm bảo tính cạnh tranh",
+            "Thiết kế lộ trình thăng tiến rõ ràng để giữ người"
+          ],
+          "sample_answer": "Tôi sẽ tập trung vào các phúc lợi mang tính cá nhân hóa cao. Thay vì tăng lương tràn lan, chúng tôi có thể tặng thêm các gói bảo hiểm cho người thân hoặc hỗ trợ chi phí học tập. Những thứ này tạo ra sự gắn kết cao hơn mà chi phí vẫn nằm trong tầm kiểm soát của công ty."
+        },
+        {
+          "question_id": "HR_JUNIOR_06",
+          "question_text": "Khi thực hiện khảo sát mức độ hài lòng của nhân viên, nếu kết quả trả về là 'nhân viên cảm thấy quá tải và muốn nghỉ việc', bạn sẽ tư vấn gì cho Ban giám đốc?",
+          "question_type": "Strategic HR",
+          "pressure_level": "High",
+          "purpose": "Kiểm tra khả năng phân tích và đề xuất",
+          "expected_duration_minutes": 3,
+          "sample_answer": "Tôi sẽ phân tích xem quá tải là do thiếu người hay do quy trình làm việc chưa hiệu quả. Tôi sẽ đề xuất rà soát lại mô tả công việc (JD) và ứng dụng tự động hóa vào các task lặp lại trước khi nghĩ đến việc tuyển thêm người hoặc tăng lương."
+        }
+      ]
+    },
+    {
+      "section_number": 6,
+      "section_name": "Văn hóa & Cam kết",
+      "duration_minutes": 5,
+      "questions": [
+        {
+          "question_id": "HR_JUNIOR_07",
+          "question_text": "Bạn định nghĩa thế nào là một văn hóa doanh nghiệp tốt? HR đóng vai trò gì trong việc 'giữ lửa' cho văn hóa đó?",
+          "question_type": "Culture",
+          "pressure_level": "Low",
+          "purpose": "Kiểm tra tư duy về giá trị vô hình",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Văn hóa tốt là khi nhân viên làm đúng ngay cả khi không có ai quan sát. HR là người kiến tạo sân chơi và duy trì các giá trị cốt lõi thông qua mọi hoạt động từ tuyển dụng đến khen thưởng."
+        },
+        {
+          "question_id": "HR_JUNIOR_08",
+          "question_text": "Tại sao bạn lại rời bỏ công việc cũ và bạn kỳ vọng điều gì nhất ở môi trường làm việc của chúng tôi?",
+          "question_type": "Behavioral",
+          "pressure_level": "Medium",
+          "purpose": "Kiểm tra sự trung thực và kỳ vọng",
+          "expected_duration_minutes": 2,
+          "sample_answer": "Tôi rời đi vì muốn tìm kiếm một môi trường có hệ thống quản trị chuyên nghiệp hơn để tôi có thể đóng góp chuyên môn sâu về C&B. Tôi ấn tượng với cách công ty quan tâm đến sự phát triển bền vững của nhân viên."
+        }
+      ]
+    }
+  ]
+}
