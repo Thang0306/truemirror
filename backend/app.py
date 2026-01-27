@@ -4,63 +4,63 @@ from flask_jwt_extended import JWTManager
 from flask_socketio import SocketIO
 from config import Config
 from models import db, bcrypt
-from routes import main_bp, auth_bp, interview_bp, chat_bp, admin_bp
-from routes.websocket_routes import init_socketio_events
 import os
 
-# Initialize SocketIO
-# Using 'threading' mode for Python 3.14 compatibility (gevent/eventlet không hỗ trợ Python 3.14)
-socketio = SocketIO(cors_allowed_origins="*", async_mode='threading', logger=True, engineio_logger=True)
+# Import blueprints
+from routes.main_routes import main_bp
+from routes.auth_routes import auth_bp
+from routes.interview_routes import interview_bp
+from routes.chat_routes import chat_bp
+from routes.admin_routes import admin_bp
+
+# Import WebSocket init
+from routes.websocket_routes import init_socketio_events
+
+# Initialize SocketIO without wildcard cors
+socketio = SocketIO(
+    cors_allowed_origins=[],  # we set origins later
+    async_mode="threading",
+    logger=True,
+    engineio_logger=True
+)
 
 def create_app():
-    # Initialize Flask app
     app = Flask(__name__)
     app.config.from_object(Config)
-    
-    # CORS configuration for production
-    # Allow both localhost and production URLs
+
+    # Build allowed origins list
     cors_origins = [
-        "http://localhost:5173",  # Local Vite dev
-        "http://localhost:3000",  # Local alternative
+        "http://localhost:5173",
+        "http://localhost:3000",
     ]
 
-    # Add Vercel frontend URL from environment
-    frontend_url = os.getenv('FRONTEND_URL')
-    if frontend_url:
-        # Remove trailing slash if exists
-        frontend_url = frontend_url.rstrip('/')
-        cors_origins.append(frontend_url)
+    FRONTEND_URL = os.getenv("FRONTEND_URL")
+    if FRONTEND_URL:
+        cors_origins.append(FRONTEND_URL.rstrip("/"))
 
-    # CORS configuration - Allow all origins with full headers
-    CORS(app,
-         resources={r"/*": {"origins": "*"}},
-         supports_credentials=True,
-         allow_headers=["Content-Type", "Authorization"],
-         expose_headers=["Content-Type", "Authorization"],
-         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-         send_wildcard=True,
-         always_send=True,
-         max_age=3600)  # Cache preflight for 1 hour
-    print(f"[INFO] CORS: Allowing ALL origins with full headers")
-    print(f"[INFO] Configured origins list: {cors_origins}")
+    # Setup CORS
+    CORS(
+        app,
+        resources={r"/*": {"origins": cors_origins}},
+        supports_credentials=True,
+        allow_headers=["Content-Type", "Authorization"],
+        expose_headers=["Content-Type", "Authorization"],
+        methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+        max_age=3600
+    )
 
-    # Add explicit OPTIONS handler for all routes
-    @app.after_request
-    def after_request(response):
-        response.headers.add('Access-Control-Allow-Origin', '*')
-        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
-        response.headers.add('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
-        response.headers.add('Access-Control-Max-Age', '3600')
-        return response
-    
+    print(f"[INFO] CORS allowed origins: {cors_origins}")
+
     # Initialize extensions
     db.init_app(app)
     bcrypt.init_app(app)
     JWTManager(app)
-    socketio.init_app(app)
 
-    # Initialize WebSocket events
-    init_socketio_events(socketio)
+    # Init SocketIO with allowed origins
+    socketio.init_app(
+        app,
+        cors_allowed_origins=cors_origins
+    )
 
     # Register blueprints
     app.register_blueprint(main_bp)
@@ -69,20 +69,16 @@ def create_app():
     app.register_blueprint(chat_bp)
     app.register_blueprint(admin_bp)
 
-    # Create database tables
+    # Create DB tables
     with app.app_context():
         db.create_all()
         print("[INFO] Database tables created")
 
-    print("[INFO] TrueMirror backend started successfully")
-    print(f"[INFO] WebSocket support enabled")
-    print(f"[INFO] Environment: {os.getenv('RAILWAY_ENVIRONMENT', 'development')}")
-
+    print("[INFO] TrueMirror backend started")
     return app
 
 app = create_app()
 
-if __name__ == '__main__':
-    port = int(os.getenv('PORT', 5000))
-    # Use socketio.run instead of app.run for WebSocket support
-    socketio.run(app, debug=False, host='0.0.0.0', port=port)
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", 5000))
+    socketio.run(app, host="0.0.0.0", port=port)
