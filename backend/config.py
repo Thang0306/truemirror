@@ -6,7 +6,8 @@ class Config:
     SECRET_KEY = os.getenv('SECRET_KEY', 'truemirror-secret-key-dev-2026')
     
     # Database config - Support both SQLite (dev) and PostgreSQL (prod)
-    DATABASE_URL = os.getenv('DATABASE_URL', 'sqlite:///truemirror.db')
+    # Railway provides DATABASE_PUBLIC_URL for external connections
+    DATABASE_URL = os.getenv('DATABASE_PUBLIC_URL') or os.getenv('DATABASE_URL', 'sqlite:///truemirror.db')
     
     # Fix Railway PostgreSQL URL format
     if DATABASE_URL and DATABASE_URL.startswith('postgres://'):
