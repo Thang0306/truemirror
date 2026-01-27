@@ -2,9 +2,9 @@ from flask import Blueprint, jsonify
 
 main_bp = Blueprint('main', __name__)
 
-@main_bp.route('/health', methods=['GET'])
+@main_bp.route('/api/health', methods=['GET'])
 def health_check():
-    """Health check endpoint"""
+    """Health check endpoint for Railway"""
     return jsonify({
         'status': 'healthy',
         'message': 'TrueMirror API is running'

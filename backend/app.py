@@ -36,9 +36,22 @@ def create_app():
          resources={r"/*": {"origins": "*"}},
          supports_credentials=True,
          allow_headers=["Content-Type", "Authorization"],
-         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"])
+         expose_headers=["Content-Type", "Authorization"],
+         methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+         send_wildcard=True,
+         always_send=True,
+         max_age=3600)  # Cache preflight for 1 hour
     print(f"[INFO] CORS: Allowing ALL origins with full headers")
     print(f"[INFO] Configured origins list: {cors_origins}")
+
+    # Add explicit OPTIONS handler for all routes
+    @app.after_request
+    def after_request(response):
+        response.headers.add('Access-Control-Allow-Origin', '*')
+        response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+        response.headers.add('Access-Control-Allow-Methods', 'GET,POST,PUT,DELETE,OPTIONS')
+        response.headers.add('Access-Control-Max-Age', '3600')
+        return response
     
     # Initialize extensions
     db.init_app(app)
