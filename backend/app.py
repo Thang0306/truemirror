@@ -4,7 +4,7 @@ from flask_jwt_extended import JWTManager
 from flask_socketio import SocketIO
 from config import Config
 from models import db, bcrypt
-from routes import main_bp, auth_bp, interview_bp, chat_bp
+from routes import main_bp, auth_bp, interview_bp, chat_bp, admin_bp
 from routes.websocket_routes import init_socketio_events
 import os
 
@@ -54,6 +54,7 @@ def create_app():
     app.register_blueprint(auth_bp)
     app.register_blueprint(interview_bp)
     app.register_blueprint(chat_bp)
+    app.register_blueprint(admin_bp)
 
     # Create database tables
     with app.app_context():
