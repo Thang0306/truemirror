@@ -181,6 +181,7 @@ html {
   color: #4b5563;
   margin-bottom: 1.5rem;
   line-height: 1.5;
+  font-style: italic;
 }
 
 @media (min-width: 768px) {

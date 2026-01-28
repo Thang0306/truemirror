@@ -49,10 +49,24 @@ const Header = ({
           <div className="flex justify-between items-center gap-8">
             {/* Logo - not clickable in interview mode */}
             <div className="flex-shrink-0 flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-brand-blue to-brand-light-blue rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-lg md:text-xl">TM</span>
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <img
+                  src="/logo.svg"
+                  alt="TrueMirror Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-2xl md:text-4xl font-bold text-brand-navy">TRUEMIRROR</span>
+              <span
+                className="text-2xl md:text-4xl font-bold"
+                style={{
+                  background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                TRUEMIRROR
+              </span>
             </div>
 
             {/* Interview info - centered */}
@@ -99,21 +113,35 @@ const Header = ({
       <nav className="container mx-auto px-4 max-w-7xl">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-br from-brand-blue to-brand-light-blue rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-lg md:text-xl">TM</span>
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                <img
+                  src="/logo.svg"
+                  alt="TrueMirror Logo"
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <span className="text-2xl md:text-4xl font-bold text-brand-navy">TRUEMIRROR</span>
+              <span
+                className="text-2xl md:text-4xl font-bold"
+                style={{
+                  background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text'
+                }}
+              >
+                TRUEMIRROR
+              </span>
             </Link>
 
             <div className="hidden md:flex items-center gap-8 lg:gap-10">
-                <Link
+                {/* <Link
                   to="/"
                   className={`text-lg lg:text-xl font-medium transition ${
                     isActive('/') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
                   Trang chủ
-                </Link>
+                </Link> */}
                 <Link
                   to="/about"
                   className={`text-lg lg:text-xl font-medium transition ${
@@ -145,7 +173,7 @@ const Header = ({
                       isActive('/dashboard') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                     }`}
                   >
-                    Dashboard
+                    Phỏng vấn
                   </Link>
                 )}
               </div>
@@ -196,14 +224,14 @@ const Header = ({
           {isMenuOpen && (
             <div className="md:hidden mt-4 pb-4 border-t pt-4">
               <div className="flex flex-col space-y-4">
-                <Link
+                {/* <Link
                   to="/"
                   className={`font-medium text-base ${
                     isActive('/') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
                   Trang chủ
-                </Link>
+                </Link> */}
                 <Link
                   to="/about"
                   className={`font-medium text-base ${
@@ -235,7 +263,7 @@ const Header = ({
                       isActive('/dashboard') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
                     }`}
                   >
-                    Dashboard
+                    Phỏng vấn
                   </Link>
                 )}
                 
