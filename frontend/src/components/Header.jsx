@@ -49,7 +49,7 @@ const Header = ({
           <div className="flex justify-between items-center gap-8">
             {/* Logo - not clickable in interview mode */}
             <div className="flex-shrink-0 flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div className="w-16 h-16 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
                   src="/logo.svg"
                   alt="TrueMirror Logo"
@@ -65,7 +65,12 @@ const Header = ({
                   backgroundClip: 'text'
                 }}
               >
-                TRUEMIRROR
+                TRUEMIRRO<span className="inline-block scale-x-[-1]" style={{ 
+                  color: '#7BA8D4',
+                  WebkitTextFillColor: '#7BA8D4',
+                  WebkitBackgroundClip: 'unset',
+                  backgroundClip: 'unset'
+                }}>R</span>
               </span>
             </div>
 
@@ -113,7 +118,7 @@ const Header = ({
       <nav className="container mx-auto px-4 max-w-7xl">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center gap-3 md:gap-4">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div className="w-16 h-16 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
                   src="/logo.svg"
                   alt="TrueMirror Logo"
@@ -129,7 +134,12 @@ const Header = ({
                   backgroundClip: 'text'
                 }}
               >
-                TRUEMIRROR
+                TRUEMIRRO<span className="inline-block scale-x-[-1]" style={{ 
+                  color: '#7BA8D4',
+                  WebkitTextFillColor: '#7BA8D4',
+                  WebkitBackgroundClip: 'unset',
+                  backgroundClip: 'unset'
+                }}>R</span>
               </span>
             </Link>
 

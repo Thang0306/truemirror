@@ -1,4 +1,5 @@
 import React from 'react'
+import './Services.css'
 
 const Services = () => {
   const plans = [
@@ -59,92 +60,248 @@ const Services = () => {
     <div className="min-h-screen">
       <section className="w-full bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl py-16 md:py-24">
-          <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center">
+          <div 
+            className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center"
+            style={{
+              backgroundImage: 'url(/news-hero.svg)',
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover',
+              backgroundAttachment: 'fixed'
+            }}
+          >
             <br />
             <div className="flex flex-col items-center justify-center space-y-8">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
-                Dịch vụ luyện phỏng vấn
+                Dịch vụ phỏng vấn
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
                 Chọn gói phù hợp với nhu cầu của bạn
               </p>
               
-              <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl">
+              <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl hero-description-padding">
                 <p>
-                  TrueMirror cung cấp 3 gói dịch vụ linh hoạt, từ miễn phí đến chuyên nghiệp, 
+                  TrueMirror cung cấp 4 gói dịch vụ linh hoạt, , 
                   giúp bạn luyện tập và cải thiện kỹ năng phỏng vấn một cách hiệu quả nhất.
                 </p>
               </div>
             </div>
+            <br />
 
           </div>
         </div>
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
-      {/* Pricing Cards - FIXED: Căn giữa content trong cards */}
+      {/* Package Showcase */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-10 md:gap-12">
-            {plans.map((plan, index) => (
-              <div
-                key={index}
-                className={`bg-gradient-to-br ${plan.color} p-10 md:p-12 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col text-center ${
-                  plan.recommended ? 'ring-4 ring-purple-500 transform scale-105' : ''
-                }`}
-              >
-                {plan.recommended && (
-                  <div className="bg-purple-600 text-white text-sm md:text-base font-bold px-4 py-2 rounded-full -mt-16 mb-4 mx-auto">
-                    ĐƯỢC ƯA CHUỘNG NHẤT
-                  </div>
-                )}
-
-                <div className="w-20 h-20 mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-6xl">{plan.icon}</span>
+          
+          {/* Package Free - 6:4 layout, text on left */}
+          <div 
+            className="relative w-full rounded-2xl overflow-hidden shadow-xl"
+            style={{
+              backgroundImage: 'url(/package-free.svg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              minHeight: '400px'
+            }}
+          >
+            <div className="grid grid-cols-10 h-full">
+              {/* Text area - 60% */}
+              <div className="col-span-6 package-text-content">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl md:text-6xl">▶▶▶</span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    DÙNG THỬ MIỄN PHÍ
+                  </h2>
                 </div>
-
-                <h3 className="text-2xl md:text-3xl font-bold text-brand-navy mb-4 text-center">
-                  {plan.name}
-                </h3>
-
-                <div className="mb-8 text-center">
-                  <span className="text-4xl md:text-5xl font-bold text-brand-blue">
-                    {plan.price}
-                  </span>
-                  <span className="text-lg md:text-xl text-gray-600">{plan.period}</span>
-                </div>
-
-                {/* FIXED: Căn giữa features */}
-                <ul className="space-y-4 mb-10 flex-grow text-center">
-                  {plan.features.map((feature, idx) => (
-                    <li
-                      key={idx}
-                      className={`text-base md:text-lg ${
-                        feature.startsWith('✓') ? 'text-gray-700' : 'text-gray-400'
-                      }`}
-                    >
-                      {feature}
-                    </li>
-                  ))}
+                
+                <div className="h-3"></div>
+                
+                <ul className="space-y-2 text-white text-base md:text-lg lg:text-xl package-bullet-text">
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl">•</span>
+                    <span>Trải nghiệm nhanh cảm giác phỏng vấn dưới áp lực thực tế <strong>trong 5 phút</strong></span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl">•</span>
+                    <span>Nhận phản hồi tổng quan về cách trả lời và thái độ phỏng vấn</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl">•</span>
+                    <span>Khởi động tự tin với tình huống mẫu phù hợp mục tiêu nghề nghiệp</span>
+                  </li>
                 </ul>
-
-                <button
-                  className={`${
-                    plan.recommended ? 'btn-primary' : 'btn-secondary'
-                  } w-full text-sm md:text-base py-3`}
-                >
-                  {plan.cta}
+                
+                <div className="h-3"></div>
+                
+                <button className="btn-primary-white text-sm md:text-base">
+                  ▶▶ TRẢI NGHIỆM NGAY!
                 </button>
               </div>
-            ))}
+              {/* Empty space - 40% for background visibility */}
+              <div className="col-span-4"></div>
+            </div>
           </div>
+          
+          <div className="h-3"></div>
+          
+          {/* Package Basic - 4:6 layout, text on right */}
+          <div 
+            className="relative w-full rounded-2xl overflow-hidden shadow-xl"
+            style={{
+              backgroundImage: 'url(/package-basic.svg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              minHeight: '400px'
+            }}
+          >
+            <div className="grid grid-cols-10 h-full">
+              {/* Empty space - 40% for background visibility */}
+              <div className="col-span-4"></div>
+              {/* Text area - 60% */}
+              <div className="col-span-6 package-text-content">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl md:text-6xl text-brand-blue">▶▶▶</span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue">
+                    GÓI CƠ BẢN
+                  </h2>
+                </div>
+                
+                <div className="h-3"></div>
+                
+                <ul className="space-y-2 text-gray-800 text-base md:text-lg package-bullet-text">
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl text-brand-blue">•</span>
+                    <span>Luyện tập các câu hỏi phỏng vấn phổ biến theo vị trí ứng tuyển</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl text-brand-blue">•</span>
+                    <span>Cải thiện cấu trúc trả lời và khả năng diễn đạt và bộc lộ năng lực</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl text-brand-blue">•</span>
+                    <span>Đề xuất lộ trình phát triển cơ bản</span>
+                  </li>
+                </ul>
+                
+                <div className="h-3"></div>
+                
+                <button className="btn-primary text-sm md:text-base">
+                  ▶▶ ĐĂNG KÝ NGAY!
+                </button>
+              </div>
+            </div>
+          </div>
+          
+          <div className="h-3"></div>
+          
+          {/* Package Premium - 6:4 layout, text on left */}
+          <div 
+            className="relative w-full rounded-2xl overflow-hidden shadow-xl"
+            style={{
+              backgroundImage: 'url(/package-premium.svg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              minHeight: '400px'
+            }}
+          >
+            <div className="grid grid-cols-10 h-full">
+              {/* Text area - 60% */}
+              <div className="col-span-6 package-text-content">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl md:text-6xl">▶▶▶</span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                    GÓI PREMIUM
+                  </h2>
+                </div>
+                
+                <div className="h-3"></div>
+                
+                <ul className="space-y-2 text-white text-base md:text-lg lg:text-xl package-bullet-text">
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl">•</span>
+                    <span>Không giới hạn với 5 kỹ năng quan trọng</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl">•</span>
+                    <span>Mô phỏng phỏng vấn chuyên sâu với nhiều tình huống khó và phản biện</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl">•</span>
+                    <span>Phân tích chi tiết hành vi, giọng nói và phản xạ để tối ưu hiệu suất và đề xuất lộ trình cải thiện</span>
+                  </li>
+                </ul>
+                
+                <div className="h-3"></div>
+                
+                <button className="btn-primary-white text-sm md:text-base">
+                  ▶▶ TRẢI NGHIỆM NGAY!
+                </button>
+              </div>
+              {/* Empty space - 40% for background visibility */}
+              <div className="col-span-4"></div>
+            </div>
+          </div>
+          
+          <div className="h-3"></div>
+          
+          {/* Package Enterprise - 4:6 layout, text on right */}
+          <div 
+            className="relative w-full rounded-2xl overflow-hidden shadow-xl"
+            style={{
+              backgroundImage: 'url(/package-enterprise.svg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              minHeight: '400px'
+            }}
+          >
+            <div className="grid grid-cols-10 h-full">
+              {/* Empty space - 40% for background visibility */}
+              <div className="col-span-4"></div>
+              {/* Text area - 60% */}
+              <div className="col-span-6 package-text-content">
+                <div className="flex items-center gap-4">
+                  <span className="text-5xl md:text-6xl text-brand-blue">▶▶▶</span>
+                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue">
+                    GÓI DOANH NGHIỆP
+                  </h2>
+                </div>
+                
+                <div className="h-3"></div>
+                
+                <ul className="space-y-2 text-gray-800 text-base md:text-lg package-bullet-text">
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl text-brand-blue">•</span>
+                    <span>Mô phỏng phỏng vấn chuẩn doanh nghiệp giúp sinh viên sẵn sàng đi làm</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl text-brand-blue">•</span>
+                    <span>Hỗ trợ các trường đại học theo dõi tiến độ, năng lực và mức độ sẵn sàng nghề nghiệp của sinh viên</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-xl text-brand-blue">•</span>
+                    <span>Cung cấp báo cáo tổng quan về năng lực nhóm ứng viên theo kỹ năng mục tiêu</span>
+                  </li>
+
+                </ul>
+                
+                <div className="h-3"></div>
+                
+                <button className="btn-primary text-sm md:text-base">
+                  ▶▶ ĐĂNG KÝ NGAY!
+                </button>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* Feature Comparison Table */}
       <section className="bg-white">
@@ -156,51 +313,191 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-10">
-            <div className="space-y-6">
-              {/* Header Row */}
-              <div className="grid grid-cols-4 gap-4 bg-gradient-to-r from-brand-blue to-brand-light-blue text-white rounded-xl p-6">
-                <div className="text-center text-base md:text-lg font-bold border-r-2 border-white/30">Tính năng</div>
-                <div className="text-center text-base md:text-lg font-bold">Free Trial</div>
-                <div className="text-center text-base md:text-lg font-bold">Basic</div>
-                <div className="text-center text-base md:text-lg font-bold">Premium</div>
-              </div>
+          <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="comparison-table">
+                <thead>
+                  <tr className="bg-gradient-to-r from-brand-blue to-brand-light-blue text-white">
+                    <th className="border-r-2 border-white/30 p-8">
+                      <div className="text-lg md:text-xl font-bold">Gói dịch vụ</div>
+                    </th>
+                    <th className="p-8">
+                      <div className="text-lg md:text-xl font-bold">Dùng thử miễn phí</div>
+                    </th>
+                    <th className="p-8">
+                      <div className="text-lg md:text-xl font-bold">Cơ bản</div>
+                    </th>
+                    <th className="p-8">
+                      <div className="text-lg md:text-xl font-bold">Premium</div>
+                    </th>
+                    <th className="p-8">
+                      <div className="text-lg md:text-xl font-bold">Doanh nghiệp</div>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {/* Price Row */}
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-bold text-gray-700">Giá</div>
+                    </td>
+                    <td className="p-8">
+                      <div className="text-lg md:text-xl font-semibold text-gray-700">0đ</div>
+                    </td>
+                    <td className="p-8">
+                      <div className="text-lg md:text-xl font-semibold text-gray-700">299,000₫/tháng</div>
+                    </td>
+                    <td className="p-8">
+                      <div className="text-lg md:text-xl font-semibold text-gray-700">699,000₫/tháng</div>
+                    </td>
+                    <td className="p-8">
+                      <div className="text-lg md:text-xl font-semibold text-gray-700">Liên hệ</div>
+                    </td>
+                  </tr>
 
-              {/* Data Rows */}
-              {[
-                ['Số phiên luyện tập', '3 phiên', '20 phiên/tháng', 'Không giới hạn'],
-                ['Bộ câu hỏi', 'Cơ bản', 'Đầy đủ', 'Đầy đủ + Độc quyền'],
-                ['AI Feedback', 'Tổng quan', 'Chi tiết', 'Chuyên sâu + Video'],
-                ['AR Mode', '✗', 'Cơ bản', 'Nâng cao'],
-                ['Lưu lịch sử', '✗', '✓', '✓'],
-                ['Báo cáo tiến độ', 'Đơn giản', '✓', '✓ + Lộ trình cá nhân'],
-                ['Hỗ trợ', 'Email', 'Email + Chat', 'Ưu tiên 24/7'],
-              ].map((row, idx) => (
-                <div
-                  key={idx}
-                  className="grid grid-cols-4 gap-4 p-6 rounded-xl hover:bg-blue-50 transition border border-gray-100"
-                >
-                  <div className="text-center text-base md:text-lg text-gray-700 font-medium border-r-2 border-gray-300">
-                    {row[0]}
-                  </div>
-                  <div className="text-center text-base md:text-lg text-gray-600">
-                    {row[1]}
-                  </div>
-                  <div className="text-center text-base md:text-lg text-gray-600">
-                    {row[2]}
-                  </div>
-                  <div className="text-center text-base md:text-lg text-gray-700 font-semibold">
-                    {row[3]}
-                  </div>
-                </div>
-              ))}
+                  {/* Feature Rows */}
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Số phiên luyện tập</div>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">3 phiên</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">20 phiên/tháng</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Không giới hạn</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Không giới hạn cho tổ chức</td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Số kỹ năng</div>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">1-2 kỹ năng</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">3 kỹ năng</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">5 kỹ năng</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Tùy chỉnh theo yêu cầu</td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Bộ câu hỏi</div>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Cơ bản</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Đầy đủ</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Đầy đủ + Độc quyền</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Tùy chỉnh theo ngành</td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">AI Feedback</div>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Tổng quan</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Chi tiết</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Chuyên sâu + Video</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Chuyên sâu + Báo cáo tổ chức</td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">AR Mode</div>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Lưu lịch sử</div>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Báo cáo tiến độ</div>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Đơn giản</td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Lộ trình cá nhân</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Báo cáo tập thể</td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Quản lý nhóm ứng viên</div>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                  </tr>
+
+                  <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Dashboard tổ chức</div>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-x">✗</span>
+                    </td>
+                    <td className="p-8">
+                      <span className="compare-check">✓</span>
+                    </td>
+                  </tr>
+
+                  <tr className="hover:bg-blue-50/30 transition">
+                    <td className="border-r-2 border-gray-300 p-8">
+                      <div className="text-base md:text-lg font-medium text-gray-700">Hỗ trợ</div>
+                    </td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Email</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Email + Chat</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Ưu tiên 24/7</td>
+                    <td className="p-8 text-base md:text-lg text-gray-700">Quản lý tài khoản riêng</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* CTA */}
       <section className="bg-white">
@@ -230,7 +527,7 @@ const Services = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
     </div>
   )
 }

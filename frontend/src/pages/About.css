@@ -1,0 +1,132 @@
+/* About Page Styles */
+
+/* Hero Section Styles */
+.about-hero-container {
+  position: relative;
+  min-height: 650px;
+  overflow: hidden;
+}
+
+.about-hero-svg {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  max-width: 110%;
+  height: auto;
+  max-height: 630px;
+  z-index: 1;
+  object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .about-hero-svg {
+    /* 91% → ~100% */
+    max-width: 100%;
+    max-height: 770px; /* tăng nhẹ chiều cao theo tỷ lệ tương ứng */
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-hero-svg {
+    /* 84% → ~92.4% */
+    max-width: 92.4%;
+    max-height: 847px; /* tăng chiều cao theo tương đương */
+  }
+}
+
+
+.about-hero-content {
+  position: relative;
+  z-index: 10;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Left-aligned paragraph for "NGUYÊN NHÂN" section - similar to hero-content */
+.about-reason-text {
+  width: 100%;
+  max-width: 1200px;
+  text-align: left;
+  margin-left: 0;
+  margin-right: auto;
+  padding-left: 3rem;
+}
+
+@media (min-width: 768px) {
+  .about-reason-text {
+    padding-left: 4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-reason-text {
+    padding-left: 5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-reason-text {
+    text-align: center;
+    margin-left: auto;
+    padding-left: 0;
+  }
+}
+
+/* Quote box styling - wider responsive widths */
+.about-quote-box {
+  width: 45%;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .about-quote-box {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-quote-box {
+    width: 55%;
+  }
+}
+
+/* Content padding for Vision, Mission, and Core Values - matching Home.jsx value-proposition-content */
+.about-content-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-content-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-content-padding {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Title spacing for Vision and Mission - spacing from decorative dots */
+.about-title-spacing {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-title-spacing {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about-title-spacing {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+}

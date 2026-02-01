@@ -18,6 +18,8 @@ function AppContent() {
   const location = useLocation()
   // Hide default header for interview room (InterviewRoom renders its own header)
   const showDefaultHeader = !location.pathname.match(/^\/interview\/\d+$/)
+  // Hide footer for interview room and show white spacer instead
+  const showFooter = !location.pathname.match(/^\/interview\/\d+$/)
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -56,7 +58,7 @@ function AppContent() {
               />
             </Routes>
           </main>
-          <Footer />
+          {showFooter ? <Footer /> : <div className="bg-white" style={{ height: '160px' }}></div>}
         </div>
   )
 }

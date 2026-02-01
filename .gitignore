@@ -32,3 +32,6 @@ CLAUDE.md
 # Reference folders
 AIChatAssistant/
 AITrueMirrorDocuments/
+
+# Agent
+.agent/

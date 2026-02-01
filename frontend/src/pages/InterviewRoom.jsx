@@ -68,6 +68,7 @@ const InterviewRoom = () => {
   const [error, setError] = useState('')
   const [sessionInfo, setSessionInfo] = useState(null)
   const [isConnected, setIsConnected] = useState(false)
+  const [showInterviewerVideo, setShowInterviewerVideo] = useState(false)
 
   const messagesEndRef = useRef(null)
   const inputRef = useRef(null)
@@ -255,6 +256,7 @@ const InterviewRoom = () => {
       try {
         const response = await api.get(`/api/interview/session/${sessionId}`)
         setSessionInfo(response.data.session)
+        setShowInterviewerVideo(true)  // Show video immediately when session info is loaded
       } catch (error) {
         console.error('[ERROR] Load session info failed:', error)
         setError('Không thể tải thông tin phiên phỏng vấn')
@@ -348,6 +350,43 @@ const InterviewRoom = () => {
         isEvaluating={isEvaluating}
         hasEvaluated={hasEvaluated}
       />
+
+      {/* Interviewer Video - Top Right Corner */}
+      {showInterviewerVideo && sessionInfo && (
+        <div 
+          className="fixed z-40"
+          style={{
+            top: 'calc(5rem + 1rem)',  // Below header (h-20) + 1rem gap
+            right: '1rem',
+            width: '280px',
+            height: '157.5px',  // 16:9 aspect ratio
+          }}
+        >
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-lg"
+            style={{
+              border: '1px solid #3B82F6',  // Blue color matching evaluate button
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)'
+            }}
+          >
+            <source 
+              src={
+                sessionInfo.style === 'Thân thiện' 
+                  ? '/friendly-style.mp4' 
+                  : sessionInfo.style === 'Nghiêm túc'
+                  ? '/serious-style.mp4'
+                  : '/picky-style.mp4'
+              } 
+              type="video/mp4" 
+            />
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      )}
 
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto">

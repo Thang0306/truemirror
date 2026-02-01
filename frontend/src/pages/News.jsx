@@ -1,4 +1,5 @@
 import React from 'react'
+import './News.css'
 
 const News = () => {
   // Mock data for news
@@ -59,21 +60,21 @@ const News = () => {
       name: 'Nguyễn Minh Anh',
       position: 'Software Engineer tại VNG',
       avatar: '👨‍💻',
-      story: 'Sau 2 tuần luyện tập với TrueMirror, mình đã tự tin hơn rất nhiều và vượt qua vòng phỏng vấn khó nhằn. Feedback từ AI giúp mình nhận ra nhiều điểm cần cải thiện!',
+      story: 'Sau 2 tuần luyện tập với TrueMirror, mình đã tự tin hơn rất nhiều và vượt qua vòng phỏng vấn khó nhằn. Feedback từ AI giúp mình nhận ra nhiều điểm cần cải thiện, từ cách trình bày ý tưởng, ngôn ngữ cơ thể cho đến kỹ năng giao tiếp.',
       rating: 5,
     },
     {
       name: 'Trần Thị Hương',
       position: 'Marketing Manager tại Shopee',
       avatar: '👩‍💼',
-      story: 'TrueMirror là công cụ tuyệt vời! Mình đã luyện tập hơn 30 phiên và cảm thấy phỏng vấn thật sự không còn đáng sợ. Cảm ơn TrueMirror đã giúp mình có công việc mơ ước!',
+      story: 'TrueMirror là công cụ tuyệt vời! Mình đã luyện tập hơn 30 phiên và cảm thấy phỏng vấn thật sự không còn đáng sợ. Từ một người hay run tay, nói ngọng khi trả lời câu hỏi, giờ mình có thể tự tin thể hiện bản thân trước mọi người. Cảm ơn TrueMirror đã giúp mình có công việc mơ ước!',
       rating: 5,
     },
     {
       name: 'Lê Văn Đức',
       position: 'Data Analyst tại FPT',
       avatar: '👨‍🔬',
-      story: 'Gói Premium rất đáng tiền! Lộ trình cá nhân hóa và feedback chuyên sâu giúp mình tiến bộ từng ngày. Mình đã từ người ngại giao tiếp thành người tự tin trong phỏng vấn.',
+      story: 'Gói Premium rất đáng tiền! Lộ trình cá nhân hóa và feedback chuyên sâu giúp mình tiến bộ từng ngày. AI phân tích chi tiết từ ngữ điệu, cách dùng từ, đến thái độ và biểu cảm khuôn mặt. Mình đã từ người ngại giao tiếp, hay né tránh ánh mắt người đối diện, thành người tự tin trả lời mọi câu hỏi trong phỏng vấn.',
       rating: 5,
     },
   ]
@@ -83,23 +84,32 @@ const News = () => {
       {/* Hero Section */}
       <section className="w-full bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl py-16 md:py-24">
-          <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center">
+          <div 
+            className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center"
+            style={{
+              backgroundImage: 'url(/news-hero.svg)',
+              backgroundPosition: 'center center',
+              backgroundSize: 'cover',
+              backgroundAttachment: 'fixed'
+            }}
+          >
             
             <div className="flex flex-col items-center justify-center space-y-8">
               <br />
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
-                Thành tựu & Tin tức
+                Tin tức & Thành tựu
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
                 Cập nhật mới nhất từ TrueMirror
               </p>
               
-              <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl">
+              <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl hero-description-padding">
                 <p>
                   Khám phá những cập nhật mới nhất về sản phẩm, thành tựu và câu chuyện thành công 
                   từ cộng đồng người dùng TrueMirror.
                 </p>
               </div>
+              <br />
             </div>
 
           </div>
@@ -107,7 +117,7 @@ const News = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* News Grid */}
       <section className="bg-white">
@@ -119,37 +129,37 @@ const News = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 auto-rows-fr">
             {newsItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-gradient-to-br from-blue-50 to-white p-8 md:p-10 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col text-center min-h-80"
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="w-16 h-16 md:w-20 md:h-20 mx-auto mb-8 flex items-center justify-center">
-                  <span className="text-6xl md:text-7xl">{item.image}</span>
+                {/* Fixed height image container - image displays fully */}
+                <div className="w-full h-[270px] bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
+                  <img 
+                    src="/news-image.svg" 
+                    alt={item.title}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
 
-                <div className="mb-8 flex justify-center">
-                  <div className="bg-brand-blue text-white text-base md:text-lg px-10 md:px-12 py-3 rounded-lg font-bold shadow-md min-w-[100px] md:min-w-[120px]">
-                    {item.category}
-                  </div>
+                {/* Content with padding - expands as needed */}
+                <div className="news-item-padding flex-grow flex flex-col">
+                  <div className="h-1.5"></div>
+                  
+                  {/* Title with hover effect */}
+                  <h3 className="text-lg md:text-xl font-bold text-brand-navy news-title-hover text-left">
+                    {item.title}
+                  </h3>
+
+                  <div className="h-1.5"></div>
+
+                  {/* Date */}
+                  <p className="text-sm md:text-base text-gray-600 text-left pb-3">
+                    {item.date}
+                  </p>
                 </div>
-
-                <h3 className="text-xl md:text-2xl font-bold text-brand-navy mb-5">
-                  {item.title}
-                </h3>
-
-                <p className="text-base md:text-lg text-gray-600 mb-6">
-                  {item.date}
-                </p>
-
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed flex-grow mb-8">
-                  {item.excerpt}
-                </p>
-
-                <button className="btn-secondary text-sm md:text-base px-4 py-2">
-                  Đọc thêm →
-                </button>
               </div>
             ))}
           </div>
@@ -157,7 +167,7 @@ const News = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* Success Stories */}
       <section className="bg-white">
@@ -175,27 +185,28 @@ const News = () => {
                 key={index}
                 className="bg-gradient-to-br from-green-50 to-white p-10 md:p-12 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col text-center min-h-96"
               >
-                <div className="w-20 h-20 md:w-24 md:h-24 mx-auto mb-6 flex items-center justify-center">
-                  <span className="text-7xl md:text-8xl">{story.avatar}</span>
+                <div className="avatar-circle">
+                  <span className="text-3xl md:text-4xl">{story.avatar}</span>
                 </div>
-
                 <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-2">
                   {story.name}
                 </h3>
-
                 <p className="text-sm md:text-base text-brand-blue font-semibold mb-4">
                   {story.position}
                 </p>
+                <div className="h-3"></div>
 
                 <div className="flex justify-center gap-1 mb-6">
                   {[...Array(story.rating)].map((_, i) => (
                     <span key={i} className="text-yellow-500 text-xl">⭐</span>
                   ))}
                 </div>
+                <div className="h-1"></div>
 
-                <p className="text-base md:text-lg text-gray-700 leading-relaxed italic">
+                <p className="text-base md:text-lg text-gray-700 leading-relaxed italic news-story-padding">
                   "{story.story}"
                 </p>
+                <div className="h-3"></div>
               </div>
             ))}
           </div>
@@ -203,7 +214,7 @@ const News = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* CTA */}
       <section className="bg-white">
@@ -233,7 +244,7 @@ const News = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
     </div>
   )
 }

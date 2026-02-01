@@ -1,0 +1,92 @@
+/* Story text padding - matching About.jsx about-content-padding */
+.news-story-padding {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .news-story-padding {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .news-story-padding {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* Avatar circle styling */
+.avatar-circle {
+  width: 3.85rem;
+  height: 3.85rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+  border: 3px solid #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1.5rem auto 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .avatar-circle {
+    width: 4.6rem;
+    height: 4.6rem;
+  }
+}
+
+/* News item padding - half of story padding */
+.news-item-padding {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .news-item-padding {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .news-item-padding {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+/* News title hover effect */
+.news-title-hover {
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.news-title-hover:hover {
+  color: #2563eb;
+  text-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Hero description padding - matching About.css about-content-padding */
+.hero-description-padding {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (min-width: 768px) {
+  .hero-description-padding {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-description-padding {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+}

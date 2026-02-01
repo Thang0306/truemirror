@@ -30,7 +30,12 @@ const Home = () => {
                     backgroundClip: 'text'
                   }}
                 >
-                  TRUEMIRROR
+                  TRUEMIRRO<span className="inline-block scale-x-[-1]" style={{ 
+                    color: '#5A8BC8',
+                    WebkitTextFillColor: '#5A8BC8',
+                    WebkitBackgroundClip: 'unset',
+                    backgroundClip: 'unset'
+                  }}>R</span>
                 </h1>
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
                   Giải pháp luyện phỏng vấn đột phá kết hợp AI & Virtual Human
@@ -58,49 +63,83 @@ const Home = () => {
         </div>
       </section>
       {/* Tạo khoảng trắng giữa các section */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
       {/* Problem Statement */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
           <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl shadow-xl p-10 md:p-14 lg:p-16 border border-gray-100">
-          <div className="h-3"></div>
+            <div className="h-3"></div>
+            
+            {/* Title - Centered, matching section-title style */}
             <div className="text-center mb-10 md:mb-12 lg:mb-14">
-              <h2 className="section-title mb-6 md:mb-8">
-                💡 Bạn có năng lực, nhưng vẫn sợ rớt phỏng vấn?
+              <h2 className="section-title">
+                Bạn có năng lực, nhưng vẫn sợ rớt phỏng vấn?
               </h2>
-              <p  className="section-subtitle">
-                Rất nhiều ứng viên trẻ rơi vào tình huống này... không phải vì thiếu năng lực,
-                mà vì không biết cách thể hiện như thế nào trước nhà tuyển dụng.
-              </p>
-              <br />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 md:mb-20 lg:mb-24">
-              <div className="p-5 md:p-6 rounded-xl flex items-center justify-center min-h-32 text-center problem-statement-card">
-                <p className="text-base md:text-lg lg:text-xl text-gray-700">✗ Chuẩn bị rất kỹ, nhưng vào phỏng vấn lại "đứng hình"?</p>
+            
+            {/* 2-column layout: 40% Image left, 60% Content right */}
+            <div className="grid grid-cols-1 lg:grid-cols-[45%_55%] gap-8 lg:gap-12">
+              
+              {/* Left Column - Image (40%) - Centered */}
+              <div className="flex items-center justify-center">
+                <img 
+                  src="/problem-statement.svg" 
+                  alt="Bạn có năng lực nhưng vẫn sợ rớt phỏng vấn" 
+                  className="w-full h-auto max-w-lg"
+                />
               </div>
-              <div className="p-5 md:p-6 rounded-xl flex items-center justify-center min-h-32 text-center problem-statement-card">
-                <p className="text-base md:text-lg lg:text-xl text-gray-700">✗ Không biết mình đang sai ở đâu sau mỗi lần trượt phỏng vấn?</p>
-              </div>
-              <div className="p-5 md:p-6 rounded-xl flex items-center justify-center min-h-32 text-center problem-statement-card">
-                <p className="text-base md:text-lg lg:text-xl text-gray-700">✗ Ánh mắt, giọng nói, biểu cảm... có đang làm mình mất điểm?</p>
-              </div>
-              <div className="p-5 md:p-6 rounded-xl flex items-center justify-center min-h-32 text-center problem-statement-card">
-                <p className="text-base md:text-lg lg:text-xl text-gray-700">✗ Sợ phỏng vấn vì sợ... thất bại thêm lần nữa?</p>
-              </div>
-            </div>
 
-            <br />
-            <div className="text-center pt-6 md:pt-8">
-              <button className="btn-primary text-lg md:text-xl px-8 py-4">
-                Giải quyết ngay với TrueMirror →
-              </button>
+              {/* Right Column - Content (60%) - Centered */}
+              <div className="flex flex-col items-center justify-center">
+                <div className="w-full max-w-2xl space-y-0">
+                  {/* Description text - centered vertically */}
+                  <div className="flex items-center justify-start min-h-[4rem] problem-description-text">
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                      Rất nhiều ứng viên trẻ rơi vào tình huống này vì không biết cách thể hiện như thế nào trước nhà tuyển dụng.
+                    </p>
+                  </div>
+                  
+                  <div className="h-3"></div>
+
+                  {/* Problem Cards - Centered within 60% area */}
+                  <div className="space-y-0">
+                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl problem-card-box">
+                      <p className="text-base md:text-lg font-semibold text-gray-800">
+                        Chuẩn bị rất kỹ, nhưng vào phỏng vấn lại "đứng hình"?
+                      </p>
+                    </div>
+                    <div className="h-3"></div>
+                    
+                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl problem-card-box">
+                      <p className="text-base md:text-lg font-semibold text-gray-800">
+                        Không biết mình đang sai ở đâu sau mỗi lần trượt phỏng vấn?
+                      </p>
+                    </div>
+                    <div className="h-3"></div>
+                    
+                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl problem-card-box">
+                      <p className="text-base md:text-lg font-semibold text-gray-800">
+                        Ánh mắt, giọng nói, biểu cảm... có đang làm mình mất điểm?
+                      </p>
+                    </div>
+                    <div className="h-3"></div>
+                    
+                    <div className="bg-gradient-to-br from-blue-100 to-blue-50 rounded-xl problem-card-box">
+                      <p className="text-base md:text-lg font-semibold text-gray-800">
+                        Sợ phỏng vấn vì sợ... thất bại thêm lần nữa?
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="h-3"></div>
+                </div>
+              </div>
             </div>
-            <br />
           </div>
         </div>
       </section>
       {/* Tạo khoảng trắng giữa các section */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* Value Propositions */}
       <section className="bg-white">
@@ -108,7 +147,7 @@ const Home = () => {
           <div className="text-center mb-14 md:mb-18 lg:mb-24">
             <h2 className="section-title">Tại sao chọn TrueMirror?</h2>
             <p className="section-subtitle">
-              TRUEMIRROR mang đến giải pháp thực tế, đáng tin cậy giúp giải quyết nỗi lo của bạn.
+              TrueMirror mang đến giải pháp thực tế, đáng tin cậy giúp giải quyết nỗi lo của bạn.
             </p>
           </div>
 
@@ -127,8 +166,8 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-green-50 to-white p-12 md:p-14 lg:p-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center justify-center text-center min-h-96">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-green-600 rounded-full flex items-center justify-center mb-8 md:mb-10 lg:mb-12 flex-shrink-0">
+            <div className="bg-gradient-to-br from-pink-50 to-white md:p-14 lg:p-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col items-center justify-center text-center min-h-96">
+              <div className="w-16 h-16 md:w-20 md:h-20 bg-pink-400 rounded-full flex items-center justify-center mb-8 md:mb-10 lg:mb-12 flex-shrink-0">
                 <span className="text-3xl md:text-4xl">🔍</span>
               </div>
               <div className="h-3"></div>
@@ -158,7 +197,7 @@ const Home = () => {
         </div>
       </section>
       {/* Tạo khoảng trắng giữa các section */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
       {/* How It Works - FIXED: Thêm vùng bao, giảm size số */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl">
@@ -195,7 +234,104 @@ const Home = () => {
         </div>
       </section>
       {/* Tạo khoảng trắng giữa các section */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
+
+      {/* Benefits Section - Bạn sẽ nhận lại */}
+      <section className="bg-white">
+        <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
+          <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-2xl shadow-xl p-10 md:p-14 lg:p-16 border border-gray-100">
+            
+            <div className="h-3"></div>
+            <div className="text-center mb-12 md:mb-16">
+              <h2 className="section-title">
+                Bạn sẽ nhận lại
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 md:gap-10 mb-12 benefits-grid">
+              {/* Benefit 1 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-2">
+                    Tăng kỹ năng xử lý trong mọi tình huống
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-600">
+                    Bạn sẽ không còn phản ứng theo bản năng trước câu hỏi khó nữa — bạn sẽ biết cách sắp xếp suy nghĩ và chọn đáp án phù hợp với từng hoàn cảnh.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 2 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-2">
+                    Tâm thế chủ động khi phỏng vấn
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-600">
+                    Việc luyện tập phản ứng dưới áp lực sẽ giúp bạn hình thành thói quen kiểm soát cảm xúc và phản hồi có chủ ý.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 3 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-2">
+                    Sự tự tin và lợi thế cạnh tranh
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-600">
+                    Bạn sẽ thể hiện một trạng thái khác biệt — bình tĩnh và tự tin, thể hiện rõ sự chuẩn bị kỹ càng và khả năng ứng biến tốt.
+                  </p>
+                </div>
+              </div>
+
+              {/* Benefit 4 */}
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <svg className="w-8 h-8 text-brand-blue" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="text-lg md:text-xl font-bold text-brand-navy mb-2">
+                    Điều hướng buổi phỏng vấn như một cuộc trao đổi hai chiều
+                  </h3>
+                  <p className="text-base md:text-lg text-gray-600">
+                    Bạn không chỉ trả lời mà còn biết cách làm rõ câu hỏi, đặt ngược lại khi cần để thể hiện năng lực và hiểu rõ yêu cầu công việc.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Image - Full width within gradient container */}
+            <div className="benefits-image-container">
+              <img 
+                src="/benefits.svg" 
+                alt="Sau khi trải nghiệm dịch vụ" 
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Tạo khoảng trắng giữa các section */}
+      <div className="h-12 md:h-16 lg:h-10"></div>
       {/* CTA */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
@@ -226,7 +362,7 @@ const Home = () => {
       </section>
       
       {/* Tạo khoảng trắng giữa các section */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
     </div>
   )
 }

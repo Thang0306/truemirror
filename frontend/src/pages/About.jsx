@@ -1,4 +1,5 @@
 import React from 'react'
+import './About.css'
 
 const About = () => {
   return (
@@ -6,35 +7,52 @@ const About = () => {
       {/* Hero Section - Brand Story */}
       <section className="w-full bg-white">
         <div className="container mx-auto px-4 md:px-8 max-w-7xl py-16 md:py-24">
-          <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center">
+          <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 about-hero-container">
             
-            <div className="flex flex-col items-center justify-center space-y-8">
-              <br />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight mt-8">
+            {/* Background SVG Image - Bottom Right Corner */}
+            <img 
+              src="/about-hero.svg" 
+              alt="About Hero Background" 
+              className="about-hero-svg"
+            />
+            
+            {/* Text Content Overlay */}
+            <div className="about-hero-content">
+              
+              {/* Main Title */}
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight text-center">
                 Về TrueMirror
               </h1>
-              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
+              
+              {/* Subtitle */}
+              <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue text-center">
                 Câu chuyện thương hiệu
               </p>
               
-              <div className="max-w-7xl mx-auto space-y-6 text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl">
-                <p>
-                  TrueMirror ra đời từ một nhận thức đơn giản nhưng sâu sắc: <strong>Nhiều ứng viên tài năng 
-                  thất bại trong phỏng vấn không phải vì thiếu năng lực</strong>, mà vì họ không biết cách 
-                  thể hiện bản thân một cách tự tin và chuyên nghiệp trước nhà tuyển dụng.
+              <div className="h-3"></div>
+              
+              {/* First Paragraph - Centered */}
+                <p className="text-lg md:text-xl lg:text-2xl text-gray-800 text-center">
+                  ra đời từ những <strong>trải nghiệm thực tế</strong> mà <strong>HÀNG TRIỆU BAN TRẺ</strong> đối mặt:
                 </p>
-                <p>
-                  Chúng tôi tin rằng mỗi người đều xứng đáng có cơ hội để <strong>luyện tập, cải thiện 
-                  và tỏa sáng</strong> trong những cuộc phỏng vấn quan trọng. Với sự kết hợp giữa 
-                  <strong> công nghệ AR hiện đại</strong> và <strong>trí tuệ nhân tạo AI tiên tiến</strong>, 
-                  TrueMirror tạo ra một môi trường luyện tập an toàn, chân thực và hiệu quả.
-                </p>
-                <p>
-                  Từ năm 2024, chúng tôi đã đồng hành cùng <strong>hàng nghìn ứng viên</strong> trên 
-                  hành trình chinh phục những vị trí mơ ước, giúp họ tự tin hơn, chuẩn bị tốt hơn 
-                  và thành công hơn trong mỗi cuộc phỏng vấn.
-                </p>
+              
+              <div className="h-3"></div>
+              
+              {/* Quote Box - Centered */}
+              <div className="flex justify-center">
+                <div className="about-quote-box bg-brand-blue text-white p-6 md:p-8 rounded-2xl shadow-lg italic text-lg md:text-xl lg:text-2xl font-medium text-center">
+                  "Dù có năng lực và kiến thức chuyên môn vững vàng, nhiều người vẫn <br/> cảm thấy lo lắng và thiếu tự tin khi bước vào các buổi phỏng vấn"
+                </div>
               </div>
+              
+              <div className="h-3"></div>
+              
+              {/* Reason Paragraph - Left Aligned with spacing like Home hero-content */}
+              <p className="text-base md:text-lg lg:text-xl text-gray-800 about-reason-text">
+                <strong>NGUYÊN NHÂN</strong> không chỉ nằm ở nội dung câu trả lời, mà còn đến từ những hành vi vô thức như ánh mắt né tránh, khoảng im lặng kéo dài hay biểu cảm căng thẳng,.... Đó là <strong>những yếu tố dễ khiến ứng viên MẤT ĐIỂM</strong> mà chính họ không nhận ra.
+              </p>
+              
+              <div className="h-3"></div>
             </div>
 
           </div>
@@ -42,54 +60,72 @@ const About = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* Vision & Mission */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
-          <div className="text-center mb-14 md:mb-18 lg:mb-24">
-            <h2 className="section-title">Tầm nhìn & Sứ mệnh</h2>
-            <p className="section-subtitle">
-              Định hướng phát triển của TrueMirror
-            </p>
-          </div>
-
+          
           <div className="grid md:grid-cols-2 gap-10 md:gap-14 lg:gap-16">
-            {/* Vision Card */}
-            <div className="bg-gradient-to-br from-blue-50 to-white p-12 md:p-14 lg:p-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center min-h-96">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-blue rounded-full flex items-center justify-center mb-8 md:mb-10 lg:mb-12">
-                <span className="text-3xl md:text-4xl">🎯</span>
+            {/* Vision */}
+            <div className="flex flex-col">
+              {/* Title with decorative underline */}
+              <div className="flex items-center justify-center mb-8 md:mb-10">
+                <div className="flex-1 h-0.5 bg-brand-blue"></div>
+                <div className="flex items-center px-4">
+                  <div className="w-3 h-3 rounded-full bg-brand-blue"></div>
+                </div>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue about-title-spacing">
+                  Tầm nhìn
+                </h3>
+                <div className="flex items-center px-4">
+                  <div className="w-3 h-3 rounded-full bg-brand-blue"></div>
+                </div>
+                <div className="flex-1 h-0.5 bg-brand-blue"></div>
               </div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-navy mb-6 md:mb-7 lg:mb-8">
-                Tầm nhìn
-              </h3>
-              <br />
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Trở thành nền tảng luyện phỏng vấn số 1 Việt Nam, giúp mọi ứng viên tự tin 
-                thể hiện bản thân và chinh phục mọi cơ hội nghề nghiệp.
-              </p>
+              {/* Content Box */}
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-8 md:p-10 lg:p-12 rounded-3xl shadow-lg flex-1">
+                <div className="h-3"></div>
+                <p className="text-lg md:text-xl lg:text-xl text-gray-800 leading-relaxed about-content-padding">
+                  <strong>TrueMirror</strong> hướng tới việc <strong>trở thành nền tảng luyện phỏng vấn</strong> và <strong>phát triển kỹ năng thể hiện bản thân đáng tin cậy cho thế hệ trẻ</strong> trong bối cảnh tuyển dụng ngày càng số hóa. <br/> Chúng tôi mong muốn góp phần tạo ra một môi trường nơi phỏng vấn <strong>không còn là trải nghiệm mang tính may rủi</strong>, mà là một <strong>kỹ năng có thể luyện tập, quan sát và cải thiện rõ ràng theo thời gian</strong>. <br/> Mục tiêu cuối cùng là xây dựng một tương lai nơi <strong>sự tự tin</strong> và <strong>kỹ năng giao tiếp</strong> trở thành <strong>chìa khóa vạn năng</strong> cho chinh phục sự nghiệp.
+                </p>
+                <div className="h-3"></div>
+              </div>
             </div>
 
-            {/* Mission Card */}
-            <div className="bg-gradient-to-br from-purple-50 to-white p-12 md:p-14 lg:p-16 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center min-h-96">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600 rounded-full flex items-center justify-center mb-8 md:mb-10 lg:mb-12">
-                <span className="text-3xl md:text-4xl">🚀</span>
+            {/* Mission */}
+            <div className="flex flex-col">
+              {/* Title with decorative underline */}
+              <div className="flex items-center justify-center mb-8 md:mb-10">
+                <div className="flex-1 h-0.5 bg-brand-blue"></div>
+                <div className="flex items-center px-4">
+                  <div className="w-3 h-3 rounded-full bg-brand-blue"></div>
+                </div>
+                <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue about-title-spacing">
+                  Sứ mệnh
+                </h3>
+                <div className="flex items-center px-4">
+                  <div className="w-3 h-3 rounded-full bg-brand-blue"></div>
+                </div>
+                <div className="flex-1 h-0.5 bg-brand-blue"></div>
               </div>
-              <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-navy mb-6 md:mb-7 lg:mb-8">
-                Sứ mệnh
-              </h3>
-              <br />
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Cung cấp công nghệ AR & AI tiên tiến để mô phỏng môi trường phỏng vấn chân thực, 
-                giúp ứng viên luyện tập hiệu quả và nhận phản hồi chi tiết để cải thiện kỹ năng.
-              </p>
+              
+              {/* Content Box */}
+              <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-8 md:p-10 lg:p-12 rounded-3xl shadow-lg flex-1">
+                <div className="h-3"></div>
+                <p className="text-lg md:text-xl lg:text-xl text-gray-800 leading-relaxed about-content-padding">
+                  TrueMirror mong muốn giúp các bạn trẻ, đặc biệt là sinh viên và những người đang bắt đầu sự nghiệp <strong>tự tin hơn khi bước vào phỏng vấn xin việc</strong>. <br/> Thông qua <strong>không gian luyện tập mô phỏng gần với phỏng vấn thực tế bằng công nghệ AR và AI</strong>, người dùng có thể <strong>thực hành thoải mái</strong> và <strong>nhận phản hồi rõ ràng về cách trả lời cũng như ngôn ngữ cơ thể</strong>. <br/> Từ đó, giảm bớt căng thẳng, <strong>thể hiện bản thân tốt hơn</strong> và <strong>nắm bắt cơ hội việc làm một cách chủ động</strong>.
+                </p>
+                <div className="h-3"></div>
+              </div>
             </div>
           </div>
+          
         </div>
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* Core Values */}
       <section className="bg-white">
@@ -107,11 +143,13 @@ const About = () => {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-blue rounded-full flex items-center justify-center mb-6 md:mb-8">
                 <span className="text-4xl md:text-5xl">💡</span>
               </div>
+              <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
                 Đổi mới
               </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Không ngừng nghiên cứu và ứng dụng công nghệ tiên tiến nhất.
+              <div className="h-3"></div>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
+                Không ngừng nghiên cứu và ứng dụng công nghệ tiên tiến nhất. ngừng nghiên cứu và ứng dụng công nghệ tiên tiến nhất.
               </p>
             </div>
 
@@ -120,10 +158,12 @@ const About = () => {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 md:mb-8">
                 <span className="text-4xl md:text-5xl">🤝</span>
               </div>
+              <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
                 Tận tâm
               </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              <div className="h-3"></div>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
                 Đặt sự thành công của người dùng lên hàng đầu trong mọi quyết định.
               </p>
             </div>
@@ -133,11 +173,13 @@ const About = () => {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600 rounded-full flex items-center justify-center mb-6 md:mb-8">
                 <span className="text-4xl md:text-5xl">⚡</span>
               </div>
+              <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
                 Hiệu quả
               </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                Tối ưu hóa thời gian và kết quả luyện tập cho từng cá nhân.
+              <div className="h-3"></div>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
+                Tối ưu thời gian luyện tập, cá nhân hóa tiến trình và cải thiện kết quả cho từng ứng viên.
               </p>
             </div>
 
@@ -146,10 +188,12 @@ const About = () => {
               <div className="w-16 h-16 md:w-20 md:h-20 bg-orange-600 rounded-full flex items-center justify-center mb-6 md:mb-8">
                 <span className="text-4xl md:text-5xl">🌟</span>
               </div>
+              <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
                 Chất lượng
               </h3>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+              <div className="h-3"></div>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
                 Cam kết cung cấp trải nghiệm và nội dung chuyên nghiệp nhất.
               </p>
             </div>
@@ -158,7 +202,7 @@ const About = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
 
       {/* CTA Section */}
       <section className="bg-white">
@@ -188,7 +232,7 @@ const About = () => {
       </section>
 
       {/* Spacing */}
-      <div className="h-12 md:h-16 lg:h-10 bg-white"></div>
+      <div className="h-12 md:h-16 lg:h-10"></div>
     </div>
   )
 }

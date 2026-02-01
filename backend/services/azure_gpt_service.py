@@ -14,7 +14,7 @@ class AzureGPTService:
             api_key=api_key,
             base_url=base_url
         )
-        self.model = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-4')
+        self.model = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-4.1')
         print(f"[INFO] Azure OpenAI initialized: model={self.model}, base_url={base_url}")
 
     def get_chat_response_stream(self, conversation_history):

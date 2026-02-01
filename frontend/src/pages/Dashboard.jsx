@@ -27,7 +27,6 @@ const Dashboard = () => {
             
             <p className="text-base md:text-lg text-gray-700 text-center max-w-2xl">
               Chào mừng bạn đến với bảng điều khiển TrueMirror.
-              Đây là trang được bảo vệ, chỉ người dùng đã đăng nhập mới có thể truy cập.
             </p>
             <br />
             
