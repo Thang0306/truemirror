@@ -38,7 +38,8 @@ const InterviewHistory = () => {
       setError('')
     } catch (error) {
       console.error('[ERROR] Load history failed:', error)
-      setError('Không thể tải lịch sử phỏng vấn')
+      // Don't show error, just leave history empty
+      setHistory([])
     } finally {
       setLoading(false)
     }
@@ -189,6 +190,7 @@ const InterviewHistory = () => {
             {history.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg mb-6">Chưa có lịch sử phỏng vấn</p>
+                <div className="h-6"></div>
                 <button
                   onClick={() => navigate('/interview/setup')}
                   className="btn-primary text-base md:text-lg px-8 py-3"
