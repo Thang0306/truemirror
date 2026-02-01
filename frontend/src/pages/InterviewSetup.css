@@ -1,0 +1,76 @@
+/* Interview Setup Page Styles */
+
+/* Progress steps box styling - wider responsive widths similar to About.jsx quote box */
+.interview-progress-box {
+  width: 85%;
+  max-width: none;
+}
+
+@media (min-width: 768px) {
+  .interview-progress-box {
+    width: 90%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .interview-progress-box {
+    width: 90%;
+  }
+}
+
+/* Content padding for progress steps - matching About.jsx about-content-padding */
+.interview-progress-content {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .interview-progress-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .interview-progress-content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+/* File uploader list padding - matching About.jsx about-content-padding */
+.file-uploader-list {
+  padding: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .file-uploader-list {
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .file-uploader-list {
+    padding: 1.25rem;
+  }
+}
+
+/* File uploader item padding */
+.file-uploader-item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .file-uploader-item {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .file-uploader-item {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}

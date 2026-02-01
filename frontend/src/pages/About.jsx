@@ -33,7 +33,7 @@ const About = () => {
               
               {/* First Paragraph - Centered */}
                 <p className="text-lg md:text-xl lg:text-2xl text-gray-800 text-center">
-                  ra đời từ những <strong>trải nghiệm thực tế</strong> mà <strong>HÀNG TRIỆU BAN TRẺ</strong> đối mặt:
+                  ra đời từ những <strong>trải nghiệm thực tế</strong> mà <strong>HÀNG TRIỆU BẠN TRẺ</strong> đối mặt:
                 </p>
               
               <div className="h-3"></div>

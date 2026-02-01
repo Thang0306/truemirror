@@ -11,7 +11,8 @@ const Header = ({
   onEvaluate = null,
   onEndSession = null,
   isEvaluating = false,
-  hasEvaluated = false
+  hasEvaluated = false,
+  readOnlyMode = false
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { user, isAuthenticated, logout } = useAuth()
@@ -90,22 +91,33 @@ const Header = ({
             </div>
 
             {/* Action buttons - same size as login/register buttons */}
-            <div className="flex gap-4 flex-shrink-0">
-              <button
-                onClick={onEvaluate}
-                disabled={!isConnected || isEvaluating || hasEvaluated}
-                className="evaluate-btn text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {t('evaluateInterview')}
-              </button>
-              <button
-                onClick={onEndSession}
-                disabled={!isConnected}
-                className="end-interview-btn text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
-              >
-                {t('endInterview')}
-              </button>
-            </div>
+            {readOnlyMode ? (
+              <div className="flex gap-4 flex-shrink-0">
+                <button
+                  onClick={onEndSession}
+                  className="btn-primary text-base md:text-lg px-8 py-3"
+                >
+                  ← Quay lại lịch sử
+                </button>
+              </div>
+            ) : (
+              <div className="flex gap-4 flex-shrink-0">
+                <button
+                  onClick={onEvaluate}
+                  disabled={!isConnected || isEvaluating || hasEvaluated}
+                  className="evaluate-btn text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {t('evaluateInterview')}
+                </button>
+                <button
+                  onClick={onEndSession}
+                  disabled={!isConnected}
+                  className="end-interview-btn text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {t('endInterview')}
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </header>

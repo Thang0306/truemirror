@@ -257,13 +257,31 @@ def init_socketio_events(socketio):
             conversation_history = get_conversation_history(session_id)
             evaluation = generate_final_evaluation(session_id, conversation_history)
 
+            # Save evaluation to session
+            session.evaluation = evaluation
+            db.session.commit()
+
+            # Add evaluation message to conversation history
+            from datetime import datetime, timezone
+            evaluation_content = f"## 📊 ĐÁNH GIÁ TỔNG KẾT\n\n{evaluation}\n\n---\n\n✅ **Cảm ơn bạn đã tham gia buổi phỏng vấn!**"
+            evaluation_message = {
+                'role': 'assistant',
+                'content': evaluation_content,
+                'timestamp': datetime.now(timezone.utc).isoformat()
+            }
+            conversation_history.append(evaluation_message)
+            
+            # Save updated conversation to database
+            save_conversation(session_id, conversation_history)
+            conversation_cache[session_id] = conversation_history
+
             room = f"session_{session_id}"
             emit('session_evaluated', {
                 'session_id': session_id,
                 'evaluation': evaluation
             }, room=room)
 
-            print(f"[WebSocket] Session {session_id} evaluated")
+            print(f"[WebSocket] Session {session_id} evaluated and saved to conversation")
 
         except Exception as e:
             print(f"[ERROR] Evaluate session failed: {str(e)}")
@@ -307,14 +325,18 @@ def build_api_messages(session, conversation_history):
 
     if not has_system_prompt:
         # Build system prompt based on session config
+        # Pass uploaded_files_info for personalized mode
+        uploaded_files_info = getattr(session, 'uploaded_files_info', None)
+
         system_prompt = gpt_service.build_interview_system_prompt(
             position=session.position,
             industry=session.industry,
             style=session.style,
-            language=session.language
+            language=session.language,
+            uploaded_files_info=uploaded_files_info
         )
 
-        # Add questions context from database
+        # Add questions context (from database or custom questions)
         questions_context = get_questions_for_session(session)
         if questions_context:
             system_prompt += f"\n\n{questions_context}"
@@ -335,8 +357,53 @@ def build_api_messages(session, conversation_history):
     return api_messages
 
 def get_questions_for_session(session):
-    """Get interview questions from database for the session."""
+    """Get interview questions - from database (standard mode) or custom questions (personalized mode)."""
     try:
+        # PERSONALIZED MODE: Use pre-generated custom questions
+        if hasattr(session, 'mode') and session.mode == 'personalized' and session.custom_questions:
+            print(f"[INFO] Loading personalized questions for session {session.id}")
+            import json
+            custom_questions = json.loads(session.custom_questions)
+
+            # Format custom questions into structured context
+            context = "=== PERSONALIZED INTERVIEW QUESTIONS ===\n\n"
+            context += f"Position: {session.position}\n"
+            context += f"Industry: {session.industry}\n"
+            context += f"Language: {'Tiếng Việt' if session.language == 'vi' else 'English'}\n"
+            context += f"Total Questions: {len(custom_questions)}\n\n"
+
+            for i, q in enumerate(custom_questions, 1):
+                context += f"=== {q.get('section', f'Section {i}')} ===\n\n"
+                context += f"Question {i}: {q['question_text']}\n"
+                context += f"Type: {q.get('question_type', 'N/A')}\n"
+                context += f"Purpose: {q.get('purpose', 'N/A')}\n"
+                context += f"Expected Duration: {q.get('expected_duration_minutes', 3)} minutes\n"
+
+                if q.get('guidelines'):
+                    guidelines = q['guidelines']
+                    if guidelines.get('must_have'):
+                        context += "Must have in answer:\n"
+                        for item in guidelines['must_have']:
+                            context += f"  ✓ {item}\n"
+
+                    if guidelines.get('should_avoid'):
+                        context += "Should avoid:\n"
+                        for item in guidelines['should_avoid']:
+                            context += f"  ✗ {item}\n"
+
+                if q.get('popup_questions'):
+                    context += "POP-UP follow-ups:\n"
+                    for popup in q['popup_questions']:
+                        context += f"  - {popup}\n"
+
+                context += "\n"
+
+            print(f"[SUCCESS] Loaded {len(custom_questions)} personalized questions")
+            return context
+
+        # STANDARD MODE: Use database questions (existing logic)
+        print(f"[INFO] Loading standard questions from database for session {session.id}")
+
         # Map job level and industry
         job_level_map = {
             'Intern': 'intern',
@@ -413,6 +480,8 @@ def get_questions_for_session(session):
 
     except Exception as e:
         print(f"[ERROR] Failed to get questions: {str(e)}")
+        import traceback
+        traceback.print_exc()
         return None
 
 def handle_question_flow(session_id, ai_response, room):

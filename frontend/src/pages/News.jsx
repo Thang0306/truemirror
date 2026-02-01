@@ -6,51 +6,51 @@ const News = () => {
   const newsItems = [
     {
       id: 1,
-      title: 'TrueMirror ra mắt tính năng AR Mode nâng cao',
-      date: '15/01/2026',
+      title: 'TrueMirror đạt hơn 500 người dùng chỉ sau hơn 2 tuần ra mắt',
+      date: '15 tháng 1 2026',
       category: 'Cập nhật',
-      image: '🚀',
-      excerpt: 'Trải nghiệm phỏng vấn chân thực hơn bao giờ hết với công nghệ AR thế hệ mới.',
+      image: '/post-1.svg',
+      excerpt: 'Chỉ sau hơn hai tuần chính thức ra mắt, nền tảng luyện phỏng vấn thông minh TRUEMIRROR đã ghi nhận cột mốc hơn 500 người dùng.',
     },
     {
       id: 2,
-      title: 'Đạt mốc 10,000 người dùng thành công',
-      date: '10/01/2026',
+      title: 'TrueMirror ghi nhận hơn 200 phản hồi người dùng và liên tục cải tiến nội dung',
+      date: '8 tháng 1 2026',
       category: 'Thành tựu',
-      image: '🎉',
-      excerpt: 'TrueMirror tự hào đồng hành cùng 10,000+ ứng viên trên hành trình chinh phục nghề nghiệp.',
+      image: '/post-2.svg',
+      excerpt: 'Trong quá trình vận hành và phát triển nền tảng, TRUEMIRROR đã tiếp nhận hơn 200 phản hồi từ người dùng.',
     },
     {
       id: 3,
-      title: 'Bổ sung 500+ câu hỏi phỏng vấn mới',
-      date: '05/01/2026',
+      title: 'TrueMirror bổ sung hơn 500 câu hỏi phỏng vấn mới, mở rộng nhiều ngành nghề và vị trí',
+      date: '5 tháng 1 2026',
       category: 'Nội dung',
-      image: '💬',
-      excerpt: 'Mở rộng bộ câu hỏi với nhiều ngành nghề và vị trí mới nhất.',
+      image: '/post-3.svg',
+      excerpt: 'Mở rộng kho nội dung với hơn 500 câu hỏi phỏng vấn mới, nhằm giúp người dùng tiếp cận đầy đủ hơn với các tình huống tuyển dụng.',
     },
     {
       id: 4,
-      title: 'TrueMirror AI nâng cấp độ chính xác lên 95%',
-      date: '28/12/2025',
+      title: 'TrueMirror nâng độ chính xác AI lên 95%: Khi luyện phỏng vấn không còn là "cảm giác"',
+      date: '28 tháng 12 2025',
       category: 'Công nghệ',
-      image: '🤖',
-      excerpt: 'Thuật toán AI mới cải thiện khả năng phân tích và đưa ra feedback chính xác hơn.',
+      image: '/post-4.svg',
+      excerpt: 'TRUEMIRROR công bố phiên bản nâng cấp mới cho hệ thống trí tuệ nhân tạo, đưa độ chính xác lên mức 95%.',
     },
     {
       id: 5,
-      title: 'Hợp tác với 50+ doanh nghiệp hàng đầu',
-      date: '20/12/2025',
+      title: 'TrueMirror mở rộng kho câu hỏi phỏng vấn tiếng Anh, bắt nhịp xu hướng nhân sự toàn cầu',
+      date: '20 tháng 12 2025',
       category: 'Đối tác',
-      image: '🤝',
-      excerpt: 'Mở rộng mạng lưới đối tác để mang đến cơ hội việc làm cho người dùng.',
+      image: '/post-5.svg',
+      excerpt: 'TRUEMIRROR đã cập nhật và mở rộng kho câu hỏi phỏng vấn tiếng Anh, hướng đến môi trường làm việc đa quốc gia.',
     },
     {
       id: 6,
-      title: 'Giải thưởng "Startup công nghệ xuất sắc 2025"',
-      date: '15/12/2025',
+      title: 'TrueMirror phiên bản mới tối ưu tốc độ và độ ổn định nền tảng, nâng cao trải nghiệm luyện phỏng vấn',
+      date: '15 tháng 12 2025',
       category: 'Giải thưởng',
-      image: '🏆',
-      excerpt: 'TrueMirror vinh dự nhận giải thưởng từ Hiệp hội Công nghệ Việt Nam.',
+      image: '/post-6.svg',
+      excerpt: 'TRUEMIRROR tiến hành nâng cấp hạ tầng kỹ thuật, tối ưu hiệu suất và đảm bảo quá trình luyện phỏng vấn mượt mà hơn.',
     },
   ]
 
@@ -58,21 +58,21 @@ const News = () => {
   const successStories = [
     {
       name: 'Nguyễn Minh Anh',
-      position: 'Software Engineer tại VNG',
+      position: 'Software Engineer',
       avatar: '👨‍💻',
       story: 'Sau 2 tuần luyện tập với TrueMirror, mình đã tự tin hơn rất nhiều và vượt qua vòng phỏng vấn khó nhằn. Feedback từ AI giúp mình nhận ra nhiều điểm cần cải thiện, từ cách trình bày ý tưởng, ngôn ngữ cơ thể cho đến kỹ năng giao tiếp.',
       rating: 5,
     },
     {
       name: 'Trần Thị Hương',
-      position: 'Marketing Manager tại Shopee',
+      position: 'Marketing Manager',
       avatar: '👩‍💼',
       story: 'TrueMirror là công cụ tuyệt vời! Mình đã luyện tập hơn 30 phiên và cảm thấy phỏng vấn thật sự không còn đáng sợ. Từ một người hay run tay, nói ngọng khi trả lời câu hỏi, giờ mình có thể tự tin thể hiện bản thân trước mọi người. Cảm ơn TrueMirror đã giúp mình có công việc mơ ước!',
       rating: 5,
     },
     {
       name: 'Lê Văn Đức',
-      position: 'Data Analyst tại FPT',
+      position: 'Data Analyst',
       avatar: '👨‍🔬',
       story: 'Gói Premium rất đáng tiền! Lộ trình cá nhân hóa và feedback chuyên sâu giúp mình tiến bộ từng ngày. AI phân tích chi tiết từ ngữ điệu, cách dùng từ, đến thái độ và biểu cảm khuôn mặt. Mình đã từ người ngại giao tiếp, hay né tránh ánh mắt người đối diện, thành người tự tin trả lời mọi câu hỏi trong phỏng vấn.',
       rating: 5,
@@ -133,12 +133,13 @@ const News = () => {
             {newsItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col"
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col cursor-pointer"
+                onClick={() => window.location.href = `/news/${item.id}`}
               >
                 {/* Fixed height image container - image displays fully */}
                 <div className="w-full h-[270px] bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
-                  <img 
-                    src="/news-image.svg" 
+                  <img
+                    src={item.image}
                     alt={item.title}
                     className="w-full h-full object-contain"
                   />
@@ -147,7 +148,7 @@ const News = () => {
                 {/* Content with padding - expands as needed */}
                 <div className="news-item-padding flex-grow flex flex-col">
                   <div className="h-1.5"></div>
-                  
+
                   {/* Title with hover effect */}
                   <h3 className="text-lg md:text-xl font-bold text-brand-navy news-title-hover text-left">
                     {item.title}

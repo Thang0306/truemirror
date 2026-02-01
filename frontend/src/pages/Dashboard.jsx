@@ -10,8 +10,6 @@ const Dashboard = () => {
     <div className="min-h-screen bg-gray-50 flex justify-center">
       <section className="w-full max-w-4xl px-4 md:px-8 py-12 md:py-16">
         <br />
-        <br />
-        <br />
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200">
           <div className="flex flex-col items-center space-y-6">
             <br />
@@ -58,7 +56,10 @@ const Dashboard = () => {
               >
                 Bắt đầu luyện phỏng vấn
               </button>
-              <button className="btn-secondary text-base md:text-lg px-8 py-3">
+              <button 
+                onClick={() => navigate('/interview-history')}
+                className="btn-secondary text-base md:text-lg px-8 py-3"
+              >
                 Xem lịch sử
               </button>
             </div>

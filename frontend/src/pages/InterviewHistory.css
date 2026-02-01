@@ -1,0 +1,106 @@
+/* Interview History Page Styles */
+
+.assessment-content {
+  background: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.assessment-content h2 {
+  color: #0F2854;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.assessment-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.assessment-content li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.assessment-content li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #1C4D8D;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.assessment-content p {
+  color: #4b5563;
+  line-height: 1.8;
+  margin: 0.75rem 0;
+}
+
+.assessment-content strong {
+  color: #0F2854;
+  font-weight: 600;
+}
+
+/* Session Card Styles */
+.session-card {
+  transition: all 0.3s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-4px);
+}
+
+.session-card:active {
+  transform: translateY(-2px);
+}
+
+/* Session card padding - matching News.jsx story padding */
+.session-card-padding {
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .session-card-padding {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .session-card-padding {
+    padding: 2.5rem;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .assessment-content {
+    padding: 1.5rem;
+  }
+  
+  .assessment-content h2 {
+    font-size: 1.25rem;
+  }
+  
+  .session-card {
+    padding: 1rem;
+  }
+}
+
+/* Loading animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}

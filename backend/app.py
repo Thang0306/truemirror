@@ -12,6 +12,7 @@ from routes.auth_routes import auth_bp
 from routes.interview_routes import interview_bp
 from routes.chat_routes import chat_bp
 from routes.admin_routes import admin_bp
+from routes.news_routes import news_bp
 
 # Import WebSocket init
 from routes.websocket_routes import init_socketio_events
@@ -70,6 +71,7 @@ def create_app():
     app.register_blueprint(interview_bp)
     app.register_blueprint(chat_bp)
     app.register_blueprint(admin_bp)
+    app.register_blueprint(news_bp)
 
     # Create DB tables if not exist
     with app.app_context():

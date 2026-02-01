@@ -80,7 +80,7 @@ const Services = () => {
               
               <div className="max-w-6xl mx-auto text-gray-700 leading-relaxed text-base md:text-lg lg:text-xl hero-description-padding">
                 <p>
-                  TrueMirror cung cấp 4 gói dịch vụ linh hoạt, , 
+                  TrueMirror cung cấp 4 gói dịch vụ linh hoạt, 
                   giúp bạn luyện tập và cải thiện kỹ năng phỏng vấn một cách hiệu quả nhất.
                 </p>
               </div>

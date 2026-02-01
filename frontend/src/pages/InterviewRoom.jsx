@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { io } from 'socket.io-client'
@@ -71,14 +71,31 @@ const InterviewRoom = () => {
   const [showInterviewerVideo, setShowInterviewerVideo] = useState(false)
 
   const messagesEndRef = useRef(null)
-  const inputRef = useRef(null)
   const socketRef = useRef(null)
   const currentAIMessageRef = useRef('')  // Track current AI message being streamed
+  const textareaRef = useRef(null)
 
   // Get translation text based on session language
   const t = (key) => {
     const lang = sessionInfo?.language || 'vi'
     return translations[lang]?.[key] || translations.vi[key]
+  }
+
+  // Auto-resize textarea function
+  const adjustTextareaHeight = () => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'inherit'
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`
+    }
+  }
+
+  // Adjust height on mount
+  useLayoutEffect(adjustTextareaHeight, [])
+
+  // Handle textarea input change
+  const handleTextareaChange = (e) => {
+    setInputValue(e.target.value)
+    adjustTextareaHeight()
   }
 
   // Scroll to bottom manually (not automatic)
@@ -275,6 +292,11 @@ const InterviewRoom = () => {
     setInputValue('')
     setError('')
 
+    // Reset textarea height after sending
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'inherit'
+    }
+
     // Add user message to UI
     const userMessageObj = {
       role: 'user',
@@ -405,14 +427,20 @@ const InterviewRoom = () => {
       {/* Input Area */}
       <div className="input-bar-container">
         <form className="input-bar-form" onSubmit={(e) => { e.preventDefault(); handleSendMessage(); }}>
-          <input
-            ref={inputRef}
-            type="text"
+          <textarea
+            ref={textareaRef}
             value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
+            onChange={handleTextareaChange}
             placeholder={isLoading ? t('aiTyping') : t('inputPlaceholder')}
             disabled={isLoading || isEvaluating || hasEvaluated}
             autoFocus
+            rows={1}
+            style={{
+              resize: 'none',
+              overflow: 'auto',
+              minHeight: '54px',
+              maxHeight: 'calc(54px + 1.6em * 3)'
+            }}
           />
           <button
             type="submit"

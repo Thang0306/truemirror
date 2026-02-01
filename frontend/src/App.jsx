@@ -8,18 +8,21 @@ import Home from './pages/Home'
 import About from './pages/About'
 import Services from './pages/Services'
 import News from './pages/News'
+import NewsDetail from './pages/NewsDetail'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import InterviewSetup from './pages/InterviewSetup'
 import InterviewRoom from './pages/InterviewRoom'
+import InterviewHistory from './pages/InterviewHistory'
+import InterviewDetail from './pages/InterviewDetail'
 
 function AppContent() {
   const location = useLocation()
-  // Hide default header for interview room (InterviewRoom renders its own header)
-  const showDefaultHeader = !location.pathname.match(/^\/interview\/\d+$/)
-  // Hide footer for interview room and show white spacer instead
-  const showFooter = !location.pathname.match(/^\/interview\/\d+$/)
+  // Hide default header for interview room and interview detail (both render their own header)
+  const showDefaultHeader = !location.pathname.match(/^\/interview\/\d+$/) && !location.pathname.match(/^\/interview-history\/\d+$/)
+  // Hide footer for interview room and interview detail, show white spacer instead
+  const showFooter = !location.pathname.match(/^\/interview\/\d+$/) && !location.pathname.match(/^\/interview-history\/\d+$/)
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -30,6 +33,7 @@ function AppContent() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/news" element={<News />} />
+              <Route path="/news/:id" element={<NewsDetail />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route 
@@ -53,6 +57,22 @@ function AppContent() {
                 element={
                   <ProtectedRoute>
                     <InterviewRoom />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/interview-history"
+                element={
+                  <ProtectedRoute>
+                    <InterviewHistory />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/interview-history/:sessionId"
+                element={
+                  <ProtectedRoute>
+                    <InterviewDetail />
                   </ProtectedRoute>
                 }
               />

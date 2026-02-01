@@ -6,10 +6,12 @@ from .question import (
     QuestionType, PressureLevel, QuestionSection,
     InterviewQuestion, QuestionGuideline, SampleAnswer, PopupQuestion
 )
+from .news_comment import NewsComment
 
 __all__ = [
     'db', 'bcrypt', 'User', 'InterviewSession', 'Conversation',
     'Industry', 'JobLevel', 'Position',
     'QuestionType', 'PressureLevel', 'QuestionSection',
-    'InterviewQuestion', 'QuestionGuideline', 'SampleAnswer', 'PopupQuestion'
+    'InterviewQuestion', 'QuestionGuideline', 'SampleAnswer', 'PopupQuestion',
+    'NewsComment'
 ]
