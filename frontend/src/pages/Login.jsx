@@ -87,7 +87,7 @@ return (
             <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
               Đăng nhập
             </h1>
-            <br/>
+            <div className="h-3"></div>
             <p className="text-lg md:text-xl text-gray-700">
               Chào mừng trở lại với TrueMirror
             </p>
@@ -101,8 +101,8 @@ return (
               </div>
             </div>
           )}
-          
-         <form onSubmit={handleSubmit} className="space-y-8 flex flex-col items-center">
+          <div className="h-3"></div>
+          <form onSubmit={handleSubmit} className="space-y-8 flex flex-col items-center">
             
             {/* Email Input */}
             <div className="w-full max-w-md">
