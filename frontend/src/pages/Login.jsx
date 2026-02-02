@@ -78,10 +78,11 @@ const Login = () => {
   }
 
 return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex justify-center bg-white">
       <section className="w-full max-w-4xl px-4 py-16">
+        <div className="h-6"></div>
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100">
-          
+          <div className="h-3"></div>
           <div className="text-center mb-10">
             <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
               Đăng nhập
@@ -113,10 +114,16 @@ return (
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full h-12 pl-8 pr-4 text-base md:text-lg border-2 rounded-lg
-                  focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
+                className={`w-full bg-white border-2 rounded-xl text-base md:text-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all
+                  text-brand-navy font-normal ${
                     errors.email ? "border-red-500" : "border-gray-300"
                   }`}
+                style={{
+                  padding: '18px 28px',
+                  height: '54px',
+                  lineHeight: '1.6'
+                }}
                 placeholder="email@example.com"
               />
               {errors.email && (
@@ -133,9 +140,16 @@ return (
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`w-full h-12 px-6 text-base md:text-lg border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
-                  errors.password ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`w-full bg-white border-2 rounded-xl text-base md:text-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all
+                  text-brand-navy font-normal ${
+                    errors.password ? 'border-red-500' : 'border-gray-300'
+                  }`}
+                style={{
+                  padding: '18px 28px',
+                  height: '54px',
+                  lineHeight: '1.6'
+                }}
                 placeholder="Nhập mật khẩu"
               />
               {errors.password && (

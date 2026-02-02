@@ -1,7 +1,26 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import './About.css'
 
 const About = () => {
+  const navigate = useNavigate()
+  const { user } = useAuth()
+
+  const handleFreeTrial = () => {
+    if (user) {
+      navigate('/dashboard')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/login')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handleViewPricing = () => {
+    navigate('/services#pricing')
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section - Brand Story */}
@@ -218,11 +237,11 @@ const About = () => {
               </p>
               <br />
               <div className="flex justify-center gap-6">
-                <button className="btn-primary text-sm md:text-base px-6 py-3">
-                  Dùng thử miễn phí
+                <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
+                  Dùng thử miễn phí 3 phiên
                 </button>
-                <button className="btn-secondary text-sm md:text-base px-6 py-3">
-                  Xem dịch vụ
+                <button className="btn-secondary text-sm md:text-base px-6 py-3" onClick={handleViewPricing}>
+                  Xem bảng giá
                 </button>
               </div>
               <div className="h-3"></div>

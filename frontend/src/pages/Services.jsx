@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useNavigate, useLocation } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import './Services.css'
 
 const Services = () => {
@@ -55,6 +57,34 @@ const Services = () => {
       recommended: true,
     },
   ]
+
+  const navigate = useNavigate()
+  const location = useLocation()
+  const { user } = useAuth()
+
+  // Handle hash navigation for pricing section
+  useEffect(() => {
+    if (location.hash === '#pricing') {
+      const element = document.getElementById('pricing')
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }
+    }
+  }, [location])
+
+  const handleFreeTrial = () => {
+    if (user) {
+      navigate('/dashboard')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/login')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handleContact = () => {
+    window.open('https://www.facebook.com/truemirror.luyenphongvanao/', '_blank')
+  }
 
   return (
     <div className="min-h-screen">
@@ -137,7 +167,7 @@ const Services = () => {
                 
                 <div className="h-3"></div>
                 
-                <button className="btn-primary-white text-sm md:text-base">
+                <button className="btn-primary-white text-sm md:text-base" onClick={handleFreeTrial}>
                   ▶▶ TRẢI NGHIỆM NGAY!
                 </button>
               </div>
@@ -189,7 +219,7 @@ const Services = () => {
                 
                 <div className="h-3"></div>
                 
-                <button className="btn-primary text-sm md:text-base">
+                <button className="btn-primary text-sm md:text-base" onClick={handleFreeTrial}>
                   ▶▶ ĐĂNG KÝ NGAY!
                 </button>
               </div>
@@ -237,7 +267,7 @@ const Services = () => {
                 
                 <div className="h-3"></div>
                 
-                <button className="btn-primary-white text-sm md:text-base">
+                <button className="btn-primary-white text-sm md:text-base" onClick={handleFreeTrial}>
                   ▶▶ TRẢI NGHIỆM NGAY!
                 </button>
               </div>
@@ -290,7 +320,7 @@ const Services = () => {
                 
                 <div className="h-3"></div>
                 
-                <button className="btn-primary text-sm md:text-base">
+                <button className="btn-primary text-sm md:text-base" onClick={handleFreeTrial}>
                   ▶▶ ĐĂNG KÝ NGAY!
                 </button>
               </div>
@@ -306,7 +336,7 @@ const Services = () => {
       {/* Feature Comparison Table */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
-          <div className="text-center mb-14 md:mb-18 lg:mb-24">
+          <div className="text-center mb-14 md:mb-18 lg:mb-24" id="pricing">
             <h2 className="section-title">So sánh chi tiết các gói dịch vụ</h2>
             <p className="section-subtitle">
               Tìm hiểu rõ hơn về các tính năng của từng gói
@@ -513,10 +543,10 @@ const Services = () => {
               </p>
               <br />
               <div className="flex justify-center gap-6">
-                <button className="btn-primary text-sm md:text-base px-6 py-3">
+                <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
                   Dùng thử 3 phiên miễn phí
                 </button>
-                <button className="btn-secondary text-sm md:text-base px-6 py-3">
+                <button className="btn-secondary text-sm md:text-base px-6 py-3" onClick={handleContact}>
                   Liên hệ tư vấn
                 </button>
               </div>

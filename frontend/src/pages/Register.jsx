@@ -63,15 +63,16 @@ const Register = () => {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
+    <div className="min-h-screen flex justify-center bg-white">
       <section className="w-full max-w-4xl px-4 py-16">
+        <div className="h-6"></div>
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100">
-          
+          <div className="h-3"></div>
           <div className="text-center mb-10">
             <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
               Đăng ký tài khoản
             </h1>
-            <br />
+            <div className="h-3"></div>
             <p className="text-lg md:text-xl text-gray-700">
               Bắt đầu hành trình luyện phỏng vấn với TrueMirror
             </p>
@@ -85,7 +86,7 @@ const Register = () => {
               </div>
             </div>
           )}
-          <br />
+          <div className="h-3"></div>
           <form onSubmit={handleSubmit} className="space-y-8 flex flex-col items-center">
             
             {/* Full Name Input */}
@@ -98,10 +99,17 @@ const Register = () => {
                 name="full_name"
                 value={formData.full_name}
                 onChange={handleChange}
-                className={`w-full h-12 px-6 text-base md:text-lg border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
-                  errors.full_name ? 'border-red-500' : 'border-gray-300'
-                }`}
-                placeholder="Nguyễn Văn A"
+                className={`w-full bg-white border-2 rounded-xl text-base md:text-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all
+                  text-brand-navy font-normal ${
+                    errors.full_name ? 'border-red-500' : 'border-gray-300'
+                  }`}
+                style={{
+                  padding: '18px 28px',
+                  height: '54px',
+                  lineHeight: '1.6'
+                }}
+                placeholder="Nguyễn Văn An"
               />
               {errors.full_name && (
                 <p className="mt-2 text-red-600 text-sm md:text-base text-center">{errors.full_name}</p>
@@ -118,9 +126,16 @@ const Register = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                className={`w-full h-12 px-6 text-base md:text-lg border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
-                  errors.email ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`w-full bg-white border-2 rounded-xl text-base md:text-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all
+                  text-brand-navy font-normal ${
+                    errors.email ? 'border-red-500' : 'border-gray-300'
+                  }`}
+                style={{
+                  padding: '18px 28px',
+                  height: '54px',
+                  lineHeight: '1.6'
+                }}
                 placeholder="email@example.com"
               />
               {errors.email && (
@@ -138,9 +153,16 @@ const Register = () => {
                 name="password"
                 value={formData.password}
                 onChange={handleChange}
-                className={`w-full h-12 px-6 text-base md:text-lg border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
-                  errors.password ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`w-full bg-white border-2 rounded-xl text-base md:text-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all
+                  text-brand-navy font-normal ${
+                    errors.password ? 'border-red-500' : 'border-gray-300'
+                  }`}
+                style={{
+                  padding: '18px 28px',
+                  height: '54px',
+                  lineHeight: '1.6'
+                }}
                 placeholder="Ít nhất 6 ký tự"
               />
               {errors.password && (
@@ -158,9 +180,16 @@ const Register = () => {
                 name="confirmPassword"
                 value={formData.confirmPassword}
                 onChange={handleChange}
-                className={`w-full h-12 px-6 text-base md:text-lg border-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-blue transition ${
-                  errors.confirmPassword ? 'border-red-500' : 'border-gray-300'
-                }`}
+                className={`w-full bg-white border-2 rounded-xl text-base md:text-lg
+                  focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all
+                  text-brand-navy font-normal ${
+                    errors.confirmPassword ? 'border-red-500' : 'border-gray-300'
+                  }`}
+                style={{
+                  padding: '18px 28px',
+                  height: '54px',
+                  lineHeight: '1.6'
+                }}
                 placeholder="Nhập lại mật khẩu"
               />
               {errors.confirmPassword && (

@@ -1,8 +1,42 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import LazyYouTube from "../components/LazyYouTube"
 import './Home.css'
 
 const Home = () => {
+  const navigate = useNavigate()
+  const { user } = useAuth()
+
+  const handleExperience = () => {
+    if (user) {
+      navigate('/dashboard')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/services')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handleLearnMore = () => {
+    navigate('/about')
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleFreeTrial = () => {
+    if (user) {
+      navigate('/dashboard')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/login')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handleViewPricing = () => {
+    navigate('/services#pricing')
+  }
+
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -44,10 +78,10 @@ const Home = () => {
                   True Mirror kết hợp AI và Virtual Human để mô phỏng phỏng vấn thực tế, giúp người dùng cải thiện khả năng thể hiện và sự tự tin trước nhà tuyển dụng.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 pt-2 md:pt-4 justify-center lg:justify-start lg:flex-start">
-                  <button className="btn-primary text-sm md:text-base">
+                  <button className="btn-primary text-sm md:text-base" onClick={handleExperience}>
                     ▶▶ TRẢI NGHIỆM NGAY!
                   </button>
-                  <button className="btn-secondary text-sm md:text-base">
+                  <button className="btn-secondary text-sm md:text-base" onClick={handleLearnMore}>
                     Tìm hiểu thêm
                   </button>
                 </div>
@@ -348,10 +382,10 @@ const Home = () => {
               <br />
               {/* Buttons */}
               <div className="flex justify-center gap-6">
-                <button className="btn-primary text-sm md:text-base px-6 py-3">
+                <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
                   Dùng thử miễn phí 3 phiên
                 </button>
-                <button className="btn-secondary text-sm md:text-base px-6 py-3">
+                <button className="btn-secondary text-sm md:text-base px-6 py-3" onClick={handleViewPricing}>
                   Xem bảng giá
                 </button>
               </div>

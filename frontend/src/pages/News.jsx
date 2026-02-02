@@ -1,4 +1,6 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
 import './News.css'
 
 const News = () => {
@@ -78,6 +80,23 @@ const News = () => {
       rating: 5,
     },
   ]
+
+  const navigate = useNavigate()
+  const { user } = useAuth()
+
+  const handleFreeTrial = () => {
+    if (user) {
+      navigate('/dashboard')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    } else {
+      navigate('/login')
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }
+
+  const handleContact = () => {
+    window.open('https://www.facebook.com/truemirror.luyenphongvanao/', '_blank')
+  }
 
   return (
     <div className="min-h-screen">
@@ -231,11 +250,11 @@ const News = () => {
               </p>
               <br />
               <div className="flex justify-center gap-6">
-                <button className="btn-primary text-sm md:text-base px-6 py-3">
-                  Dùng thử miễn phí
+                <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
+                  Dùng thử 3 phiên miễn phí
                 </button>
-                <button className="btn-secondary text-sm md:text-base px-6 py-3">
-                  Xem thêm câu chuyện
+                <button className="btn-secondary text-sm md:text-base px-6 py-3" onClick={handleContact}>
+                  Kết nối với chúng tôi
                 </button>
               </div>
               <div className="h-3"></div>
