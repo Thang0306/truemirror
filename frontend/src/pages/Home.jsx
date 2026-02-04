@@ -45,7 +45,7 @@ const Home = () => {
           <div
             className="bg-gradient-to-br from-blue-50 via-white to-blue-50 rounded-2xl p-8 md:p-12 lg:p-16"
             style={{
-              backgroundImage: 'url(/homepage-bg.svg)',
+              backgroundImage: 'url(/homepage-bg.webp)',
               backgroundPosition: 'center center',
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed'
@@ -117,7 +117,7 @@ const Home = () => {
               {/* Left Column - Image (40%) - Centered */}
               <div className="flex items-center justify-center">
                 <img 
-                  src="/problem-statement.svg" 
+                  src="/problem-statement.webp" 
                   alt="Bạn có năng lực nhưng vẫn sợ rớt phỏng vấn" 
                   className="w-full h-auto max-w-lg"
                 />
@@ -355,7 +355,7 @@ const Home = () => {
             {/* Image - Full width within gradient container */}
             <div className="benefits-image-container">
               <img 
-                src="/benefits.svg" 
+                src="/benefits.webp" 
                 alt="Sau khi trải nghiệm dịch vụ" 
                 className="w-full h-auto rounded-lg"
               />

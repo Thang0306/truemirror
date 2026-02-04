@@ -11,7 +11,7 @@ const News = () => {
       title: 'TrueMirror đạt hơn 500 người dùng chỉ sau hơn 2 tuần ra mắt',
       date: '15 tháng 1 2026',
       category: 'Cập nhật',
-      image: '/post-1.svg',
+      image: '/post-1.webp',
       excerpt: 'Chỉ sau hơn hai tuần chính thức ra mắt, nền tảng luyện phỏng vấn thông minh TRUEMIRROR đã ghi nhận cột mốc hơn 500 người dùng.',
     },
     {
@@ -19,7 +19,7 @@ const News = () => {
       title: 'TrueMirror ghi nhận hơn 200 phản hồi người dùng và liên tục cải tiến nội dung',
       date: '8 tháng 1 2026',
       category: 'Thành tựu',
-      image: '/post-2.svg',
+      image: '/post-2.webp',
       excerpt: 'Trong quá trình vận hành và phát triển nền tảng, TRUEMIRROR đã tiếp nhận hơn 200 phản hồi từ người dùng.',
     },
     {
@@ -27,7 +27,7 @@ const News = () => {
       title: 'TrueMirror bổ sung hơn 500 câu hỏi phỏng vấn mới, mở rộng nhiều ngành nghề và vị trí',
       date: '5 tháng 1 2026',
       category: 'Nội dung',
-      image: '/post-3.svg',
+      image: '/post-3.webp',
       excerpt: 'Mở rộng kho nội dung với hơn 500 câu hỏi phỏng vấn mới, nhằm giúp người dùng tiếp cận đầy đủ hơn với các tình huống tuyển dụng.',
     },
     {
@@ -35,7 +35,7 @@ const News = () => {
       title: 'TrueMirror nâng độ chính xác AI lên 95%: Khi luyện phỏng vấn không còn là "cảm giác"',
       date: '28 tháng 12 2025',
       category: 'Công nghệ',
-      image: '/post-4.svg',
+      image: '/post-4.webp',
       excerpt: 'TRUEMIRROR công bố phiên bản nâng cấp mới cho hệ thống trí tuệ nhân tạo, đưa độ chính xác lên mức 95%.',
     },
     {
@@ -43,7 +43,7 @@ const News = () => {
       title: 'TrueMirror mở rộng kho câu hỏi phỏng vấn tiếng Anh, bắt nhịp xu hướng nhân sự toàn cầu',
       date: '20 tháng 12 2025',
       category: 'Đối tác',
-      image: '/post-5.svg',
+      image: '/post-5.webp',
       excerpt: 'TRUEMIRROR đã cập nhật và mở rộng kho câu hỏi phỏng vấn tiếng Anh, hướng đến môi trường làm việc đa quốc gia.',
     },
     {
@@ -51,7 +51,7 @@ const News = () => {
       title: 'TrueMirror phiên bản mới tối ưu tốc độ và độ ổn định nền tảng, nâng cao trải nghiệm luyện phỏng vấn',
       date: '15 tháng 12 2025',
       category: 'Giải thưởng',
-      image: '/post-6.svg',
+      image: '/post-6.webp',
       excerpt: 'TRUEMIRROR tiến hành nâng cấp hạ tầng kỹ thuật, tối ưu hiệu suất và đảm bảo quá trình luyện phỏng vấn mượt mà hơn.',
     },
   ]
@@ -106,7 +106,7 @@ const News = () => {
           <div 
             className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center"
             style={{
-              backgroundImage: 'url(/news-hero.svg)',
+              backgroundImage: 'url(/news-hero.webp)',
               backgroundPosition: 'center center',
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed'

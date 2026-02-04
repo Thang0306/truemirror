@@ -30,7 +30,7 @@ const About = () => {
             
             {/* Background SVG Image - Bottom Right Corner */}
             <img 
-              src="/about-hero.svg" 
+              src="/about-hero.webp" 
               alt="About Hero Background" 
               className="about-hero-svg"
             />

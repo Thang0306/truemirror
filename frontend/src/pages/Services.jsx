@@ -93,7 +93,7 @@ const Services = () => {
           <div 
             className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100 text-center"
             style={{
-              backgroundImage: 'url(/news-hero.svg)',
+              backgroundImage: 'url(/news-hero.webp)',
               backgroundPosition: 'center center',
               backgroundSize: 'cover',
               backgroundAttachment: 'fixed'
@@ -132,7 +132,7 @@ const Services = () => {
           <div 
             className="relative w-full rounded-2xl overflow-hidden shadow-xl"
             style={{
-              backgroundImage: 'url(/package-free.svg)',
+              backgroundImage: 'url(/package-free.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               minHeight: '400px'
@@ -182,7 +182,7 @@ const Services = () => {
           <div 
             className="relative w-full rounded-2xl overflow-hidden shadow-xl"
             style={{
-              backgroundImage: 'url(/package-basic.svg)',
+              backgroundImage: 'url(/package-basic.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               minHeight: '400px'
@@ -232,7 +232,7 @@ const Services = () => {
           <div 
             className="relative w-full rounded-2xl overflow-hidden shadow-xl"
             style={{
-              backgroundImage: 'url(/package-premium.svg)',
+              backgroundImage: 'url(/package-premium.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               minHeight: '400px'
@@ -282,7 +282,7 @@ const Services = () => {
           <div 
             className="relative w-full rounded-2xl overflow-hidden shadow-xl"
             style={{
-              backgroundImage: 'url(/package-enterprise.svg)',
+              backgroundImage: 'url(/package-enterprise.webp)',
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               minHeight: '400px'

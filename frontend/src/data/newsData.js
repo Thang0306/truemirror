@@ -3,7 +3,7 @@ export const newsData = {
     id: 1,
     title: 'TrueMirror đạt hơn 500 người dùng chỉ sau hơn 2 tuần ra mắt',
     date: '15 tháng 1 2026',
-    image: '/post-1.svg',
+    image: '/post-1.webp',
     content: `Chỉ sau hơn hai tuần chính thức ra mắt, nền tảng luyện phỏng vấn thông minh TRUEMIRROR đã ghi nhận cột mốc hơn 500 người dùng, cho thấy nhu cầu thực tế và sự quan tâm ngày càng lớn của người trẻ đối với các giải pháp chuẩn bị phỏng vấn bài bản, chuyên sâu trong bối cảnh thị trường tuyển dụng ngày càng cạnh tranh.
 
 Theo đại diện dự án, người dùng của TRUEMIRROR đến từ nhiều nhóm đối tượng khác nhau, bao gồm sinh viên chuẩn bị tốt nghiệp, người mới đi làm và cả những ứng viên đã có kinh nghiệm mong muốn cải thiện kỹ năng trả lời phỏng vấn. Sự đa dạng này giúp các phiên luyện tập trên nền tảng phản ánh nhiều tình huống thực tế, từ phỏng vấn cơ bản đến những kịch bản đòi hỏi khả năng ứng biến và chịu áp lực cao.
@@ -18,7 +18,7 @@ Trong thời gian tới, đội ngũ phát triển TRUEMIRROR cho biết sẽ ti
     id: 2,
     title: 'TrueMirror ghi nhận hơn 200 phản hồi người dùng và liên tục cải tiến nội dung luyện phỏng vấn',
     date: '8 tháng 1 2026',
-    image: '/post-2.svg',
+    image: '/post-2.webp',
     content: `Trong quá trình vận hành và phát triển nền tảng, TRUEMIRROR đã tiếp nhận hơn 200 phản hồi từ người dùng sau khi trải nghiệm các tính năng luyện phỏng vấn trực tuyến. Các phản hồi này được ghi nhận xuyên suốt quá trình người dùng luyện tập, bao gồm nhận xét về nội dung câu hỏi, mức độ sát thực tế, cách phản hồi của nhà tuyển dụng mô phỏng và trải nghiệm sử dụng tổng thể.
 
 Dựa trên những ý kiến thực tế đó, đội ngũ TRUEMIRROR đã tiến hành đánh giá lại toàn bộ nội dung luyện phỏng vấn, đồng thời triển khai nhiều điều chỉnh nhằm nâng cao chất lượng nền tảng. Cụ thể, các kịch bản phỏng vấn được tinh chỉnh để bám sát hơn với bối cảnh tuyển dụng thực tế, ngôn ngữ phản hồi được điều chỉnh tự nhiên hơn, giúp người dùng cảm nhận rõ ràng áp lực và nhịp độ của một buổi phỏng vấn thật.
@@ -31,7 +31,7 @@ TRUEMIRROR xem việc lắng nghe người dùng và cải tiến liên tục l�
     id: 3,
     title: 'TrueMirror bổ sung hơn 500 câu hỏi phỏng vấn mới, mở rộng nhiều ngành nghề và vị trí',
     date: '5 tháng 1 2026',
-    image: '/post-3.svg',
+    image: '/post-3.webp',
     content: `Trong bối cảnh thị trường lao động không ngừng thay đổi, yêu cầu tuyển dụng ngày càng đa dạng và chuyên sâu, việc chuẩn bị cho một buổi phỏng vấn không còn dừng lại ở vài câu hỏi quen thuộc. Xuất phát từ thực tế đó, TRUEMIRROR đã mở rộng kho nội dung với hơn 500 câu hỏi phỏng vấn mới, nhằm giúp người dùng tiếp cận đầy đủ và sát thực hơn với các tình huống tuyển dụng hiện nay.
 
 Bộ câu hỏi mới được xây dựng dựa trên nhu cầu tuyển dụng thực tế của nhiều ngành nghề và vị trí khác nhau, từ khối văn phòng, marketing, kinh doanh cho đến các lĩnh vực đang có tốc độ tuyển dụng cao. Nội dung không chỉ tập trung đánh giá kiến thức chuyên môn mà còn khai thác kỹ năng mềm, tư duy phản biện và khả năng xử lý tình huống – những yếu tố ngày càng được nhà tuyển dụng coi trọng.
@@ -44,7 +44,7 @@ Trong thời gian tới, nền tảng sẽ tiếp tục cập nhật và mở r�
     id: 4,
     title: 'TrueMirror nâng độ chính xác AI lên 95%: Khi luyện phỏng vấn không còn là "cảm giác"',
     date: '28 tháng 12 2025',
-    image: '/post-4.svg',
+    image: '/post-4.webp',
     content: `Trong bối cảnh thị trường lao động ngày càng cạnh tranh, kỹ năng phỏng vấn đang dần trở thành một điểm nghẽn, khó đột phá đối với nhiều ứng viên, đặc biệt là người trẻ. Không ít trường hợp có năng lực chuyên môn tốt nhưng vẫn thất bại trong quá trình tuyển dụng do thiếu khả năng thể hiện dưới áp lực. Đây cũng là bài toán mà nhiều nền tảng công nghệ nhân sự đang tìm cách giải quyết.
 
 Mới đây, TRUEMIRROR – nền tảng luyện phỏng vấn ứng dụng AI và Virtual Human đã công bố phiên bản nâng cấp mới cho hệ thống trí tuệ nhân tạo, đưa độ chính xác trong phân tích hành vi phỏng vấn lên mức 95%. Theo đại diện dự án, bản nâng cấp này tập trung vào việc cải thiện khả năng "đọc" các tín hiệu phi ngôn ngữ, vốn là yếu tố quan trọng nhưng thường bị bỏ qua trong quá trình tự luyện tập của ứng viên.
@@ -59,7 +59,7 @@ Trong bối cảnh AI ngày càng được ứng dụng sâu vào lĩnh vực nh
     id: 5,
     title: 'TrueMirror mở rộng kho câu hỏi phỏng vấn tiếng Anh, bắt nhịp xu hướng nhân sự toàn cầu',
     date: '20 tháng 12 2025',
-    image: '/post-5.svg',
+    image: '/post-5.webp',
     content: `Cùng với làn sóng toàn cầu hóa và sự hiện diện ngày càng lớn của các doanh nghiệp nước ngoài tại Việt Nam, phỏng vấn bằng tiếng Anh đã trở thành yêu cầu phổ biến, không chỉ với các vị trí quản lý mà cả những công việc dành cho sinh viên mới ra trường. Tuy nhiên, nhiều ứng viên vẫn gặp khó khăn khi phải thể hiện năng lực bằng ngôn ngữ thứ hai trong bối cảnh áp lực cao.
 
 Nhận diện rõ xu hướng này, TRUEMIRROR đã cập nhật và mở rộng kho câu hỏi phỏng vấn tiếng Anh, hướng đến các tình huống thường gặp trong môi trường làm việc đa quốc gia. Nội dung được xây dựng theo nhiều nhóm ngành và cấp độ, từ các câu hỏi hành vi cơ bản đến những kịch bản đánh giá tư duy, khả năng phản biện và kỹ năng giao tiếp chuyên nghiệp.
@@ -74,7 +74,7 @@ Trong bức tranh chung của thị trường công nghệ nhân sự, động t
     id: 6,
     title: 'TrueMirror phiên bản mới tối ưu tốc độ và độ ổn định nền tảng, nâng cao trải nghiệm luyện phỏng vấn',
     date: '15 tháng 12 2025',
-    image: '/post-6.svg',
+    image: '/post-6.webp',
     content: `Trong quá trình sử dụng các nền tảng học tập trực tuyến, tốc độ truy cập và sự ổn định của hệ thống đóng vai trò quan trọng trong việc duy trì trải nghiệm liền mạch cho người dùng. Nhận thức rõ điều này, TRUEMIRROR đã tiến hành nâng cấp hạ tầng kỹ thuật, hướng đến việc tối ưu hiệu suất và đảm bảo quá trình luyện phỏng vấn diễn ra mượt mà hơn.
 
 Đợt nâng cấp tập trung vào việc cải thiện tốc độ tải trang, giảm độ trễ khi luyện tập và tăng cường khả năng vận hành ổn định của nền tảng, ngay cả trong thời điểm có nhiều người dùng truy cập đồng thời. Nhờ đó, người dùng có thể tập trung vào nội dung luyện phỏng vấn mà không bị gián đoạn bởi các vấn đề kỹ thuật.
