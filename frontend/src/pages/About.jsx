@@ -133,7 +133,7 @@ const About = () => {
               <div className="bg-gradient-to-br from-cyan-50 to-blue-50 p-8 md:p-10 lg:p-12 rounded-3xl shadow-lg flex-1">
                 <div className="h-3"></div>
                 <p className="text-lg md:text-xl lg:text-xl text-gray-800 leading-relaxed about-content-padding">
-                  TrueMirror mong muốn giúp các bạn trẻ, đặc biệt là sinh viên và những người đang bắt đầu sự nghiệp <strong>tự tin hơn khi bước vào phỏng vấn xin việc</strong>. <br/> Thông qua <strong>không gian luyện tập mô phỏng gần với phỏng vấn thực tế bằng công nghệ AR và AI</strong>, người dùng có thể <strong>thực hành thoải mái</strong> và <strong>nhận phản hồi rõ ràng về cách trả lời cũng như ngôn ngữ cơ thể</strong>. <br/> Từ đó, giảm bớt căng thẳng, <strong>thể hiện bản thân tốt hơn</strong> và <strong>nắm bắt cơ hội việc làm một cách chủ động</strong>.
+                  TrueMirror mong muốn giúp các bạn trẻ, đặc biệt là sinh viên và những người đang bắt đầu sự nghiệp <strong>tự tin hơn khi bước vào phỏng vấn xin việc</strong>. <br/> Thông qua <strong>không gian luyện tập mô phỏng gần với phỏng vấn thực tế bằng công nghệ Virtual Human và AI</strong>, người dùng có thể <strong>thực hành thoải mái</strong> và <strong>nhận phản hồi rõ ràng về cách trả lời cũng như ngôn ngữ cơ thể</strong>. <br/> Từ đó, giảm bớt căng thẳng, <strong>thể hiện bản thân tốt hơn</strong> và <strong>nắm bắt cơ hội việc làm một cách chủ động</strong>.
                 </p>
                 <div className="h-3"></div>
               </div>
@@ -156,64 +156,49 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
-            {/* Value 1 */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12">
+            {/* Value 1 - Trung thực */}
             <div className="bg-gradient-to-br from-blue-50 to-white p-10 md:p-12 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center min-h-80">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-brand-blue rounded-full flex items-center justify-center mb-6 md:mb-8">
-                <span className="text-4xl md:text-5xl">💡</span>
+                <span className="text-4xl md:text-5xl">✨</span>
               </div>
               <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
-                Đổi mới
+                Trung thực
               </h3>
               <div className="h-3"></div>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
-                Không ngừng nghiên cứu và ứng dụng công nghệ tiên tiến nhất. ngừng nghiên cứu và ứng dụng công nghệ tiên tiến nhất.
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding text-left">
+                TrueMirror tái hiện áp lực phỏng vấn gần với trải nghiệm thật và phản ánh chính xác cách người dùng thể hiện. Mọi phản hồi đều nhằm giúp người dùng nhìn nhận đúng năng lực hiện tại của mình.
               </p>
             </div>
 
-            {/* Value 2 */}
+            {/* Value 2 - Tập trung vào tiến bộ */}
             <div className="bg-gradient-to-br from-green-50 to-white p-10 md:p-12 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center min-h-80">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-green-600 rounded-full flex items-center justify-center mb-6 md:mb-8">
-                <span className="text-4xl md:text-5xl">🤝</span>
+                <span className="text-4xl md:text-5xl">📈</span>
               </div>
               <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
-                Tận tâm
+                Tập trung vào tiến bộ
               </h3>
               <div className="h-3"></div>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
-                Đặt sự thành công của người dùng lên hàng đầu trong mọi quyết định.
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding text-left">
+                TrueMirror ưu tiên quá trình cải thiện lâu dài thay vì kết quả tức thời. Hệ thống phản hồi được xây dựng để hỗ trợ người dùng điều chỉnh và nâng cao khả năng thể hiện qua từng lần luyện tập.
               </p>
             </div>
 
-            {/* Value 3 */}
+            {/* Value 3 - An toàn và bảo vệ người dùng */}
             <div className="bg-gradient-to-br from-purple-50 to-white p-10 md:p-12 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center min-h-80">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-purple-600 rounded-full flex items-center justify-center mb-6 md:mb-8">
-                <span className="text-4xl md:text-5xl">⚡</span>
+                <span className="text-4xl md:text-5xl">🛡️</span>
               </div>
               <div className="h-3"></div>
               <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
-                Hiệu quả
+                An toàn và bảo vệ người dùng
               </h3>
               <div className="h-3"></div>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
-                Tối ưu thời gian luyện tập, cá nhân hóa tiến trình và cải thiện kết quả cho từng ứng viên.
-              </p>
-            </div>
-
-            {/* Value 4 */}
-            <div className="bg-gradient-to-br from-orange-50 to-white p-10 md:p-12 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 flex flex-col items-center justify-center text-center min-h-80">
-              <div className="w-16 h-16 md:w-20 md:h-20 bg-orange-600 rounded-full flex items-center justify-center mb-6 md:mb-8">
-                <span className="text-4xl md:text-5xl">🌟</span>
-              </div>
-              <div className="h-3"></div>
-              <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-brand-navy mb-4 md:mb-5">
-                Chất lượng
-              </h3>
-              <div className="h-3"></div>
-              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding">
-                Cam kết cung cấp trải nghiệm và nội dung chuyên nghiệp nhất.
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed about-content-padding text-left">
+                TrueMirror đảm bảo quyền riêng tư và bảo mật dữ liệu cá nhân, đồng thời tạo ra môi trường luyện tập tôn trọng, nơi người dùng có thể thử nghiệm và cải thiện mà không chịu rủi ro ngoài ý muốn.
               </p>
             </div>
           </div>

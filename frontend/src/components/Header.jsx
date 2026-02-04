@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import '../pages/InterviewRoom.css' // Import CSS for interview buttons
+import '../pages/InterviewRoom.css' 
+import './Header.css' // New search styles
 
 const Header = ({
   interviewMode = false,
@@ -18,6 +19,69 @@ const Header = ({
   const { user, isAuthenticated, logout } = useAuth()
   const navigate = useNavigate()
   const location = useLocation()
+  const [searchText, setSearchText] = useState('')
+
+  // Search functionality
+  const handleSearch = (e) => {
+    e.preventDefault()
+    
+    // Clear previous highlights
+    const highlights = document.querySelectorAll('mark.search-highlight')
+    highlights.forEach(mark => {
+      const parent = mark.parentNode
+      parent.replaceChild(document.createTextNode(mark.textContent), mark)
+      parent.normalize()
+    })
+
+    if (!searchText.trim()) return
+
+    try {
+      const regex = new RegExp(searchText, 'gi')
+      const treeWalker = document.createTreeWalker(
+        document.body,
+        NodeFilter.SHOW_TEXT,
+        {
+          acceptNode: function(node) {
+            // Skip scripts, styles, and inputs
+            if (['SCRIPT', 'STYLE', 'NOSCRIPT', 'TEXTAREA', 'INPUT'].includes(node.parentNode.nodeName)) {
+              return NodeFilter.FILTER_REJECT
+            }
+            if (node.parentNode.isContentEditable) return NodeFilter.FILTER_REJECT
+            return NodeFilter.FILTER_ACCEPT
+          }
+        }
+      )
+
+      const nodesToReplace = []
+      while (treeWalker.nextNode()) {
+        const node = treeWalker.currentNode
+        if (node.nodeValue.match(regex)) {
+          nodesToReplace.push(node)
+        }
+      }
+
+      nodesToReplace.forEach(node => {
+        const fragment = document.createDocumentFragment()
+        let lastIdx = 0
+        const text = node.nodeValue
+        
+        text.replace(regex, (match, idx) => {
+          fragment.appendChild(document.createTextNode(text.slice(lastIdx, idx)))
+          const mark = document.createElement('mark')
+          mark.className = 'search-highlight'
+          mark.textContent = match
+          fragment.appendChild(mark)
+          lastIdx = idx + match.length
+          return match
+        })
+        
+        fragment.appendChild(document.createTextNode(text.slice(lastIdx)))
+        node.parentNode.replaceChild(fragment, node)
+      })
+    } catch (err) {
+      console.error('Search error:', err)
+    }
+  }
 
   // Check if user is in interview setup page (not in interview room yet)
   const isInSetup = location.pathname === '/setup'
@@ -203,12 +267,24 @@ const Header = ({
             <div className="hidden md:flex items-center gap-4 lg:gap-6">
                 {isAuthenticated ? (
                   <>
-                    <span className="text-lg text-gray-700">
-                      Xin chào, <strong>{user?.full_name}</strong>
-                    </span>
+                    {/* Search Bar */}
+                    <form onSubmit={handleSearch} className="search-bar-container">
+                      <input
+                        type="text"
+                        className="search-input"
+                        placeholder="Tìm kiếm..."
+                        value={searchText}
+                        onChange={(e) => setSearchText(e.target.value)}
+                      />
+                      <button type="submit" className="search-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                        </svg>
+                      </button>
+                    </form>
                     <button
                       onClick={handleLogout}
-                      className="btn-secondary text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none"
+                      className="btn-secondary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all hover:bg-gray-100"
                     >
                       Đăng xuất
                     </button>
@@ -291,8 +367,21 @@ const Header = ({
                 
                 {isAuthenticated ? (
                   <>
-                    <div className="text-gray-700 text-base pt-2 border-t">
-                      Xin chào, <strong>{user?.full_name}</strong>
+                    <div className="pt-2 border-t">
+                      <form onSubmit={handleSearch} className="search-bar-container w-full">
+                        <input
+                          type="text"
+                          className="search-input"
+                          placeholder="Tìm kiếm..."
+                          value={searchText}
+                          onChange={(e) => setSearchText(e.target.value)}
+                        />
+                        <button type="submit" className="search-btn">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                          </svg>
+                        </button>
+                      </form>
                     </div>
                     <button onClick={handleLogout} className="btn-secondary w-full text-base">
                       Đăng xuất

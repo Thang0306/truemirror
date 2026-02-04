@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="md:pr-4">
             <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-5">TrueMirror</h3>
             <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-              Nền tảng luyện phỏng vấn thông minh với AR và AI, giúp bạn tự tin chinh phục mọi cơ hội nghề nghiệp.
+              Nền tảng luyện phỏng vấn thông minh với Virtual Human và AI, giúp bạn tự tin chinh phục mọi cơ hội nghề nghiệp.
             </p>
           </div>
 
@@ -39,12 +39,12 @@ const Footer = () => {
             <ul className="space-y-2 text-base md:text-lg">
               <li className="flex items-center gap-2">
                 <span>📧</span>
-                <span className="text-gray-300 break-all">support@truemirror.ai</span>
+                <span className="text-gray-300 break-all">truemirror.ai@gmail.com</span>
               </li>
               <div className="h-1"></div>
               <li className="flex items-center gap-2">
                 <span>📞</span>
-                <span className="text-gray-300">(+84) 123 456 789</span>
+                <span className="text-gray-300">(+84) 336 790 647</span>
               </li>
             </ul>
           </div>

@@ -17,7 +17,7 @@ const Services = () => {
         '✓ AI feedback tổng quan',
         '✓ Báo cáo đơn giản',
         '✗ Không lưu lịch sử chi tiết',
-        '✗ Không có AR mode',
+        '✗ Không có Virtual Human mode',
       ],
       cta: 'Dùng thử ngay',
       recommended: false,
@@ -34,7 +34,7 @@ const Services = () => {
         '✓ AI feedback chi tiết',
         '✓ Báo cáo tiến độ',
         '✓ Lưu lịch sử vĩnh viễn',
-        '✓ AR mode cơ bản',
+        '✓ Virtual Human mode cơ bản',
       ],
       cta: 'Chọn gói này',
       recommended: false,
@@ -50,7 +50,7 @@ const Services = () => {
         '✓ Toàn bộ bộ câu hỏi + câu hỏi độc quyền',
         '✓ AI feedback chuyên sâu + video analysis',
         '✓ Báo cáo tiến độ + lộ trình cá nhân',
-        '✓ AR mode nâng cao',
+        '✓ Virtual Human mode nâng cao',
         '✓ Hỗ trợ ưu tiên 24/7',
       ],
       cta: 'Chọn gói này',
@@ -428,7 +428,7 @@ const Services = () => {
 
                   <tr className="border-b border-gray-200 hover:bg-blue-50/30 transition">
                     <td className="border-r-2 border-gray-300 p-8">
-                      <div className="text-base md:text-lg font-medium text-gray-700">AR Mode</div>
+                      <div className="text-base md:text-lg font-medium text-gray-700">Virtual Human Mode</div>
                     </td>
                     <td className="p-8">
                       <span className="compare-x">✗</span>
