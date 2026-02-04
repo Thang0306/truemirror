@@ -265,10 +265,8 @@ const Header = ({
               </div>
 
             <div className="hidden md:flex items-center gap-4 lg:gap-6">
-                {isAuthenticated ? (
-                  <>
-                    {/* Search Bar */}
-                    <form onSubmit={handleSearch} className="search-bar-container">
+                 {/* Search Bar - Always Visible */}
+                 <form onSubmit={handleSearch} className="search-bar-container">
                       <input
                         type="text"
                         className="search-input"
@@ -282,22 +280,23 @@ const Header = ({
                         </svg>
                       </button>
                     </form>
+
+                {isAuthenticated ? (
                     <button
                       onClick={handleLogout}
                       className="btn-secondary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all hover:bg-gray-100"
                     >
                       Đăng xuất
                     </button>
-                </>
               ) : (
                 <>
                   <Link to="/login">
-                    <button className="btn-secondary text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none">
+                    <button className="btn-secondary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all hover:bg-gray-100">
                       Đăng nhập
                     </button>
                   </Link>
                   <Link to="/register">
-                    <button className="btn-primary text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none">
+                    <button className="btn-primary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all">
                       Dùng thử miễn phí
                     </button>
                   </Link>
@@ -365,28 +364,27 @@ const Header = ({
                   </Link>
                 )}
                 
+                <div className="pt-2 border-t">
+                  <form onSubmit={handleSearch} className="search-bar-container w-full">
+                    <input
+                      type="text"
+                      className="search-input"
+                      placeholder="Tìm kiếm..."
+                      value={searchText}
+                      onChange={(e) => setSearchText(e.target.value)}
+                    />
+                    <button type="submit" className="search-btn">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                      </svg>
+                    </button>
+                  </form>
+                </div>
+                
                 {isAuthenticated ? (
-                  <>
-                    <div className="pt-2 border-t">
-                      <form onSubmit={handleSearch} className="search-bar-container w-full">
-                        <input
-                          type="text"
-                          className="search-input"
-                          placeholder="Tìm kiếm..."
-                          value={searchText}
-                          onChange={(e) => setSearchText(e.target.value)}
-                        />
-                        <button type="submit" className="search-btn">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                          </svg>
-                        </button>
-                      </form>
-                    </div>
                     <button onClick={handleLogout} className="btn-secondary w-full text-base">
                       Đăng xuất
                     </button>
-                  </>
                 ) : (
                   <>
                     <Link to="/login">
