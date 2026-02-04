@@ -431,6 +431,12 @@ const InterviewRoom = () => {
             ref={textareaRef}
             value={inputValue}
             onChange={handleTextareaChange}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' && !e.shiftKey) {
+                e.preventDefault();
+                handleSendMessage();
+              }
+            }}
             placeholder={isLoading ? t('aiTyping') : t('inputPlaceholder')}
             disabled={isLoading || isEvaluating || hasEvaluated}
             autoFocus

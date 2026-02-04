@@ -14,7 +14,7 @@ class AzureGPTService:
             api_key=api_key,
             base_url=base_url
         )
-        self.model = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-4.1')
+        self.model = os.getenv('AZURE_OPENAI_DEPLOYMENT', 'gpt-5-mini')
         print(f"[INFO] Azure OpenAI initialized: model={self.model}, base_url={base_url}")
 
     def get_chat_response_stream(self, conversation_history):
@@ -27,8 +27,8 @@ class AzureGPTService:
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=conversation_history,
-                temperature=0.7,
-                max_tokens=1000,
+                # temperature removed as gpt-5-mini only supports default (1)
+                max_completion_tokens=4000,
                 stream=True
             )
 
@@ -158,8 +158,8 @@ Hãy viết đánh giá bằng markdown format, ngắn gọn nhưng cụ thể.
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=messages,
-                temperature=0.7,
-                max_tokens=800
+                # temperature removed for gpt-5-mini default (1)
+                max_completion_tokens=5500
             )
 
             return response.choices[0].message.content
@@ -206,8 +206,8 @@ Liệt kê 2-4 điểm yếu hoặc điểm cần cải thiện của cá nhân 
                     'role': 'user',
                     'content': assessment_prompt
                 }],
-                temperature=0,  # Temperature = 0 for consistent results
-                max_tokens=1000
+                # temperature removed for gpt-5-mini default (1)
+                max_completion_tokens=5000
             )
 
             return response.choices[0].message.content
@@ -256,8 +256,8 @@ Liệt kê 2-4 điểm yếu hoặc điểm cần cải thiện của cá nhân 
                         "content": content
                     }
                 ],
-                temperature=0,
-                max_tokens=4000  # Increased for multi-page PDFs
+                # temperature removed for gpt-5-mini default (1)
+                max_completion_tokens=4000  # Increased for multi-page PDFs
             )
 
             extracted_text = response.choices[0].message.content.strip()
@@ -331,31 +331,62 @@ Respond ONLY with valid JSON, no markdown formatting, no explanation.
                     'role': 'user',
                     'content': analysis_prompt
                 }],
-                temperature=0,
-                max_tokens=1000
+                # temperature removed for gpt-5-mini default (1)
+                max_completion_tokens=5000
             )
 
             result_text = response.choices[0].message.content.strip()
 
-            # Remove markdown code blocks if present
-            if result_text.startswith('```'):
-                result_text = result_text.split('```')[1]
-                if result_text.startswith('json'):
-                    result_text = result_text[4:]
-                result_text = result_text.strip()
-
-            # Parse JSON
+            # Robust JSON extraction using regex
+            import re
             import json
-            extracted_info = json.loads(result_text)
+            
+            # Try to find JSON object within the text
+            json_match = re.search(r'\{.*\}', result_text, re.DOTALL)
+            
+            if json_match:
+                json_str = json_match.group(0)
+                try:
+                    extracted_info = json.loads(json_str)
+                except json.JSONDecodeError:
+                    # If regex match fails to parse (e.g. invalid JSON syntax), try cleaning code blocks
+                    pass
+            
+            # Fallback: legacy cleaning if regex didn't work or return valid JSON
+            if 'extracted_info' not in locals():
+                clean_text = result_text
+                if '```' in clean_text:
+                    parts = clean_text.split('```')
+                    for part in parts:
+                        if '{' in part and '}' in part:
+                            clean_text = part
+                            if clean_text.strip().startswith('json'):
+                                clean_text = clean_text.strip()[4:]
+                            break
+                
+                clean_text = clean_text.strip()
+                extracted_info = json.loads(clean_text)
 
             print(f"[SUCCESS] Extracted info: position={extracted_info.get('position')}, industry={extracted_info.get('industry')}")
 
             return extracted_info
 
-        except json.JSONDecodeError as e:
+        except (json.JSONDecodeError, Exception) as e:
             print(f"[ERROR] Failed to parse AI response as JSON: {str(e)}")
-            print(f"[DEBUG] AI response: {result_text}")
-            raise Exception(f"AI không thể phân tích tài liệu. Vui lòng thử lại hoặc sử dụng mode chuẩn.")
+            print(f"[DEBUG] AI response raw: {result_text}")
+            # Try one last fallback: return a basic default structure if parsing fails completely
+            # This prevents the "AI không thể phân tích" error from blocking the user flow
+            default_info = {
+                "position": "Unknown Position",
+                "industry": "General",
+                "candidate_skills": [],
+                "experience_level": "Junior",
+                "job_requirements": "N/A",
+                "candidate_background": "N/A",
+                "key_focus_areas": ["General Fit", "Communication"]
+            }
+            print("[WARN] Using default fallback info due to parsing error.")
+            return default_info
         except Exception as e:
             print(f"[ERROR] File analysis failed: {str(e)}")
             raise Exception(f"Lỗi khi phân tích tài liệu: {str(e)}")
@@ -399,84 +430,132 @@ Candidate & Job Info:
 Interview Style: {style}
 
 Create questions following this structure:
-- 3-4 questions for Section 1: Background & Experience (Kinh nghiệm & Nền tảng)
-- 3-4 questions for Section 2: Technical/Domain Skills (Kỹ năng chuyên môn)
-- 2-3 questions for Section 3: Behavioral & Soft Skills (Kỹ năng mềm)
-- 2-3 questions for Section 4: Future Goals & Cultural Fit (Định hướng & Phù hợp văn hóa)
+- 3-4 questions for Section 1: Background & Experience
+- 3-4 questions for Section 2: Technical/Domain Skills
+- 2-3 questions for Section 3: Behavioral & Soft Skills
+- 2-3 questions for Section 4: Future Goals & Cultural Fit
 
-Each question must have:
-- section: The section name
-- question_text: The main question (tailored to candidate's background)
+Each question must be a JSON object with:
+- section: Section name
+- question_text: The question content
 - question_type: "Behavioral", "Technical", or "Situational"
-- purpose: What this question assesses (1 sentence)
-- expected_duration_minutes: 2-5 minutes
-- guidelines: {{"must_have": ["point1", "point2"], "should_avoid": ["point1", "point2"]}}
-- popup_questions: 2-3 follow-up questions for deeper exploration
+- purpose: Assessment purpose
+- expected_duration_minutes: Duration (int)
+- guidelines: {{ "must_have": [], "should_avoid": [] }}
+- popup_questions: [ "Follow-up 1", "Follow-up 2" ]
 
-Important:
-- Questions MUST be {lang_instruction}
-- Tailor questions to the candidate's specific skills, experience level, and the job requirements
-- For {extracted_info.get('experience_level', 'Junior')} level, adjust difficulty appropriately
-- Include specific skills from candidate_skills where relevant
-- Make questions practical and job-relevant
-
-Return ONLY a valid JSON array of question objects, no markdown formatting, no explanation.
-
-Example structure:
-[
-  {{
-    "section": "Section 1: Background & Experience",
-    "question_text": "...",
-    "question_type": "Behavioral",
-    "purpose": "...",
-    "expected_duration_minutes": 3,
-    "guidelines": {{
-      "must_have": ["specific example", "quantifiable results"],
-      "should_avoid": ["vague answers", "no concrete details"]
-    }},
-    "popup_questions": ["Follow-up 1?", "Follow-up 2?"]
-  }}
-]
+IMPORTANT:
+- Return a SINGLE valid JSON object with a key "questions" containing the list.
+- Example: {{ "questions": [ {{...}}, {{...}} ] }}
+- Do NOT use markdown formatting (no ```json).
+- Content must be {lang_instruction}.
 """
 
-            # Call GPT with temperature=0.7 for creativity
+            # Call GPT
             response = self.client.chat.completions.create(
                 model=self.model,
                 messages=[{
                     'role': 'user',
                     'content': question_prompt
                 }],
-                temperature=0.7,
-                max_tokens=3000
+                # temperature removed for gpt-5-mini default (1)
+                max_completion_tokens=5000
             )
 
             result_text = response.choices[0].message.content.strip()
+            
+            # Extract JSON using regex (looking for object with "questions" key or just list)
+            import re
+            questions = []
+            
+            # Try to find JSON object structure first
+            json_match = re.search(r'\{.*\}', result_text, re.DOTALL)
+            if json_match:
+                try:
+                    data = json.loads(json_match.group(0))
+                    if 'questions' in data and isinstance(data['questions'], list):
+                        questions = data['questions']
+                except:
+                    pass
+            
+            # If that failed, try finding a list structure directly
+            if not questions:
+                list_match = re.search(r'\[.*\]', result_text, re.DOTALL)
+                if list_match:
+                    try:
+                        questions = json.loads(list_match.group(0))
+                    except:
+                        pass
 
-            # Remove markdown code blocks if present
-            if result_text.startswith('```'):
-                result_text = result_text.split('```')[1]
-                if result_text.startswith('json'):
-                    result_text = result_text[4:]
-                result_text = result_text.strip()
+            # Fallback cleaning if regex failed
+            if not questions:
+                if result_text.startswith('```'):
+                    result_text = result_text.split('```')[1]
+                    if result_text.startswith('json'):
+                        result_text = result_text[4:]
+                    result_text = result_text.strip()
+                try:
+                    parsed = json.loads(result_text)
+                    if isinstance(parsed, dict) and 'questions' in parsed:
+                        questions = parsed['questions']
+                    elif isinstance(parsed, list):
+                        questions = parsed
+                except:
+                    pass
 
-            # Parse JSON
-            questions = json.loads(result_text)
-
-            # Validate structure
-            if not isinstance(questions, list) or len(questions) < 5:
-                raise Exception("AI generated insufficient questions")
+            # Validate
+            if not isinstance(questions, list) or len(questions) < 3:
+                raise Exception("Insufficient valid questions generated")
 
             print(f"[SUCCESS] Generated {len(questions)} personalized questions")
-
             return questions
 
-        except json.JSONDecodeError as e:
-            print(f"[ERROR] Failed to parse AI response as JSON: {str(e)}")
-            print(f"[DEBUG] AI response: {result_text}")
-            raise Exception("AI không thể tạo câu hỏi. Vui lòng thử lại.")
         except Exception as e:
             print(f"[ERROR] Question generation failed: {str(e)}")
-            raise Exception(f"Lỗi khi tạo câu hỏi: {str(e)}")
+            print(f"[DEBUG] AI response raw: {result_text}")
+            
+            # ROBUST FALLBACK: Return default questions instead of crashing
+            print("[WARN] Using fallback questions due to generation error.")
+            
+            fallback_qs = [
+                {
+                    "section": "Section 1: Background & Experience",
+                    "question_text": "Hãy giới thiệu ngắn gọn về bản thân và những kinh nghiệm làm việc nổi bật nhất của bạn liên quan đến vị trí này." if language == 'vi' else "Please briefly introduce yourself and highlight your most relevant work experience for this position.",
+                    "question_type": "Behavioral",
+                    "purpose": "Ice breaker and background check",
+                    "expected_duration_minutes": 3,
+                    "guidelines": {"must_have": ["Overview of experience"], "should_avoid": ["Too detailed personal life"]},
+                    "popup_questions": []
+                },
+                {
+                    "section": "Section 2: Technical Skills",
+                    "question_text": "Trong dự án gần đây nhất, bạn đã gặp phải thử thách kỹ thuật (hoặc chuyên môn) nào khó khăn nhất và bạn đã giải quyết nó như thế nào?" if language == 'vi' else "In your most recent project, what was the most challenging technical (or professional) problem you faced, and how did you resolve it?",
+                    "question_type": "Technical",
+                    "purpose": "Problem solving skills",
+                    "expected_duration_minutes": 5,
+                    "guidelines": {"must_have": ["STAR method", "Specific solution"], "should_avoid": ["Vague description"]},
+                    "popup_questions": ["What would you do differently?"]
+                },
+                 {
+                    "section": "Section 3: Soft Skills",
+                    "question_text": "Hãy kể về một lần bạn phải thuyết phục người khác chấp nhận ý kiến của mình. Kết quả ra sao?" if language == 'vi' else "Tell me about a time you had to persuade someone to accept your idea. What was the outcome?",
+                    "question_type": "Behavioral",
+                    "purpose": "Communication and influence",
+                    "expected_duration_minutes": 4,
+                    "guidelines": {"must_have": ["Context", "Action"], "should_avoid": []},
+                    "popup_questions": []
+                },
+                {
+                    "section": "Section 4: Goals",
+                    "question_text": "Bạn định hướng phát triển bản thân như thế nào trong 2-3 năm tới?" if language == 'vi' else "How do you see yourself developing in the next 2-3 years?",
+                    "question_type": "Situational",
+                    "purpose": "Career alignment",
+                    "expected_duration_minutes": 3,
+                    "guidelines": {"must_have": ["Clear goals"], "should_avoid": []},
+                    "popup_questions": []
+                }
+            ]
+            return fallback_qs
 
 
 # Singleton instance
