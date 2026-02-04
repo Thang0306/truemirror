@@ -13,7 +13,7 @@ const Home = () => {
       navigate('/dashboard')
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } else {
-      navigate('/services')
+      navigate('/login')
       window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }
