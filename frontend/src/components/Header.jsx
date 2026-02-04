@@ -109,12 +109,12 @@ const Header = ({
   // Interview mode layout
   if (interviewMode && sessionInfo) {
     return (
-      <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200 h-24 md:h-28 lg:h-20 flex items-center">
+      <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200 h-16 md:h-20 flex items-center">
         <div className="container mx-auto px-4 max-w-6xl">
           <div className="flex justify-between items-center gap-8">
             {/* Logo - not clickable in interview mode */}
-            <div className="flex-shrink-0 flex items-center gap-3 md:gap-4">
-              <div className="w-16 h-16 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+            <div className="flex-shrink-0 flex items-center gap-2 md:gap-3">
+              <div className="w-14 h-14 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
                   src="/logo.svg"
                   alt="TrueMirror Logo"
@@ -122,7 +122,7 @@ const Header = ({
                 />
               </div>
               <span
-                className="text-2xl md:text-4xl font-bold"
+                className="text-2xl md:text-3xl font-bold"
                 style={{
                   background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
                   WebkitBackgroundClip: 'text',
@@ -141,10 +141,10 @@ const Header = ({
 
             {/* Interview info - centered */}
             <div className="flex-1 text-center">
-              <h1 className="text-2xl md:text-3xl font-bold text-brand-navy">
+              <h1 className="text-lg md:text-xl font-bold text-brand-navy">
                 {t('title')} {sessionInfo.position} - {sessionInfo.industry}
               </h1>
-              <p className="text-sm md:text-base text-gray-600 mt-1">
+              <p className="text-xs md:text-sm text-gray-600 mt-0.5">
                 {t('style')} {sessionInfo.language === 'vi' ? sessionInfo.style : translations?.en?.styles?.[sessionInfo.style] || sessionInfo.style} | {t('language')} {sessionInfo.language === 'vi' ? t('vietnamese') : t('english')}
                 {' | '}
                 <span className={`inline-flex items-center gap-1 ${isConnected ? 'text-green-600' : 'text-red-600'}`}>
@@ -159,7 +159,7 @@ const Header = ({
               <div className="flex gap-4 flex-shrink-0">
                 <button
                   onClick={onEndSession}
-                  className="btn-primary text-base md:text-lg px-8 py-3"
+                  className="btn-primary text-sm font-medium px-4 py-2 h-9"
                 >
                   ← Quay lại lịch sử
                 </button>
@@ -169,14 +169,14 @@ const Header = ({
                 <button
                   onClick={onEvaluate}
                   disabled={!isConnected || isEvaluating || hasEvaluated}
-                  className="evaluate-btn text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="evaluate-btn text-sm font-medium px-4 py-2 h-10 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {t('evaluateInterview')}
                 </button>
                 <button
                   onClick={onEndSession}
                   disabled={!isConnected}
-                  className="end-interview-btn text-lg lg:text-xl px-4 md:px-5 py-2 h-14 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="end-interview-btn text-sm font-medium px-4 py-2 h-10 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {t('endInterview')}
                 </button>
@@ -190,11 +190,11 @@ const Header = ({
 
   // Normal header layout (for all other pages including setup)
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50 h-24 md:h-28 lg:h-20 flex items-center">
+    <header className="bg-white shadow-md sticky top-0 z-50 h-16 md:h-18 lg:h-20 flex items-center">
       <nav className="container mx-auto px-4 max-w-7xl">
           <div className="flex justify-between items-center">
-            <Link to="/" className="flex items-center gap-3 md:gap-4">
-              <div className="w-16 h-16 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+            <Link to="/" className="flex items-center gap-2 md:gap-3">
+              <div className="w-14 h-14 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
                   src="/logo.svg"
                   alt="TrueMirror Logo"
@@ -202,7 +202,7 @@ const Header = ({
                 />
               </div>
               <span
-                className="text-2xl md:text-4xl font-bold"
+                className="text-2xl md:text-3xl font-bold"
                 style={{
                   background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
                   WebkitBackgroundClip: 'text',
@@ -219,10 +219,10 @@ const Header = ({
               </span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-8 lg:gap-10">
+            <div className="hidden md:flex items-center gap-5 lg:gap-8">
                 {/* <Link
                   to="/"
-                  className={`text-lg lg:text-xl font-medium transition ${
+                  className={`text-base font-medium transition ${
                     isActive('/') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -230,7 +230,7 @@ const Header = ({
                 </Link> */}
                 <Link
                   to="/about"
-                  className={`text-lg lg:text-xl font-medium transition ${
+                  className={`text-lg font-medium transition ${
                     isActive('/about') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -238,7 +238,7 @@ const Header = ({
                 </Link>
                 <Link
                   to="/services"
-                  className={`text-lg lg:text-xl font-medium transition ${
+                  className={`text-lg font-medium transition ${
                     isActive('/services') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -246,7 +246,7 @@ const Header = ({
                 </Link>
                 <Link
                   to="/news"
-                  className={`text-lg lg:text-xl font-medium transition ${
+                  className={`text-lg font-medium transition ${
                     isActive('/news') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -255,7 +255,7 @@ const Header = ({
                 {isAuthenticated && (
                   <Link
                     to="/dashboard"
-                    className={`text-lg lg:text-xl font-medium transition ${
+                    className={`text-lg font-medium transition ${
                       isActive('/dashboard') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                     }`}
                   >
@@ -284,19 +284,19 @@ const Header = ({
                 {isAuthenticated ? (
                     <button
                       onClick={handleLogout}
-                      className="btn-secondary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all hover:bg-gray-100"
+                      className="btn-secondary text-base font-medium px-5 h-10 flex items-center justify-center transition-all hover:bg-gray-100"
                     >
                       Đăng xuất
                     </button>
               ) : (
                 <>
                   <Link to="/login">
-                    <button className="btn-secondary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all hover:bg-gray-100">
+                    <button className="btn-secondary text-base font-medium px-5 h-10 flex items-center justify-center transition-all hover:bg-gray-100">
                       Đăng nhập
                     </button>
                   </Link>
                   <Link to="/register">
-                    <button className="btn-primary text-base lg:text-lg px-4 py-2 h-11 leading-none transition-all">
+                    <button className="btn-primary text-base font-medium px-5 h-10 flex items-center justify-center transition-all">
                       Dùng thử miễn phí
                     </button>
                   </Link>

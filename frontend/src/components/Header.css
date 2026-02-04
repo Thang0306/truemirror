@@ -5,10 +5,10 @@
   border: 1px solid #e5e7eb;
   border-radius: 9999px; /* Rounded pill shape */
   background-color: #f9fafb;
-  padding: 0.25rem 0.75rem;
+  padding: 0.15rem 0.5rem; /* Reduced padding */
   transition: all 0.2s;
   width: 100%;
-  max-width: 300px; /* Default desktop width */
+  max-width: 240px; /* Reduced width */
 }
 
 /* Hover & Focus state for container */
@@ -23,15 +23,15 @@
   border: none;
   background: transparent;
   width: 100%;
-  padding: 0.25rem 0.5rem;
-  font-size: 1rem; /* Text size similar to nav links */
+  padding: 0.2rem 0.4rem;
+  font-size: 0.875rem; /* Reduced to 14px */
   color: #0F2854; /* Brand Navy */
   outline: none;
 }
 
 .search-input::placeholder {
   color: #9ca3af;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
 }
 
 /* Search Button (Magnifying Glass) */
