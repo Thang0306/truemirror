@@ -163,8 +163,10 @@ const InterviewSetup = () => {
 
   if (isMobile) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
-        <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-xl text-center border border-gray-100 flex flex-col items-center">
+      <div className="min-h-screen flex justify-center bg-gray-50 px-4">
+        <div className="w-full max-w-md py-16">
+          <div className="h-6"></div>
+          <div className="bg-white rounded-2xl p-8 w-full shadow-xl text-center border border-gray-100 flex flex-col items-center">
           <div className="h-6"></div>
           <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6">
             <span className="text-4xl">💻</span>
@@ -173,19 +175,22 @@ const InterviewSetup = () => {
             Trải nghiệm tốt nhất trên máy tính
           </h2>
           <div className="h-3"></div>
-          <p className="text-gray-600 mb-8 leading-relaxed px-6">
+          <p className="text-gray-600 mb-8 leading-relaxed max-w-xs mx-auto">
             Ứng dụng phỏng vấn của TrueMirror hiện tại chỉ hỗ trợ trên máy tính để đảm bảo chất lượng video và âm thanh tốt nhất.
           </p>
           <div className="h-3"></div>
-          <button
-            onClick={() => navigate('/')}
-            className="btn-primary w-full py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
-          >
-            Quay về trang chủ
-          </button>
+          <div className="w-full max-w-[16rem]">
+            <button
+              onClick={() => navigate('/dashboard')}
+              className="btn-primary w-full py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+            >
+              Quay về bảng điều khiển
+            </button>
+          </div>
           <div className="h-6"></div>
         </div>
       </div>
+    </div>
     )
   }
 

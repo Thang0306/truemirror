@@ -109,9 +109,9 @@ const Header = ({
   // Interview mode layout
   if (interviewMode && sessionInfo) {
     return (
-      <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200 h-16 md:h-20 flex items-center">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <div className="flex justify-between items-center gap-8">
+      <header className="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200 h-16 md:h-18 lg:h-20 flex items-center">
+        <nav className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="flex justify-between lg:justify-start items-center gap-5 lg:gap-4 xl:gap-8">
             {/* Logo - not clickable in interview mode */}
             <div className="flex-shrink-0 flex items-center gap-2 md:gap-3">
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
@@ -134,51 +134,129 @@ const Header = ({
               </span>
             </div>
 
-            {/* Interview info - centered */}
-            <div className="flex-1 text-center">
-              <h1 className="text-lg md:text-xl font-bold text-brand-navy">
-                {t('title')} {sessionInfo.position} - {sessionInfo.industry}
-              </h1>
-              <p className="text-xs md:text-sm text-gray-600 mt-0.5">
-                {t('style')} {sessionInfo.language === 'vi' ? sessionInfo.style : translations?.en?.styles?.[sessionInfo.style] || sessionInfo.style} | {t('language')} {sessionInfo.language === 'vi' ? t('vietnamese') : t('english')}
-                {' | '}
-                <span className={`inline-flex items-center gap-1 ${isConnected ? 'text-green-600' : 'text-red-600'}`}>
-                  <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}></span>
-                  {isConnected ? t('connected') : t('disconnected')}
-                </span>
-              </p>
-            </div>
+            {/* Desktop: Interview Info & Actions */}
+            <div className="hidden lg:flex flex-1 justify-between items-center">
+              {/* Interview Info */}
+              <div className="flex flex-col justify-center">
+                <h1 className="text-lg font-bold text-brand-navy whitespace-nowrap">
+                  {t('title')} {sessionInfo.position} - {sessionInfo.industry}
+                </h1>
+                <div className="flex items-center gap-2 text-sm text-gray-600 mt-0.5">
+                   <span>{t('style')} {sessionInfo.language === 'vi' ? sessionInfo.style : translations?.en?.styles?.[sessionInfo.style] || sessionInfo.style}</span>
+                   <span>|</span>
+                   <span>{t('language')} {sessionInfo.language === 'vi' ? t('vietnamese') : t('english')}</span>
+                   <span>|</span>
+                   <span className={`inline-flex items-center gap-1 ${isConnected ? 'text-green-600' : 'text-red-600'}`}>
+                    <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}></span>
+                    {isConnected ? t('connected') : t('disconnected')}
+                  </span>
+                </div>
+              </div>
 
-            {/* Action buttons - same size as login/register buttons */}
-            {readOnlyMode ? (
-              <div className="flex gap-4 flex-shrink-0">
+              {/* Action Buttons */}
+              {readOnlyMode ? (
                 <button
                   onClick={onEndSession}
-                  className="btn-primary text-sm font-medium px-4 py-2 h-9"
+                  className="btn-primary text-base font-medium px-5 h-10 flex items-center justify-center transition-all"
                 >
                   ← Quay lại lịch sử
                 </button>
-              </div>
-            ) : (
-              <div className="flex gap-4 flex-shrink-0">
-                <button
-                  onClick={onEvaluate}
-                  disabled={!isConnected || isEvaluating || hasEvaluated}
-                  className="evaluate-btn text-sm font-medium px-4 py-2 h-10 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {t('evaluateInterview')}
-                </button>
-                <button
-                  onClick={onEndSession}
-                  disabled={!isConnected}
-                  className="end-interview-btn text-sm font-medium px-4 py-2 h-10 leading-none disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {t('endInterview')}
-                </button>
-              </div>
-            )}
+              ) : (
+                <div className="flex gap-4">
+                  <button
+                    onClick={onEvaluate}
+                    disabled={!isConnected || isEvaluating || hasEvaluated}
+                    className="evaluate-btn text-base font-medium px-5 h-10 flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {t('evaluateInterview')}
+                  </button>
+                  <button
+                    onClick={onEndSession}
+                    disabled={!isConnected}
+                    className="end-interview-btn text-base font-medium px-5 h-10 flex items-center justify-center transition-all disabled:opacity-50 disabled:cursor-not-allowed"
+                  >
+                    {t('endInterview')}
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              className="lg:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {isMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
           </div>
-        </div>
+
+          {/* Mobile Menu for Interview Mode */}
+          {isMenuOpen && (
+            <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto px-4 pb-8 border-t border-gray-100 shadow-xl">
+              <div className="flex flex-col space-y-6 pt-6 items-center">
+                {/* Session Info in Menu */}
+                 <div className="text-center space-y-2">
+                    <h1 className="text-xl font-bold text-brand-navy">
+                      {t('title')} {sessionInfo.position}
+                    </h1>
+                    <p className="text-lg text-gray-700 font-medium">{sessionInfo.industry}</p>
+                    <div className="flex flex-col gap-1 text-base text-gray-600">
+                      <p>{t('style')} {sessionInfo.language === 'vi' ? sessionInfo.style : translations?.en?.styles?.[sessionInfo.style] || sessionInfo.style}</p>
+                      <p>{t('language')} {sessionInfo.language === 'vi' ? t('vietnamese') : t('english')}</p>
+                      <p className={`flex items-center justify-center gap-2 ${isConnected ? 'text-green-600' : 'text-red-600'}`}>
+                        <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-600' : 'bg-red-600'}`}></span>
+                        {isConnected ? t('connected') : t('disconnected')}
+                      </p>
+                    </div>
+                 </div>
+
+                 <div className="w-full h-px bg-gray-100"></div>
+
+                {/* Mobile Actions */}
+                {readOnlyMode ? (
+                  <button
+                    onClick={() => {
+                        setIsMenuOpen(false)
+                        onEndSession()
+                    }}
+                    className="btn-primary w-full max-w-[320px] text-base py-3 rounded-lg shadow-md"
+                  >
+                    ← Quay lại lịch sử
+                  </button>
+                ) : (
+                  <div className="flex flex-col gap-3 w-full items-center">
+                    <button
+                      onClick={() => {
+                          setIsMenuOpen(false)
+                          onEvaluate()
+                      }}
+                      disabled={!isConnected || isEvaluating || hasEvaluated}
+                      className="evaluate-btn w-full max-w-[320px] text-base py-3 rounded-lg shadow-md disabled:opacity-50"
+                    >
+                      {t('evaluateInterview')}
+                    </button>
+                    <button
+                      onClick={() => {
+                          setIsMenuOpen(false)
+                          onEndSession()
+                      }}
+                      disabled={!isConnected}
+                      className="end-interview-btn w-full max-w-[320px] text-base py-3 rounded-lg shadow-md disabled:opacity-50"
+                    >
+                      {t('endInterview')}
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+        </nav>
       </header>
     )
   }
