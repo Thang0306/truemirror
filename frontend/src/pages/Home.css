@@ -47,10 +47,11 @@
 }
 
 .hero-video {
-  width: 150%;
-  max-width: 600px;
+  width: 100%;
+  max-width: 100%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 @media (max-width: 1024px) {

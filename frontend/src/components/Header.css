@@ -1,3 +1,33 @@
+/* Header Container - Ensure symmetrical padding */
+header {
+  box-sizing: border-box;
+}
+
+header > div {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Force minimum padding on all sides */
+.header-container {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    padding-left: 32px !important;
+    padding-right: 32px !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header-container {
+    padding-left: 48px !important;
+    padding-right: 48px !important;
+  }
+}
+
 /* Search Bar Container */
 .search-bar-container {
   display: flex;
@@ -5,10 +35,10 @@
   border: 1px solid #e5e7eb;
   border-radius: 9999px; /* Rounded pill shape */
   background-color: #f9fafb;
-  padding: 0.15rem 0.5rem; /* Reduced padding */
+  padding: 0.25rem 0.6rem;
   transition: all 0.2s;
   width: 100%;
-  max-width: 240px; /* Reduced width */
+  max-width: 280px;
 }
 
 /* Hover & Focus state for container */
@@ -23,15 +53,15 @@
   border: none;
   background: transparent;
   width: 100%;
-  padding: 0.2rem 0.4rem;
-  font-size: 0.875rem; /* Reduced to 14px */
+  padding: 0.3rem 0.5rem;
+  font-size: 1rem;
   color: #0F2854; /* Brand Navy */
   outline: none;
 }
 
 .search-input::placeholder {
   color: #9ca3af;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 /* Search Button (Magnifying Glass) */
@@ -47,14 +77,19 @@
   transition: color 0.2s;
 }
 
+.search-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .search-btn:hover {
   color: #1C4D8D; /* Brand Blue on hover */
 }
 
 /* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1280px) {
   .search-bar-container {
-    max-width: 200px; /* Smaller width on tablets */
+    max-width: 240px; /* Smaller width on tablets */
   }
 }
 
