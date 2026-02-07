@@ -82,10 +82,10 @@ const Header = ({
           </div>
 
           {/* Desktop: Interview Info & Actions */}
-          <div className="hidden min-[1200px]:flex flex-1 justify-between items-center ml-8">
-            {/* Interview Info */}
-            <div className="flex flex-col justify-center">
-              <h1 className="text-xl font-bold text-brand-navy whitespace-nowrap">
+          <div className="hidden min-[1200px]:flex flex-1 items-center justify-center ml-8">
+            {/* Interview Info - Centered */}
+            <div className="flex flex-col justify-center items-center text-center flex-1">
+              <h1 className="text-2xl font-bold text-brand-navy whitespace-nowrap">
                 {t('title')} {sessionInfo.position} - {sessionInfo.industry}
               </h1>
               <div className="flex items-center gap-2 text-base text-gray-600 mt-0.5">
@@ -100,16 +100,16 @@ const Header = ({
               </div>
             </div>
 
-            {/* Action Buttons */}
+            {/* Action Buttons - Right */}
             {readOnlyMode ? (
               <button
                 onClick={onEndSession}
-                className="btn-primary text-lg font-medium px-6 h-11 flex items-center justify-center transition-all whitespace-nowrap"
+                className="btn-primary text-lg font-medium px-6 h-11 flex items-center justify-center transition-all whitespace-nowrap flex-shrink-0"
               >
                 ← Quay lại lịch sử
               </button>
             ) : (
-              <div className="flex gap-4">
+              <div className="flex gap-4 flex-shrink-0">
                 <button
                   onClick={onEvaluate}
                   disabled={!isConnected || isEvaluating || hasEvaluated}
