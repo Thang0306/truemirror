@@ -21,7 +21,7 @@ header > div {
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .header-container {
     padding-left: 48px !important;
     padding-right: 48px !important;
@@ -87,15 +87,22 @@ header > div {
 }
 
 /* Responsive adjustments */
-@media (max-width: 1280px) {
+@media (max-width: 1200px) {
   .search-bar-container {
     max-width: 240px; /* Smaller width on tablets */
   }
 }
 
+/* iPad Pro and tablets in mobile menu */
+@media (min-width: 768px) and (max-width: 1200px) {
+  .search-bar-container {
+    max-width: 320px; /* Match button width in mobile menu */
+  }
+}
+
 @media (max-width: 768px) {
   .search-bar-container {
-    max-width: 320px; /* Constrained width */
+    max-width: 320px; /* Match button width */
     width: 100%;
     margin-left: auto;
     margin-right: auto;

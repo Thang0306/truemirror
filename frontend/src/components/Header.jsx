@@ -82,7 +82,7 @@ const Header = ({
           </div>
 
           {/* Desktop: Interview Info & Actions */}
-          <div className="hidden xl:flex flex-1 justify-between items-center ml-8">
+          <div className="hidden min-[1200px]:flex flex-1 justify-between items-center ml-8">
             {/* Interview Info */}
             <div className="flex flex-col justify-center">
               <h1 className="text-xl font-bold text-brand-navy whitespace-nowrap">
@@ -130,7 +130,7 @@ const Header = ({
 
           {/* Mobile Hamburger Button */}
           <button
-            className="xl:hidden p-2 -mr-2"
+            className="min-[1200px]:hidden p-2 -mr-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -146,7 +146,7 @@ const Header = ({
 
         {/* Mobile Menu for Interview Mode */}
         {isMenuOpen && (
-          <div className="xl:hidden fixed top-16 md:top-18 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto border-t border-gray-100 shadow-xl">
+          <div className="min-[1200px]:hidden fixed top-16 md:top-18 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto border-t border-gray-100 shadow-xl">
             <div className="flex flex-col space-y-6 pt-6 px-4 pb-8 items-center">
               {/* Session Info in Menu */}
                <div className="text-center space-y-2">
@@ -235,7 +235,7 @@ const Header = ({
         </Link>
 
         {/* Desktop Navigation - Centered */}
-        <nav className="hidden xl:flex items-center gap-6 xl:gap-8 flex-1 justify-center">
+        <nav className="hidden min-[1200px]:flex items-center gap-6 min-[1200px]:gap-8 flex-1 justify-center">
           <Link
             to="/about"
             className={`text-lg xl:text-xl font-medium transition whitespace-nowrap ${
@@ -273,7 +273,7 @@ const Header = ({
         </nav>
 
         {/* Desktop Actions - Right aligned */}
-        <div className="hidden xl:flex items-center gap-3 xl:gap-4 flex-shrink-0">
+        <div className="hidden min-[1200px]:flex items-center gap-3 min-[1200px]:gap-4 flex-shrink-0">
           {/* Search Bar */}
           <form onSubmit={handleSearch} className="search-bar-container">
             <input
@@ -316,7 +316,7 @@ const Header = ({
 
         {/* Mobile Hamburger Button */}
         <button
-          className="xl:hidden p-2 -mr-2"
+          className="min-[1200px]:hidden p-2 -mr-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -332,7 +332,7 @@ const Header = ({
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="xl:hidden fixed top-16 md:top-18 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto border-t border-gray-100 shadow-xl">
+        <div className="min-[1200px]:hidden fixed top-16 md:top-18 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto border-t border-gray-100 shadow-xl">
           <div className="flex flex-col px-4 py-6 space-y-4">
             {/* Navigation Links */}
             <Link
