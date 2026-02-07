@@ -64,12 +64,12 @@ const Register = () => {
 
   return (
     <div className="min-h-screen flex justify-center bg-white">
-      <section className="w-full max-w-4xl px-4 py-16">
+      <section className="w-full max-w-4xl px-6 md:px-8 py-16">
         <div className="h-6"></div>
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100">
           <div className="h-3"></div>
           <div className="text-center mb-10">
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4">
               Đăng ký tài khoản
             </h1>
             <div className="h-3"></div>
@@ -196,7 +196,7 @@ const Register = () => {
                 <p className="mt-2 text-red-600 text-sm md:text-base text-center">{errors.confirmPassword}</p>
               )}
             </div>
-            <br />
+            <div className="h-6"></div>
             {/* Submit Button */}
             <div className="w-full max-w-[16rem]">
               <button
@@ -207,7 +207,7 @@ const Register = () => {
                 {loading ? 'Đang đăng ký...' : 'Đăng ký'}
               </button>
             </div>
-            <br />
+            <div className="h-6"></div>
             {/* Login Link */}
             <p className="text-center text-base md:text-lg text-gray-700 pt-4 pb-6">
               Đã có tài khoản?{' '}
@@ -215,9 +215,12 @@ const Register = () => {
                 Đăng nhập ngay
               </Link>
             </p>
-            <br />
+            <div className="h-6"></div>
           </form>
         </div>
+
+        {/* Spacing */}
+        <div className="h-12 md:h-16 lg:h-10"></div>
       </section>
     </div>
   )

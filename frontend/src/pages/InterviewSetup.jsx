@@ -138,17 +138,68 @@ const InterviewSetup = () => {
     }
   }
 
+  const [isMobile, setIsMobile] = useState(false)
+
+  React.useEffect(() => {
+    const checkDevice = () => {
+      const userAgent = navigator.userAgent || navigator.vendor || window.opera
+      
+      // Check for mobile/tablet user agents
+      const isMobileDevice = /android|webos|iphone|ipad|ipod|blackberry|iemobile|opera mini/i.test(userAgent)
+      
+      // Check for iPadOS 13+ (which reports as MacIntel but has touch points)
+      const isIPad = navigator.maxTouchPoints > 1 && /MacIntel/.test(navigator.platform)
+      
+      // Check screen width
+      const isSmallScreen = window.innerWidth < 1024
+
+      setIsMobile(isMobileDevice || isIPad || isSmallScreen)
+    }
+    
+    checkDevice()
+    window.addEventListener('resize', checkDevice)
+    return () => window.removeEventListener('resize', checkDevice)
+  }, [])
+
+  if (isMobile) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4 py-10">
+        <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-xl text-center border border-gray-100 flex flex-col items-center">
+          <div className="h-6"></div>
+          <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mb-6">
+            <span className="text-4xl">💻</span>
+          </div>
+          <h2 className="text-2xl font-bold text-brand-navy mb-3 px-4">
+            Trải nghiệm tốt nhất trên máy tính
+          </h2>
+          <div className="h-3"></div>
+          <p className="text-gray-600 mb-8 leading-relaxed px-6">
+            Ứng dụng phỏng vấn của TrueMirror hiện tại chỉ hỗ trợ trên máy tính để đảm bảo chất lượng video và âm thanh tốt nhất.
+          </p>
+          <div className="h-3"></div>
+          <button
+            onClick={() => navigate('/')}
+            className="btn-primary w-full py-3 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all"
+          >
+            Quay về trang chủ
+          </button>
+          <div className="h-6"></div>
+        </div>
+      </div>
+    )
+  }
+
   return (
     <div className="min-h-screen flex justify-center bg-gray-50">
-      <section className="w-full max-w-4xl px-4 py-16">
-        <br />
+      <section className="w-full max-w-4xl px-6 md:px-8 py-16">
+        <div className="h-6"></div>
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100">
           <div className="text-center mb-10">
-            <br />
+            <div className="h-6"></div>
             <h1 className="text-4xl md:text-5xl font-bold text-brand-navy mb-4">
               Thiết lập phỏng vấn
             </h1>
-            <br />
+            <div className="h-3"></div>
             <p className="text-lg md:text-xl text-gray-700">
               Cấu hình phiên phỏng vấn của bạn để bắt đầu luyện tập
             </p>
@@ -208,7 +259,7 @@ const InterviewSetup = () => {
             </div>
           )}
 
-          <br />
+          <div className="h-6"></div>
 
           <form onSubmit={handleSubmit} className="space-y-8 flex flex-col items-center">
 
@@ -334,7 +385,7 @@ const InterviewSetup = () => {
               )}
             </div>
 
-            <br />
+            <div className="h-6"></div>
 
             {/* Submit Button */}
             <div className="w-full max-w-[16rem]">
@@ -346,7 +397,7 @@ const InterviewSetup = () => {
                 {loading ? 'Đang thiết lập...' : 'Bắt đầu phỏng vấn'}
               </button>
             </div>
-            <br />
+            <div className="h-6"></div>
           </form>
         </div>
 

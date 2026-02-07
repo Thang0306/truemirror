@@ -39,7 +39,7 @@ const About = () => {
             <div className="about-hero-content">
               
               {/* Main Title */}
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight text-center">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight text-center">
                 Về TrueMirror
               </h1>
               
@@ -59,7 +59,7 @@ const About = () => {
               
               {/* Quote Box - Centered */}
               <div className="flex justify-center">
-                <div className="about-quote-box bg-brand-blue text-white p-6 md:p-8 rounded-2xl shadow-lg italic text-lg md:text-xl lg:text-2xl font-medium text-center">
+                <div className="about-quote-box bg-brand-blue text-white p-6 md:p-8 rounded-2xl shadow-lg italic text-lg md:text-l lg:text-xl font-medium text-center">
                   "Dù có năng lực và kiến thức chuyên môn vững vàng, nhiều người vẫn <br/> cảm thấy lo lắng và thiếu tự tin khi bước vào các buổi phỏng vấn"
                 </div>
               </div>
@@ -67,7 +67,7 @@ const About = () => {
               <div className="h-3"></div>
               
               {/* Reason Paragraph - Left Aligned with spacing like Home hero-content */}
-              <p className="text-base md:text-lg lg:text-xl text-gray-800 about-reason-text">
+              <p className="text-base md:text-lg lg:text-l text-gray-800 about-reason-text">
                 <strong>NGUYÊN NHÂN</strong> không chỉ nằm ở nội dung câu trả lời, mà còn đến từ những hành vi vô thức như ánh mắt né tránh, khoảng im lặng kéo dài hay biểu cảm căng thẳng,.... Đó là <strong>những yếu tố dễ khiến ứng viên MẤT ĐIỂM</strong> mà chính họ không nhận ra.
               </p>
               
@@ -220,7 +220,7 @@ const About = () => {
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-medium">
                 Hãy để chúng tôi đồng hành cùng bạn trên con đường phát triển sự nghiệp!
               </p>
-              <br />
+              <div className="h-6"></div>
               <div className="flex justify-center gap-6">
                 <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
                   Dùng thử miễn phí 3 phiên

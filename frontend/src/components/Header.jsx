@@ -114,7 +114,7 @@ const Header = ({
           <div className="flex justify-between items-center gap-8">
             {/* Logo - not clickable in interview mode */}
             <div className="flex-shrink-0 flex items-center gap-2 md:gap-3">
-              <div className="w-14 h-14 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
                   src="/logo.svg"
                   alt="TrueMirror Logo"
@@ -122,7 +122,7 @@ const Header = ({
                 />
               </div>
               <span
-                className="text-2xl md:text-3xl font-bold"
+                className="text-3xl md:text-4xl font-bold"
                 style={{
                   background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
                   WebkitBackgroundClip: 'text',
@@ -192,9 +192,9 @@ const Header = ({
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 h-16 md:h-18 lg:h-20 flex items-center">
       <nav className="container mx-auto px-4 max-w-7xl">
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between lg:justify-start items-center gap-5 lg:gap-8">
             <Link to="/" className="flex items-center gap-2 md:gap-3">
-              <div className="w-14 h-14 md:w-18 md:h-18 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+              <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
                   src="/logo.svg"
                   alt="TrueMirror Logo"
@@ -202,7 +202,7 @@ const Header = ({
                 />
               </div>
               <span
-                className="text-2xl md:text-3xl font-bold"
+                className="text-3xl md:text-4xl font-bold whitespace-nowrap"
                 style={{
                   background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
                   WebkitBackgroundClip: 'text',
@@ -219,7 +219,7 @@ const Header = ({
               </span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-5 lg:gap-8">
+            <div className="hidden lg:flex items-center gap-5 lg:gap-8">
                 {/* <Link
                   to="/"
                   className={`text-base font-medium transition ${
@@ -230,7 +230,7 @@ const Header = ({
                 </Link> */}
                 <Link
                   to="/about"
-                  className={`text-lg font-medium transition ${
+                  className={`text-lg font-medium transition whitespace-nowrap ${
                     isActive('/about') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -238,7 +238,7 @@ const Header = ({
                 </Link>
                 <Link
                   to="/services"
-                  className={`text-lg font-medium transition ${
+                  className={`text-lg font-medium transition whitespace-nowrap ${
                     isActive('/services') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -246,7 +246,7 @@ const Header = ({
                 </Link>
                 <Link
                   to="/news"
-                  className={`text-lg font-medium transition ${
+                  className={`text-lg font-medium transition whitespace-nowrap ${
                     isActive('/news') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                   }`}
                 >
@@ -255,7 +255,7 @@ const Header = ({
                 {isAuthenticated && (
                   <Link
                     to="/dashboard"
-                    className={`text-lg font-medium transition ${
+                    className={`text-lg font-medium transition whitespace-nowrap ${
                       isActive('/dashboard') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
                     }`}
                   >
@@ -264,7 +264,7 @@ const Header = ({
                 )}
               </div>
 
-            <div className="hidden md:flex items-center gap-4 lg:gap-6">
+            <div className="hidden lg:flex items-center gap-4 lg:gap-6">
                  {/* Search Bar - Always Visible */}
                  <form onSubmit={handleSearch} className="search-bar-container">
                       <input
@@ -297,7 +297,7 @@ const Header = ({
                   </Link>
                   <Link to="/register">
                     <button className="btn-primary text-base font-medium px-5 h-10 flex items-center justify-center transition-all">
-                      Dùng thử miễn phí
+                      Đăng ký
                     </button>
                   </Link>
                 </>
@@ -305,7 +305,7 @@ const Header = ({
               </div>
 
             <button
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
             >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -319,52 +319,48 @@ const Header = ({
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden mt-4 pb-4 border-t pt-4">
-              <div className="flex flex-col space-y-4">
-                {/* <Link
-                  to="/"
-                  className={`font-medium text-base ${
-                    isActive('/') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
-                  }`}
-                >
-                  Trang chủ
-                </Link> */}
+            <div className="lg:hidden fixed top-16 left-0 right-0 bottom-0 bg-white z-50 overflow-y-auto px-4 pb-8 border-t border-gray-100 shadow-xl">
+              <div className="flex flex-col space-y-4 pt-6">
                 <Link
                   to="/about"
-                  className={`font-medium text-base ${
+                  className={`font-medium text-lg py-3 border-b border-gray-50 text-center ${
                     isActive('/about') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
                   }`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Về TrueMirror
                 </Link>
                 <Link
                   to="/services"
-                  className={`font-medium text-base ${
+                  className={`font-medium text-lg py-3 border-b border-gray-50 text-center ${
                     isActive('/services') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
                   }`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Dịch vụ
                 </Link>
                 <Link
                   to="/news"
-                  className={`font-medium text-base ${
+                  className={`font-medium text-lg py-3 border-b border-gray-50 text-center ${
                     isActive('/news') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
                   }`}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   Tin tức
                 </Link>
                 {isAuthenticated && (
                   <Link
                     to="/dashboard"
-                    className={`font-medium text-base ${
+                    className={`font-medium text-lg py-3 border-b border-gray-50 text-center ${
                       isActive('/dashboard') ? 'text-brand-blue font-bold' : 'text-gray-700 hover:text-brand-blue'
                     }`}
+                    onClick={() => setIsMenuOpen(false)}
                   >
                     Phỏng vấn
                   </Link>
                 )}
                 
-                <div className="pt-2 border-t">
+                <div className="pt-2">
                   <form onSubmit={handleSearch} className="search-bar-container w-full">
                     <input
                       type="text"
@@ -381,20 +377,22 @@ const Header = ({
                   </form>
                 </div>
                 
+                <div className="pt-4 flex flex-col gap-3 items-center">
                 {isAuthenticated ? (
-                    <button onClick={handleLogout} className="btn-secondary w-full text-base">
+                    <button onClick={handleLogout} className="btn-secondary w-full max-w-[320px] text-base py-3 rounded-lg">
                       Đăng xuất
                     </button>
                 ) : (
                   <>
-                    <Link to="/login">
-                      <button className="btn-secondary w-full text-base">Đăng nhập</button>
+                    <Link to="/login" onClick={() => setIsMenuOpen(false)} className="w-full flex justify-center">
+                      <button className="btn-secondary w-full max-w-[320px] text-base py-3 rounded-lg">Đăng nhập</button>
                     </Link>
-                    <Link to="/register">
-                      <button className="btn-primary w-full text-base">Dùng thử miễn phí</button>
+                    <Link to="/register" onClick={() => setIsMenuOpen(false)} className="w-full flex justify-center">
+                      <button className="btn-primary w-full max-w-[320px] text-base py-3 rounded-lg shadow-md">Đăng ký</button>
                     </Link>
                   </>
                 )}
+                </div>
               </div>
             </div>
           )}

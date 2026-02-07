@@ -60,7 +60,10 @@
 
 @media (max-width: 768px) {
   .search-bar-container {
-    max-width: 100%; /* Full width in mobile menu */
+    max-width: 320px; /* Constrained width */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     margin-bottom: 0.5rem;
   }
 }

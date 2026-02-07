@@ -25,9 +25,10 @@
   gap: 16px;
   padding: 16px 28px 16px 24px;
   width: 95%;
-  max-width: 1000px;
+  max-width: 900px;
   min-width: 300px;
-  margin-bottom: 30px;
+  min-width: 300px;
+  /* margin-bottom removed to center vertically */
   box-sizing: border-box;
   border: 2px solid #e5e7eb;
 }
@@ -40,10 +41,11 @@
   color: #0F2854;
   border-radius: 14px;
   font-size: 1.1rem;
-  padding: 18px 28px;
+  padding: 14px 20px; /* Reduced vertical padding to prevent scrollbar */
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   font-family: inherit;
+  overflow: hidden; /* Hide scrollbar initially */
 }
 
 .input-bar-form input[type="text"]::placeholder,

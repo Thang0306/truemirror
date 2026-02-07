@@ -99,9 +99,9 @@ const Services = () => {
               backgroundAttachment: 'fixed'
             }}
           >
-            <br />
+            <div className="h-6"></div>
             <div className="flex flex-col items-center justify-center space-y-8">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight">
                 Dịch vụ phỏng vấn
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
@@ -115,7 +115,7 @@ const Services = () => {
                 </p>
               </div>
             </div>
-            <br />
+            <div className="h-6"></div>
 
           </div>
         </div>
@@ -138,12 +138,12 @@ const Services = () => {
               minHeight: '400px'
             }}
           >
-            <div className="grid grid-cols-10 h-full">
-              {/* Text area - 60% */}
-              <div className="col-span-6 package-text-content">
+            <div className="grid grid-cols-1 md:grid-cols-10 h-full">
+              {/* Text area - 100% on mobile, 60% on desktop */}
+              <div className="col-span-1 md:col-span-6 package-text-content">
                 <div className="flex items-center gap-4">
-                  <span className="text-5xl md:text-6xl">▶▶▶</span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                  <span className="text-4xl md:text-5xl">▶▶▶</span>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
                     DÙNG THỬ MIỄN PHÍ
                   </h2>
                 </div>
@@ -171,8 +171,8 @@ const Services = () => {
                   ▶▶ TRẢI NGHIỆM NGAY!
                 </button>
               </div>
-              {/* Empty space - 40% for background visibility */}
-              <div className="col-span-4"></div>
+              {/* Empty space - 40% for background visibility - hidden on mobile */}
+              <div className="hidden md:block col-span-4"></div>
             </div>
           </div>
           
@@ -188,14 +188,14 @@ const Services = () => {
               minHeight: '400px'
             }}
           >
-            <div className="grid grid-cols-10 h-full">
-              {/* Empty space - 40% for background visibility */}
-              <div className="col-span-4"></div>
-              {/* Text area - 60% */}
-              <div className="col-span-6 package-text-content">
+            <div className="grid grid-cols-1 md:grid-cols-10 h-full">
+              {/* Empty space - 40% for background visibility - hidden on mobile */}
+              <div className="hidden md:block col-span-4"></div>
+              {/* Text area - 100% on mobile, 60% on desktop */}
+              <div className="col-span-1 md:col-span-6 package-text-content">
                 <div className="flex items-center gap-4">
-                  <span className="text-5xl md:text-6xl text-brand-blue">▶▶▶</span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue">
+                  <span className="text-4xl md:text-5xl text-brand-blue">▶▶▶</span>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue">
                     GÓI CƠ BẢN
                   </h2>
                 </div>
@@ -238,12 +238,12 @@ const Services = () => {
               minHeight: '400px'
             }}
           >
-            <div className="grid grid-cols-10 h-full">
-              {/* Text area - 60% */}
-              <div className="col-span-6 package-text-content">
+            <div className="grid grid-cols-1 md:grid-cols-10 h-full">
+              {/* Text area - 100% on mobile, 60% on desktop */}
+              <div className="col-span-1 md:col-span-6 package-text-content">
                 <div className="flex items-center gap-4">
-                  <span className="text-5xl md:text-6xl">▶▶▶</span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                  <span className="text-4xl md:text-5xl">▶▶▶</span>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white">
                     GÓI PREMIUM
                   </h2>
                 </div>
@@ -271,8 +271,8 @@ const Services = () => {
                   ▶▶ TRẢI NGHIỆM NGAY!
                 </button>
               </div>
-              {/* Empty space - 40% for background visibility */}
-              <div className="col-span-4"></div>
+              {/* Empty space - 40% for background visibility - hidden on mobile */}
+              <div className="hidden md:block col-span-4"></div>
             </div>
           </div>
           
@@ -288,14 +288,14 @@ const Services = () => {
               minHeight: '400px'
             }}
           >
-            <div className="grid grid-cols-10 h-full">
-              {/* Empty space - 40% for background visibility */}
-              <div className="col-span-4"></div>
-              {/* Text area - 60% */}
-              <div className="col-span-6 package-text-content">
+            <div className="grid grid-cols-1 md:grid-cols-10 h-full">
+              {/* Empty space - 40% for background visibility - hidden on mobile */}
+              <div className="hidden md:block col-span-4"></div>
+              {/* Text area - 100% on mobile, 60% on desktop */}
+              <div className="col-span-1 md:col-span-6 package-text-content">
                 <div className="flex items-center gap-4">
-                  <span className="text-5xl md:text-6xl text-brand-blue">▶▶▶</span>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-blue">
+                  <span className="text-4xl md:text-5xl text-brand-blue">▶▶▶</span>
+                  <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue">
                     GÓI DOANH NGHIỆP
                   </h2>
                 </div>
@@ -541,7 +541,7 @@ const Services = () => {
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-medium">
                 Hãy bắt đầu với gói Free Trial để trải nghiệm TrueMirror hoàn toàn miễn phí!
               </p>
-              <br />
+              <div className="h-6"></div>
               <div className="flex justify-center gap-6">
                 <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
                   Dùng thử 3 phiên miễn phí

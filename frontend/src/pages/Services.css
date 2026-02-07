@@ -82,6 +82,7 @@
 .comparison-table {
   table-layout: fixed;
   width: 100%;
+  min-width: 800px; /* Ensure table doesn't shrink too much */
 }
 
 .comparison-table th,

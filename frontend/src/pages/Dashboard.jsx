@@ -8,25 +8,25 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-50 flex justify-center">
-      <section className="w-full max-w-4xl px-4 md:px-8 py-12 md:py-16">
-        <br />
+      <section className="w-full max-w-4xl px-6 md:px-8 py-12 md:py-16">
+        <div className="h-6"></div>
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-12 shadow-xl border border-gray-200">
           <div className="flex flex-col items-center space-y-6">
-            <br />
+            <div className="h-6"></div>
             <div className="w-12 h-12 md:w-16 md:h-16 bg-brand-blue rounded-full flex items-center justify-center">
               <span className="text-2xl md:text-3xl">👋</span>
             </div>
-            <br />
+            <div className="h-6"></div>
             
             <h1 className="text-2xl md:text-4xl font-semibold text-brand-navy">
               Xin chào, {user?.full_name}!
             </h1>
-            <br />
+            <div className="h-6"></div>
             
             <p className="text-base md:text-lg text-gray-700 text-center max-w-2xl">
               Chào mừng bạn đến với bảng điều khiển TrueMirror.
             </p>
-            <br />
+            <div className="h-6"></div>
             
             <div className="mt-8"></div>
             
@@ -47,7 +47,7 @@ const Dashboard = () => {
               </div>
             </div>
             
-            <br />
+            <div className="h-6"></div>
             
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <button 
@@ -63,7 +63,7 @@ const Dashboard = () => {
                 Xem lịch sử
               </button>
             </div>
-            <br />
+            <div className="h-6"></div>
           </div>
         </div>
       </section>

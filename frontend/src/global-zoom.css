@@ -1,0 +1,35 @@
+/* 
+    Global Zoom Scaling
+    Forces the entire application to look like it's at 90% browser zoom level.
+    This improves information density and aesthetics as per design requirements.
+*/
+
+/* 
+   Using CSS 'zoom' property which is supported by Chrome, Edge, Safari (Webkit/Blink engines).
+   This property correctly handles layout scaling including scrollable areas and fixed elements.
+*/
+html {
+    zoom: 0.90; 
+}
+
+/* 
+   Firefox specific adjustment (Gecko engine):
+   Firefox does NOT support the 'zoom' property.
+   We use CSS transform to simulate the zoom effect.
+   
+   WARNING: This may affect sticky/fixed headers or scroll behavior.
+   Scale 0.90 requires width/height of 111.111% (100/0.9) to fill the viewport.
+*/
+@-moz-document url-prefix() {
+    html {
+        transform: scale(0.95);
+        transform-origin: 0 0;
+        width: 105.26316%;
+        height: 105.26316%;
+    }
+    
+    body {
+        /* Ensure body takes full height of scaled html */
+        height: 100%;
+    }
+}

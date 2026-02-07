@@ -42,6 +42,13 @@ html {
   margin-right: auto;
 }
 
+@media (max-width: 640px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;

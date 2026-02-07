@@ -72,7 +72,7 @@ const Home = () => {
                   }}>R</span>
                 </h1>
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
-                  Giải pháp luyện phỏng vấn đột phá kết hợp AI & Virtual Human
+                  Giải pháp luyện phỏng vấn đột phá <br/> kết hợp AI & Virtual Human
                 </h2>
                 <p className="text-base md:text-lg text-gray-700 leading-relaxed">
                   True Mirror kết hợp AI và Virtual Human để mô phỏng phỏng vấn thực tế, giúp người dùng cải thiện khả năng thể hiện và sự tự tin trước nhà tuyển dụng.
@@ -379,7 +379,7 @@ const Home = () => {
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-medium" >
                 Hàng ngàn ứng viên đã tự tin hơn với TrueMirror!
               </p>
-              <br />
+              <div className="h-6"></div>
               {/* Buttons */}
               <div className="flex justify-center gap-6">
                 <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>

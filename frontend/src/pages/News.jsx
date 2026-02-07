@@ -114,8 +114,8 @@ const News = () => {
           >
             
             <div className="flex flex-col items-center justify-center space-y-8">
-              <br />
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-navy leading-tight">
+              <div className="h-6"></div>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight">
                 Tin tức & Thành tựu
               </h1>
               <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
@@ -128,7 +128,7 @@ const News = () => {
                   từ cộng đồng người dùng TrueMirror.
                 </p>
               </div>
-              <br />
+              <div className="h-6"></div>
             </div>
 
           </div>
@@ -248,7 +248,7 @@ const News = () => {
               <p className="text-lg md:text-xl lg:text-2xl text-gray-700 font-medium">
                 Hãy bắt đầu luyện tập với TrueMirror ngay hôm nay!
               </p>
-              <br />
+              <div className="h-6"></div>
               <div className="flex justify-center gap-6">
                 <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
                   Dùng thử 3 phiên miễn phí

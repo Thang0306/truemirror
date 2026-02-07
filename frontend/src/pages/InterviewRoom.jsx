@@ -380,8 +380,8 @@ const InterviewRoom = () => {
           style={{
             top: 'calc(5rem + 1rem)',  // Below header (h-20) + 1rem gap
             right: '1rem',
-            width: '280px',
-            height: '157.5px',  // 16:9 aspect ratio
+            width: '240px',
+            height: '135px',  // 16:9 aspect ratio
           }}
         >
           <video
@@ -412,7 +412,7 @@ const InterviewRoom = () => {
 
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto">
-        <div className="container mx-auto px-4 py-6" style={{maxWidth: '1000px'}}>
+        <div className="container mx-auto px-4 py-6" style={{maxWidth: '900px'}}>
           {error && (
             <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg mb-4 text-center">
               {error}
@@ -443,7 +443,7 @@ const InterviewRoom = () => {
             rows={1}
             style={{
               resize: 'none',
-              overflow: 'auto',
+              overflow: 'hidden', // Hide scrollbar initially, let auto-resize handle height
               minHeight: '54px',
               maxHeight: 'calc(54px + 1.6em * 3)'
             }}

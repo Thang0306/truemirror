@@ -46,7 +46,7 @@
 /* Left-aligned paragraph for "NGUYÊN NHÂN" section - similar to hero-content */
 .about-reason-text {
   width: 100%;
-  max-width: 1200px;
+  max-width: 900px;
   text-align: left;
   margin-left: 0;
   margin-right: auto;
@@ -67,15 +67,25 @@
 
 @media (max-width: 1024px) {
   .about-reason-text {
-    text-align: center;
-    margin-left: auto;
-    padding-left: 0;
+    text-align: left;
+    margin-left: 0;
+    padding-left: 2rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Ensure reason text is visible on mobile */
+@media (max-width: 768px) {
+  .about-reason-text {
+    display: block;
+    padding-left: 1.5rem;
+    padding-right: 1rem;
   }
 }
 
 /* Quote box styling - wider responsive widths */
 .about-quote-box {
-  width: 45%;
+  width: 90%;
   max-width: none;
 }
 
