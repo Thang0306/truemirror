@@ -469,7 +469,7 @@ const InterviewSetup = () => {
             <div className="h-6"></div>
 
             <p className="text-xs md:text-sm text-gray-500 italic">
-              Quá trình này có thể mất 10-30 giây
+              Quá trình này có thể mất tối đa 1 phút
             </p>
 
             <div className="h-6"></div>

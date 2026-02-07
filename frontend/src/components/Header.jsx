@@ -122,7 +122,7 @@ const Header = ({
                 />
               </div>
               <span
-                className="text-3xl md:text-4xl font-bold"
+                className="text-3xl md:text-4xl font-bold whitespace-nowrap"
                 style={{
                   background: 'linear-gradient(90deg, #0F2854 0%, #0F2854 15%, #1C4D8D 40%, #4988C4 70%, #7BA8D4 100%)',
                   WebkitBackgroundClip: 'text',
@@ -130,12 +130,7 @@ const Header = ({
                   backgroundClip: 'text'
                 }}
               >
-                TRUEMIRRO<span className="inline-block scale-x-[-1]" style={{ 
-                  color: '#7BA8D4',
-                  WebkitTextFillColor: '#7BA8D4',
-                  WebkitBackgroundClip: 'unset',
-                  backgroundClip: 'unset'
-                }}>R</span>
+                TRUEMIRROR
               </span>
             </div>
 
@@ -191,8 +186,8 @@ const Header = ({
   // Normal header layout (for all other pages including setup)
   return (
     <header className="bg-white shadow-md sticky top-0 z-50 h-16 md:h-18 lg:h-20 flex items-center">
-      <nav className="container mx-auto px-4 max-w-7xl">
-          <div className="flex justify-between lg:justify-start items-center gap-5 lg:gap-8">
+      <nav className="container mx-auto px-6 lg:px-8 max-w-7xl">
+          <div className="flex justify-between lg:justify-start items-center gap-5 lg:gap-4 xl:gap-8">
             <Link to="/" className="flex items-center gap-2 md:gap-3">
               <div className="w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                 <img
@@ -210,12 +205,7 @@ const Header = ({
                   backgroundClip: 'text'
                 }}
               >
-                TRUEMIRRO<span className="inline-block scale-x-[-1]" style={{ 
-                  color: '#7BA8D4',
-                  WebkitTextFillColor: '#7BA8D4',
-                  WebkitBackgroundClip: 'unset',
-                  backgroundClip: 'unset'
-                }}>R</span>
+                TRUEMIRROR
               </span>
             </Link>
 

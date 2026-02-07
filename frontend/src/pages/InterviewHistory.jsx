@@ -102,10 +102,16 @@ const InterviewHistory = () => {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-blue mx-auto mb-4"></div>
-          <p className="text-gray-600">Đang tải lịch sử...</p>
+      <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+        <div className="flex flex-col items-center">
+          <div className="relative w-20 h-20 md:w-24 md:h-24 mb-4">
+            <div className="absolute inset-0 border-4 border-gray-200 rounded-full"></div>
+            <div className="absolute inset-0 border-4 border-brand-blue rounded-full border-t-transparent animate-spin"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-2xl md:text-3xl">🤖</span>
+            </div>
+          </div>
+          <p className="text-gray-600 font-medium text-lg">Đang tải lịch sử...</p>
         </div>
       </div>
     )

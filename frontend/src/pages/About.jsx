@@ -67,7 +67,7 @@ const About = () => {
               <div className="h-3"></div>
               
               {/* Reason Paragraph - Left Aligned with spacing like Home hero-content */}
-              <p className="text-base md:text-lg lg:text-l text-gray-800 about-reason-text">
+              <p className="text-sm md:text-base lg:text-lg text-gray-800 about-reason-text">
                 <strong>NGUYÊN NHÂN</strong> không chỉ nằm ở nội dung câu trả lời, mà còn đến từ những hành vi vô thức như ánh mắt né tránh, khoảng im lặng kéo dài hay biểu cảm căng thẳng,.... Đó là <strong>những yếu tố dễ khiến ứng viên MẤT ĐIỂM</strong> mà chính họ không nhận ra.
               </p>
               

@@ -64,12 +64,7 @@ const Home = () => {
                     backgroundClip: 'text'
                   }}
                 >
-                  TRUEMIRRO<span className="inline-block scale-x-[-1]" style={{ 
-                    color: '#5A8BC8',
-                    WebkitTextFillColor: '#5A8BC8',
-                    WebkitBackgroundClip: 'unset',
-                    backgroundClip: 'unset'
-                  }}>R</span>
+                  TRUEMIRROR
                 </h1>
                 <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-brand-blue">
                   Giải pháp luyện phỏng vấn đột phá <br/> kết hợp AI & Virtual Human
