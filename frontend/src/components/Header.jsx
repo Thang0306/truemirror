@@ -428,8 +428,8 @@ const Header = ({
                   </Link>
                 )}
                 
-                <div className="pt-2">
-                  <form onSubmit={handleSearch} className="search-bar-container w-full">
+                <div className="pt-2 flex justify-center">
+                  <form onSubmit={handleSearch} className="search-bar-container w-full max-w-[320px]">
                     <input
                       type="text"
                       className="search-input"
