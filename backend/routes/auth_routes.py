@@ -150,3 +150,71 @@ def get_current_user():
     except Exception as e:
         print(f"[ERROR] Get current user failed: {str(e)}")
         return jsonify({'error': 'Đã xảy ra lỗi'}), 500
+
+import requests
+
+@auth_bp.route('/google', methods=['POST'])
+def google_login():
+    """
+    Handle Google Login with Access Token
+    """
+    print("[START] Google Login request received")
+    
+    try:
+        data = request.get_json()
+        token = data.get('token')
+        
+        if not token:
+            return jsonify({'error': 'Token không hợp lệ'}), 400
+            
+        # Verify token with Google
+        google_response = requests.get(
+            'https://www.googleapis.com/oauth2/v3/userinfo',
+            headers={'Authorization': f'Bearer {token}'}
+        )
+        
+        if google_response.status_code != 200:
+            print(f"[ERROR] Google token validation failed: {google_response.text}")
+            return jsonify({'error': 'Xác thực Google thất bại'}), 401
+            
+        google_data = google_response.json()
+        email = google_data.get('email')
+        name = google_data.get('name')
+        picture = google_data.get('picture')
+        
+        if not email:
+            return jsonify({'error': 'Không thể lấy email từ Google'}), 400
+            
+        # Check if user exists
+        user = User.query.filter_by(email=email).first()
+        
+        if not user:
+            # Create new user
+            print(f"[INFO] Creating new user from Google: {email}")
+            user = User(
+                email=email,
+                full_name=name or email.split('@')[0],
+                # You might want to store google_id or picture here if model supports it
+            )
+            # Set a random password or mark as google-auth user
+            # For simplicity, we just set a random password
+            import secrets
+            user.set_password(secrets.token_hex(16))
+            
+            db.session.add(user)
+            db.session.commit()
+        else:
+            print(f"[INFO] Existing user logged in via Google: {email}")
+            
+        # Create JWT
+        access_token = create_access_token(identity=str(user.id))
+        
+        return jsonify({
+            'message': 'Đăng nhập Google thành công',
+            'user': user.to_dict(),
+            'access_token': access_token
+        }), 200
+        
+    except Exception as e:
+        print(f"[ERROR] Google login failed: {str(e)}")
+        return jsonify({'error': 'Đã xảy ra lỗi khi đăng nhập với Google'}), 500

@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import api from '../utils/api'
+import { useGoogleLogin } from '@react-oauth/google'
+
+import './Login.css'
 
 const Login = () => {
   const navigate = useNavigate()
@@ -77,6 +80,32 @@ const Login = () => {
     }
   }
 
+  const googleLogin = useGoogleLogin({
+    onSuccess: async (tokenResponse) => {
+      try {
+        setLoading(true);
+        const res = await api.post('/api/auth/google', {
+          token: tokenResponse.access_token,
+        });
+        
+        // Login user with returned token
+        login(res.data.user, res.data.access_token)
+        
+        // Navigate to dashboard
+        navigate('/')
+      } catch (err) {
+        console.error('Google Login Error:', err);
+        setServerError(err.response?.data?.error || 'Đăng nhập Google thất bại');
+      } finally {
+        setLoading(false);
+      }
+    },
+    onError: (error) => {
+      console.error('Google Login Failed:', error);
+      setServerError('Đăng nhập Google thất bại');
+    }
+  });
+
 return (
     <div className="min-h-screen flex justify-center bg-white">
       <section className="w-full max-w-4xl px-6 md:px-8 py-16">
@@ -84,11 +113,11 @@ return (
         <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 rounded-3xl p-8 md:p-16 shadow-xl border border-gray-100">
           <div className="h-3"></div>
           <div className="text-center mb-10">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy mb-4">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-navy mb-4">
               Đăng nhập
             </h1>
             <div className="h-3"></div>
-            <p className="text-lg md:text-xl text-gray-700">
+            <p className="text-base md:text-lg text-gray-700">
               Chào mừng trở lại với TrueMirror
             </p>
           </div>
@@ -160,16 +189,40 @@ return (
             <div className="h-6"></div>
 
             {/* Submit Button */}
-            <div className="w-full max-w-[16rem]">
+            <div className="w-full max-w-[20rem]">
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full btn-primary text-lg md:text-xl px-8 py-5 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition"
+                className="w-full h-12 btn-primary text-base md:text-lg px-8 disabled:opacity-50 disabled:cursor-not-allowed rounded-xl bg-blue-600 text-white font-bold hover:bg-blue-700 transition flex items-center justify-center"
               >
                 {loading ? 'Đang đăng nhập...' : 'Đăng nhập'}
               </button>
             </div>
 
+            <div className="h-3"></div>
+            
+            <div className="relative flex justify-center items-center w-full max-w-[20rem]">
+              <div className="flex-grow border-t border-gray-300"></div>
+              <span className="flex-shrink-0 login-divider-text text-gray-500 text-sm">Hoặc tiếp tục với</span>
+              <div className="flex-grow border-t border-gray-300"></div>
+            </div>
+
+            <div className="h-3"></div>
+
+            <div className="w-full max-w-[20rem]">
+              <button
+                type="button"
+                onClick={() => googleLogin()}
+                className="w-full h-12 flex items-center justify-center gap-3 bg-white border border-gray-300 rounded-xl px-6 text-gray-700 font-bold hover:bg-gray-50 transition-all shadow-sm"
+              >
+                <img 
+                  src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" 
+                  alt="Google" 
+                  className="w-6 h-6 md:w-7 md:h-7"
+                />
+                <span className="text-base md:text-lg">Đăng nhập với Google</span>
+              </button>
+            </div>
             <div className="h-6"></div>
             {/* Register Link */}
             <p className="text-center text-base md:text-lg text-gray-700 pt-4">

@@ -1,0 +1,21 @@
+/* Login Page Styles */
+
+/* Divider spacing logic inspired by About page */
+.login-divider-text {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+@media (min-width: 768px) {
+  .login-divider-text {
+    margin-left: 0.6rem;
+    margin-right: 0.6rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .login-divider-text {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+  }
+}
