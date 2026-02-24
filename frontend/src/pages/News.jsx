@@ -564,7 +564,8 @@ const News = () => {
                 <div className="bg-white rounded-lg w-full">
                   {/* Using TinyMCE instead of Quill */}
                   <Editor
-                    apiKey={import.meta.env.VITE_TINYMCE_API_KEY || 'x9232hmno22ipyya9bp11zh6fp3jw9dybasrvj2tmkotqcfy'}
+                    tinymceScriptSrc="/tinymce/tinymce.min.js"
+                    licenseKey="gpl"
                     value={newNewsForm.content}
                     onEditorChange={(content, editor) => {
                       setNewNewsForm({...newNewsForm, content})
@@ -577,19 +578,26 @@ const News = () => {
                       ],
                       toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
                       toolbar_mode: 'wrap',
-                      tinycomments_mode: 'embedded',
-                      tinycomments_author: 'Admin',
-                      mergetags_list: [
-                        { value: 'First.Name', title: 'First Name' },
-                        { value: 'Email', title: 'Email' },
-                      ],
-                      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
-                      uploadcare_public_key: '225c1060b3f987175a6d',
+                      // Allow uploading images from computer directly into editor content
+                      automatic_uploads: true,
+                      file_picker_types: 'image',
+                      images_upload_handler: async (blobInfo, progress) => {
+                        const formData = new FormData()
+                        formData.append('file', blobInfo.blob(), blobInfo.filename())
+                        const response = await api.post('/api/upload/', formData, {
+                          headers: { 'Content-Type': 'multipart/form-data' },
+                          onUploadProgress: (e) => {
+                            if (e.total) progress(Math.round((e.loaded / e.total) * 100))
+                          }
+                        })
+                        if (!response.data.success) throw new Error(response.data.error || 'Upload failed')
+                        return response.data.url
+                      },
                       image_title: true,
                       image_caption: true,
                       image_class_list: [
-                        { title: 'Responsive', value: 'img-responsive' },
-                        { title: 'Center', value: 'img-center' },
+                        { title: 'Canh giữa', value: 'img-center' },
+                        { title: 'Toàn chiều rộng', value: 'img-responsive' },
                       ],
                       content_style: `
                         body { font-family:Inter,Helvetica,Arial,sans-serif; font-size:16px; min-height: 400px; padding-bottom: 50px; }

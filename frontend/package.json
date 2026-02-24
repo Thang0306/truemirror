@@ -22,7 +22,8 @@
     "react-markdown": "^9.0.1",
     "react-router-dom": "^7.12.0",
     "remark-gfm": "^4.0.0",
-    "socket.io-client": "^4.8.1"
+    "socket.io-client": "^4.8.1",
+    "tinymce": "^8.3.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",
@@ -36,6 +37,7 @@
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
     "tailwindcss": "^4.1.18",
-    "vite": "^7.2.4"
+    "vite": "^7.2.4",
+    "vite-plugin-static-copy": "^3.2.0"
   }
 }
