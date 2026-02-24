@@ -8,11 +8,13 @@ from .question import (
     InterviewQuestion, QuestionGuideline, SampleAnswer, PopupQuestion
 )
 from .news_comment import NewsComment
+from .post import Post
+from .post_comment import PostComment
 
 __all__ = [
     'db', 'bcrypt', 'User', 'InterviewSession', 'Conversation', 'UserAssessment',
     'Industry', 'JobLevel', 'Position',
     'QuestionType', 'PressureLevel', 'QuestionSection',
     'InterviewQuestion', 'QuestionGuideline', 'SampleAnswer', 'PopupQuestion',
-    'NewsComment'
+    'NewsComment', 'Post', 'PostComment'
 ]

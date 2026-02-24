@@ -141,6 +141,39 @@ def migrate_user_assessments():
         }), 500
 
 
+@admin_bp.route('/migrate-posts', methods=['POST', 'OPTIONS'])
+@cross_origin()
+def migrate_posts():
+    """
+    Run migration for posts feature
+    Creates: posts, posts_comments tables
+    Usage: POST to /api/admin/migrate-posts
+    """
+    try:
+        print("[START] Running posts migration via API endpoint")
+
+        # Import migration function
+        from add_posts import run_migration
+
+        # Run migration
+        run_migration()
+
+        print("[SUCCESS] Posts migration completed")
+        return jsonify({
+            'success': True,
+            'message': 'Posts migration completed successfully'
+        }), 200
+
+    except Exception as e:
+        print(f"[ERROR] Migration failed: {str(e)}")
+        import traceback
+        traceback.print_exc()
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 @admin_bp.route('/migrate-all', methods=['POST', 'OPTIONS'])
 @cross_origin()
 def migrate_all():
@@ -149,6 +182,7 @@ def migrate_all():
     1. Personalized interview mode
     2. News comments
     3. User assessments
+    4. Posts
     Usage: POST to /api/admin/migrate-all
     """
     try:
@@ -178,6 +212,14 @@ def migrate_all():
             results.append('✓ User assessments migration completed')
         except Exception as e:
             results.append(f'✗ User assessments migration failed: {str(e)}')
+
+        # Migration 4: Posts
+        try:
+            from add_posts import run_migration as migrate_posts_func
+            migrate_posts_func()
+            results.append('✓ Posts migration completed')
+        except Exception as e:
+            results.append(f'✗ Posts migration failed: {str(e)}')
 
         print("[SUCCESS] All migrations completed")
         return jsonify({

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useLayoutEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import { newsData } from '../data/newsData'
 import api from '../utils/api'
@@ -18,8 +18,15 @@ dayjs.locale('vi')
 const NewsDetail = () => {
   const { id } = useParams()
   const navigate = useNavigate()
+  const location = useLocation()
   const { user } = useAuth()
-  const article = newsData[id]
+  
+  // If URL starts with /post/, this is a database post — skip newsData lookup entirely
+  const isPostRoute = location.pathname.startsWith('/post/')
+  
+  const [article, setArticle] = useState(null)
+  const [isPost, setIsPost] = useState(false)
+  const [isFetchingArticle, setIsFetchingArticle] = useState(true)
 
   const [comments, setComments] = useState([])
   const [newComment, setNewComment] = useState('')
@@ -46,14 +53,62 @@ const NewsDetail = () => {
   }
 
   useEffect(() => {
+    const fetchArticle = async () => {
+      setIsFetchingArticle(true)
+      
+      // 1 & 2: Only check local data if we're on /news/:id route
+      if (!isPostRoute) {
+        // 1. Try local newsData (default news)
+        let localArticle = newsData[id]
+
+        // 2. Try customNews (admin created news)
+        if (!localArticle) {
+          const customNews = JSON.parse(localStorage.getItem('customNews') || '[]')
+          localArticle = customNews.find(item => item.id.toString() === id.toString())
+        }
+
+        if (localArticle) {
+          setArticle(localArticle)
+          setIsPost(false)
+          setIsFetchingArticle(false)
+          return
+        }
+      }
+      
+      // 3. If not found locally, fetch from /api/posts
+      try {
+        const response = await api.get(`/api/posts/${id}`)
+        if (response.data.success) {
+          const postData = response.data.post
+          setArticle({
+            ...postData,
+            image: postData.image_url,
+            date: postData.date_display,
+            isHtml: true // posts are always HTML
+          })
+          setIsPost(true)
+        }
+      } catch (err) {
+        console.error('Failed to fetch post:', err)
+      } finally {
+        setIsFetchingArticle(false)
+      }
+    }
+    
+    fetchArticle()
+  }, [id])
+
+  useEffect(() => {
     if (article) {
       loadComments()
     }
-  }, [id])
+  }, [article]) // Changed dependency from id to article
 
   const loadComments = async () => {
+    if (!article) return
     try {
-      const response = await api.get(`/api/news/${id}/comments`)
+      const endpoint = isPost ? `/api/posts/${id}/comments` : `/api/news/${id}/comments`
+      const response = await api.get(endpoint)
       setComments(response.data.comments || [])
     } catch (err) {
       console.error('Load comments error:', err)
@@ -68,7 +123,8 @@ const NewsDetail = () => {
     setError('')
 
     try {
-      await api.post(`/api/news/${id}/comments`, {
+      const endpoint = isPost ? `/api/posts/${id}/comments` : `/api/news/${id}/comments`
+      await api.post(endpoint, {
         content: newComment
       })
       setNewComment('')
@@ -90,11 +146,29 @@ const NewsDetail = () => {
     if (!confirm('Bạn có chắc muốn xóa bình luận này?')) return
 
     try {
-      await api.delete(`/api/news/${id}/comments/${commentId}`)
+      const endpoint = isPost ? `/api/posts/${id}/comments/${commentId}` : `/api/news/${id}/comments/${commentId}`
+      await api.delete(endpoint)
       loadComments()
     } catch (err) {
       setError('Không thể xóa bình luận. Vui lòng thử lại.')
     }
+  }
+
+  if (isFetchingArticle) {
+    return (
+      <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+        <div className="flex flex-col items-center">
+          <div className="relative w-20 h-20 md:w-24 md:h-24 mb-4">
+            <div className="absolute inset-0 border-4 border-gray-200 rounded-full"></div>
+            <div className="absolute inset-0 border-4 border-brand-blue rounded-full border-t-transparent animate-spin"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <span className="text-2xl md:text-3xl">📰</span>
+            </div>
+          </div>
+          <p className="text-gray-600 font-medium text-lg">Đang tải bài viết...</p>
+        </div>
+      </div>
+    )
   }
 
   if (!article) {
@@ -106,7 +180,7 @@ const NewsDetail = () => {
             onClick={() => navigate('/news')}
             className="btn-primary text-base px-6 py-3"
           >
-            Quay lại trang tin tức
+            Quay lại trang thông tin
           </button>
         </div>
       </div>
@@ -125,7 +199,7 @@ const NewsDetail = () => {
             onClick={() => navigate('/news')}
             className="text-brand-blue hover:text-brand-navy font-medium mb-8 flex items-center gap-2 transition text-xl md:text-2xl"
           >
-            ← Quay lại trang tin tức
+            ← Quay lại trang thông tin
           </button>
 
           <div className="h-3"></div>
@@ -135,7 +209,7 @@ const NewsDetail = () => {
             <div className="h-3"></div>
 
             {/* Title */}
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-brand-navy leading-tight text-center news-detail-content-padding">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-brand-navy leading-tight text-center news-detail-content-padding">
               {article.title}
             </h1>
 
@@ -161,14 +235,21 @@ const NewsDetail = () => {
 
             {/* Content */}
             <div className="news-detail-content-padding">
-              {article.content.split('\n\n').map((paragraph, index) => (
-                <div key={index}>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
-                    {paragraph}
-                  </p>
-                  <div className="h-6"></div>
-                </div>
-              ))}
+              {article.isHtml ? (
+                <div 
+                  className="prose max-w-none prose-blue w-full prose-img:mx-auto"
+                  dangerouslySetInnerHTML={{ __html: article.content }} 
+                />
+              ) : (
+                article.content.split('\n\n').map((paragraph, index) => (
+                  <div key={index}>
+                    <p className="text-base md:text-lg text-gray-700 leading-relaxed text-left">
+                      {paragraph}
+                    </p>
+                    <div className="h-6"></div>
+                  </div>
+                ))
+              )}
             </div>
 
             <div className="h-3"></div>
@@ -196,7 +277,13 @@ const NewsDetail = () => {
                         ref={textareaRef}
                         value={newComment}
                         onChange={handleTextareaChange}
-                        placeholder="Viết bình luận của bạn..."
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault()
+                            if (newComment.trim() && !loading) handleSubmitComment(e)
+                          }
+                        }}
+                        placeholder="Viết bình luận..."
                         disabled={loading}
                         rows={1}
                         style={{
@@ -305,7 +392,7 @@ const NewsDetail = () => {
                 onClick={() => navigate('/news')}
                 className="btn-primary text-base md:text-lg px-8 py-3"
               >
-                ← Quay lại trang tin tức
+                ← Quay lại trang thông tin
               </button>
               <div className="h-6"></div>
             </div>

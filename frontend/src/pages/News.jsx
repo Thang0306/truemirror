@@ -1,11 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import ImageUploader from '../components/ImageUploader'
+import { Editor } from '@tinymce/tinymce-react'
+import api from '../utils/api'
 import './News.css'
 
 const News = () => {
+  const [showAddPopup, setShowAddPopup] = useState(false)
+  const [newNewsForm, setNewNewsForm] = useState({ title: '', content: '' })
+  const [uploadedFiles, setUploadedFiles] = useState([])
+  const [filesError, setFilesError] = useState('')
+  const navigate = useNavigate()
+  const { user } = useAuth()
+  
+  const isAdmin = user?.email?.toLowerCase() === 'admintruemirror@gmail.com'
+
   // Mock data for news
-  const newsItems = [
+  const defaultNewsItems = [
     {
       id: 1,
       title: 'TrueMirror đạt hơn 500 người dùng chỉ sau hơn 2 tuần ra mắt',
@@ -56,6 +68,144 @@ const News = () => {
     },
   ]
 
+  const getCustomNews = () => JSON.parse(localStorage.getItem('customNews') || '[]')
+  const getDeletedIds = () => JSON.parse(localStorage.getItem('deletedNewsIds') || '[]')
+
+  const [newsItems, setNewsItems] = useState([])
+  const [journeyItems, setJourneyItems] = useState([])
+  const [addType, setAddType] = useState('news') // 'news', 'journey'
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Load news from localStorage
+  useEffect(() => {
+    const deletedIds = getDeletedIds()
+    const activeDefaults = defaultNewsItems.filter(item => !deletedIds.includes(item.id))
+    const customItems = getCustomNews().filter(item => !deletedIds.includes(item.id))
+    setNewsItems([...customItems, ...activeDefaults])
+  }, [])
+
+  // Load journey posts from API
+  useEffect(() => {
+    loadJourneyPosts()
+  }, [])
+
+  const loadJourneyPosts = async () => {
+    try {
+      const response = await api.get('/api/posts')
+      if (response.data.success) {
+        setJourneyItems(response.data.posts)
+      }
+    } catch (err) {
+      console.error('Failed to load posts:', err)
+    }
+  }
+
+  const handleDelete = (e, id) => {
+    e.stopPropagation()
+    if (!window.confirm('Bạn có chắc muốn xóa tin tức này?')) return
+    
+    const deletedIds = getDeletedIds()
+    deletedIds.push(id)
+    localStorage.setItem('deletedNewsIds', JSON.stringify(deletedIds))
+    
+    setNewsItems(prev => prev.filter(item => item.id !== id))
+  }
+
+  const handleJourneyDelete = async (e, id) => {
+    e.stopPropagation()
+    if (!window.confirm('Bạn có chắc muốn xóa bài viết này?')) return
+    
+    try {
+      await api.delete(`/api/posts/${id}`)
+      setJourneyItems(prev => prev.filter(item => item.id !== id))
+    } catch (err) {
+      console.error('Failed to delete post:', err)
+      alert('Không thể xóa bài viết. Vui lòng thử lại.')
+    }
+  }
+
+  // Upload image via backend → Cloudinary (signed, no upload_preset needed)
+  const uploadToCloudinary = async (file) => {
+    const formData = new FormData()
+    formData.append('file', file)
+
+    const response = await api.post('/api/upload/', formData, {
+      headers: { 'Content-Type': 'multipart/form-data' }
+    })
+
+    if (!response.data.success) throw new Error(response.data.error || 'Upload failed')
+    return response.data.url
+  }
+
+  const handleAddSubmit = async (e) => {
+    e.preventDefault()
+    
+    // File validation
+    if (uploadedFiles.length === 0) {
+      setFilesError('Vui lòng upload ít nhất 1 ảnh chủ đề')
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      // Tính toán ngày hiện tại chuẩn giờ VN (UTC+7)
+      const now = new Date()
+      const utcTime = now.getTime() + (now.getTimezoneOffset() * 60000)
+      const vnTime = new Date(utcTime + (3600000 * 7))
+      const formattedDate = `${vnTime.getDate()} tháng ${vnTime.getMonth() + 1} ${vnTime.getFullYear()}`
+
+      if (addType === 'news') {
+        // News: keep localStorage approach
+        const fileUrl = URL.createObjectURL(uploadedFiles[0])
+        const newId = Date.now()
+        const tempDiv = document.createElement('div')
+        tempDiv.innerHTML = newNewsForm.content
+        const plainTextContent = tempDiv.textContent || tempDiv.innerText || ''
+
+        const customArticle = {
+          id: newId,
+          title: newNewsForm.title,
+          date: formattedDate,
+          content: newNewsForm.content,
+          image: fileUrl,
+          category: 'Cập nhật',
+          excerpt: plainTextContent.substring(0, 150) + (plainTextContent.length > 150 ? '...' : ''),
+          isHtml: true
+        }
+
+        const customItems = getCustomNews()
+        customItems.unshift(customArticle)
+        localStorage.setItem('customNews', JSON.stringify(customItems))
+        setNewsItems(prev => [customArticle, ...prev])
+      } else {
+        // Journey: upload to Cloudinary + save via API
+        const imageUrl = await uploadToCloudinary(uploadedFiles[0])
+
+        const response = await api.post('/api/posts', {
+          title: newNewsForm.title,
+          content: newNewsForm.content,
+          image_url: imageUrl,
+          date_display: formattedDate
+        })
+
+        if (response.data.success) {
+          setJourneyItems(prev => [response.data.post, ...prev])
+        }
+      }
+
+      setShowAddPopup(false)
+      setNewNewsForm({ title: '', content: '' })
+      setUploadedFiles([])
+      setFilesError('')
+    } catch (err) {
+      console.error('Submit failed:', err)
+      alert('Có lỗi xảy ra. Vui lòng thử lại.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   // Mock data for success stories
   const successStories = [
     {
@@ -80,9 +230,6 @@ const News = () => {
       rating: 5,
     },
   ]
-
-  const navigate = useNavigate()
-  const { user } = useAuth()
 
   const handleFreeTrial = () => {
     if (user) {
@@ -138,6 +285,80 @@ const News = () => {
       {/* Spacing */}
       <div className="h-12 md:h-16 lg:h-10"></div>
 
+      {/* Journey Grid */}
+      <section className="bg-white">
+        <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
+          <div className="text-center mb-14 md:mb-18 lg:mb-24">
+            <h2 className="section-title">Hành trình phỏng vấn toàn diện</h2>
+            <p className="section-subtitle">
+              Chia sẻ và học hỏi kinh nghiệm từ cộng đồng
+            </p>
+            {isAdmin && (
+              <div className="flex flex-col items-center w-full">
+                <button 
+                  onClick={() => {
+                    setAddType('journey')
+                    setShowAddPopup(true)
+                  }} 
+                  className="btn-primary w-fit px-8 h-12 flex items-center justify-center gap-2 mx-auto rounded-xl text-base md:text-lg font-bold"
+                >
+                  <span className="text-xl">+</span> Thêm bài viết
+                </button>
+                <div className="h-6"></div>
+              </div>
+            )}
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 auto-rows-fr">
+            {journeyItems.map((item) => (
+              <div
+                key={item.id}
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col cursor-pointer relative"
+                onClick={() => window.location.href = `/post/${item.id}`}
+              >
+                {isAdmin && (
+                  <button
+                    onClick={(e) => handleJourneyDelete(e, item.id)}
+                    className="absolute top-3 right-3 bg-white bg-opacity-90 p-2 rounded-full text-red-400 hover:text-red-600 hover:bg-red-50 transition shadow-md z-10"
+                    title="Xóa bài viết"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                )}
+                {/* Fixed height image container - image displays fully */}
+                <div className="w-full h-[270px] bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
+                  <img
+                    src={item.image_url || item.image || ''}
+                    alt={item.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+
+                {/* Content with padding - expands as needed */}
+                <div className="news-item-padding flex-grow flex flex-col">
+                  <div className="h-1.5"></div>
+
+                  <h3 className="text-lg md:text-xl font-bold text-brand-navy news-title-hover text-left">
+                    {item.title}
+                  </h3>
+
+                  <div className="h-1.5"></div>
+
+                  <p className="text-sm md:text-base text-gray-600 text-left pb-3">
+                    {item.date_display || item.date}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Spacing */}
+      <div className="h-12 md:h-16 lg:h-10"></div>
+
       {/* News Grid */}
       <section className="bg-white">
         <div className="container mx-auto px-6 md:px-8 max-w-6xl py-20 md:py-24 lg:py-28">
@@ -146,15 +367,40 @@ const News = () => {
             <p className="section-subtitle">
               Những thông tin và cập nhật mới nhất
             </p>
+            {isAdmin && (
+              <div className="flex flex-col items-center w-full">
+                <button 
+                  onClick={() => {
+                    setAddType('news')
+                    setShowAddPopup(true)
+                  }} 
+                  className="btn-primary w-fit px-8 h-12 flex items-center justify-center gap-2 mx-auto rounded-xl text-base md:text-lg font-bold"
+                >
+                  <span className="text-xl">+</span> Thêm tin tức
+                </button>
+                <div className="h-6"></div>
+              </div>
+            )}
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-12 auto-rows-fr">
             {newsItems.map((item) => (
               <div
                 key={item.id}
-                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col cursor-pointer"
+                className="bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden flex flex-col cursor-pointer relative"
                 onClick={() => window.location.href = `/news/${item.id}`}
               >
+                {isAdmin && (
+                  <button
+                    onClick={(e) => handleDelete(e, item.id)}
+                    className="absolute top-3 right-3 bg-white bg-opacity-90 p-2 rounded-full text-red-400 hover:text-red-600 hover:bg-red-50 transition shadow-md z-10"
+                    title="Xóa tin tức"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                      <path fillRule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                  </button>
+                )}
                 {/* Fixed height image container - image displays fully */}
                 <div className="w-full h-[270px] bg-gradient-to-br from-blue-50 to-white flex items-center justify-center overflow-hidden">
                   <img
@@ -251,7 +497,7 @@ const News = () => {
               <div className="h-6"></div>
               <div className="flex justify-center gap-6">
                 <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
-                  Dùng thử 3 phiên miễn phí
+                  Dùng thử miễn phí
                 </button>
                 <button className="btn-secondary text-sm md:text-base px-6 py-3" onClick={handleContact}>
                   Kết nối với chúng tôi
@@ -265,6 +511,122 @@ const News = () => {
 
       {/* Spacing */}
       <div className="h-12 md:h-16 lg:h-10"></div>
+
+      {/* Add News Popup */}
+      {showAddPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 md:p-8">
+          <div className="bg-white rounded-3xl p-6 md:p-10 w-full max-w-6xl shadow-2xl border border-gray-100 flex flex-col items-center max-h-[90vh] overflow-y-auto">
+            <div className="h-6 w-full shrink-0 inline-block min-h-[1.5rem]"></div>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-brand-blue text-center w-full px-4">
+              {addType === 'news' ? 'Thêm tin tức' : 'Thêm bài viết'}
+            </h2>
+            <div className="h-6"></div>
+            
+            <form onSubmit={handleAddSubmit} className="w-full flex flex-col items-center">
+              <div className="w-full max-w-2xl">
+                <label className="block text-lg font-semibold text-brand-navy mb-3 text-center">
+                  Tiêu đề
+                </label>
+                <textarea
+                  required
+                  value={newNewsForm.title}
+                  onChange={e => setNewNewsForm({...newNewsForm, title: e.target.value})}
+                  className="w-full bg-white border-2 border-gray-300 rounded-xl text-base md:text-lg focus:outline-none focus:ring-2 focus:ring-brand-blue focus:border-brand-blue transition-all resize-none"
+                  style={{
+                    padding: '18px 28px',
+                    height: '108px',
+                    lineHeight: '1.6'
+                  }}
+                  placeholder={addType === 'news' ? "Nhập tiêu đề tin tức" : "Nhập tiêu đề bài viết"}
+                />
+              </div>
+              <div className="h-3 w-full shrink-0"></div>
+              
+              <div className="w-full max-w-2xl flex flex-col items-center relative z-0">
+                <ImageUploader
+                  file={uploadedFiles.length > 0 ? uploadedFiles[0] : null}
+                  onChange={(file) => {
+                    setUploadedFiles(file ? [file] : [])
+                    if(file) setFilesError('')
+                  }}
+                  maxSizeMB={5}
+                />
+                {filesError && (
+                  <p className="mt-2 text-red-600 text-sm md:text-base text-center">{filesError}</p>
+                )}
+              </div>
+              <div className="h-3 w-full shrink-0"></div>
+
+              <div className="w-full max-w-5xl relative z-10 px-0 md:px-8">
+                <label className="block text-lg font-semibold text-brand-navy mb-3 text-center">
+                  Nội dung
+                </label>
+                <div className="bg-white rounded-lg w-full">
+                  {/* Using TinyMCE instead of Quill */}
+                  <Editor
+                    apiKey={import.meta.env.VITE_TINYMCE_API_KEY || 'x9232hmno22ipyya9bp11zh6fp3jw9dybasrvj2tmkotqcfy'}
+                    value={newNewsForm.content}
+                    onEditorChange={(content, editor) => {
+                      setNewNewsForm({...newNewsForm, content})
+                    }}
+                    init={{
+                      height: 500,
+                      menubar: false,
+                      plugins: [
+                        'anchor', 'autolink', 'charmap', 'codesample', 'emoticons', 'image', 'link', 'lists', 'media', 'searchreplace', 'table', 'visualblocks', 'wordcount'
+                      ],
+                      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
+                      toolbar_mode: 'wrap',
+                      tinycomments_mode: 'embedded',
+                      tinycomments_author: 'Admin',
+                      mergetags_list: [
+                        { value: 'First.Name', title: 'First Name' },
+                        { value: 'Email', title: 'Email' },
+                      ],
+                      ai_request: (request, respondWith) => respondWith.string(() => Promise.reject('See docs to implement AI Assistant')),
+                      uploadcare_public_key: '225c1060b3f987175a6d',
+                      image_title: true,
+                      image_caption: true,
+                      image_class_list: [
+                        { title: 'Responsive', value: 'img-responsive' },
+                        { title: 'Center', value: 'img-center' },
+                      ],
+                      content_style: `
+                        body { font-family:Inter,Helvetica,Arial,sans-serif; font-size:16px; min-height: 400px; padding-bottom: 50px; }
+                        img { max-width: min(100%, 800px) !important; height: auto !important; }
+                        .img-center { display: block; margin-left: auto; margin-right: auto; }
+                      `,
+                      setup: function (editor) {
+                        editor.on('change', function () {
+                          editor.save();
+                        });
+                      }
+                    }}
+                  />
+                </div>
+              </div>
+              <div className="h-6"></div>
+              
+              <div className="w-full flex justify-center gap-4">
+                <button
+                  type="button"
+                  onClick={() => setShowAddPopup(false)}
+                  className="w-full max-w-[12rem] h-12 btn-secondary text-base md:text-lg px-6 rounded-xl font-bold flex items-center justify-center transition"
+                >
+                  Hủy
+                </button>
+                <button
+                  type="submit"
+                  className="w-full max-w-[12rem] h-12 btn-primary text-base md:text-lg px-6 rounded-xl font-bold flex items-center justify-center transition"
+                >
+                  {addType === 'news' ? 'Đăng tin' : 'Thêm bài viết'}
+                </button>
+              </div>
+              <div className="h-6"></div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

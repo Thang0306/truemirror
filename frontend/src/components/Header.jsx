@@ -39,12 +39,88 @@ const Header = ({
     }
   }
 
+  // Remove all existing search highlights from the page
+  const clearHighlights = () => {
+    const marks = document.querySelectorAll('mark[data-search]')
+    marks.forEach((mark) => {
+      const parent = mark.parentNode
+      parent.replaceChild(document.createTextNode(mark.textContent), mark)
+      parent.normalize()
+    })
+  }
+
+  // Highlight all occurrences of a keyword on the current page
+  const highlightText = (keyword) => {
+    clearHighlights()
+    if (!keyword.trim()) return
+
+    const regex = new RegExp(`(${keyword.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi')
+
+    // Walk all text nodes in main content (exclude header/footer)
+    const main = document.querySelector('main') || document.body
+    const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+      acceptNode: (node) => {
+        const parent = node.parentElement
+        // Skip script, style, input, textarea, and already-marked nodes
+        if (!parent) return NodeFilter.FILTER_REJECT
+        const tag = parent.tagName.toLowerCase()
+        if (['script', 'style', 'input', 'textarea', 'mark'].includes(tag)) return NodeFilter.FILTER_REJECT
+        if (regex.test(node.nodeValue)) return NodeFilter.FILTER_ACCEPT
+        return NodeFilter.FILTER_SKIP
+      }
+    })
+
+    const nodesToReplace = []
+    let node
+    while ((node = walker.nextNode())) {
+      nodesToReplace.push(node)
+    }
+
+    nodesToReplace.forEach((textNode) => {
+      const parts = textNode.nodeValue.split(regex)
+      if (parts.length <= 1) return
+      const fragment = document.createDocumentFragment()
+      parts.forEach((part) => {
+        if (regex.test(part)) {
+          const mark = document.createElement('mark')
+          mark.setAttribute('data-search', 'true')
+          mark.style.backgroundColor = '#FDE68A'
+          mark.style.color = 'inherit'
+          mark.style.webkitTextFillColor = 'currentColor'
+          mark.style.borderRadius = '2px'
+          mark.style.padding = '0 1px'
+          mark.textContent = part
+          fragment.appendChild(mark)
+        } else {
+          fragment.appendChild(document.createTextNode(part))
+        }
+        regex.lastIndex = 0
+      })
+      textNode.parentNode.replaceChild(fragment, textNode)
+    })
+
+    // Scroll to first match
+    const firstMark = document.querySelector('mark[data-search]')
+    if (firstMark) {
+      firstMark.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+  }
+
   const handleSearch = (e) => {
     e.preventDefault()
-    if (searchText.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchText.trim())}`)
-      setSearchText('')
+    const query = searchText.trim()
+    if (query) {
+      highlightText(query)
       setIsMenuOpen(false)
+    } else {
+      clearHighlights()
+    }
+  }
+
+  const handleSearchChange = (e) => {
+    setSearchText(e.target.value)
+    if (!e.target.value.trim()) {
+      clearHighlights()
     }
   }
 
@@ -258,7 +334,7 @@ const Header = ({
               isActive('/news') ? 'text-brand-blue font-bold border-b-2 border-brand-blue' : 'text-gray-700 hover:text-brand-blue'
             }`}
           >
-            Tin tức
+            Thông tin
           </Link>
           {isAuthenticated && (
             <Link
@@ -281,7 +357,7 @@ const Header = ({
               className="search-input"
               placeholder="Tìm kiếm..."
               value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
+              onChange={handleSearchChange}
             />
             <button type="submit" className="search-btn">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -360,7 +436,7 @@ const Header = ({
               }`}
               onClick={() => setIsMenuOpen(false)}
             >
-              Tin tức
+              Thông tin
             </Link>
             {isAuthenticated && (
               <Link
@@ -382,7 +458,7 @@ const Header = ({
                   className="search-input"
                   placeholder="Tìm kiếm..."
                   value={searchText}
-                  onChange={(e) => setSearchText(e.target.value)}
+                  onChange={handleSearchChange}
                 />
                 <button type="submit" className="search-btn">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

@@ -544,7 +544,7 @@ const Services = () => {
               <div className="h-6"></div>
               <div className="flex justify-center gap-6">
                 <button className="btn-primary text-sm md:text-base px-6 py-3" onClick={handleFreeTrial}>
-                  Dùng thử 3 phiên miễn phí
+                  Dùng thử miễn phí
                 </button>
                 <button className="btn-secondary text-sm md:text-base px-6 py-3" onClick={handleContact}>
                   Liên hệ tư vấn

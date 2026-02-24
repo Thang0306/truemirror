@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 /* Base styles */
 * {
@@ -99,6 +100,61 @@ html {
 
 .to-brand-light-blue {
   --tw-gradient-to: #4988C4;
+}
+
+/* Fix Tailwind Prose Text Alignment & TinyMCE Formatting */
+.prose [style*="text-align: right"],
+.prose [style*="text-align: right"] * {
+  text-align: right !important;
+}
+
+.prose [style*="text-align: center"],
+.prose [style*="text-align: center"] * {
+  text-align: center !important;
+}
+
+.prose [style*="text-align: justify"],
+.prose [style*="text-align: justify"] * {
+  text-align: justify !important;
+}
+
+/* Force TinyMCE Lists & Indents to Display Correctly */
+.prose ul {
+  list-style-type: disc !important;
+  padding-left: 2.5rem;
+}
+
+.prose ol {
+  list-style-type: decimal !important;
+  padding-left: 2.5rem;
+}
+
+.prose ul ul, .prose ol ul {
+  list-style-type: circle !important;
+}
+
+.prose li {
+  display: list-item !important;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Base Image responsive & center */
+.prose img {
+  max-width: min(100%, 800px);
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Caption style for images */
+.prose figcaption {
+  font-size: 0.875rem;
+  color: #6b7280;
+  text-align: center;
+  margin-top: 0.75rem;
+  font-style: italic;
 }
 
 /* Custom component classes */

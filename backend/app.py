@@ -13,6 +13,8 @@ from routes.interview_routes import interview_bp
 from routes.chat_routes import chat_bp
 from routes.admin_routes import admin_bp
 from routes.news_routes import news_bp
+from routes.posts_routes import posts_bp
+from routes.upload_routes import upload_bp
 
 # Import WebSocket init
 from routes.websocket_routes import init_socketio_events
@@ -72,10 +74,14 @@ def create_app():
     app.register_blueprint(chat_bp)
     app.register_blueprint(admin_bp)
     app.register_blueprint(news_bp)
+    app.register_blueprint(posts_bp)
+    app.register_blueprint(upload_bp)
 
     # Create DB tables if not exist
     with app.app_context():
+        print("[DEBUG] Starting db.create_all()...")
         db.create_all()
+        print("[DEBUG] Finished db.create_all()!")
         print("[INFO] Database tables created")
 
     print("[INFO] TrueMirror backend started")
