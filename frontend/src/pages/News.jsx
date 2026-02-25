@@ -578,7 +578,10 @@ const News = () => {
                       ],
                       toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat',
                       toolbar_mode: 'wrap',
-                      // Allow uploading images from computer directly into editor content
+                      // Keep URLs exactly as typed — prevent TinyMCE from converting absolute URLs to relative
+                      relative_urls: false,
+                      remove_script_host: false,
+                      convert_urls: false,
                       automatic_uploads: true,
                       file_picker_types: 'image',
                       images_upload_handler: async (blobInfo, progress) => {
